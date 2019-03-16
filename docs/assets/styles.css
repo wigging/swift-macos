@@ -1,0 +1,36 @@
+.container {
+    max-width: 800px;
+}
+
+body {
+    background-color: #fffff8;
+}
+
+p {
+    font-size: 1.1em;
+}
+
+ul {
+    font-size: 1.1em;
+    list-style: none;
+    padding-left: 0;
+}
+
+#title {
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+@media (max-width: 480px) {
+
+.display-4 { font-size: 2.5em; }
+
+h1 { font-size: 2em; }
+
+h2 { font-size: 1.5em; }
+
+h3 { font-size: 1.3em; }
+
+p, ul { font-size: 1em; }
+
+}

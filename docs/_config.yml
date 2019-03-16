@@ -1,0 +1,11 @@
+collections:
+  articles:
+    output: true
+    permalink: /:name
+
+defaults:
+  - scope:
+      path: ""
+      type: "articles"
+    values:
+      layout: article
