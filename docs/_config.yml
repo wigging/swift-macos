@@ -9,3 +9,5 @@ defaults:
       type: "articles"
     values:
       layout: article
+
+highlighter: rouge
