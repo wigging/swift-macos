@@ -11,11 +11,11 @@
                 <application id="hnw-xV-0zn" sceneMemberID="viewController">
                     <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
                         <items>
-                            <menuItem title="Alert" id="1Xt-HY-uBw">
+                            <menuItem title="alert-modal" id="1Xt-HY-uBw">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Alert" systemMenu="apple" id="uQy-DD-JDr">
+                                <menu key="submenu" title="alert-modal" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
-                                        <menuItem title="About Alert" id="5kV-Vb-QxS">
+                                        <menuItem title="About alert-modal" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
@@ -29,7 +29,7 @@
                                             <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
-                                        <menuItem title="Hide Alert" keyEquivalent="h" id="Olw-nP-bQN">
+                                        <menuItem title="Hide alert-modal" keyEquivalent="h" id="Olw-nP-bQN">
                                             <connections>
                                                 <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
                                             </connections>
@@ -47,7 +47,7 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                                        <menuItem title="Quit Alert" keyEquivalent="q" id="4sb-4s-VLi">
+                                        <menuItem title="Quit alert-modal" keyEquivalent="q" id="4sb-4s-VLi">
                                             <connections>
                                                 <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
                                             </connections>
@@ -660,7 +660,7 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
                                     <items>
-                                        <menuItem title="Alert Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                                        <menuItem title="alert-modal Help" keyEquivalent="?" id="FKE-Sm-Kum">
                                             <connections>
                                                 <action selector="showHelp:" target="Ady-hI-5gd" id="y7X-2Q-9no"/>
                                             </connections>
@@ -674,7 +674,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Alert" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="alert_modal" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -704,49 +704,37 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Alert" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="alert_modal" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lAU-8Q-rZr">
-                                <rect key="frame" x="179" y="168" width="123" height="32"/>
-                                <buttonCell key="cell" type="push" title="Modal Alert A" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="JPb-WB-zhz">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7h5-C6-9uy">
+                                <rect key="frame" x="188" y="118" width="104" height="32"/>
+                                <buttonCell key="cell" type="push" title="Example B" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="5pe-IU-wT7">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="showModalAertA:" target="XfG-lQ-9wD" id="3nd-26-4E2"/>
+                                    <action selector="exampleB:" target="XfG-lQ-9wD" id="7Y5-bV-GQu"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VyA-D3-Zfc">
-                                <rect key="frame" x="179" y="118" width="122" height="32"/>
-                                <buttonCell key="cell" type="push" title="Modal Alert B" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6na-jw-jbf">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1MZ-Z0-0ju">
+                                <rect key="frame" x="188" y="178" width="104" height="32"/>
+                                <buttonCell key="cell" type="push" title="Example A" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="KVa-Op-JXI">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="showModalAlertB:" target="XfG-lQ-9wD" id="Xh9-bJ-VMn"/>
-                                </connections>
-                            </button>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CdP-As-lpw">
-                                <rect key="frame" x="186" y="66" width="108" height="32"/>
-                                <buttonCell key="cell" type="push" title="Sheet Alert" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="mKv-9E-bXU">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="showSheetAlert:" target="XfG-lQ-9wD" id="IqS-Cg-X72"/>
+                                    <action selector="exampleA:" target="XfG-lQ-9wD" id="bwy-Eg-M8y"/>
                                 </connections>
                             </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="VyA-D3-Zfc" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="QQ8-uB-uVf"/>
-                            <constraint firstItem="CdP-As-lpw" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="Vtu-Ur-T2s"/>
-                            <constraint firstItem="VyA-D3-Zfc" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="c0e-IP-9VF"/>
-                            <constraint firstItem="CdP-As-lpw" firstAttribute="top" secondItem="VyA-D3-Zfc" secondAttribute="bottom" constant="31" id="mKT-c1-LMm"/>
-                            <constraint firstItem="VyA-D3-Zfc" firstAttribute="top" secondItem="lAU-8Q-rZr" secondAttribute="bottom" constant="29" id="wKO-qd-8fY"/>
-                            <constraint firstItem="lAU-8Q-rZr" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="zg7-cE-sfJ"/>
+                            <constraint firstItem="7h5-C6-9uy" firstAttribute="top" secondItem="1MZ-Z0-0ju" secondAttribute="bottom" constant="39" id="3Fq-y6-euA"/>
+                            <constraint firstItem="1MZ-Z0-0ju" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="8Ry-2s-Dgy"/>
+                            <constraint firstItem="7h5-C6-9uy" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="Ff1-6S-9Yc"/>
+                            <constraint firstItem="7h5-C6-9uy" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="uxq-BD-vyk"/>
                         </constraints>
                     </view>
                 </viewController>

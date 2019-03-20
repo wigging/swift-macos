@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  Alert
+//  alert-modal
 //
-//  Created by Gavin on 2/13/19.
+//  Created by Gavin on 3/19/19.
 //  Copyright © 2019 Gavin. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import Cocoa
 
 class ViewController: NSViewController {
 
-    @IBAction func showModalAertA(_ sender: NSButton) {
+    @IBAction func exampleA(_ sender: NSButton) {
         let alert = NSAlert()
         alert.addButton(withTitle: "OK")
         alert.alertStyle = .critical
@@ -18,8 +18,8 @@ class ViewController: NSViewController {
         alert.messageText = "The Modal Alert"
         alert.runModal()
     }
-    
-    @IBAction func showModalAlertB(_ sender: NSButton) {
+
+    @IBAction func exampleB(_ sender: NSButton) {
         let alert = NSAlert()
         alert.addButton(withTitle: "OK")
         alert.addButton(withTitle: "Cancel")
@@ -42,21 +42,4 @@ class ViewController: NSViewController {
         }
     }
     
-    @IBAction func showSheetAlert(_ sender: NSButton) {
-        let alert = NSAlert()
-        alert.addButton(withTitle: "OK")
-        alert.addButton(withTitle: "Cancel")
-        alert.messageText = "The Sheet Alert"
-        alert.informativeText = "Some informative text goes here."
-        alert.alertStyle = .informational
-        alert.beginSheetModal(for: self.view.window!) { response in
-            if response == .alertFirstButtonReturn {
-                print("first button selected: OK")
-            } else if response == .alertSecondButtonReturn {
-                print("second button selected: Cancel")
-            }
-        }
-    }
-    
 }
-

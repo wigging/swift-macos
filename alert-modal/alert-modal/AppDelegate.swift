@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Alert
+//  alert-modal
 //
-//  Created by Gavin on 2/13/19.
+//  Created by Gavin on 3/19/19.
 //  Copyright © 2019 Gavin. All rights reserved.
 //
 
@@ -11,6 +11,8 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
+
+
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
     }
@@ -18,4 +20,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
+
+
 }
+

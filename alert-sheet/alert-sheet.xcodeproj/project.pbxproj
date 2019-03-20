@@ -7,24 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		86358B1E22152A0700E335C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86358B1D22152A0700E335C2 /* AppDelegate.swift */; };
-		86358B2022152A0700E335C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86358B1F22152A0700E335C2 /* ViewController.swift */; };
-		86358B2222152A0700E335C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86358B2122152A0700E335C2 /* Assets.xcassets */; };
-		86358B2522152A0700E335C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86358B2322152A0700E335C2 /* Main.storyboard */; };
+		86AFF8592241C98200DE121F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFF8582241C98200DE121F /* AppDelegate.swift */; };
+		86AFF85B2241C98200DE121F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86AFF85A2241C98200DE121F /* ViewController.swift */; };
+		86AFF85D2241C98300DE121F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86AFF85C2241C98300DE121F /* Assets.xcassets */; };
+		86AFF8602241C98300DE121F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86AFF85E2241C98300DE121F /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		86358B1A22152A0700E335C2 /* Alert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alert.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		86358B1D22152A0700E335C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		86358B1F22152A0700E335C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		86358B2122152A0700E335C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		86358B2422152A0700E335C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		86358B2622152A0700E335C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		86358B2722152A0700E335C2 /* Alert.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Alert.entitlements; sourceTree = "<group>"; };
+		86AFF8552241C98200DE121F /* alert-sheet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "alert-sheet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		86AFF8582241C98200DE121F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		86AFF85A2241C98200DE121F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		86AFF85C2241C98300DE121F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		86AFF85F2241C98300DE121F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		86AFF8612241C98300DE121F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86AFF8622241C98300DE121F /* alert_sheet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = alert_sheet.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		86358B1722152A0600E335C2 /* Frameworks */ = {
+		86AFF8522241C98200DE121F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -34,71 +34,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		86358B1122152A0600E335C2 = {
+		86AFF84C2241C98200DE121F = {
 			isa = PBXGroup;
 			children = (
-				86358B1C22152A0700E335C2 /* Alert */,
-				86358B1B22152A0700E335C2 /* Products */,
+				86AFF8572241C98200DE121F /* alert-sheet */,
+				86AFF8562241C98200DE121F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		86358B1B22152A0700E335C2 /* Products */ = {
+		86AFF8562241C98200DE121F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				86358B1A22152A0700E335C2 /* Alert.app */,
+				86AFF8552241C98200DE121F /* alert-sheet.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		86358B1C22152A0700E335C2 /* Alert */ = {
+		86AFF8572241C98200DE121F /* alert-sheet */ = {
 			isa = PBXGroup;
 			children = (
-				86358B1D22152A0700E335C2 /* AppDelegate.swift */,
-				86358B1F22152A0700E335C2 /* ViewController.swift */,
-				86358B2122152A0700E335C2 /* Assets.xcassets */,
-				86358B2322152A0700E335C2 /* Main.storyboard */,
-				86358B2622152A0700E335C2 /* Info.plist */,
-				86358B2722152A0700E335C2 /* Alert.entitlements */,
+				86AFF8582241C98200DE121F /* AppDelegate.swift */,
+				86AFF85A2241C98200DE121F /* ViewController.swift */,
+				86AFF85C2241C98300DE121F /* Assets.xcassets */,
+				86AFF85E2241C98300DE121F /* Main.storyboard */,
+				86AFF8612241C98300DE121F /* Info.plist */,
+				86AFF8622241C98300DE121F /* alert_sheet.entitlements */,
 			);
-			path = Alert;
+			path = "alert-sheet";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		86358B1922152A0600E335C2 /* Alert */ = {
+		86AFF8542241C98200DE121F /* alert-sheet */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 86358B2A22152A0700E335C2 /* Build configuration list for PBXNativeTarget "Alert" */;
+			buildConfigurationList = 86AFF8652241C98300DE121F /* Build configuration list for PBXNativeTarget "alert-sheet" */;
 			buildPhases = (
-				86358B1622152A0600E335C2 /* Sources */,
-				86358B1722152A0600E335C2 /* Frameworks */,
-				86358B1822152A0600E335C2 /* Resources */,
+				86AFF8512241C98200DE121F /* Sources */,
+				86AFF8522241C98200DE121F /* Frameworks */,
+				86AFF8532241C98200DE121F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Alert;
-			productName = Alert;
-			productReference = 86358B1A22152A0700E335C2 /* Alert.app */;
+			name = "alert-sheet";
+			productName = "alert-sheet";
+			productReference = 86AFF8552241C98200DE121F /* alert-sheet.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		86358B1222152A0600E335C2 /* Project object */ = {
+		86AFF84D2241C98200DE121F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = Gavin;
 				TargetAttributes = {
-					86358B1922152A0600E335C2 = {
+					86AFF8542241C98200DE121F = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
-			buildConfigurationList = 86358B1522152A0600E335C2 /* Build configuration list for PBXProject "Alert" */;
+			buildConfigurationList = 86AFF8502241C98200DE121F /* Build configuration list for PBXProject "alert-sheet" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -106,45 +106,45 @@
 				en,
 				Base,
 			);
-			mainGroup = 86358B1122152A0600E335C2;
-			productRefGroup = 86358B1B22152A0700E335C2 /* Products */;
+			mainGroup = 86AFF84C2241C98200DE121F;
+			productRefGroup = 86AFF8562241C98200DE121F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				86358B1922152A0600E335C2 /* Alert */,
+				86AFF8542241C98200DE121F /* alert-sheet */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		86358B1822152A0600E335C2 /* Resources */ = {
+		86AFF8532241C98200DE121F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86358B2222152A0700E335C2 /* Assets.xcassets in Resources */,
-				86358B2522152A0700E335C2 /* Main.storyboard in Resources */,
+				86AFF85D2241C98300DE121F /* Assets.xcassets in Resources */,
+				86AFF8602241C98300DE121F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		86358B1622152A0600E335C2 /* Sources */ = {
+		86AFF8512241C98200DE121F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86358B2022152A0700E335C2 /* ViewController.swift in Sources */,
-				86358B1E22152A0700E335C2 /* AppDelegate.swift in Sources */,
+				86AFF85B2241C98200DE121F /* ViewController.swift in Sources */,
+				86AFF8592241C98200DE121F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		86358B2322152A0700E335C2 /* Main.storyboard */ = {
+		86AFF85E2241C98300DE121F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				86358B2422152A0700E335C2 /* Base */,
+				86AFF85F2241C98300DE121F /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -152,7 +152,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		86358B2822152A0700E335C2 /* Debug */ = {
+		86AFF8632241C98300DE121F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -213,7 +213,7 @@
 			};
 			name = Debug;
 		};
-		86358B2922152A0700E335C2 /* Release */ = {
+		86AFF8642241C98300DE121F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -267,37 +267,37 @@
 			};
 			name = Release;
 		};
-		86358B2B22152A0700E335C2 /* Debug */ = {
+		86AFF8662241C98300DE121F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Alert/Alert.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "alert-sheet/alert_sheet.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = Alert/Info.plist;
+				INFOPLIST_FILE = "alert-sheet/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Gavin.Alert;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Gavin.alert-sheet";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
-		86358B2C22152A0700E335C2 /* Release */ = {
+		86AFF8672241C98300DE121F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Alert/Alert.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "alert-sheet/alert_sheet.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = Alert/Info.plist;
+				INFOPLIST_FILE = "alert-sheet/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Gavin.Alert;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Gavin.alert-sheet";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};
@@ -306,25 +306,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		86358B1522152A0600E335C2 /* Build configuration list for PBXProject "Alert" */ = {
+		86AFF8502241C98200DE121F /* Build configuration list for PBXProject "alert-sheet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				86358B2822152A0700E335C2 /* Debug */,
-				86358B2922152A0700E335C2 /* Release */,
+				86AFF8632241C98300DE121F /* Debug */,
+				86AFF8642241C98300DE121F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		86358B2A22152A0700E335C2 /* Build configuration list for PBXNativeTarget "Alert" */ = {
+		86AFF8652241C98300DE121F /* Build configuration list for PBXNativeTarget "alert-sheet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				86358B2B22152A0700E335C2 /* Debug */,
-				86358B2C22152A0700E335C2 /* Release */,
+				86AFF8662241C98300DE121F /* Debug */,
+				86AFF8672241C98300DE121F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 86358B1222152A0600E335C2 /* Project object */;
+	rootObject = 86AFF84D2241C98200DE121F /* Project object */;
 }
