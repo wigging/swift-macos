@@ -1,28 +1,16 @@
 ---
 title: Alerts
-date: 2019-03-16
+date: 2019-03-21
 ---
 
 # Alerts
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Alerts in macOS applications are created with the `NSAlert` object as a modal window or as a sheet displayed within a window. Use the `beginSheetModal()` function to display an alert sheet or use the `runModal()` function to display an alert window.
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+## Modal window alert
 
-```python
-def sayhello(x):
-    word = x
-    print(f'say {word}')
-```
+Here.
 
-Done.
+## Sheet alert
+
+Here.
