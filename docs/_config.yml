@@ -1,5 +1,3 @@
-baseurl: /swift-macos
-
 collections:
   articles:
     output: true

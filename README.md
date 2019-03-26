@@ -10,15 +10,11 @@
 - https://developer.apple.com/documentation/appkit/nsalert
 - Display an alert as a modal dialog or as a sheet.
 
-<img src="img/modal.png" width="400px"> <img src="img/sheet.png" width="400px">
-
 ## OutlineView
 
 - `NSOutlineView`, `NSOutlineViewDataSource`, and `NSOutlineViewDelegate`
 - https://developer.apple.com/documentation/appkit/views_and_controls/outline_view
 - Use a Source List object from Interface Builder as an Outline View.
-
-<img src="img/outlineview.png" width="400px">
 
 ## Process
 
@@ -37,8 +33,6 @@
 - `NSTableView`, `NSTableViewDataSource`, and `NSTableViewDelegate`
 - https://developer.apple.com/documentation/appkit/nstableview
 - Display data in a table of rows and columns.
-
-<img src="img/tableview.png" width="400px">
 
 ## UserDefaults
 
