@@ -13,7 +13,7 @@ Alerts in macOS applications are created with the `NSAlert` object as a modal wi
 
 A modal alert appears in front of the main window and becomes the active window; thus, disabling the main window but keeping it visible. An example of a simple modal alert along with its associated code is given below.
 
-<img src="assets/alert-modal-1.png" class="img-fluid" style="max-width: 400px">
+<img src="{{ site.baseurl }}/assets/alert-modal-1.png" class="img-fluid" style="max-width: 400px">
 
 ```swift
 let alert = NSAlert()
@@ -26,7 +26,7 @@ alert.runModal()
 
 Features such as a custom icon, buttons, and text fields can be added to the alert window. Responses are available to identify which button was clicked.
 
-<img src="assets/alert-modal-2.png" class="img-fluid" style="max-width: 400px">
+<img src="{{ site.baseurl }}/assets/alert-modal-2.png" class="img-fluid" style="max-width: 400px">
 
 ```swift
 let alert = NSAlert()
