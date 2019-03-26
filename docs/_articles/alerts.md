@@ -7,11 +7,13 @@ date: 2019-03-21
 
 ---
 
-Alerts in macOS applications are created with the `NSAlert` object as a modal window or as a sheet displayed within a window. Use the `beginSheetModal()` function to display an alert sheet or use the `runModal()` function to display an alert window.
+Alerts in macOS applications are created with the `NSAlert` object as a modal window or as a sheet displayed within a window. Use the `beginSheetModal()` function to display an alert sheet or use the `runModal()` function to display a modal alert window.
 
 ## Modal window alert
 
-An example of a simple model alert is shown below.
+A modal alert appears in front of the main window and becomes the active window; thus, disabling the main window but keeping it visible. An example of a simple modal alert along with its associated code is given below.
+
+<img src="assets/alert-modal-1.png" class="img-fluid" style="max-width: 400px">
 
 ```swift
 let alert = NSAlert()
@@ -22,7 +24,9 @@ alert.messageText = "The Modal Alert"
 alert.runModal()
 ```
 
-A more complicated model alert is shown below.
+Features such as a custom icon, buttons, and text fields can be added to the alert window. Responses are available to identify which button was clicked.
+
+<img src="assets/alert-modal-2.png" class="img-fluid" style="max-width: 400px">
 
 ```swift
 let alert = NSAlert()
