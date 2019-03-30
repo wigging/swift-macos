@@ -17,6 +17,12 @@ ul {
 }
 
 #title {
+    font-size: 3em;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+#footer {
     margin-bottom: 40px;
     margin-top: 40px;
 }
