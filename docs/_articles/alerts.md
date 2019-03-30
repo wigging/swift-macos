@@ -5,8 +5,6 @@ date: 2019-03-21
 
 # Alerts
 
----
-
 Alerts in macOS applications are created with the `NSAlert` object as a modal window or as a sheet displayed within a window. Use the `beginSheetModal()` function to display an alert sheet or use the `runModal()` function to display a modal alert window.
 
 ## Modal window alert
@@ -55,8 +53,7 @@ if response == .alertFirstButtonReturn {
 
 Here.
 
----
+Example code for this article is available in the **alert-modal** and **alert-sheet** repositories on [GitHub][]. Comments and other feedback can be submitted on the [Issues][] page.
 
-Example code for this article is available in the alert-modal and alert-sheet repositories on [GitHub](https://github.com/wigging/swift-macos). Comments and other feedback can be submitted on the [Issues](https://github.com/wigging/swift-macos/issues) page.
-
----
+[GitHub]: https://github.com/wigging/swift-macos
+[Issues]: https://github.com/wigging/swift-macos/issues
