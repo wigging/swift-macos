@@ -1,3 +1,6 @@
+/* Main styles
+-------------------------------------------------*/
+
 .container { max-width: 750px; }
 
 body { background-color: #fffff8; }
@@ -7,7 +10,7 @@ img {
     margin-top: 20px;
 }
 
-p { font-size: 1.1em; }
+p { font-size: 1.2em; }
 
 ul {
     font-size: 1.1em;
