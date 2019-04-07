@@ -1,34 +1,59 @@
-/* Main styles
+/* Override Bootstrap
 -------------------------------------------------*/
 
 .container { max-width: 750px; }
 
+/* Styles
+-------------------------------------------------*/
+
+a:link {
+  color: #0303B0;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #0303B0;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #0303B0;
+  background: #EEEEEE;
+  text-decoration: none;
+}
+
+a:active {
+  color: #E00505;
+  background: #EEEEEE;
+  text-decoration: none;
+}
+
 body { background-color: #fffff8; }
 
 img {
-    margin-bottom: 20px;
-    margin-top: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 p { font-size: 1.2em; }
 
 ul {
-    font-size: 1.1em;
-    list-style: none;
-    padding-left: 0;
+  font-size: 1.1em;
+  list-style: none;
+  padding-left: 0;
 }
 
 #title {
-    font-size: 3em;
-    margin-bottom: 40px;
-    margin-top: 40px;
+  font-size: 3em;
+  margin-bottom: 40px;
+  margin-top: 40px;
 }
 
 #title-icons { font-size: 2em; }
 
 #footer {
-    margin-bottom: 40px;
-    margin-top: 40px;
+  margin-bottom: 40px;
+  margin-top: 40px;
 }
 
 /* Styles for mobile
