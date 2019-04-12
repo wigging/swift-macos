@@ -30,6 +30,13 @@ a:active {
 
 body { background-color: #fffff8; }
 
+h1, h2 {
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+h3 { margin-top: 0.5em; }
+
 img {
   margin-bottom: 20px;
   margin-top: 20px;
@@ -42,6 +49,8 @@ ul {
   list-style: none;
   padding-left: 0;
 }
+
+.img-small { max-width: 400px; }
 
 #title {
   font-size: 3em;
@@ -66,6 +75,8 @@ h1 { font-size: 2em; }
 h2 { font-size: 1.5em; }
 
 h3 { font-size: 1.3em; }
+
+.img-small { max-width: 100%; }
 
 p, ul { font-size: 1em; }
 
