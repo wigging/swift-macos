@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ViewControllerA" customModule="change_view" customModuleProvider="target">
+            <connections>
+                <outlet property="textField" destination="Qnl-34-JX1" id="RlS-Fj-Vv0"/>
+                <outlet property="view" destination="c22-O7-iKe" id="fo8-Qe-3m4"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="230"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PIC-Ac-ppg">
+                    <rect key="frame" x="127" y="106" width="46" height="17"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="View A" id="TLu-yl-KGf">
+                        <font key="font" usesAppearanceFont="YES"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="e4p-JC-Ta1">
+                    <rect key="frame" x="102" y="104" width="96" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="96" id="EeK-6v-6yM"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="LHj-S4-Np6">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <action selector="showText:" target="-2" id="mx7-t0-v7w"/>
+                    </connections>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GSL-e1-Wqe">
+                    <rect key="frame" x="127" y="166" width="46" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="42" id="vJ5-rX-eGH"/>
+                    </constraints>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="View A" id="2Fo-Vh-F4m">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Qnl-34-JX1">
+                    <rect key="frame" x="100" y="79" width="100" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="96" id="bhv-zw-tOz"/>
+                    </constraints>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="text" id="eH7-vU-a6A">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Qnl-34-JX1" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="7KC-a7-MiT"/>
+                <constraint firstItem="e4p-JC-Ta1" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="OUy-44-MUT"/>
+                <constraint firstItem="GSL-e1-Wqe" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="47" id="cMZ-MM-SEp"/>
+                <constraint firstItem="GSL-e1-Wqe" firstAttribute="centerX" secondItem="c22-O7-iKe" secondAttribute="centerX" id="gXc-tY-DaT"/>
+                <constraint firstItem="e4p-JC-Ta1" firstAttribute="top" secondItem="GSL-e1-Wqe" secondAttribute="bottom" constant="40" id="jGq-0V-WZd"/>
+                <constraint firstItem="Qnl-34-JX1" firstAttribute="top" secondItem="e4p-JC-Ta1" secondAttribute="bottom" constant="8" id="tAV-D5-BKk"/>
+            </constraints>
+            <point key="canvasLocation" x="-109" y="205"/>
+        </customView>
+    </objects>
+</document>
