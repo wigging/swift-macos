@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  OutlineView
+//  sidebar
 //
-//  Created by Gavin on 3/3/19.
+//  Created by Gavin on 4/19/19.
 //  Copyright © 2019 Gavin. All rights reserved.
 //
 

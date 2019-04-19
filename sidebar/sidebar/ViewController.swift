@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  OutlineView
+//  sidebar
 //
-//  Created by Gavin on 3/3/19.
+//  Created by Gavin on 4/19/19.
 //  Copyright © 2019 Gavin. All rights reserved.
 //
 
@@ -10,11 +10,8 @@ import Cocoa
 
 class ViewController: NSViewController {
     
-    let names = ["Homer Simpson", "Bill Murray", "Chevy Chase"]
-
-    @IBOutlet weak var outlineView: NSOutlineView!  // this outline view is a Source List object
+    private let names = ["Homer Simpson", "Chevy Chase", "Dan Aykroyd", "Bill Murray"]
     @IBOutlet weak var textLabel: NSTextField!
-    
 }
 
 extension ViewController: NSOutlineViewDataSource {
@@ -36,16 +33,17 @@ extension ViewController: NSOutlineViewDelegate {
     
     func outlineView(_ outlineView: NSOutlineView, viewFor tableColumn: NSTableColumn?, item: Any) -> NSView? {
         
-        var tableCellView: NSTableCellView?
+        let id = NSUserInterfaceItemIdentifier(rawValue: "DataCell")
         
-        if let name = item as? String {
-            tableCellView = outlineView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "DataCell"), owner: self) as? NSTableCellView
-            
-            if let textField = tableCellView?.textField {
-                textField.stringValue = name
-                textField.sizeToFit()
-            }
+        guard let tableCellView = outlineView.makeView(withIdentifier: id, owner: self) as? NSTableCellView,
+            let name = item as? String,
+            let textField = tableCellView.textField,
+            let imageView = tableCellView.imageView else {
+                return nil
         }
+        
+        textField.stringValue = name
+        imageView.image = NSImage(named: NSImage.addTemplateName)
         
         return tableCellView
     }
@@ -60,5 +58,4 @@ extension ViewController: NSOutlineViewDelegate {
             textLabel.stringValue = "Selected: \(item)"
         }
     }
-    
 }
