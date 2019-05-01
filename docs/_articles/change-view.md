@@ -5,13 +5,15 @@ date: 2019-04-12
 
 # Change View in a Window
 
-Subviews can be added to a custom view to display contents from other view controllers inside a window. In this example, a subview is a `.xib` file which acts as the view of an `NSViewController` object.
+`NSViewController`, `xib`
+
+Subviews can be added to a custom view to display contents from other view controllers inside a window. In this example, a subview is a xib file which acts as the view of an NSViewController object.
 
 To get started, drag a Custom View to the window from the object library in Interface Builder. Don't forget to set the size and layout contraints of the view.
 
 <img src="assets/change-view-1.png" class="img-small">
 
-Next, create a view by adding a new file and selecting View in the User Interface section. This view appears in the Xcode project as a XIB file. After adding the view, create a view controller by adding a new Cocoa Class file to the project; it is a subclass of `NSViewController`.
+Next, create a view by adding a new file and selecting View in the User Interface section. This view appears in the Xcode project as a XIB file. After adding the view, create a view controller by adding a new Cocoa Class file to the project; it is a subclass of NSViewController.
 
 <img src="assets/change-view-2.png" class="img-small">
 <img src="assets/change-view-3.png" class="img-small">
@@ -38,7 +40,7 @@ class ViewControllerA: NSViewController {
 }
 ```
 
-Finally, in the main view controller (shown below) create properties to each subview view controller. The `nibName` is the name of the XIB file that represents the view associated with the view controller. Create an outlet to the custom view which contains the subviews. For this particular example, a button action adds the view to the custom view.
+Finally, in the main view controller (shown below) create properties to each subview view controller. The nibName is the name of the XIB file that represents the view associated with the view controller. Create an outlet to the custom view which contains the subviews. For this particular example, a button action adds the view to the custom view.
 
 ```swift
 // ViewController.swift

@@ -5,6 +5,8 @@ date: 2019-04-19
 
 # Sidebar (Source List)
 
+`NSOutlineViewDataSource`, `NSOutlineViewDelegate`
+
 A sidebar (also known as a source list) occupies one side of a window and typically displays a list of items. The sidebar object is comprised of an outline view and table column. Each item can be selected to modify content in the window. To show this functionality, code is presented below for creating a sidebar that updates a label based on the selected item.
 
 The first step is to drag a source list object into the main window. Don't forget to apply contraints on the source list so it renders properly in the window. 
@@ -29,7 +31,7 @@ class ViewController: NSViewController {
 }
 ```
 
-Data source methods from `NSOutlineViewDataSource` are used to retrieve data for the outline view.
+Data source methods from NSOutlineViewDataSource are used to retrieve data for the outline view.
 
 ```swift
 extension ViewController: NSOutlineViewDataSource {
@@ -48,7 +50,7 @@ extension ViewController: NSOutlineViewDataSource {
 }
 ```
 
-Delegate methods from `NSOutlineViewDelegate` configure the table cells in the sidebar and handle selection events.
+Delegate methods from NSOutlineViewDelegate configure the table cells in the sidebar and handle selection events.
 
 ```swift
 extension ViewController: NSOutlineViewDelegate {

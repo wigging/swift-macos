@@ -5,7 +5,9 @@ date: 2019-04-06
 
 # Alerts
 
-Alerts in macOS applications are created with the `NSAlert` class as a modal window or as a sheet displayed within a window. Use the `runModal()` function to display a modal alert window or use the `beginSheetModal()` function to display an alert sheet inside a window.
+`NSAlert`, `runModal()`, `beginSheetModal()`
+
+Alerts in macOS applications are created with the NSAlert class as a modal window or as a sheet displayed within a window. Use the runModal function to display a modal alert window or use the beginSheetModal function to display an alert sheet inside a window.
 
 ## Modal window alert
 
