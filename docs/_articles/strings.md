@@ -1,3 +1,15 @@
+---
+title: Strings
+date: 2019-05-12
+---
+
+# Strings
+
+`String`
+
+A string in Swift is a series of characters surrounded by quotation marks such as "hello" or "awesome". See the code snippets below for examples of working with the String type in Swift.
+
+```swift
 // Initialize and empty string
 // -------------------------------------------------------
 
@@ -52,7 +64,7 @@ let company = "Apple Computer"
 company.count
 
 // Convert a string to int, float, or double
-// note that these return an optional
+// Note that these return an optional
 // -------------------------------------------------------
 
 let intString = "37"
@@ -66,3 +78,11 @@ let doubleNumber = Double(doubleString)
 
 let notDoubleString = "apple"
 let notDoubleNumber = Double(notDoubleString)
+```
+
+## Source Code
+
+The **strings.playground** on [GitHub][] provides executable code of the examples shown above. Comments and other feedback can be submitted on the [Issues][] page.
+
+[GitHub]: https://github.com/wigging/swift-macos
+[Issues]: https://github.com/wigging/swift-macos/issues  
