@@ -1,4 +1,4 @@
-// Initialize and empty string
+// Initialize an empty string
 // -------------------------------------------------------
 
 var empty = ""
@@ -8,6 +8,22 @@ var initString = String()
 // -------------------------------------------------------
 
 let theString = "some string"
+
+// Multiline string as two lines
+// -------------------------------------------------------
+
+let multiString = """
+line one here
+next line here
+"""
+
+// Multiline text as one line
+// -------------------------------------------------------
+
+let multiOneString = """
+line one here \
+but this line also first line
+"""
 
 // Append to a string
 // -------------------------------------------------------
@@ -52,7 +68,7 @@ let company = "Apple Computer"
 company.count
 
 // Convert a string to int, float, or double
-// note that these return an optional
+// Note that these return an optional
 // -------------------------------------------------------
 
 let intString = "37"

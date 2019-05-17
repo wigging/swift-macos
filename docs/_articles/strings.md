@@ -10,7 +10,7 @@ date: 2019-05-12
 A string in Swift is a series of characters surrounded by quotation marks such as "hello" or "awesome". See the code snippets below for examples of working with the String type in Swift.
 
 ```swift
-// Initialize and empty string
+// Initialize an empty string
 // -------------------------------------------------------
 
 var empty = ""
@@ -20,6 +20,22 @@ var initString = String()
 // -------------------------------------------------------
 
 let theString = "some string"
+
+// Multiline string as two lines
+// -------------------------------------------------------
+
+let multiString = """
+line one here
+next line here
+"""
+
+// Multiline text as one line
+// -------------------------------------------------------
+
+let multiOneString = """
+line one here \
+but this line also first line
+"""
 
 // Append to a string
 // -------------------------------------------------------
