@@ -5,8 +5,6 @@ date: 2019-04-12
 
 # Change View in a Window
 
-`NSViewController`, `xib`
-
 Subviews can be added to a custom view to display contents from other view controllers inside a window. In this example, a subview is a xib file which acts as the view of an NSViewController object.
 
 To get started, drag a Custom View to the window from the object library in Interface Builder. Don't forget to set the size and layout contraints of the view.
@@ -71,7 +69,7 @@ class ViewController: NSViewController {
 
 ## Source code
 
-Example code for this article is available in the **change-view** repository on [GitHub][]. Comments and other feedback can be submitted on the [Issues][] page.
+Example code for this article is available in the change-view repository on [GitHub][]. Comments and other feedback can be submitted on the [Issues][] page.
 
 [GitHub]: https://github.com/wigging/swift-macos
 [Issues]: https://github.com/wigging/swift-macos/issues

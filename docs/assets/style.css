@@ -6,24 +6,13 @@
 /* Styles
 -------------------------------------------------*/
 
-a:link {
-  color: #0303B0;
-  text-decoration: none;
-}
-
-a:visited {
-  color: #0303B0;
+a {
+  color: #4407E6;
   text-decoration: none;
 }
 
 a:hover {
-  color: #0303B0;
-  background: #EEEEEE;
-  text-decoration: none;
-}
-
-a:active {
-  color: #E00505;
+  color: #4407E6;
   background: #EEEEEE;
   text-decoration: none;
 }

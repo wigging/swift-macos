@@ -5,8 +5,6 @@ date: 2019-04-19
 
 # Sidebar (Source List)
 
-`NSOutlineViewDataSource`, `NSOutlineViewDelegate`
-
 A sidebar (also known as a source list) occupies one side of a window and typically displays a list of items. The sidebar object is comprised of an outline view and table column. Each item can be selected to modify content in the window. To show this functionality, code is presented below for creating a sidebar that updates a label based on the selected item.
 
 The first step is to drag a source list object into the main window. Don't forget to apply contraints on the source list so it renders properly in the window. 
@@ -91,7 +89,7 @@ The final project presents a sidebar in the window. When the user selects an ite
 
 ## Source Code
 
-Example code for this article is available in the **sidebar** folder on [GitHub][]. Comments and other feedback can be submitted on the [Issues][] page.
+Example code for this article is available in the sidebar repository on [GitHub][]. Comments and other feedback can be submitted on the [Issues][] page.
 
 [GitHub]: https://github.com/wigging/swift-macos
 [Issues]: https://github.com/wigging/swift-macos/issues
