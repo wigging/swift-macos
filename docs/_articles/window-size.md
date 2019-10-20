@@ -20,6 +20,8 @@ struct ContentView : View {
 }
 ```
 
+<img src="assets/window-size.png" class="img-small">
+
 ## Example code
 
 The window-size folder in the [swift-macos](https://github.com/wigging/swift-macos) repository contains an example Xcode provide for this article.
