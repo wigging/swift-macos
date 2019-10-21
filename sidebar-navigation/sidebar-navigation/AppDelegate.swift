@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  sidebar-nav4
+//  sidebar-navigation
 //
-//  Created by Gavin on 9/20/19.
-//  Copyright © 2019 Gavin. All rights reserved.
+//  Created by Gavin Wiggins on 10/20/19.
+//  Copyright © 2019 Gavin Wiggins. All rights reserved.
 //
 
 import Cocoa
@@ -13,6 +13,7 @@ import SwiftUI
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     var window: NSWindow!
+
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Create the SwiftUI view that provides the window contents.
