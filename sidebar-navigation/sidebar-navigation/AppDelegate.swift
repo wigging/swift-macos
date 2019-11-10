@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  sidebar-navigation
 //
-//  Created by Gavin Wiggins on 10/20/19.
+//  Created by Gavin Wiggins on 11/10/19.
 //  Copyright © 2019 Gavin Wiggins. All rights reserved.
 //
 

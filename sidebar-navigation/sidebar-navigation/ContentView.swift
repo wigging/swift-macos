@@ -2,21 +2,33 @@
 //  ContentView.swift
 //  sidebar-navigation
 //
-//  Created by Gavin Wiggins on 10/20/19.
+//  Created by Gavin Wiggins on 11/10/19.
 //  Copyright © 2019 Gavin Wiggins. All rights reserved.
 //
 
 import SwiftUI
+
+struct SidebarView: View {
+    
+    @State private var selected = Set<String>()
+    
+    private let items = ["🍎 Apple", "🍌 Banana", "🥥 Coconut", "🍒 Cherry", "🥜 Peanut", "🍑 Peach", "🍅 Tomato", "🍞 Bread", "🍕 Pizza", "🥦 Broccoli", "🥝 Kiwi", "🧀 Cheese", "🍉 Watermelon"]
+    
+    var body: some View {
+        List(items, id: \.self, selection: $selected) { item in
+            NavigationLink(destination: DetailView(selection: item)) {
+                Text("\(item)")
+            }
+        }
+        .listStyle(SidebarListStyle())
+    }
+}
 
 struct DetailView: View {
     
     var selection: String
     
     var body: some View {
-        containedView()
-    }
-    
-    private func containedView() -> AnyView {
         switch selection {
         case "🍎 Apple":
             return AnyView(AppleView())
@@ -25,22 +37,11 @@ struct DetailView: View {
         case "🥥 Coconut":
             return AnyView(CoconutView())
         default:
-            return AnyView(Text("Some view here").frame(maxWidth: .infinity, maxHeight: .infinity))
+            return AnyView(
+                Text("Some \(selection) view here")
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+            )
         }
-    }
-}
-
-struct SidebarView: View {
-    
-    let items = ["🍎 Apple", "🍌 Banana", "🥥 Coconut", "🍒 Cherry", "🥜 Peanut", "🍑 Peach", "🍅 Tomato", "🍞 Bread", "🍕 Pizza", "🥦 Broccoli", "🥝 Kiwi", "🧀 Cheese", "🍉 Watermelon"]
-    
-    var body: some View {
-        List(items, id: \.self) { item in
-            NavigationLink(destination: DetailView(selection: item)) {
-                Text("\(item)")
-            }
-        }
-        .listStyle(SidebarListStyle())
     }
 }
 
