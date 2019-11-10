@@ -10,6 +10,8 @@ import SwiftUI
 
 struct SidebarView: View {
     
+    // This binding must be implemented with List otherwise item selection
+    // will not work properly when the app launches.
     @State private var selected = Set<String>()
     
     private let items = ["🍎 Apple", "🍌 Banana", "🥥 Coconut", "🍒 Cherry", "🥜 Peanut", "🍑 Peach", "🍅 Tomato", "🍞 Bread", "🍕 Pizza", "🥦 Broccoli", "🥝 Kiwi", "🧀 Cheese", "🍉 Watermelon"]
