@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:image-icons.xcodeproj">
+      location = "self:system-images.xcodeproj">
    </FileRef>
 </Workspace>

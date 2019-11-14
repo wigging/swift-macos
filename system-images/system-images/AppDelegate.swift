@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  image-icons
+//  system-images
 //
-//  Created by Gavin on 9/30/19.
-//  Copyright © 2019 Gavin. All rights reserved.
+//  Created by Gavin Wiggins on 11/13/19.
+//  Copyright © 2019 Gavin Wiggins. All rights reserved.
 //
 
 import Cocoa

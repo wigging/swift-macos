@@ -1,4 +1,4 @@
-# Swift programming for macOS
+# Swift Programming for macOS
 
 :apple: :computer: Code examples written in Swift for macOS app development.
 

@@ -1,14 +1,17 @@
 //
 //  ContentView.swift
-//  image-icons
+//  system-images
 //
-//  Created by Gavin on 9/30/19.
-//  Copyright © 2019 Gavin. All rights reserved.
+//  Created by Gavin Wiggins on 11/13/19.
+//  Copyright © 2019 Gavin Wiggins. All rights reserved.
 //
 
 import SwiftUI
 
 struct ContentView: View {
+    
+    // See the NSImage.Name documentation for available system images
+    // https://developer.apple.com/documentation/appkit/nsimage/name
     
     let prefs = NSImage(named: NSImage.preferencesGeneralName)!
     let user = NSImage(named: NSImage.userAccountsName)!
@@ -16,11 +19,12 @@ struct ContentView: View {
     let computer = NSImage(named: NSImage.computerName)!
     let folder = NSImage(named: NSImage.folderName)!
     
-    
-    
-    // See the NSImage.Name docs for available system images
-    // https://developer.apple.com/documentation/appkit/nsimage/name
-    
+    let caution = NSImage(named: NSImage.cautionName)!
+    let group = NSImage(named: NSImage.userGroupName)!
+    let guest = NSImage(named: NSImage.userGuestName)!
+    let font = NSImage(named: NSImage.fontPanelName)!
+    let info = NSImage(named: NSImage.infoName)!
+
     var body: some View {
         VStack {
             Text("System images available in macOS")
@@ -33,17 +37,18 @@ struct ContentView: View {
                     Image(nsImage: folder)
                 }
                 VStack(spacing: 10) {
-                    Image(nsImage: prefs)
-                    Image(nsImage: user)
-                    Image(nsImage: advanced)
-                    Image(nsImage: computer)
-                    Image(nsImage: folder)
+                    Image(nsImage: caution)
+                    Image(nsImage: group)
+                    Image(nsImage: guest)
+                    Image(nsImage: font)
+                    Image(nsImage: info)
                 }
             }
         }
         .frame(width: 480, height: 300)
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
