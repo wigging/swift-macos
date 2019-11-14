@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  scroll-view
 //
-//  Created by Gavin on 8/3/19.
-//  Copyright © 2019 Gavin. All rights reserved.
+//  Created by Gavin Wiggins on 11/13/19.
+//  Copyright © 2019 Gavin Wiggins. All rights reserved.
 //
 
 import Cocoa
@@ -14,17 +14,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     var window: NSWindow!
 
+
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        // Create the SwiftUI view that provides the window contents.
+        let contentView = ContentView()
+
+        // Create the window and set the content view. 
         window = NSWindow(
             contentRect: NSRect(x: 0, y: 0, width: 480, height: 300),
-            styleMask: [.titled, .closable, .miniaturizable, .resizable],
+            styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
             backing: .buffered, defer: false)
         window.center()
         window.setFrameAutosaveName("Main Window")
-
-        window.contentView = NSHostingView(rootView: ContentView())
-
+        window.contentView = NSHostingView(rootView: contentView)
         window.makeKeyAndOrderFront(nil)
     }
 
@@ -34,3 +36,4 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
 }
+

@@ -2,51 +2,63 @@
 //  ContentView.swift
 //  scroll-view
 //
-//  Created by Gavin on 8/3/19.
-//  Copyright © 2019 Gavin. All rights reserved.
+//  Created by Gavin Wiggins on 11/13/19.
+//  Copyright © 2019 Gavin Wiggins. All rights reserved.
 //
 
 import SwiftUI
 
-struct NameRow: View {
-    
-    var name: String
-    
-    var body: some View {
-        VStack {
-            Spacer()
-            Text("\(name)")
-            Spacer()
-            Divider()
-        }.frame(width: 100, height: 40)
-    }
-}
-
 struct ContentView: View {
-    
-    // Must remove .fullSizeContentView from AppDelegate NSWindow otherwise bottom
-    // of scroll view will be clipped by window frame.
-    
-    let names = ["Homer", "Marge", "Lisa", "Bart", "Maggie", "Krusty", "Burns", "Nelson", "Otto"]
+    @State private var toggled = true
     
     var body: some View {
-        VStack {
-            ScrollView {
-                ForEach(names, id: \.self) { name in
-                    NameRow(name: name)
+        ScrollView(.vertical) {
+            VStack(spacing: 20) {
+                Text("Example of a scroll view")
+                    .font(.headline)
+                
+                Toggle(isOn: $toggled) {
+                    Text("Toggle 1")
                 }
+                
+                Toggle(isOn: $toggled) {
+                    Text("Toggle 2")
+                }
+                
+                Toggle(isOn: $toggled) {
+                    Text("Toggle 3")
+                }
+                
+                Button(action: {
+                    // do something
+                }) {
+                    Text("Button 1")
+                }
+                
+                Button(action: {
+                    // do something
+                }) {
+                    Text("Button 2")
+                }
+                
+                Button(action: {
+                    // do something
+                }) {
+                    Text("Button 3")
+                }
+                
+                Text("Last Item in scroll view")
             }
-        }.frame(width: 100, height: 160)
+            .padding()
+            .frame(width: 300)
+        }
+        .frame(width: 300, height: 200)
     }
 }
 
-#if DEBUG
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            NameRow(name: "Name")
-            ContentView()
-        }
+        ContentView()
     }
 }
-#endif
