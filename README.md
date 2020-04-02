@@ -10,7 +10,7 @@ Visit https://gavinw.me/swift-macos for a discussion of each example in this rep
 
 Submit a Pull Request if you would like to contribute to this work. Questions and other comments can be submitted on the Issues page. Another way to contribute is by making a small donation to the Tip Jar.
 
-## Tip Jar
+## Support
 
 Support this work by making a donation at [paypal.me/gavinwiggins](https://www.paypal.me/gavinwiggins). Thank you 😁
 
