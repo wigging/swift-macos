@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/syntax.css">
+
+    <title>Swift macOS</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+            <h1>{{ page.title }}</h1>
+            <p>Posted on {{ page.date | date: '%B %d, %Y' }}</p>
+            <hr>
+            <br>
+            {{ content }}
+            <br>
+            <hr>
+            <p><a href="/"><b>Back</b></a></p>
+            <br>
+        </div>
+    </div>
+
+    <div class="row my-5">
+        <div class="col-md">
+            <p class="text-center small">Written by Gavin Wiggins © {{ page.date | date: '%Y' }}</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,10 +1,66 @@
+---
+---
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+
     <title>Swift macOS</title>
 </head>
 <body>
-    <h1>Swift Programming for macOS</h1>
-    <p>Coming soon.</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+            <h1>Swift Programming for macOS</h1>
+
+            <hr>
+            <br>
+
+            <h3>🍎 🖥</h3>
+
+            <p>There are plenty of books, videos, and online resources for developing iOS apps. Despite the fact that iPhone and iPad apps require a Mac for code development, there is little information about actually creating native Mac applications. The articles provided below demonstrate various aspects of Mac app development using the latest versions of Swift and SwiftUI. Hopefully these examples will provide a useful resource for Mac developers.</p>
+
+            <p>See the <a href="https://github.com/wigging/swift-macos">swift-macos</a> repository on GitHub for example code.</p>
+
+            <br>
+
+            {% for post in site.posts %}
+            <p>
+                <a href="{{ post.url }}"><b>{{ post.title }}</b></a>
+                <br>
+                {{ post.excerpt | strip_html }}
+            </p>
+            {% endfor %}
+
+            <br>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md">
+            {% for tag in site.tags %}
+            <p><b>{{ tag[0] }}</b></p>
+                <ul>
+                {% for post in tag[1] %}
+                    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                {% endfor %}
+                </ul>
+            {% endfor %}
+
+            <br>
+            <hr>
+        </div>
+    </div>
+
+    <div class="row my-5">
+        <div class="col-md">
+            <p class="text-center small">Developed by Gavin Wiggins © 2020</p>
+        </div>
+    </div>
+</div>
 </body>
 </html>
