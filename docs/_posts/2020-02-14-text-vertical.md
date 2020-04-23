@@ -24,4 +24,4 @@ struct ContentView: View {
 }
 ```
 
-![text vertical](/images/text-vertical.png)
+![text vertical]({{ '/images/text-vertical.png' | relative_url }})
