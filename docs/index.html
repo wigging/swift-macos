@@ -30,7 +30,7 @@
 
             {% for post in site.posts %}
             <p>
-                <a href="{{ post.url }}"><b>{{ post.title }}</b></a>
+                <a href="{{ post.url | relative_url }}"><b>{{ post.title }}</b></a>
                 <br>
                 {{ post.excerpt | strip_html }}
             </p>
