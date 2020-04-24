@@ -5,7 +5,7 @@ tags: [NavigationView, List, ScrollView]
 
 A navigation view contains a master and detail view. In this example, the master view displays a list of fruits in the sidebar. The detail view determines which view to display based on which item is selected in the sidebar.
 
-![sidebar]({{ '/images/sidebar.png' | relative_url }})
+![sidebar](/swift-macos/images/sidebar.png)
 
 The content view of the window is a navigation view that contains the master and detail views. An enum defines the state of the sidebar list selection and is used to determine which view is displayed by the detail view. UserDefaults stores the selection so that the detail view displays the last viewed item when the app is relaunched.
 

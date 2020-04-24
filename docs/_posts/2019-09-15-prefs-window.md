@@ -5,7 +5,7 @@ tags: NSWindow
 
 A preferences window contains user settings for the application. This window is usually opened from the Preferences item in the application's menu bar. To open a window from the Preferences menu item, connect an IBAction between the item and AppDelegate.
 
-![preferences menu]({{ '/images/preferences-menu.png' | relative_url }}){: .large-img}
+![preferences menu](/swift-macos/images/preferences-menu.png){: .large-img}
 
 ```swift
 // AppDelegate.swift
@@ -36,7 +36,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 The contents of the Preferences window is defined in a separate file where controls, text, and other items are added to the window's view.
 
-![preferences window]({{ '/images/preferences-window.png' | relative_url }})
+![preferences window](/swift-macos/images/preferences-window.png)
 
 ```swift
 // PreferencesView.swift
