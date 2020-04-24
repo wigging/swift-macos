@@ -1,7 +1,3 @@
-.container {
-    max-width: 700px;
-}
-
 a:hover {
     color: #4407E6;
     background: #EEEEEE;
@@ -20,22 +16,18 @@ img {
     max-width: 400px;
 }
 
-#notes-list {
-    columns: 2 auto;
+/* Make code blocks scroll horizontally */
+pre code {
+    white-space: pre;
+    word-wrap: normal;
 }
 
-#profile-img {
-    margin-top: 10px;
-    width: 100px;
+.container {
+    max-width: 700px;
 }
 
 .large-img {
     max-width: 100%;
-}
-
-.center-img {
-    margin: 0 auto;
-    display: block;
 }
 
 @media (max-width: 480px) {
