@@ -1,6 +1,7 @@
 ---
 title: Sidebar navigation
 tags: [NavigationView, List, ScrollView]
+image: sidebar.png
 ---
 
 A navigation view contains a master and detail view. In this example, the master view displays a list of fruits in the sidebar. The detail view determines which view to display based on which item is selected in the sidebar.

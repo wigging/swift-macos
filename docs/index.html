@@ -24,24 +24,27 @@
 
             <p>There are plenty of books, videos, and online resources for developing iOS apps. Despite the fact that iPhone and iPad apps require a Mac for code development, there is little information about actually creating native Mac applications. The articles provided below demonstrate various aspects of Mac app development using the latest versions of Swift and SwiftUI. Hopefully these examples will provide a useful resource for Mac developers.</p>
 
-            <p>See the <a href="https://github.com/wigging/swift-macos">swift-macos</a> repository on GitHub for example code.</p>
-
-            <br>
-
-            {% for post in site.posts %}
-            <p>
-                <a href="/swift-macos{{ post.url }}"><b>{{ post.title }}</b></a>
-                <br>
-                {{ post.excerpt | strip_html }}
-            </p>
-            {% endfor %}
-
-            <br>
+            <p>See the <a href="https://github.com/wigging/swift-macos"><b>swift-macos</b></a> repository on GitHub for example code.</p>
         </div>
     </div>
 
+    {% for post in site.posts %}
+    <div class="row my-5">
+        <div class="col-md-4">
+            <p><img src="/swift-macos/images/{{ post.image }}" class="img-fluid"></p>
+        </div>
+        <div class="col-md">
+            <p><a href="/swift-macos{{ post.url }}"><b>{{ post.title }}</b></a></p>
+            <p>{{ post.excerpt | strip_html }}</p>
+        </div>
+    </div>
+    {% endfor %}
+
     <div class="row">
         <div class="col-md">
+            <hr>
+            <br>
+
             {% for tag in site.tags %}
             <p><b>{{ tag[0] }}</b></p>
                 <ul>
@@ -58,7 +61,7 @@
 
     <div class="row my-5">
         <div class="col-md">
-            <p class="text-center small">Developed by Gavin Wiggins © 2020</p>
+            <p class="text-center small">Gavin Wiggins © 2020</p>
         </div>
     </div>
 </div>
