@@ -16,7 +16,7 @@ Submit a Pull Request if you would like to contribute to this work. Questions an
 
 ## Support
 
-Support this work by making a donation at [paypal.me/gavinwiggins](https://www.paypal.me/gavinwiggins). Thank you 😁
+Support this project by using the **:heart: Sponsor** button at the top of this page. Thank you :smile:.
 
 ## License
 
