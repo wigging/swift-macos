@@ -8,32 +8,28 @@
 
 import SwiftUI
 
-enum Fruit: String, CaseIterable {
-    case apple = "🍎 Apple"
-    case coconut = "🥥 Coconut"
-    case mango = "🥭 Mango"
-    case kiwi = "🥝 Kiwi"
-}
+private let fruits = ["🍎 Apple", "🥥 Coconut", "🥭 Mango", "🥝 Kiwi"]
 
 struct SidebarView: View {
     
-    @Binding var selectedFruit: Fruit?
+    @Binding var selectedFruit: String?
     
     var body: some View {
-        List(Fruit.allCases, id: \.self, selection: $selectedFruit) { fruit in
-            Text("\(fruit.rawValue)")
+        List(fruits, id: \.self, selection: $selectedFruit) { fruit in
+            Text("\(fruit)")
         }
-        .listStyle(SidebarListStyle())
-        .frame(minWidth: 200, maxWidth: 300)
+        //.listStyle(SidebarListStyle())
+        //.frame(minWidth: 180, idealWidth: 200, maxWidth: 300)
+        .frame(minWidth: 100, idealWidth: 150, maxWidth: 200)
     }
 }
 
 struct DetailView: View {
     
-    @Binding var fruit: Fruit?
+    @Binding var fruit: String?
     
     var body: some View {
-        Text("\(fruit?.rawValue ?? "Default Fruit")")
+        Text("\(fruit ?? "Default Fruit")")
             .font(.headline)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
@@ -41,7 +37,7 @@ struct DetailView: View {
 
 struct ContentView: View {
     
-    @State private var selectedFruit: Fruit?
+    @State private var selectedFruit: String?
     
     var body: some View {
         NavigationView {
