@@ -10,9 +10,22 @@ See https://gavinw.me/swift-macos for documentation of the examples in this repo
 
 The documentation website is built with Jekyll and hosted with [GitHub Pages](https://pages.github.com). Files for the website are in the `docs/` folder. Since this is a project website (not a user or organization website) the baseurl must be set to the repository name `baseurl: /swift-macos` in the `docs/_config.yml` file. Therefore, paths in the HTML and Markdown files must start with `/swift-macos`.
 
+Run the Jekyll server with the following command:
+
+```bash
+$ bundle exec jekyll serve
+```
+
+Use the following commands to update the Ruby Bundler gem and the GitHub pages gem:
+
+```bash
+$ gem update bundler
+$ bundle update github-pages
+```
+
 ## Contributing
 
-Submit a Pull Request if you would like to contribute to this work. Questions and other comments can be submitted on the Issues page. Another way to contribute is by making a small donation to the Tip Jar.
+Submit a Pull Request if you would like to contribute to this project. Questions and other comments can be submitted on the Issues page.
 
 ## Support
 
