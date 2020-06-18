@@ -4,11 +4,11 @@
 
 There are plenty of books, videos, and online resources for developing iOS apps. Despite the fact that iPhone and iPad apps require a Mac for code development, there is very little information about actually creating native Mac applications. The examples in this repository demonstrate various aspects of Mac app development using the latest versions of Swift and SwiftUI. Hopefully these examples will provide a useful resource for Mac developers.
 
-## Documentation
+## Website
 
-See https://gavinw.me/swift-macos for documentation of the examples in this repository.
+See https://gavinw.me/swift-macos for the website which discusses the examples in this repository.
 
-The documentation website is built with Jekyll and hosted with [GitHub Pages](https://pages.github.com). Files for the website are in the `docs/` folder. Since this is a project website (not a user or organization website) the baseurl must be set to the repository name `baseurl: /swift-macos` in the `docs/_config.yml` file. Therefore, paths in the HTML and Markdown files must start with `/swift-macos`.
+The website is built with [Jekyll](https://jekyllrb.com) and hosted with [GitHub Pages](https://pages.github.com). Files for the website are in the `docs/` folder. Since this is a project website (not a user or organization website) the baseurl must be set to the repository name `baseurl: /swift-macos` in the `docs/_config.yml` file. Therefore, paths in the HTML and Markdown files must start with `/swift-macos`.
 
 Run the Jekyll server with the following command:
 
@@ -16,7 +16,7 @@ Run the Jekyll server with the following command:
 $ bundle exec jekyll serve
 ```
 
-Use the following commands to update the Ruby Bundler gem and the GitHub pages gem:
+Commands to update the Ruby Bundler gem and the GitHub pages gem:
 
 ```bash
 $ gem update bundler

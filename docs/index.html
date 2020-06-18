@@ -41,26 +41,44 @@
     {% endfor %}
 
     <div class="row">
+
+        <!-- Column for even items -->
         <div class="col-md">
-            <hr>
-            <br>
-
             {% for tag in site.tags %}
-            <p><b>{{ tag[0] }}</b></p>
-                <ul>
-                {% for post in tag[1] %}
-                    <li><a href="/swift-macos{{ post.url }}">{{ post.title }}</a></li>
-                {% endfor %}
-                </ul>
+                {% assign mod = forloop.index | modulo: 2 %}
+                {% if mod == 0 %}
+                    <p><b>{{ tag[0] }}</b></p>
+                    <ul>
+                    {% for post in tag[1] %}
+                        <li><a href="/swift-macos{{ post.url }}">{{ post.title }}</a></li>
+                    {% endfor %}
+                    </ul>
+                {% endif %}
             {% endfor %}
-
-            <br>
-            <hr>
         </div>
+
+        <!-- Column for odd items -->
+        <div class="col-md">
+            {% for tag in site.tags %}
+                {% assign mod = forloop.index | modulo: 2 %}
+                {% if mod != 0 %}
+                    <p><b>{{ tag[0] }}</b></p>
+                    <ul>
+                    {% for post in tag[1] %}
+                        <li><a href="/swift-macos{{ post.url }}">{{ post.title }}</a></li>
+                    {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <br>
+        <hr>
     </div>
 
     <div class="row my-5">
         <div class="col-md">
+            <hr class="mb-5">
             <p class="text-center small">Gavin Wiggins © 2020</p>
         </div>
     </div>
