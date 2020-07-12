@@ -12,6 +12,10 @@ h1, h2 {
     margin-top: 60px;
 }
 
+h2 {
+    margin-bottom: 20px;
+}
+
 img {
     max-width: 400px;
 }
