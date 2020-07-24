@@ -1,8 +1,7 @@
 ---
 title: Keyboard shortcuts
-category: macOS and Xcode
+category: Xcode
 tags: [macOS, Xcode]
-image: key-shortcuts.png
 ---
 
 By pressing certain key combinations (keyboard shortcut), you can do things that normally need a mouse, trackpad, or other input source. For example, to use Command ⌘ + C, press and hold the Command ⌘ key, then the C key, then release both keys.

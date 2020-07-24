@@ -28,21 +28,11 @@
         </div>
     </div>
 
-    {% for post in site.posts %}
-    <div class="row my-5">
-        <div class="col-md-4">
-            <p><img src="/swift-macos/images/{{ post.image }}" class="img-fluid"></p>
-        </div>
-        <div class="col-md">
-            <p><a href="/swift-macos{{ post.url }}"><b>{{ post.title }}</b></a></p>
-            <p>{{ post.excerpt | strip_html }}</p>
-        </div>
-    </div>
-    {% endfor %}
+    <!-- Table of contents section -->
 
     <div class="row">
         <div class="col-md">
-            <h2>Contents</h2>
+            <h2>Table of Contents</h2>
             <hr>
         </div>
     </div>
@@ -61,49 +51,30 @@
         </div>
     </div>
 
+    <!-- Index section -->
+
     <div class="row">
         <div class="col-md">
-            <h2>Tags</h2>
+            <h2>Index</h2>
             <hr>
         </div>
     </div>
 
     <div class="row">
-        {% assign tags = site.tags | sort %}
-
-        <!-- Column for even items -->
         <div class="col-md">
+            {% assign tags = site.tags | sort %}
             {% for tag in tags %}
-                {% assign mod = forloop.index | modulo: 2 %}
-                {% if mod == 0 %}
-                    <h5>{{ tag[0] }}</h5>
-                    <ul>
-                    {% for post in tag[1] %}
-                        <li><a href="/swift-macos{{ post.url }}">{{ post.title }}</a></li>
-                    {% endfor %}
-                    </ul>
-                {% endif %}
+            <h5>{{ tag[0] }}</h5>
+            <ul>
+                {% for post in tag[1] %}
+                    <li><a href="/swift-macos{{ post.url }}">{{ post.title }}</a></li>
+                {% endfor %}
+            </ul>
             {% endfor %}
         </div>
-
-        <!-- Column for odd items -->
-        <div class="col-md">
-            {% for tag in tags %}
-                {% assign mod = forloop.index | modulo: 2 %}
-                {% if mod != 0 %}
-                    <h5>{{ tag[0] }}</h5>
-                    <ul>
-                    {% for post in tag[1] %}
-                        <li><a href="/swift-macos{{ post.url }}">{{ post.title }}</a></li>
-                    {% endfor %}
-                    </ul>
-                {% endif %}
-            {% endfor %}
-        </div>
-
-        <br>
-        <hr>
     </div>
+
+    <!-- Footer section -->
 
     <div class="row my-5">
         <div class="col-md">

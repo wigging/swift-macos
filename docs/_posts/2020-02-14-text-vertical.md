@@ -2,7 +2,6 @@
 title: Text vertical
 category: Text
 tags: Text
-image: text-vertical.png
 ---
 
 Vertical text can be accomplished by rotating a text view 90 degrees. To rotate the frame of the text view, the fixed size modifier must be implemented along with defining the frame size.

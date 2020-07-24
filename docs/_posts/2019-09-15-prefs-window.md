@@ -2,7 +2,6 @@
 title: Preferences window
 category: Windows
 tags: NSWindow
-image: preferences-window.png
 ---
 
 A preferences window contains user settings for the application. This window is usually opened from the Preferences item in the application's menu bar. To open a window from the Preferences menu item, connect an IBAction between the item and AppDelegate.

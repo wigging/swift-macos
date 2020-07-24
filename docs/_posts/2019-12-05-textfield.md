@@ -2,7 +2,6 @@
 title: TextField
 category: Text
 tags: TextField
-image: text-field.png
 ---
 
 The TextField structure is a control that provides an editable text field. Various modifiers are available to customize the appearance and text alignment. Actions can be performed when editing begins and ends for the text field or when the return key is pressed.

@@ -2,7 +2,6 @@
 title: Button styles
 category: Controls
 tags: Button
-image: button-styles.png
 ---
 
 Several button styles are available in macOS such as the plain, link, bordered, and borderless styles. For a truly custom style, conforming a struct to the ButtonStyle protocol can offer more customization options.
