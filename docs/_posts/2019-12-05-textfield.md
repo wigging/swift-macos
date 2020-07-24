@@ -1,5 +1,6 @@
 ---
 title: TextField
+category: Text
 tags: TextField
 image: text-field.png
 ---

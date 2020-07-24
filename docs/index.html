@@ -25,8 +25,6 @@
             <p>There are plenty of books, videos, and online resources for developing iOS apps. Despite the fact that iPhone and iPad apps require a Mac for code development, there is little information about actually creating native Mac applications. The articles provided below demonstrate various aspects of Mac app development using the latest versions of Swift and SwiftUI. Hopefully these examples will provide a useful resource for Mac developers.</p>
 
             <p>GitHub repository at <a href="https://github.com/wigging/swift-macos"><b>wigging/swift-macos</b></a>.</p>
-
-            <p>Jump to <a href="#index"><b>Index</b></a>.</p>
         </div>
     </div>
 
@@ -44,19 +42,41 @@
 
     <div class="row">
         <div class="col-md">
-            <h2 id="index">Index</h2>
+            <h2>Contents</h2>
             <hr>
         </div>
     </div>
 
     <div class="row">
+        <div class="col-md">
+            {% assign categories = site.categories | sort %}
+            {% for cat in categories %}
+            <h5>{{ cat[0] }}</h5>
+            <ul>
+               {% for post in cat[1] %}
+                   <li><a href="/swift-macos{{ post.url }}">{{ post.title }}</a></li>
+               {% endfor %}
+            </ul>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md">
+            <h2>Tags</h2>
+            <hr>
+        </div>
+    </div>
+
+    <div class="row">
+        {% assign tags = site.tags | sort %}
 
         <!-- Column for even items -->
         <div class="col-md">
-            {% for tag in site.tags %}
+            {% for tag in tags %}
                 {% assign mod = forloop.index | modulo: 2 %}
                 {% if mod == 0 %}
-                    <p><b>{{ tag[0] }}</b></p>
+                    <h5>{{ tag[0] }}</h5>
                     <ul>
                     {% for post in tag[1] %}
                         <li><a href="/swift-macos{{ post.url }}">{{ post.title }}</a></li>
@@ -68,10 +88,10 @@
 
         <!-- Column for odd items -->
         <div class="col-md">
-            {% for tag in site.tags %}
+            {% for tag in tags %}
                 {% assign mod = forloop.index | modulo: 2 %}
                 {% if mod != 0 %}
-                    <p><b>{{ tag[0] }}</b></p>
+                    <h5>{{ tag[0] }}</h5>
                     <ul>
                     {% for post in tag[1] %}
                         <li><a href="/swift-macos{{ post.url }}">{{ post.title }}</a></li>

@@ -1,5 +1,6 @@
 ---
 title: Sidebar navigation
+category: Navigation
 tags: [NavigationView, List, ScrollView]
 image: sidebar.png
 ---

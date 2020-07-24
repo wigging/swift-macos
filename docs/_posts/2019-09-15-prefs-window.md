@@ -1,5 +1,6 @@
 ---
 title: Preferences window
+category: Windows
 tags: NSWindow
 image: preferences-window.png
 ---

@@ -1,5 +1,6 @@
 ---
 title: Application should reopen window
+category: Application
 tags: [NSApplicationDelegate, NSApplication]
 image: app-reopen.png
 ---

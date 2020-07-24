@@ -1,5 +1,6 @@
 ---
 title: Keyboard shortcuts
+category: macOS and Xcode
 tags: [macOS, Xcode]
 image: key-shortcuts.png
 ---

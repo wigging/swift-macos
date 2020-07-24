@@ -1,5 +1,6 @@
 ---
 title: Button styles
+category: Controls
 tags: Button
 image: button-styles.png
 ---

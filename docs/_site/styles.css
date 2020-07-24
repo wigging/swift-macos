@@ -1,0 +1,43 @@
+a:hover {
+    color: #4407E6;
+    background: #EEEEEE;
+    text-decoration: none;
+}
+
+body {
+    background-color: #fffff8;
+}
+
+h1, h2 {
+    margin-top: 60px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+img {
+    max-width: 400px;
+}
+
+/* Make code blocks scroll horizontally */
+pre code {
+    white-space: pre;
+    word-wrap: normal;
+}
+
+.container {
+    max-width: 700px;
+}
+
+.large-img {
+    max-width: 100%;
+}
+
+@media (max-width: 480px) {
+
+    img {
+        max-width: 100%;
+    }
+
+}

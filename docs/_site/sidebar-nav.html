@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/swift-macos/styles.css">
+    <link rel="stylesheet" href="/swift-macos/syntax.css">
+
+    <title>Swift macOS</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+            <h1>Sidebar navigation</h1>
+            <p>Posted on October 05, 2019</p>
+            <hr>
+            <br>
+            <p>A navigation view contains a master and detail view. In this example, the master view displays a list of fruits in the sidebar. The detail view determines which view to display based on which item is selected in the sidebar.</p>
+
+<p><img src="/swift-macos/images/sidebar.png" alt="sidebar" /></p>
+
+<p>The content view of the window is a navigation view that contains the master and detail views. An enum defines the state of the sidebar list selection and is used to determine which view is displayed by the detail view. UserDefaults stores the selection so that the detail view displays the last viewed item when the app is relaunched.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// ContentView.swift</span>
+
+<span class="kd">import</span> <span class="kt">SwiftUI</span>
+
+<span class="kd">struct</span> <span class="kt">ContentView</span><span class="p">:</span> <span class="kt">View</span> <span class="p">{</span>
+
+    <span class="kd">@State</span> <span class="kd">private</span> <span class="k">var</span> <span class="nv">selectedFruit</span><span class="p">:</span> <span class="kt">Fruit</span><span class="p">?</span>
+
+    <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="kd">some</span> <span class="kt">View</span> <span class="p">{</span>
+        <span class="kt">NavigationView</span> <span class="p">{</span>
+            <span class="kt">NavigationMaster</span><span class="p">(</span><span class="nv">selectedFruit</span><span class="p">:</span> <span class="err">$</span><span class="n">selectedFruit</span><span class="p">)</span>
+            <span class="kt">NavigationDetail</span><span class="p">(</span><span class="nv">fruit</span><span class="p">:</span> <span class="err">$</span><span class="n">selectedFruit</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// NavigationMaster.swift</span>
+
+<span class="kd">struct</span> <span class="kt">NavigationMaster</span><span class="p">:</span> <span class="kt">View</span> <span class="p">{</span>
+
+    <span class="kd">@Binding</span> <span class="k">var</span> <span class="nv">selectedFruit</span><span class="p">:</span> <span class="kt">Fruit</span><span class="p">?</span>
+    <span class="kd">private</span> <span class="k">let</span> <span class="nv">defaultFruit</span> <span class="o">=</span> <span class="kt">Fruit</span><span class="p">(</span><span class="nv">rawValue</span><span class="p">:</span> <span class="kt">UserDefaults</span><span class="o">.</span><span class="n">standard</span><span class="o">.</span><span class="nf">object</span><span class="p">(</span><span class="nv">forKey</span><span class="p">:</span> <span class="s">"SelectedFruit"</span><span class="p">)</span> <span class="k">as?</span> <span class="kt">String</span> <span class="p">??</span> <span class="s">"🥭 Mango"</span><span class="p">)</span>
+
+    <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="kd">some</span> <span class="kt">View</span> <span class="p">{</span>
+        <span class="kt">List</span><span class="p">(</span><span class="kt">Fruit</span><span class="o">.</span><span class="n">allCases</span><span class="p">,</span> <span class="nv">id</span><span class="p">:</span> <span class="p">\</span><span class="o">.</span><span class="k">self</span><span class="p">,</span> <span class="nv">selection</span><span class="p">:</span> <span class="err">$</span><span class="n">selectedFruit</span><span class="p">)</span> <span class="p">{</span> <span class="n">fruit</span> <span class="k">in</span>
+            <span class="kt">Text</span><span class="p">(</span><span class="s">"</span><span class="se">\(</span><span class="n">fruit</span><span class="o">.</span><span class="n">rawValue</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="o">.</span><span class="nf">listStyle</span><span class="p">(</span><span class="kt">SidebarListStyle</span><span class="p">())</span>
+        <span class="o">.</span><span class="n">onAppear</span> <span class="p">{</span>
+            <span class="k">self</span><span class="o">.</span><span class="n">selectedFruit</span> <span class="o">=</span> <span class="k">self</span><span class="o">.</span><span class="n">defaultFruit</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// NavigationDetail.swift</span>
+
+<span class="kd">struct</span> <span class="kt">NavigationDetail</span><span class="p">:</span> <span class="kt">View</span> <span class="p">{</span>
+
+    <span class="kd">@Binding</span> <span class="k">var</span> <span class="nv">fruit</span><span class="p">:</span> <span class="kt">Fruit</span><span class="p">?</span>
+
+    <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="kd">some</span> <span class="kt">View</span> <span class="p">{</span>
+
+        <span class="k">switch</span> <span class="n">fruit</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="o">.</span><span class="nv">apple</span><span class="p">:</span>
+            <span class="kt">UserDefaults</span><span class="o">.</span><span class="n">standard</span><span class="o">.</span><span class="nf">set</span><span class="p">(</span><span class="kt">Fruit</span><span class="o">.</span><span class="n">apple</span><span class="o">.</span><span class="n">rawValue</span><span class="p">,</span> <span class="nv">forKey</span><span class="p">:</span> <span class="s">"SelectedFruit"</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kt">AnyView</span><span class="p">(</span><span class="kt">AppleView</span><span class="p">())</span>
+        <span class="k">case</span> <span class="o">.</span><span class="nv">coconut</span><span class="p">:</span>
+            <span class="kt">UserDefaults</span><span class="o">.</span><span class="n">standard</span><span class="o">.</span><span class="nf">set</span><span class="p">(</span><span class="kt">Fruit</span><span class="o">.</span><span class="n">coconut</span><span class="o">.</span><span class="n">rawValue</span><span class="p">,</span> <span class="nv">forKey</span><span class="p">:</span> <span class="s">"SelectedFruit"</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kt">AnyView</span><span class="p">(</span><span class="kt">CoconutView</span><span class="p">())</span>
+        <span class="k">case</span> <span class="o">.</span><span class="nv">mango</span><span class="p">:</span>
+            <span class="kt">UserDefaults</span><span class="o">.</span><span class="n">standard</span><span class="o">.</span><span class="nf">set</span><span class="p">(</span><span class="kt">Fruit</span><span class="o">.</span><span class="n">mango</span><span class="o">.</span><span class="n">rawValue</span><span class="p">,</span> <span class="nv">forKey</span><span class="p">:</span> <span class="s">"SelectedFruit"</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kt">AnyView</span><span class="p">(</span><span class="kt">MangoView</span><span class="p">())</span>
+        <span class="k">case</span> <span class="o">.</span><span class="nv">kiwi</span><span class="p">:</span>
+            <span class="kt">UserDefaults</span><span class="o">.</span><span class="n">standard</span><span class="o">.</span><span class="nf">set</span><span class="p">(</span><span class="kt">Fruit</span><span class="o">.</span><span class="n">kiwi</span><span class="o">.</span><span class="n">rawValue</span><span class="p">,</span> <span class="nv">forKey</span><span class="p">:</span> <span class="s">"SelectedFruit"</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kt">AnyView</span><span class="p">(</span><span class="kt">KiwiView</span><span class="p">())</span>
+        <span class="k">case</span> <span class="o">.</span><span class="nv">none</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kt">AnyView</span><span class="p">(</span><span class="kt">Text</span><span class="p">(</span><span class="s">"Default View"</span><span class="p">)</span><span class="o">.</span><span class="nf">frame</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">200</span><span class="p">))</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Fruit.swift</span>
+
+<span class="kd">enum</span> <span class="kt">Fruit</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="kt">CaseIterable</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="n">apple</span> <span class="o">=</span> <span class="s">"🍎 Apple"</span>
+    <span class="k">case</span> <span class="n">coconut</span> <span class="o">=</span> <span class="s">"🥥 Coconut"</span>
+    <span class="k">case</span> <span class="n">mango</span> <span class="o">=</span> <span class="s">"🥭 Mango"</span>
+    <span class="k">case</span> <span class="n">kiwi</span> <span class="o">=</span> <span class="s">"🥝 Kiwi"</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>To properly render the entire navigation view in the window, the frame is specified for each detail view. Note that each detail view is the same size. If the views are different sizes the window will try to adjust its size accordingly. Unfortunately, macOS windows animating size changes with SwiftUI is buggy so in this example I use a scroll view for large detail views.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// AppleView.swift</span>
+
+<span class="kd">struct</span> <span class="kt">AppleView</span><span class="p">:</span> <span class="kt">View</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="kd">some</span> <span class="kt">View</span> <span class="p">{</span>
+        <span class="kt">VStack</span> <span class="p">{</span>
+            <span class="kt">Text</span><span class="p">(</span><span class="s">"Apple View"</span><span class="p">)</span><span class="o">.</span><span class="nf">font</span><span class="p">(</span><span class="o">.</span><span class="n">largeTitle</span><span class="p">)</span>
+            <span class="kt">Text</span><span class="p">(</span><span class="s">"🍎"</span><span class="p">)</span><span class="o">.</span><span class="nf">font</span><span class="p">(</span><span class="o">.</span><span class="n">title</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="o">.</span><span class="nf">frame</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">200</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// CoconutView.swift</span>
+
+<span class="kd">struct</span> <span class="kt">CoconutView</span><span class="p">:</span> <span class="kt">View</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="kd">some</span> <span class="kt">View</span> <span class="p">{</span>
+        <span class="kt">VStack</span> <span class="p">{</span>
+            <span class="kt">Text</span><span class="p">(</span><span class="s">"Coconut View"</span><span class="p">)</span><span class="o">.</span><span class="nf">font</span><span class="p">(</span><span class="o">.</span><span class="n">largeTitle</span><span class="p">)</span>
+            <span class="kt">Text</span><span class="p">(</span><span class="s">"🥥"</span><span class="p">)</span><span class="o">.</span><span class="nf">font</span><span class="p">(</span><span class="o">.</span><span class="n">title</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="o">.</span><span class="nf">frame</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">200</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Mango.swift</span>
+
+<span class="kd">struct</span> <span class="kt">MangoView</span><span class="p">:</span> <span class="kt">View</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="kd">some</span> <span class="kt">View</span> <span class="p">{</span>
+        <span class="kt">ScrollView</span><span class="p">(</span><span class="o">.</span><span class="n">vertical</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">VStack</span> <span class="p">{</span>
+                <span class="kt">Text</span><span class="p">(</span><span class="s">"Mango View"</span><span class="p">)</span><span class="o">.</span><span class="nf">font</span><span class="p">(</span><span class="o">.</span><span class="n">largeTitle</span><span class="p">)</span>
+                <span class="kt">Text</span><span class="p">(</span><span class="s">"🥭"</span><span class="p">)</span><span class="o">.</span><span class="nf">font</span><span class="p">(</span><span class="o">.</span><span class="n">largeTitle</span><span class="p">)</span>
+                <span class="kt">ForEach</span><span class="p">(</span><span class="mi">1</span><span class="o">..&lt;</span><span class="mi">20</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="kt">Text</span><span class="p">(</span><span class="s">"Mango </span><span class="se">\(</span><span class="nv">$0</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="o">.</span><span class="nf">frame</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">300</span><span class="p">)</span>
+            <span class="o">.</span><span class="nf">padding</span><span class="p">(</span><span class="o">.</span><span class="n">vertical</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+            <br>
+            <hr>
+            <p><a href="/swift-macos/"><b>Back</b></a></p>
+            <br>
+        </div>
+    </div>
+
+    <div class="row my-5">
+        <div class="col-md">
+            <p class="text-center small">Gavin Wiggins © 2019</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

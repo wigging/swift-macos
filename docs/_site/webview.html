@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/swift-macos/styles.css">
+    <link rel="stylesheet" href="/swift-macos/syntax.css">
+
+    <title>Swift macOS</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+            <h1>Web view</h1>
+            <p>Posted on March 10, 2020</p>
+            <hr>
+            <br>
+            <p>A WKWebView from the WebKit framework is used to display web content in a window. The web view can be wrapped with NSViewRepresentable to make it usable with SwiftUI. Content for the web view can be loaded using a website url, a string representing HTML content, or by loading an HTML file.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">import</span> <span class="kt">SwiftUI</span>
+<span class="kd">import</span> <span class="kt">WebKit</span>
+
+<span class="c1">// A view representing a WKWebView for displaying a webpage using a url.</span>
+
+<span class="kd">struct</span> <span class="kt">WebView</span><span class="p">:</span> <span class="kt">NSViewRepresentable</span> <span class="p">{</span>
+
+    <span class="k">let</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">String</span>
+
+    <span class="kd">func</span> <span class="nf">makeNSView</span><span class="p">(</span><span class="nv">context</span><span class="p">:</span> <span class="kt">Context</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">WKWebView</span> <span class="p">{</span>
+
+        <span class="k">guard</span> <span class="k">let</span> <span class="nv">url</span> <span class="o">=</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="k">self</span><span class="o">.</span><span class="n">url</span><span class="p">)</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="kt">WKWebView</span><span class="p">()</span>
+        <span class="p">}</span>
+
+        <span class="k">let</span> <span class="nv">webview</span> <span class="o">=</span> <span class="kt">WKWebView</span><span class="p">()</span>
+        <span class="k">let</span> <span class="nv">request</span> <span class="o">=</span> <span class="kt">URLRequest</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="n">url</span><span class="p">)</span>
+        <span class="n">webview</span><span class="o">.</span><span class="nf">load</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">webview</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">updateNSView</span><span class="p">(</span><span class="n">_</span> <span class="nv">nsView</span><span class="p">:</span> <span class="kt">WKWebView</span><span class="p">,</span> <span class="nv">context</span><span class="p">:</span> <span class="kt">Context</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// A view representing a WKWebView for displaying HTML content.</span>
+
+<span class="kd">struct</span> <span class="kt">WebView</span><span class="p">:</span> <span class="kt">NSViewRepresentable</span> <span class="p">{</span>
+
+    <span class="k">let</span> <span class="nv">content</span><span class="p">:</span> <span class="kt">String</span>
+
+    <span class="kd">func</span> <span class="nf">makeNSView</span><span class="p">(</span><span class="nv">context</span><span class="p">:</span> <span class="kt">Context</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">WKWebView</span> <span class="p">{</span>
+
+        <span class="k">let</span> <span class="nv">webview</span> <span class="o">=</span> <span class="kt">WKWebView</span><span class="p">()</span>
+        <span class="n">webview</span><span class="o">.</span><span class="nf">loadHTMLString</span><span class="p">(</span><span class="k">self</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="nv">baseURL</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">webview</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">updateNSView</span><span class="p">(</span><span class="n">_</span> <span class="nv">nsView</span><span class="p">:</span> <span class="kt">WKWebView</span><span class="p">,</span> <span class="nv">context</span><span class="p">:</span> <span class="kt">Context</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// A view representing a WKWebView for displaying an HTML file.</span>
+
+<span class="kd">struct</span> <span class="kt">WebView</span><span class="p">:</span> <span class="kt">NSViewRepresentable</span> <span class="p">{</span>
+
+    <span class="k">let</span> <span class="nv">file</span><span class="p">:</span> <span class="kt">String</span>
+
+    <span class="kd">func</span> <span class="nf">makeNSView</span><span class="p">(</span><span class="nv">context</span><span class="p">:</span> <span class="kt">Context</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">WKWebView</span> <span class="p">{</span>
+
+        <span class="k">guard</span> <span class="k">let</span> <span class="nv">url</span> <span class="o">=</span> <span class="kt">Bundle</span><span class="o">.</span><span class="n">main</span><span class="o">.</span><span class="nf">url</span><span class="p">(</span><span class="nv">forResource</span><span class="p">:</span> <span class="k">self</span><span class="o">.</span><span class="n">file</span><span class="p">,</span> <span class="nv">withExtension</span><span class="p">:</span> <span class="s">"html"</span><span class="p">)</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="kt">WKWebView</span><span class="p">()</span>
+        <span class="p">}</span>
+
+        <span class="k">let</span> <span class="nv">webview</span> <span class="o">=</span> <span class="kt">WKWebView</span><span class="p">()</span>
+        <span class="n">webview</span><span class="o">.</span><span class="nf">loadFileURL</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="nv">allowingReadAccessTo</span><span class="p">:</span> <span class="n">url</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">webview</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">updateNSView</span><span class="p">(</span><span class="n">_</span> <span class="nv">nsView</span><span class="p">:</span> <span class="kt">WKWebView</span><span class="p">,</span> <span class="nv">context</span><span class="p">:</span> <span class="kt">Context</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>For SwiftUI to properly display the WebView, it must be within a GeometryReader and ScrollView.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">import</span> <span class="kt">SwiftUI</span>
+
+<span class="kd">struct</span> <span class="kt">ContentView</span><span class="p">:</span> <span class="kt">View</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="kd">some</span> <span class="kt">View</span> <span class="p">{</span>
+        <span class="kt">VStack</span> <span class="p">{</span>
+            <span class="kt">GeometryReader</span> <span class="p">{</span> <span class="n">geom</span> <span class="k">in</span>
+                <span class="kt">ScrollView</span> <span class="p">{</span>
+                    <span class="kt">WebView</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://www.apple.com"</span><span class="p">)</span>
+                        <span class="o">.</span><span class="nf">frame</span><span class="p">(</span><span class="nv">height</span><span class="p">:</span> <span class="n">geom</span><span class="o">.</span><span class="n">size</span><span class="o">.</span><span class="n">height</span><span class="p">)</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="kt">Text</span><span class="p">(</span><span class="s">"Apple's website"</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="o">.</span><span class="nf">padding</span><span class="p">()</span>
+        <span class="o">.</span><span class="nf">frame</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">480</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">600</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p><img src="/swift-macos/images/web-view.png" alt="web view" /></p>
+
+            <br>
+            <hr>
+            <p><a href="/swift-macos/"><b>Back</b></a></p>
+            <br>
+        </div>
+    </div>
+
+    <div class="row my-5">
+        <div class="col-md">
+            <p class="text-center small">Gavin Wiggins © 2020</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

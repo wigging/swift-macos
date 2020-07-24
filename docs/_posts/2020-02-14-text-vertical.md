@@ -1,5 +1,6 @@
 ---
 title: Text vertical
+category: Text
 tags: Text
 image: text-vertical.png
 ---

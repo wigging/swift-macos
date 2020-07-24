@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/swift-macos/styles.css">
+    <link rel="stylesheet" href="/swift-macos/syntax.css">
+
+    <title>Swift macOS</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+            <h1>TextField</h1>
+            <p>Posted on December 05, 2019</p>
+            <hr>
+            <br>
+            <p>The TextField structure is a control that provides an editable text field. Various modifiers are available to customize the appearance and text alignment. Actions can be performed when editing begins and ends for the text field or when the return key is pressed.</p>
+
+<p><img src="/swift-macos/images/text-field.png" alt="text field" /></p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">import</span> <span class="kt">SwiftUI</span>
+
+<span class="kd">struct</span> <span class="kt">ContentView</span><span class="p">:</span> <span class="kt">View</span> <span class="p">{</span>
+    <span class="kd">@State</span> <span class="kd">private</span> <span class="k">var</span> <span class="nv">text1</span> <span class="o">=</span> <span class="s">""</span>
+
+    <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="kd">some</span> <span class="kt">View</span> <span class="p">{</span>
+        <span class="kt">VStack</span> <span class="p">{</span>
+            <span class="kt">TextField</span><span class="p">(</span><span class="s">"Example 1"</span><span class="p">,</span> <span class="nv">text</span><span class="p">:</span> <span class="err">$</span><span class="n">text1</span><span class="p">)</span>
+
+            <span class="kt">TextField</span><span class="p">(</span><span class="s">"Example 2"</span><span class="p">,</span> <span class="nv">text</span><span class="p">:</span> <span class="err">$</span><span class="n">text1</span><span class="p">)</span>
+                <span class="o">.</span><span class="nf">fixedSize</span><span class="p">()</span>
+
+            <span class="kt">TextField</span><span class="p">(</span><span class="s">"Example 3"</span><span class="p">,</span> <span class="nv">text</span><span class="p">:</span> <span class="err">$</span><span class="n">text1</span><span class="p">)</span>
+                <span class="o">.</span><span class="nf">textFieldStyle</span><span class="p">(</span><span class="kt">RoundedBorderTextFieldStyle</span><span class="p">())</span>
+
+            <span class="kt">TextField</span><span class="p">(</span><span class="s">"Example 4"</span><span class="p">,</span> <span class="nv">text</span><span class="p">:</span> <span class="err">$</span><span class="n">text1</span><span class="p">)</span>
+                <span class="o">.</span><span class="nf">multilineTextAlignment</span><span class="p">(</span><span class="o">.</span><span class="n">center</span><span class="p">)</span>
+
+            <span class="kt">TextField</span><span class="p">(</span><span class="s">"Example 5"</span><span class="p">,</span> <span class="nv">text</span><span class="p">:</span> <span class="err">$</span><span class="n">text1</span><span class="p">)</span>
+                <span class="o">.</span><span class="nf">multilineTextAlignment</span><span class="p">(</span><span class="o">.</span><span class="n">trailing</span><span class="p">)</span>
+
+            <span class="kt">TextField</span><span class="p">(</span><span class="s">"Example 6"</span><span class="p">,</span> <span class="nv">text</span><span class="p">:</span> <span class="err">$</span><span class="n">text1</span><span class="p">)</span>
+                <span class="o">.</span><span class="nf">foregroundColor</span><span class="p">(</span><span class="o">.</span><span class="n">red</span><span class="p">)</span>
+
+            <span class="kt">TextField</span><span class="p">(</span><span class="s">"Example 7"</span><span class="p">,</span> <span class="nv">text</span><span class="p">:</span> <span class="err">$</span><span class="n">text1</span><span class="p">,</span> <span class="nv">onEditingChanged</span><span class="p">:</span> <span class="p">{</span> <span class="n">editing</span> <span class="k">in</span>
+                <span class="k">if</span> <span class="n">editing</span> <span class="p">{</span>
+                    <span class="nf">print</span><span class="p">(</span><span class="s">"is editing"</span><span class="p">)</span>
+                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                    <span class="nf">print</span><span class="p">(</span><span class="s">"not editing"</span><span class="p">)</span>
+                <span class="p">}</span>
+            <span class="p">})</span>
+
+            <span class="kt">TextField</span><span class="p">(</span><span class="s">"Example 8"</span><span class="p">,</span> <span class="nv">text</span><span class="p">:</span> <span class="err">$</span><span class="n">text1</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nf">print</span><span class="p">(</span><span class="s">"on commit"</span><span class="p">)</span>
+            <span class="p">}</span>
+
+        <span class="p">}</span>
+        <span class="o">.</span><span class="nf">padding</span><span class="p">()</span>
+        <span class="o">.</span><span class="nf">frame</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">480</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">300</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+            <br>
+            <hr>
+            <p><a href="/swift-macos/"><b>Back</b></a></p>
+            <br>
+        </div>
+    </div>
+
+    <div class="row my-5">
+        <div class="col-md">
+            <p class="text-center small">Gavin Wiggins © 2019</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

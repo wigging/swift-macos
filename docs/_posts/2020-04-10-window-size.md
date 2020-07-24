@@ -1,5 +1,6 @@
 ---
 title: Window size
+category: Windows
 tags: NSWindow
 image: window-size.png
 ---

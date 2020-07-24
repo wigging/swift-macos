@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/swift-macos/styles.css">
+    <link rel="stylesheet" href="/swift-macos/syntax.css">
+
+    <title>Swift macOS</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+            <h1>Application should reopen window</h1>
+            <p>Posted on June 17, 2020</p>
+            <hr>
+            <br>
+            <p>A Mac app created by the default macOS Xcode template will release the main window when it is closed. This makes it impossible to reopen the window unless certain features are added to the app.</p>
+
+<p><img src="/swift-macos/images/app-reopen.png" alt="app reopen" /></p>
+
+<p>In the AppDelegate, prevent the window from being released by setting the isReleasedWhenClosed property to false.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">applicationDidFinishLaunching</span><span class="p">(</span><span class="n">_</span> <span class="nv">aNotification</span><span class="p">:</span> <span class="kt">Notification</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// ...</span>
+
+    <span class="c1">// Prevent window from being released once it's closed.</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">isReleasedWhenClosed</span> <span class="o">=</span> <span class="kc">false</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Next, use the applicationShouldHandleReopen method in the AppDelegate to handle the reopening of the main app window. You should now be able to reopen the window by clicking the app’s Dock icon.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">func</span> <span class="nf">applicationShouldHandleReopen</span><span class="p">(</span><span class="n">_</span> <span class="nv">sender</span><span class="p">:</span> <span class="kt">NSApplication</span><span class="p">,</span> <span class="n">hasVisibleWindows</span> <span class="nv">flag</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="n">flag</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"hasVisibleWindows is `true`"</span><span class="p">)</span>
+        <span class="n">window</span><span class="o">.</span><span class="nf">orderFront</span><span class="p">(</span><span class="k">self</span><span class="p">)</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"hasVisibleWindows is `false`"</span><span class="p">)</span>
+        <span class="n">window</span><span class="o">.</span><span class="nf">makeKeyAndOrderFront</span><span class="p">(</span><span class="k">self</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="kc">true</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Another issue is the main app window is still released if the window is closed then another application is selected (becomes active). To prevent this, in the Info.plist file, set <code class="language-plaintext highlighter-rouge">Application can be killed to reclaim memory or other extraordinary circumstances</code> to <code class="language-plaintext highlighter-rouge">NO</code>. This is the same as setting <code class="language-plaintext highlighter-rouge">NSSupportsAutomaticTermination</code> to <code class="language-plaintext highlighter-rouge">NO</code> in the Info.plist file.</p>
+
+            <br>
+            <hr>
+            <p><a href="/swift-macos/"><b>Back</b></a></p>
+            <br>
+        </div>
+    </div>
+
+    <div class="row my-5">
+        <div class="col-md">
+            <p class="text-center small">Gavin Wiggins © 2020</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
