@@ -1,7 +1,7 @@
 ---
 title: Scroll view
 category: Views
-tags: [ScrollView]
+tags: ScrollView
 ---
 
 A scroll view displays its content within a scrollable area of the window.
