@@ -16,6 +16,10 @@ h2 {
     margin-bottom: 20px;
 }
 
+hr {
+    background-color: #ccc;
+}
+
 img {
     max-width: 400px;
 }

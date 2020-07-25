@@ -38,56 +38,30 @@
     </div>
 
     <div class="row">
+        <!-- x represents middle index of categories array  -->
+        {% assign x = site.categories | size | divided_by: 2 | plus: 1 %}
+        {% assign categories = site.categories | sort %}
+
         <div class="col-md">
-            <h5>Application</h5>
+            {% for category in categories limit:x %}
+            <h5>{{ category[0] }}</h5>
             <ul>
-            {% for post in site.categories.Application %}
+            {% for post in category[1] %}
                 <li><a href="/swift-macos{{ post.url }}">{{ post.title }}</a></li>
             {% endfor %}
             </ul>
-
-            <h5>Controls</h5>
-            <ul>
-            {% for post in site.categories.Controls %}
-                <li><a href="/swift-macos{{ post.url }}">{{ post.title }}</a></li>
             {% endfor %}
-            </ul>
-
-            <h5>Navigation</h5>
-            <ul>
-            {% for post in site.categories.Navigation %}
-                <li><a href="/swift-macos{{ post.url }}">{{ post.title }}</a></li>
-            {% endfor %}
-            </ul>
-
-            <h5>Text</h5>
-            <ul>
-            {% for post in site.categories.Text %}
-                <li><a href="/swift-macos{{ post.url }}">{{ post.title }}</a></li>
-            {% endfor %}
-            </ul>
         </div>
+
         <div class="col-md">
-            <h5>Views</h5>
+            {% for category in categories offset:x %}
+            <h5>{{ category[0] }}</h5>
             <ul>
-            {% for post in site.categories.Views %}
+            {% for post in category[1] %}
                 <li><a href="/swift-macos{{ post.url }}">{{ post.title }}</a></li>
             {% endfor %}
             </ul>
-
-            <h5>Windows</h5>
-            <ul>
-            {% for post in site.categories.Windows %}
-                <li><a href="/swift-macos{{ post.url }}">{{ post.title }}</a></li>
             {% endfor %}
-            </ul>
-
-            <h5>Xcode</h5>
-            <ul>
-            {% for post in site.categories.Xcode %}
-                <li><a href="/swift-macos{{ post.url }}">{{ post.title }}</a></li>
-            {% endfor %}
-            </ul>
         </div>
     </div>
 
@@ -101,14 +75,28 @@
     </div>
 
     <div class="row">
+        <!-- y represents middle index of tags array  -->
+        {% assign y = site.tags | size | divided_by: 2 | plus: 1 %}
+        {% assign tags = site.tags | sort %}
+
         <div class="col-md">
-            {% assign tags = site.tags | sort %}
-            {% for tag in tags %}
+            {% for tag in tags limit:y %}
             <h5>{{ tag[0] }}</h5>
             <ul>
-                {% for post in tag[1] %}
-                    <li><a href="/swift-macos{{ post.url }}">{{ post.title }}</a></li>
-                {% endfor %}
+            {% for post in tag[1] %}
+                <li><a href="/swift-macos{{ post.url }}">{{ post.title }}</a></li>
+            {% endfor %}
+            </ul>
+            {% endfor %}
+        </div>
+
+        <div class="col-md">
+            {% for tag in tags offset:y %}
+            <h5>{{ tag[0] }}</h5>
+            <ul>
+            {% for post in tag[1] %}
+                <li><a href="/swift-macos{{ post.url }}">{{ post.title }}</a></li>
+            {% endfor %}
             </ul>
             {% endfor %}
         </div>
