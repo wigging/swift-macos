@@ -39,15 +39,55 @@
 
     <div class="row">
         <div class="col-md">
-            {% assign categories = site.categories | sort %}
-            {% for cat in categories %}
-            <h5>{{ cat[0] }}</h5>
+            <h5>Application</h5>
             <ul>
-               {% for post in cat[1] %}
-                   <li><a href="/swift-macos{{ post.url }}">{{ post.title }}</a></li>
-               {% endfor %}
-            </ul>
+            {% for post in site.categories.Application %}
+                <li><a href="/swift-macos{{ post.url }}">{{ post.title }}</a></li>
             {% endfor %}
+            </ul>
+
+            <h5>Controls</h5>
+            <ul>
+            {% for post in site.categories.Controls %}
+                <li><a href="/swift-macos{{ post.url }}">{{ post.title }}</a></li>
+            {% endfor %}
+            </ul>
+
+            <h5>Navigation</h5>
+            <ul>
+            {% for post in site.categories.Navigation %}
+                <li><a href="/swift-macos{{ post.url }}">{{ post.title }}</a></li>
+            {% endfor %}
+            </ul>
+
+            <h5>Text</h5>
+            <ul>
+            {% for post in site.categories.Text %}
+                <li><a href="/swift-macos{{ post.url }}">{{ post.title }}</a></li>
+            {% endfor %}
+            </ul>
+        </div>
+        <div class="col-md">
+            <h5>Views</h5>
+            <ul>
+            {% for post in site.categories.Views %}
+                <li><a href="/swift-macos{{ post.url }}">{{ post.title }}</a></li>
+            {% endfor %}
+            </ul>
+
+            <h5>Windows</h5>
+            <ul>
+            {% for post in site.categories.Windows %}
+                <li><a href="/swift-macos{{ post.url }}">{{ post.title }}</a></li>
+            {% endfor %}
+            </ul>
+
+            <h5>Xcode</h5>
+            <ul>
+            {% for post in site.categories.Xcode %}
+                <li><a href="/swift-macos{{ post.url }}">{{ post.title }}</a></li>
+            {% endfor %}
+            </ul>
         </div>
     </div>
 
