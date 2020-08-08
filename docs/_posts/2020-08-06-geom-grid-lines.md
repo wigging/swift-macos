@@ -1,5 +1,5 @@
 ---
-title: Use GeometryReader to Create Grid Lines
+title: GeometryReader and Grid Lines
 category: Drawing and Animation
 tags: GeometryReader
 ---
