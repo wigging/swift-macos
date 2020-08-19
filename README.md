@@ -4,9 +4,13 @@
 
 There are plenty of books, videos, and online resources for developing iOS apps. Despite the fact that iPhone and iPad apps require a Mac for code development, there is very little information about actually creating native Mac applications. The examples in this repository demonstrate various aspects of Mac app development using the latest versions of Swift and SwiftUI. Hopefully the examples will provide a useful resource for Mac developers.
 
-**Examples:** Xcode projects and Playgrounds are located in the **code** folder.
+## Code
 
-**Website:** https://gavinw.me/swift-macos
+Code examples are available as Xcode projects and Playgrounds located in the **code** folder.
+
+## Website
+
+Documentation for the example code is available at https://gavinw.me/swift-macos.
 
 ## Building the website
 
