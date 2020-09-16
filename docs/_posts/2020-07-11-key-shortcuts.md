@@ -144,6 +144,9 @@ Command ⌘ + Option ⌥ + 0
 Shift ⇧ + Command ⌘ + Y
 : Hide or show the debugging area.
 
+Command ⌘ + Option ⌥ + E
+: Select the first instance of some text. Then use shortcut to select next occurance of that text.
+
 ## macOS shortcuts
 
 Some of these shortcuts do not apply to Macs with the Touch ID sensor. These shortcuts are denoted by an * .
