@@ -6,29 +6,28 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="/swift-macos/styles.css">
 
     <title>Swift macOS</title>
 </head>
 <body>
 <div class="container">
+
+    <!---------------------------- Banner ---------------------------->
+
     <div class="row">
         <div class="col-md">
             <h1>Swift Programming for macOS</h1>
-
             <hr>
             <br>
-
             <h3>🍎 🖥</h3>
-
             <p>There are plenty of books, videos, and online resources for developing iOS apps. Despite the fact that iPhone and iPad apps require a Mac for code development, there is little information about actually creating native Mac applications. The articles provided below demonstrate various aspects of Mac app development using the latest versions of Swift and SwiftUI. Hopefully these examples will provide a useful resource for Mac developers.</p>
-
             <p>GitHub repository at <a href="https://github.com/wigging/swift-macos"><b>wigging/swift-macos</b></a>.</p>
         </div>
     </div>
 
-    <!-- Contents section -->
+    <!---------------------------- Content ---------------------------->
 
     <div class="row">
         <div class="col-md">
@@ -39,72 +38,59 @@
     </div>
 
     <div class="row">
-        <!-- x represents middle index of categories array  -->
-        {% assign x = site.categories | size | divided_by: 2 | plus: 1 %}
-        {% assign categories = site.categories | sort %}
+
+        <!-- Column 1 -->
 
         <div class="col-md">
-            {% for category in categories limit:x %}
-            <h5>{{ category[0] }}</h5>
+            <h5>Application</h5>
             <ul>
-            {% for post in category[1] %}
-                <li><a href="/swift-macos{{ post.url }}">{{ post.title }}</a></li>
+            {% for article in site.application %}
+                <li><a href="/swift-macos{{ article.url }}">{{ article.title }}</a></li>
             {% endfor %}
             </ul>
+
+            <h5>macOS and Xcode</h5>
+            <ul>
+            {% for article in site.macos_xcode %}
+                <li><a href="/swift-macos{{ article.url }}">{{ article.title }}</a></li>
             {% endfor %}
+            </ul>
+
+            <h5>Navigation</h5>
+            <ul>
+            {% for article in site.navigation %}
+                <li><a href="/swift-macos{{ article.url }}">{{ article.title }}</a></li>
+            {% endfor %}
+            </ul>
+
+            <h5>Types</h5>
+            <ul>
+            {% for article in site.types %}
+                <li><a href="/swift-macos{{ article.url }}">{{ article.title }}</a></li>
+            {% endfor %}
+            </ul>
         </div>
 
+        <!-- Column 2 -->
+
         <div class="col-md">
-            {% for category in categories offset:x %}
-            <h5>{{ category[0] }}</h5>
+            <h5>Views and Controls</h5>
             <ul>
-            {% for post in category[1] %}
-                <li><a href="/swift-macos{{ post.url }}">{{ post.title }}</a></li>
+            {% for article in site.views_controls %}
+                <li><a href="/swift-macos{{ article.url }}">{{ article.title }}</a></li>
             {% endfor %}
             </ul>
+
+            <h5>Windows</h5>
+            <ul>
+            {% for article in site.windows %}
+                <li><a href="/swift-macos{{ article.url }}">{{ article.title }}</a></li>
             {% endfor %}
+            </ul>
         </div>
     </div>
 
-    <!-- API index section -->
-
-    <div class="row">
-        <div class="col-md">
-            <h4>API index</h4>
-            <hr>
-            <br>
-        </div>
-    </div>
-
-    <div class="row">
-        <!-- y represents middle index of tags array  -->
-        {% assign y = site.tags | size | divided_by: 2 | plus: 1 %}
-        {% assign tags = site.tags | sort %}
-
-        <div class="col-md">
-            {% for tag in tags limit:y %}
-            <h5>{{ tag[0] }}</h5>
-            <ul>
-            {% for post in tag[1] %}
-                <li><a href="/swift-macos{{ post.url }}">{{ post.title }}</a></li>
-            {% endfor %}
-            </ul>
-            {% endfor %}
-        </div>
-
-        <div class="col-md">
-            {% for tag in tags offset:y %}
-            <h5>{{ tag[0] }}</h5>
-            <ul>
-            {% for post in tag[1] %}
-                <li><a href="/swift-macos{{ post.url }}">{{ post.title }}</a></li>
-            {% endfor %}
-            </ul>
-            {% endfor %}
-        </div>
-    </div>
-
-    <!-- Footer section -->
+    <!---------------------------- Footer ---------------------------->
 
     <div class="row my-5">
         <div class="col-md">

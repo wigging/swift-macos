@@ -1,7 +1,7 @@
 ---
 title: Application should reopen window
-category: Application
-tags: [NSApplicationDelegate, NSApplication]
+slug: app-reopen
+date: 2020-06-17
 ---
 
 A Mac app created by the default macOS Xcode template will release the main window when it is closed. This makes it impossible to reopen the window unless certain features are added to the app.

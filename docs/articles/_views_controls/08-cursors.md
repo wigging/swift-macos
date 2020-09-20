@@ -1,7 +1,7 @@
 ---
 title: Cursors
-category: Controls
-tags: [NSCursor, Button]
+slug: cursors
+date: 2020-06-07
 ---
 
 The mouse pointer (or cursor) is represented by an arrow on the screen. Different cursors are available in macOS to indicate actions that the user can take with the mouse.

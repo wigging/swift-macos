@@ -1,7 +1,7 @@
 ---
 title: Scroll view
-category: Views
-tags: ScrollView
+slug: scrollview
+date: 2020-07-23
 ---
 
 A scroll view displays its content within a scrollable area of the window.

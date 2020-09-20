@@ -1,7 +1,7 @@
 ---
 title: PreferenceKey View Width
-category: View Preferences
-tags: PreferenceKey
+slug: preferencekey
+date: 2020-07-30
 ---
 
 The PreferenceKey protocol can be implemented to ensure the width of two views stay the same. For example, in the image below, the red bottom rectangle will remain the same width as the orange rectangle when the window is resized.

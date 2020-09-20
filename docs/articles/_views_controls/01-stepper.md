@@ -1,7 +1,7 @@
 ---
 title: Stepper control
-category: Controls
-tags: Stepper
+slug: stepper
+date: 2019-11-23
 ---
 
 The stepper control increments and decrements a value. A closed range can be used to limit the applicable stepper values.

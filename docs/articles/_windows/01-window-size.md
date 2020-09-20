@@ -1,7 +1,7 @@
 ---
 title: Window size
-category: Windows
-tags: NSWindow
+slug: window-size
+date: 2020-04-10
 ---
 
 The window size is defined by the frame size of the containing view. In this example the VStack frame is set to a width of 500 and height of 300 which makes the window width 500 and height 300.

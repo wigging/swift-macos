@@ -1,7 +1,7 @@
 ---
 title: Strides
-category: Collections
-tags: Array
+slug: strides
+date: 2020-08-18
 ---
 
 Use stride to step over values between two limits or boundaries. The stride functions can also be used to build Arrays with a certain range of numbers.

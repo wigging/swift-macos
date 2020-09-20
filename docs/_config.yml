@@ -1,19 +1,35 @@
 baseurl: /swift-macos
 
-collections_dir: sections
+collections_dir: articles
 
 collections:
+  application:
+    output: true
+    permalink: /:title
+    layout: article
   getting_started:
     output: true
     permalink: /:title
+    layout: article
+  macos_xcode:
+    output: true
+    permalink: /:title
+    layout: article
+  navigation:
+    output: true
+    permalink: /:title
+    layout: article
   types:
     output: true
     permalink: /:title
-  command_line:
+    layout: article
+  views_controls:
     output: true
     permalink: /:title
-  file_system:
+    layout: article
+  windows:
     output: true
     permalink: /:title
+    layout: article
 
 exclude: [README.md, Gemfile]

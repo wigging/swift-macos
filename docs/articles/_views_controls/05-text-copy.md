@@ -1,7 +1,7 @@
 ---
 title: Text copy
-category: Text
-tags: [NSPasteboard, Text, TextField, Button]
+slug: text-copy
+date: 2020-06-08
 ---
 
 The typical way to copy text is to select it with the mouse then press ⌘C. To do this in code, use the NSPasteboard class to transfer text to the pasteboard server.

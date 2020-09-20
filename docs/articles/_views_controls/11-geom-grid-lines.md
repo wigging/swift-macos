@@ -1,7 +1,7 @@
 ---
 title: GeometryReader and Grid Lines
-category: Drawing and Animation
-tags: GeometryReader
+slug: geomreader-grid-lines
+date: 2020-08-06
 ---
 
 A GeometryReader can be used to equally space lines in a view even when that view changes size. This is accomplished by using the width and height of the container view to determine the spacing of the lines.
