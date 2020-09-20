@@ -6,30 +6,60 @@ collections:
   application:
     output: true
     permalink: /:title
-    layout: article
   getting_started:
     output: true
     permalink: /:title
-    layout: article
   macos_xcode:
     output: true
     permalink: /:title
-    layout: article
   navigation:
     output: true
     permalink: /:title
-    layout: article
   types:
     output: true
     permalink: /:title
-    layout: article
   views_controls:
     output: true
     permalink: /:title
-    layout: article
   windows:
     output: true
     permalink: /:title
-    layout: article
+
+defaults:
+  - scope:
+      path: ""
+      type: "application"
+    values:
+      layout: "article"
+  - scope:
+      path: ""
+      type: "getting_started"
+    values:
+      layout: "article"
+  - scope:
+      path: ""
+      type: "macos_xcode"
+    values:
+      layout: "article"
+  - scope:
+      path: ""
+      type: "navigation"
+    values:
+      layout: "article"
+  - scope:
+      path: ""
+      type: "types"
+    values:
+      layout: "article"
+  - scope:
+      path: ""
+      type: "views_controls"
+    values:
+      layout: "article"
+  - scope:
+      path: ""
+      type: "windows"
+    values:
+      layout: "article"
 
 exclude: [README.md, Gemfile]

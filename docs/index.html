@@ -42,6 +42,13 @@
         <!-- Column 1 -->
 
         <div class="col-md">
+            <h5>Getting Started</h5>
+            <ul>
+            {% for article in site.getting_started %}
+                <li><a href="/swift-macos{{ article.url }}">{{ article.title }}</a></li>
+            {% endfor %}
+            </ul>
+
             <h5>Application</h5>
             <ul>
             {% for article in site.application %}
