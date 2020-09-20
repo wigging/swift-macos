@@ -1,10 +1,19 @@
 baseurl: /swift-macos
 
-defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
+collections_dir: sections
 
-permalink: /:title
+collections:
+  getting_started:
+    output: true
+    permalink: /:title
+  types:
+    output: true
+    permalink: /:title
+  command_line:
+    output: true
+    permalink: /:title
+  file_system:
+    output: true
+    permalink: /:title
+
+exclude: [README.md, Gemfile]
