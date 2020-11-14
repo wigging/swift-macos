@@ -1,64 +1,14 @@
 baseurl: /swift-macos
 
-collections_dir: articles
-
 collections:
-  application:
-    output: true
-    permalink: /:title
-  getting_started:
-    output: true
-    permalink: /:title
-  macos_xcode:
-    output: true
-    permalink: /:title
-  navigation:
-    output: true
-    permalink: /:title
-  types:
-    output: true
-    permalink: /:title
-  views_controls:
-    output: true
-    permalink: /:title
-  windows:
+  articles:
     output: true
     permalink: /:title
 
 defaults:
   - scope:
       path: ""
-      type: "application"
-    values:
-      layout: "article"
-  - scope:
-      path: ""
-      type: "getting_started"
-    values:
-      layout: "article"
-  - scope:
-      path: ""
-      type: "macos_xcode"
-    values:
-      layout: "article"
-  - scope:
-      path: ""
-      type: "navigation"
-    values:
-      layout: "article"
-  - scope:
-      path: ""
-      type: "types"
-    values:
-      layout: "article"
-  - scope:
-      path: ""
-      type: "views_controls"
-    values:
-      layout: "article"
-  - scope:
-      path: ""
-      type: "windows"
+      type: "articles"
     values:
       layout: "article"
 
