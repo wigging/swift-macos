@@ -1,6 +1,5 @@
 ---
-title: GeometryReader and Grid Lines
-slug: geomreader-grid-lines
+title: GeometryReader and grid lines
 date: 2020-08-06
 ---
 

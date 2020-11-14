@@ -1,6 +1,5 @@
 ---
 title: Picker control
-slug: picker
 date: 2019-08-12
 ---
 

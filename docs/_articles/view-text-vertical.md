@@ -1,6 +1,5 @@
 ---
 title: Text vertical
-slug: text-vertical
 date: 2020-02-14
 ---
 

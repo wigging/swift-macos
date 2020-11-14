@@ -1,6 +1,5 @@
 ---
 title: Remove old simulators
-slug: remove-old-sims
 date: 2020-09-17
 ---
 

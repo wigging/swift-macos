@@ -1,6 +1,5 @@
 ---
 title: Text view
-slug: text
 date: 2020-01-18
 ---
 

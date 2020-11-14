@@ -1,6 +1,5 @@
 ---
 title: Application should reopen window
-slug: app-reopen
 date: 2020-06-17
 ---
 

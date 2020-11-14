@@ -1,6 +1,5 @@
 ---
 title: Cursors
-slug: cursors
 date: 2020-06-07
 ---
 

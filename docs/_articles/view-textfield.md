@@ -1,6 +1,5 @@
 ---
 title: TextField
-slug: textfield
 date: 2019-12-05
 ---
 

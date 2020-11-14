@@ -1,6 +1,5 @@
 ---
 title: Text copy
-slug: text-copy
 date: 2020-06-08
 ---
 

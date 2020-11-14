@@ -1,6 +1,5 @@
 ---
 title: Sidebar navigation
-slug: sidebar-nav
 date: 2019-10-05
 ---
 

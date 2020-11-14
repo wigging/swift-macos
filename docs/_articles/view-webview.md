@@ -1,6 +1,5 @@
 ---
 title: Web view
-slug: webview
 date: 2020-03-10
 ---
 

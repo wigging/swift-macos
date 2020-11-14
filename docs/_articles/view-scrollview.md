@@ -1,6 +1,5 @@
 ---
 title: Scroll view
-slug: scrollview
 date: 2020-07-23
 ---
 

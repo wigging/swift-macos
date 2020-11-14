@@ -1,6 +1,5 @@
 ---
 title: Keyboard shortcuts
-slug: keyboard-shortcuts
 date: 2020-07-11
 ---
 

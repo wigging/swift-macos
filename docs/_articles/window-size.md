@@ -1,6 +1,5 @@
 ---
 title: Window size
-slug: window-size
 date: 2020-04-10
 ---
 

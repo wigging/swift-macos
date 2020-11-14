@@ -1,6 +1,5 @@
 ---
 title: Stepper control
-slug: stepper
 date: 2019-11-23
 ---
 

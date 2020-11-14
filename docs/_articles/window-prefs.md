@@ -1,6 +1,5 @@
 ---
 title: Preferences window
-slug: prefs-window
 date: 2019-09-15
 ---
 

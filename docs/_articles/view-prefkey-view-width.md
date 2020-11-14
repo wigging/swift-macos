@@ -1,6 +1,5 @@
 ---
-title: PreferenceKey View Width
-slug: preferencekey
+title: PreferenceKey view width
 date: 2020-07-30
 ---
 

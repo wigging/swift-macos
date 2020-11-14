@@ -1,6 +1,5 @@
 ---
 title: Application credits
-slug: app-credits
 date: 2020-09-20
 ---
 
