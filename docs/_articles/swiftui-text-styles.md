@@ -1,7 +1,6 @@
 ---
 title: Text styles
 date: 2021-02-17
-example: TextStyles
 ---
 
 The Text view in SwiftUI provides several modifiers to customize the appearance and style of the text.

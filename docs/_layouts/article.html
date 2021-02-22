@@ -15,10 +15,7 @@
     <div class="row">
         <div class="col-md">
             <h1>{{ page.title }}</h1>
-            <p>
-                Posted on {{ page.date | date: '%B %d, %Y' }} <br>
-                {% if page.example %}See <a href="https://github.com/wigging/swift-macos/tree/main/examples/{{ page.example }}">{{ page.example }}</a> for example code{% endif %}
-            </p>
+            <p>Posted on {{ page.date | date: '%B %d, %Y' }}</p>
             <hr>
             <br>
             {{ content }}
