@@ -1,19 +1,19 @@
 //
 //  ContentView.swift
-//  AppCredits
+//  Credits
 //
-//  Created by Gavin Wiggins on 9/17/20.
+//  Created by Gavin Wiggins on 2/28/21.
 //
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Select `About AppCredits` in the menu")
+        Text("To view the Credits in the About window, go to the menu bar, select Credits, then click About Credits.")
+            .padding()
             .frame(width: 400, height: 300)
     }
 }
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
