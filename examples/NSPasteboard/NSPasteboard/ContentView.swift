@@ -1,13 +1,10 @@
----
-title: Text copy
-date: 2020-06-08
----
+//
+//  ContentView.swift
+//  NSPasteboard
+//
+//  Created by Gavin Wiggins on 3/16/21.
+//
 
-The typical way to copy text is to select it with the mouse then press ⌘C. To do this in code, use the NSPasteboard class to transfer text to the pasteboard server.
-
-![copy text](/swift-macos/images/text-copy.png)
-
-```swift
 import SwiftUI
 
 struct ContentView: View {
@@ -31,8 +28,9 @@ struct ContentView: View {
         .frame(width: 400, height: 300)
     }
 }
-```
 
-## Further reading
-
-See [Apple's documentation](https://developer.apple.com/documentation/appkit/nspasteboard) for more information about the NSPasteboard class object.
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}

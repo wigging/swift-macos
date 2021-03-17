@@ -7,26 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AAB3A2E0248C0075006917AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB3A2DF248C0075006917AB /* AppDelegate.swift */; };
-		AAB3A2E2248C0075006917AB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB3A2E1248C0075006917AB /* ContentView.swift */; };
-		AAB3A2E4248C0076006917AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAB3A2E3248C0076006917AB /* Assets.xcassets */; };
-		AAB3A2E7248C0076006917AB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAB3A2E6248C0076006917AB /* Preview Assets.xcassets */; };
-		AAB3A2EA248C0076006917AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAB3A2E8248C0076006917AB /* Main.storyboard */; };
+		AAE9719B2601A62E00F74DBE /* NSPasteboardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE9719A2601A62E00F74DBE /* NSPasteboardApp.swift */; };
+		AAE9719D2601A62E00F74DBE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE9719C2601A62E00F74DBE /* ContentView.swift */; };
+		AAE9719F2601A62E00F74DBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAE9719E2601A62E00F74DBE /* Assets.xcassets */; };
+		AAE971A22601A62E00F74DBE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAE971A12601A62E00F74DBE /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AAB3A2DC248C0075006917AB /* text-copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "text-copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AAB3A2DF248C0075006917AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AAB3A2E1248C0075006917AB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		AAB3A2E3248C0076006917AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AAB3A2E6248C0076006917AB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		AAB3A2E9248C0076006917AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AAB3A2EB248C0076006917AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AAB3A2EC248C0076006917AB /* text_copy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = text_copy.entitlements; sourceTree = "<group>"; };
+		AAE971972601A62E00F74DBE /* NSPasteboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSPasteboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAE9719A2601A62E00F74DBE /* NSPasteboardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSPasteboardApp.swift; sourceTree = "<group>"; };
+		AAE9719C2601A62E00F74DBE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AAE9719E2601A62E00F74DBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AAE971A12601A62E00F74DBE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AAE971A32601A62E00F74DBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAE971A42601A62E00F74DBE /* NSPasteboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NSPasteboard.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		AAB3A2D9248C0075006917AB /* Frameworks */ = {
+		AAE971942601A62E00F74DBE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,40 +34,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AAB3A2D3248C0075006917AB = {
+		AAE9718E2601A62E00F74DBE = {
 			isa = PBXGroup;
 			children = (
-				AAB3A2DE248C0075006917AB /* text-copy */,
-				AAB3A2DD248C0075006917AB /* Products */,
+				AAE971992601A62E00F74DBE /* NSPasteboard */,
+				AAE971982601A62E00F74DBE /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		AAB3A2DD248C0075006917AB /* Products */ = {
+		AAE971982601A62E00F74DBE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AAB3A2DC248C0075006917AB /* text-copy.app */,
+				AAE971972601A62E00F74DBE /* NSPasteboard.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AAB3A2DE248C0075006917AB /* text-copy */ = {
+		AAE971992601A62E00F74DBE /* NSPasteboard */ = {
 			isa = PBXGroup;
 			children = (
-				AAB3A2DF248C0075006917AB /* AppDelegate.swift */,
-				AAB3A2E1248C0075006917AB /* ContentView.swift */,
-				AAB3A2E3248C0076006917AB /* Assets.xcassets */,
-				AAB3A2E8248C0076006917AB /* Main.storyboard */,
-				AAB3A2EB248C0076006917AB /* Info.plist */,
-				AAB3A2EC248C0076006917AB /* text_copy.entitlements */,
-				AAB3A2E5248C0076006917AB /* Preview Content */,
+				AAE9719A2601A62E00F74DBE /* NSPasteboardApp.swift */,
+				AAE9719C2601A62E00F74DBE /* ContentView.swift */,
+				AAE9719E2601A62E00F74DBE /* Assets.xcassets */,
+				AAE971A32601A62E00F74DBE /* Info.plist */,
+				AAE971A42601A62E00F74DBE /* NSPasteboard.entitlements */,
+				AAE971A02601A62E00F74DBE /* Preview Content */,
 			);
-			path = "text-copy";
+			path = NSPasteboard;
 			sourceTree = "<group>";
 		};
-		AAB3A2E5248C0076006917AB /* Preview Content */ = {
+		AAE971A02601A62E00F74DBE /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				AAB3A2E6248C0076006917AB /* Preview Assets.xcassets */,
+				AAE971A12601A62E00F74DBE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -77,39 +74,38 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AAB3A2DB248C0075006917AB /* text-copy */ = {
+		AAE971962601A62E00F74DBE /* NSPasteboard */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AAB3A2EF248C0076006917AB /* Build configuration list for PBXNativeTarget "text-copy" */;
+			buildConfigurationList = AAE971A72601A62E00F74DBE /* Build configuration list for PBXNativeTarget "NSPasteboard" */;
 			buildPhases = (
-				AAB3A2D8248C0075006917AB /* Sources */,
-				AAB3A2D9248C0075006917AB /* Frameworks */,
-				AAB3A2DA248C0075006917AB /* Resources */,
+				AAE971932601A62E00F74DBE /* Sources */,
+				AAE971942601A62E00F74DBE /* Frameworks */,
+				AAE971952601A62E00F74DBE /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "text-copy";
-			productName = "text-copy";
-			productReference = AAB3A2DC248C0075006917AB /* text-copy.app */;
+			name = NSPasteboard;
+			productName = NSPasteboard;
+			productReference = AAE971972601A62E00F74DBE /* NSPasteboard.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		AAB3A2D4248C0075006917AB /* Project object */ = {
+		AAE9718F2601A62E00F74DBE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1150;
-				LastUpgradeCheck = 1150;
-				ORGANIZATIONNAME = "Gavin Wiggins";
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
 				TargetAttributes = {
-					AAB3A2DB248C0075006917AB = {
-						CreatedOnToolsVersion = 11.5;
+					AAE971962601A62E00F74DBE = {
+						CreatedOnToolsVersion = 12.4;
 					};
 				};
 			};
-			buildConfigurationList = AAB3A2D7248C0075006917AB /* Build configuration list for PBXProject "text-copy" */;
+			buildConfigurationList = AAE971922601A62E00F74DBE /* Build configuration list for PBXProject "NSPasteboard" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -117,54 +113,42 @@
 				en,
 				Base,
 			);
-			mainGroup = AAB3A2D3248C0075006917AB;
-			productRefGroup = AAB3A2DD248C0075006917AB /* Products */;
+			mainGroup = AAE9718E2601A62E00F74DBE;
+			productRefGroup = AAE971982601A62E00F74DBE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AAB3A2DB248C0075006917AB /* text-copy */,
+				AAE971962601A62E00F74DBE /* NSPasteboard */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		AAB3A2DA248C0075006917AB /* Resources */ = {
+		AAE971952601A62E00F74DBE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAB3A2EA248C0076006917AB /* Main.storyboard in Resources */,
-				AAB3A2E7248C0076006917AB /* Preview Assets.xcassets in Resources */,
-				AAB3A2E4248C0076006917AB /* Assets.xcassets in Resources */,
+				AAE971A22601A62E00F74DBE /* Preview Assets.xcassets in Resources */,
+				AAE9719F2601A62E00F74DBE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		AAB3A2D8248C0075006917AB /* Sources */ = {
+		AAE971932601A62E00F74DBE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAB3A2E2248C0075006917AB /* ContentView.swift in Sources */,
-				AAB3A2E0248C0075006917AB /* AppDelegate.swift in Sources */,
+				AAE9719D2601A62E00F74DBE /* ContentView.swift in Sources */,
+				AAE9719B2601A62E00F74DBE /* NSPasteboardApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		AAB3A2E8248C0076006917AB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AAB3A2E9248C0076006917AB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		AAB3A2ED248C0076006917AB /* Debug */ = {
+		AAE971A52601A62E00F74DBE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -190,6 +174,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -214,7 +199,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -224,7 +209,7 @@
 			};
 			name = Debug;
 		};
-		AAB3A2EE248C0076006917AB /* Release */ = {
+		AAE971A62601A62E00F74DBE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -250,6 +235,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -268,7 +254,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -277,43 +263,45 @@
 			};
 			name = Release;
 		};
-		AAB3A2F0248C0076006917AB /* Debug */ = {
+		AAE971A82601A62E00F74DBE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "text-copy/text_copy.entitlements";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NSPasteboard/NSPasteboard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"text-copy/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"NSPasteboard/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "text-copy/Info.plist";
+				INFOPLIST_FILE = NSPasteboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.GavinWiggins.text-copy";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GavinWiggins.NSPasteboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		AAB3A2F1248C0076006917AB /* Release */ = {
+		AAE971A92601A62E00F74DBE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "text-copy/text_copy.entitlements";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NSPasteboard/NSPasteboard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"text-copy/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"NSPasteboard/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "text-copy/Info.plist";
+				INFOPLIST_FILE = NSPasteboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.GavinWiggins.text-copy";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GavinWiggins.NSPasteboard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -322,25 +310,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AAB3A2D7248C0075006917AB /* Build configuration list for PBXProject "text-copy" */ = {
+		AAE971922601A62E00F74DBE /* Build configuration list for PBXProject "NSPasteboard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AAB3A2ED248C0076006917AB /* Debug */,
-				AAB3A2EE248C0076006917AB /* Release */,
+				AAE971A52601A62E00F74DBE /* Debug */,
+				AAE971A62601A62E00F74DBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AAB3A2EF248C0076006917AB /* Build configuration list for PBXNativeTarget "text-copy" */ = {
+		AAE971A72601A62E00F74DBE /* Build configuration list for PBXNativeTarget "NSPasteboard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AAB3A2F0248C0076006917AB /* Debug */,
-				AAB3A2F1248C0076006917AB /* Release */,
+				AAE971A82601A62E00F74DBE /* Debug */,
+				AAE971A92601A62E00F74DBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = AAB3A2D4248C0075006917AB /* Project object */;
+	rootObject = AAE9718F2601A62E00F74DBE /* Project object */;
 }
