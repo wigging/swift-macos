@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:geometryreader-grid-lines.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>

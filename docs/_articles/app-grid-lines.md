@@ -1,33 +1,35 @@
-//
-//  ContentView.swift
-//  geometryreader-grid-lines
-//
-//  Created by Gavin Wiggins on 8/5/20.
-//  Copyright © 2020 Gavin Wiggins. All rights reserved.
-//
+---
+title: Grid lines
+date: 2020-03-24
+---
 
+A GeometryReader can be used to equally space lines in a view even when that view changes size. This is accomplished by using the width and height of the container view to determine the spacing of the lines.
+
+![geometryreader grid lines](/swift-macos/images/geom-grid-lines.png)
+
+```swift
 import SwiftUI
 
 struct ContentView: View {
-    
+
     let xSteps = 5  // purple lines for x-axis grid
     let ySteps = 4  // black lines for y-axis grid
-    
+
     var body: some View {
         ZStack(alignment: .top) {
             GeometryReader { geometry in
                 Rectangle()
                     .fill(Color.gray)
-                
-                // x-axis grid lines
+
+                // x-axis grid shown as purple lines
                 ForEach(0..<self.xSteps+1) {
                     Rectangle()
                         .fill(Color.purple)
                         .frame(width: 3)
                         .offset(x: geometry.size.width / CGFloat(self.xSteps) * CGFloat($0), y: 0.0)
                 }
-                
-                // y-axis grid lines
+
+                // y-axis grid shown as black lines
                 ForEach(0..<self.ySteps+1) {
                     Rectangle()
                         .fill(Color.black)
@@ -41,9 +43,4 @@ struct ContentView: View {
         .background(Color.secondary)
     }
 }
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+```
