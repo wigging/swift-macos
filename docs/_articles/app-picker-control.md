@@ -1,6 +1,6 @@
 ---
 title: Picker control
-date: 2019-08-12
+date: 2021-03-25
 ---
 
 The picker control selects an item from a set of values. The appearance of the picker can be changed by using different styles and modifiers.
