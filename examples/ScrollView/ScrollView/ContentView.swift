@@ -1,33 +1,33 @@
 //
 //  ContentView.swift
-//  scroll-view
+//  ScrollView
 //
-//  Created by Gavin Wiggins on 11/13/19.
-//  Copyright © 2019 Gavin Wiggins. All rights reserved.
+//  Created by Gavin Wiggins on 3/26/21.
 //
 
 import SwiftUI
 
 struct ContentView: View {
+    
     @State private var toggled = true
     
     var body: some View {
         ScrollView {
-            VStack(spacing: 25) {
+            VStack(spacing: 20) {
                 Text("Scroll up and down").font(.headline)
-                
+
                 Toggle(isOn: $toggled) { Text("Toggle 1") }
-                
+
                 Toggle(isOn: $toggled) { Text("Toggle 2") }
-                
+
                 Toggle(isOn: $toggled) { Text("Toggle 3") }
-                
+
                 Button("Button 1") { }
-                
+
                 Button("Button 2") { }
 
                 Button("Button 3") { }
-                
+
                 Text("Last Item in scroll view")
             }
             .padding()

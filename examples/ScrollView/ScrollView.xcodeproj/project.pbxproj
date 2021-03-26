@@ -7,26 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AA578FAE237CED6A004EE8C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA578FAD237CED6A004EE8C5 /* AppDelegate.swift */; };
-		AA578FB0237CED6A004EE8C5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA578FAF237CED6A004EE8C5 /* ContentView.swift */; };
-		AA578FB2237CED6B004EE8C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA578FB1237CED6B004EE8C5 /* Assets.xcassets */; };
-		AA578FB5237CED6B004EE8C5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA578FB4237CED6B004EE8C5 /* Preview Assets.xcassets */; };
-		AA578FB8237CED6B004EE8C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA578FB6237CED6B004EE8C5 /* Main.storyboard */; };
+		AA3C5B54260E511700427CF0 /* ScrollViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3C5B53260E511700427CF0 /* ScrollViewApp.swift */; };
+		AA3C5B56260E511700427CF0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3C5B55260E511700427CF0 /* ContentView.swift */; };
+		AA3C5B58260E511800427CF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA3C5B57260E511800427CF0 /* Assets.xcassets */; };
+		AA3C5B5B260E511800427CF0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA3C5B5A260E511800427CF0 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AA578FAA237CED6A004EE8C5 /* scroll-view.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "scroll-view.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA578FAD237CED6A004EE8C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AA578FAF237CED6A004EE8C5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		AA578FB1237CED6B004EE8C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AA578FB4237CED6B004EE8C5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		AA578FB7237CED6B004EE8C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AA578FB9237CED6B004EE8C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AA578FBA237CED6B004EE8C5 /* scroll_view.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = scroll_view.entitlements; sourceTree = "<group>"; };
+		AA3C5B50260E511700427CF0 /* ScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA3C5B53260E511700427CF0 /* ScrollViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewApp.swift; sourceTree = "<group>"; };
+		AA3C5B55260E511700427CF0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AA3C5B57260E511800427CF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA3C5B5A260E511800427CF0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AA3C5B5C260E511800427CF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA3C5B5D260E511800427CF0 /* ScrollView.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScrollView.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		AA578FA7237CED6A004EE8C5 /* Frameworks */ = {
+		AA3C5B4D260E511700427CF0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,40 +34,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AA578FA1237CED6A004EE8C5 = {
+		AA3C5B47260E511700427CF0 = {
 			isa = PBXGroup;
 			children = (
-				AA578FAC237CED6A004EE8C5 /* scroll-view */,
-				AA578FAB237CED6A004EE8C5 /* Products */,
+				AA3C5B52260E511700427CF0 /* ScrollView */,
+				AA3C5B51260E511700427CF0 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		AA578FAB237CED6A004EE8C5 /* Products */ = {
+		AA3C5B51260E511700427CF0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AA578FAA237CED6A004EE8C5 /* scroll-view.app */,
+				AA3C5B50260E511700427CF0 /* ScrollView.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AA578FAC237CED6A004EE8C5 /* scroll-view */ = {
+		AA3C5B52260E511700427CF0 /* ScrollView */ = {
 			isa = PBXGroup;
 			children = (
-				AA578FAD237CED6A004EE8C5 /* AppDelegate.swift */,
-				AA578FAF237CED6A004EE8C5 /* ContentView.swift */,
-				AA578FB1237CED6B004EE8C5 /* Assets.xcassets */,
-				AA578FB6237CED6B004EE8C5 /* Main.storyboard */,
-				AA578FB9237CED6B004EE8C5 /* Info.plist */,
-				AA578FBA237CED6B004EE8C5 /* scroll_view.entitlements */,
-				AA578FB3237CED6B004EE8C5 /* Preview Content */,
+				AA3C5B53260E511700427CF0 /* ScrollViewApp.swift */,
+				AA3C5B55260E511700427CF0 /* ContentView.swift */,
+				AA3C5B57260E511800427CF0 /* Assets.xcassets */,
+				AA3C5B5C260E511800427CF0 /* Info.plist */,
+				AA3C5B5D260E511800427CF0 /* ScrollView.entitlements */,
+				AA3C5B59260E511800427CF0 /* Preview Content */,
 			);
-			path = "scroll-view";
+			path = ScrollView;
 			sourceTree = "<group>";
 		};
-		AA578FB3237CED6B004EE8C5 /* Preview Content */ = {
+		AA3C5B59260E511800427CF0 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				AA578FB4237CED6B004EE8C5 /* Preview Assets.xcassets */,
+				AA3C5B5A260E511800427CF0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -77,39 +74,38 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AA578FA9237CED6A004EE8C5 /* scroll-view */ = {
+		AA3C5B4F260E511700427CF0 /* ScrollView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AA578FBD237CED6B004EE8C5 /* Build configuration list for PBXNativeTarget "scroll-view" */;
+			buildConfigurationList = AA3C5B60260E511800427CF0 /* Build configuration list for PBXNativeTarget "ScrollView" */;
 			buildPhases = (
-				AA578FA6237CED6A004EE8C5 /* Sources */,
-				AA578FA7237CED6A004EE8C5 /* Frameworks */,
-				AA578FA8237CED6A004EE8C5 /* Resources */,
+				AA3C5B4C260E511700427CF0 /* Sources */,
+				AA3C5B4D260E511700427CF0 /* Frameworks */,
+				AA3C5B4E260E511700427CF0 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "scroll-view";
-			productName = "scroll-view";
-			productReference = AA578FAA237CED6A004EE8C5 /* scroll-view.app */;
+			name = ScrollView;
+			productName = ScrollView;
+			productReference = AA3C5B50260E511700427CF0 /* ScrollView.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		AA578FA2237CED6A004EE8C5 /* Project object */ = {
+		AA3C5B48260E511700427CF0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1120;
-				LastUpgradeCheck = 1160;
-				ORGANIZATIONNAME = "Gavin Wiggins";
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
 				TargetAttributes = {
-					AA578FA9237CED6A004EE8C5 = {
-						CreatedOnToolsVersion = 11.2.1;
+					AA3C5B4F260E511700427CF0 = {
+						CreatedOnToolsVersion = 12.4;
 					};
 				};
 			};
-			buildConfigurationList = AA578FA5237CED6A004EE8C5 /* Build configuration list for PBXProject "scroll-view" */;
+			buildConfigurationList = AA3C5B4B260E511700427CF0 /* Build configuration list for PBXProject "ScrollView" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -117,54 +113,42 @@
 				en,
 				Base,
 			);
-			mainGroup = AA578FA1237CED6A004EE8C5;
-			productRefGroup = AA578FAB237CED6A004EE8C5 /* Products */;
+			mainGroup = AA3C5B47260E511700427CF0;
+			productRefGroup = AA3C5B51260E511700427CF0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AA578FA9237CED6A004EE8C5 /* scroll-view */,
+				AA3C5B4F260E511700427CF0 /* ScrollView */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		AA578FA8237CED6A004EE8C5 /* Resources */ = {
+		AA3C5B4E260E511700427CF0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA578FB8237CED6B004EE8C5 /* Main.storyboard in Resources */,
-				AA578FB5237CED6B004EE8C5 /* Preview Assets.xcassets in Resources */,
-				AA578FB2237CED6B004EE8C5 /* Assets.xcassets in Resources */,
+				AA3C5B5B260E511800427CF0 /* Preview Assets.xcassets in Resources */,
+				AA3C5B58260E511800427CF0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		AA578FA6237CED6A004EE8C5 /* Sources */ = {
+		AA3C5B4C260E511700427CF0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA578FB0237CED6A004EE8C5 /* ContentView.swift in Sources */,
-				AA578FAE237CED6A004EE8C5 /* AppDelegate.swift in Sources */,
+				AA3C5B56260E511700427CF0 /* ContentView.swift in Sources */,
+				AA3C5B54260E511700427CF0 /* ScrollViewApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		AA578FB6237CED6B004EE8C5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AA578FB7237CED6B004EE8C5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		AA578FBB237CED6B004EE8C5 /* Debug */ = {
+		AA3C5B5E260E511800427CF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -190,6 +174,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -214,7 +199,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -224,7 +209,7 @@
 			};
 			name = Debug;
 		};
-		AA578FBC237CED6B004EE8C5 /* Release */ = {
+		AA3C5B5F260E511800427CF0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -250,6 +235,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -268,7 +254,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -277,45 +263,45 @@
 			};
 			name = Release;
 		};
-		AA578FBE237CED6B004EE8C5 /* Debug */ = {
+		AA3C5B61260E511800427CF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "scroll-view/scroll_view.entitlements";
-				CODE_SIGN_IDENTITY = "-";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ScrollView/ScrollView.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"scroll-view/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ScrollView/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "scroll-view/Info.plist";
+				INFOPLIST_FILE = ScrollView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.GavinWiggins.scroll-view";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GavinWiggins.ScrollView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		AA578FBF237CED6B004EE8C5 /* Release */ = {
+		AA3C5B62260E511800427CF0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "scroll-view/scroll_view.entitlements";
-				CODE_SIGN_IDENTITY = "-";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ScrollView/ScrollView.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"scroll-view/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ScrollView/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "scroll-view/Info.plist";
+				INFOPLIST_FILE = ScrollView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.GavinWiggins.scroll-view";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GavinWiggins.ScrollView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -324,25 +310,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AA578FA5237CED6A004EE8C5 /* Build configuration list for PBXProject "scroll-view" */ = {
+		AA3C5B4B260E511700427CF0 /* Build configuration list for PBXProject "ScrollView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AA578FBB237CED6B004EE8C5 /* Debug */,
-				AA578FBC237CED6B004EE8C5 /* Release */,
+				AA3C5B5E260E511800427CF0 /* Debug */,
+				AA3C5B5F260E511800427CF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AA578FBD237CED6B004EE8C5 /* Build configuration list for PBXNativeTarget "scroll-view" */ = {
+		AA3C5B60260E511800427CF0 /* Build configuration list for PBXNativeTarget "ScrollView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AA578FBE237CED6B004EE8C5 /* Debug */,
-				AA578FBF237CED6B004EE8C5 /* Release */,
+				AA3C5B61260E511800427CF0 /* Debug */,
+				AA3C5B62260E511800427CF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = AA578FA2237CED6A004EE8C5 /* Project object */;
+	rootObject = AA3C5B48260E511700427CF0 /* Project object */;
 }

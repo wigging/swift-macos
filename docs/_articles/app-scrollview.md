@@ -1,9 +1,9 @@
 ---
-title: Scroll view
-date: 2020-07-23
+title: ScrollView
+date: 2021-03-26
 ---
 
-A scroll view displays its content within a scrollable area of the window.
+The scroll view displays its content within a scrollable area of the window.
 
 ![scroll view](/swift-macos/images/scroll-view.png)
 
