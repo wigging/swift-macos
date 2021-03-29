@@ -7,26 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AA3BD86D2389D03F0083A393 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3BD86C2389D03F0083A393 /* AppDelegate.swift */; };
-		AA3BD86F2389D03F0083A393 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3BD86E2389D03F0083A393 /* ContentView.swift */; };
-		AA3BD8712389D0400083A393 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA3BD8702389D0400083A393 /* Assets.xcassets */; };
-		AA3BD8742389D0400083A393 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA3BD8732389D0400083A393 /* Preview Assets.xcassets */; };
-		AA3BD8772389D0400083A393 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA3BD8752389D0400083A393 /* Main.storyboard */; };
+		AA4386B32612182100895A86 /* StepperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4386B22612182100895A86 /* StepperApp.swift */; };
+		AA4386B52612182100895A86 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4386B42612182100895A86 /* ContentView.swift */; };
+		AA4386B72612182200895A86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA4386B62612182200895A86 /* Assets.xcassets */; };
+		AA4386BA2612182200895A86 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA4386B92612182200895A86 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AA3BD8692389D03F0083A393 /* stepper-control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "stepper-control.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA3BD86C2389D03F0083A393 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AA3BD86E2389D03F0083A393 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		AA3BD8702389D0400083A393 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AA3BD8732389D0400083A393 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		AA3BD8762389D0400083A393 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AA3BD8782389D0400083A393 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AA3BD8792389D0400083A393 /* stepper_control.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = stepper_control.entitlements; sourceTree = "<group>"; };
+		AA4386AF2612182100895A86 /* Stepper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stepper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA4386B22612182100895A86 /* StepperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperApp.swift; sourceTree = "<group>"; };
+		AA4386B42612182100895A86 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AA4386B62612182200895A86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA4386B92612182200895A86 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AA4386BB2612182200895A86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA4386BC2612182200895A86 /* Stepper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Stepper.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		AA3BD8662389D03F0083A393 /* Frameworks */ = {
+		AA4386AC2612182100895A86 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,40 +34,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AA3BD8602389D03F0083A393 = {
+		AA4386A62612182100895A86 = {
 			isa = PBXGroup;
 			children = (
-				AA3BD86B2389D03F0083A393 /* stepper-control */,
-				AA3BD86A2389D03F0083A393 /* Products */,
+				AA4386B12612182100895A86 /* Stepper */,
+				AA4386B02612182100895A86 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		AA3BD86A2389D03F0083A393 /* Products */ = {
+		AA4386B02612182100895A86 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AA3BD8692389D03F0083A393 /* stepper-control.app */,
+				AA4386AF2612182100895A86 /* Stepper.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AA3BD86B2389D03F0083A393 /* stepper-control */ = {
+		AA4386B12612182100895A86 /* Stepper */ = {
 			isa = PBXGroup;
 			children = (
-				AA3BD86C2389D03F0083A393 /* AppDelegate.swift */,
-				AA3BD86E2389D03F0083A393 /* ContentView.swift */,
-				AA3BD8702389D0400083A393 /* Assets.xcassets */,
-				AA3BD8752389D0400083A393 /* Main.storyboard */,
-				AA3BD8782389D0400083A393 /* Info.plist */,
-				AA3BD8792389D0400083A393 /* stepper_control.entitlements */,
-				AA3BD8722389D0400083A393 /* Preview Content */,
+				AA4386B22612182100895A86 /* StepperApp.swift */,
+				AA4386B42612182100895A86 /* ContentView.swift */,
+				AA4386B62612182200895A86 /* Assets.xcassets */,
+				AA4386BB2612182200895A86 /* Info.plist */,
+				AA4386BC2612182200895A86 /* Stepper.entitlements */,
+				AA4386B82612182200895A86 /* Preview Content */,
 			);
-			path = "stepper-control";
+			path = Stepper;
 			sourceTree = "<group>";
 		};
-		AA3BD8722389D0400083A393 /* Preview Content */ = {
+		AA4386B82612182200895A86 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				AA3BD8732389D0400083A393 /* Preview Assets.xcassets */,
+				AA4386B92612182200895A86 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -77,39 +74,38 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AA3BD8682389D03F0083A393 /* stepper-control */ = {
+		AA4386AE2612182100895A86 /* Stepper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AA3BD87C2389D0400083A393 /* Build configuration list for PBXNativeTarget "stepper-control" */;
+			buildConfigurationList = AA4386BF2612182200895A86 /* Build configuration list for PBXNativeTarget "Stepper" */;
 			buildPhases = (
-				AA3BD8652389D03F0083A393 /* Sources */,
-				AA3BD8662389D03F0083A393 /* Frameworks */,
-				AA3BD8672389D03F0083A393 /* Resources */,
+				AA4386AB2612182100895A86 /* Sources */,
+				AA4386AC2612182100895A86 /* Frameworks */,
+				AA4386AD2612182100895A86 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "stepper-control";
-			productName = "stepper-control";
-			productReference = AA3BD8692389D03F0083A393 /* stepper-control.app */;
+			name = Stepper;
+			productName = Stepper;
+			productReference = AA4386AF2612182100895A86 /* Stepper.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		AA3BD8612389D03F0083A393 /* Project object */ = {
+		AA4386A72612182100895A86 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1120;
-				LastUpgradeCheck = 1120;
-				ORGANIZATIONNAME = "Gavin Wiggins";
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
 				TargetAttributes = {
-					AA3BD8682389D03F0083A393 = {
-						CreatedOnToolsVersion = 11.2.1;
+					AA4386AE2612182100895A86 = {
+						CreatedOnToolsVersion = 12.4;
 					};
 				};
 			};
-			buildConfigurationList = AA3BD8642389D03F0083A393 /* Build configuration list for PBXProject "stepper-control" */;
+			buildConfigurationList = AA4386AA2612182100895A86 /* Build configuration list for PBXProject "Stepper" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -117,54 +113,42 @@
 				en,
 				Base,
 			);
-			mainGroup = AA3BD8602389D03F0083A393;
-			productRefGroup = AA3BD86A2389D03F0083A393 /* Products */;
+			mainGroup = AA4386A62612182100895A86;
+			productRefGroup = AA4386B02612182100895A86 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AA3BD8682389D03F0083A393 /* stepper-control */,
+				AA4386AE2612182100895A86 /* Stepper */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		AA3BD8672389D03F0083A393 /* Resources */ = {
+		AA4386AD2612182100895A86 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA3BD8772389D0400083A393 /* Main.storyboard in Resources */,
-				AA3BD8742389D0400083A393 /* Preview Assets.xcassets in Resources */,
-				AA3BD8712389D0400083A393 /* Assets.xcassets in Resources */,
+				AA4386BA2612182200895A86 /* Preview Assets.xcassets in Resources */,
+				AA4386B72612182200895A86 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		AA3BD8652389D03F0083A393 /* Sources */ = {
+		AA4386AB2612182100895A86 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA3BD86F2389D03F0083A393 /* ContentView.swift in Sources */,
-				AA3BD86D2389D03F0083A393 /* AppDelegate.swift in Sources */,
+				AA4386B52612182100895A86 /* ContentView.swift in Sources */,
+				AA4386B32612182100895A86 /* StepperApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		AA3BD8752389D0400083A393 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AA3BD8762389D0400083A393 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		AA3BD87A2389D0400083A393 /* Debug */ = {
+		AA4386BD2612182200895A86 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -190,6 +174,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -214,7 +199,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -224,7 +209,7 @@
 			};
 			name = Debug;
 		};
-		AA3BD87B2389D0400083A393 /* Release */ = {
+		AA4386BE2612182200895A86 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -250,6 +235,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -268,7 +254,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -277,43 +263,45 @@
 			};
 			name = Release;
 		};
-		AA3BD87D2389D0400083A393 /* Debug */ = {
+		AA4386C02612182200895A86 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "stepper-control/stepper_control.entitlements";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Stepper/Stepper.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"stepper-control/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Stepper/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "stepper-control/Info.plist";
+				INFOPLIST_FILE = Stepper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.GavinWiggins.stepper-control";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GavinWiggins.Stepper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		AA3BD87E2389D0400083A393 /* Release */ = {
+		AA4386C12612182200895A86 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "stepper-control/stepper_control.entitlements";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Stepper/Stepper.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"stepper-control/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Stepper/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "stepper-control/Info.plist";
+				INFOPLIST_FILE = Stepper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.GavinWiggins.stepper-control";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GavinWiggins.Stepper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -322,25 +310,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AA3BD8642389D03F0083A393 /* Build configuration list for PBXProject "stepper-control" */ = {
+		AA4386AA2612182100895A86 /* Build configuration list for PBXProject "Stepper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AA3BD87A2389D0400083A393 /* Debug */,
-				AA3BD87B2389D0400083A393 /* Release */,
+				AA4386BD2612182200895A86 /* Debug */,
+				AA4386BE2612182200895A86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AA3BD87C2389D0400083A393 /* Build configuration list for PBXNativeTarget "stepper-control" */ = {
+		AA4386BF2612182200895A86 /* Build configuration list for PBXNativeTarget "Stepper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AA3BD87D2389D0400083A393 /* Debug */,
-				AA3BD87E2389D0400083A393 /* Release */,
+				AA4386C02612182200895A86 /* Debug */,
+				AA4386C12612182200895A86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = AA3BD8612389D03F0083A393 /* Project object */;
+	rootObject = AA4386A72612182100895A86 /* Project object */;
 }
