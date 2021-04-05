@@ -1,6 +1,6 @@
 //
-//  TextStylesApp.swift
-//  TextStyles
+//  TextVerticalApp.swift
+//  TextVertical
 //
 //  Created by Gavin Wiggins on 4/4/21.
 //
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct TextStylesApp: App {
+struct TextVerticalApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

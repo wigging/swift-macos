@@ -3,8 +3,6 @@ title: Text
 date: 2021-04-04
 ---
 
-## Overview
-
 A Text view displays one or more lines of read-only text.
 
 ![text](/swift-macos/images/text.png)
