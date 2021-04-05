@@ -1,14 +1,14 @@
 //
 //  ContentView.swift
-//  text-field
+//  TextField
 //
-//  Created by Gavin Wiggins on 11/17/19.
-//  Copyright © 2019 Gavin Wiggins. All rights reserved.
+//  Created by Gavin Wiggins on 4/4/21.
 //
 
 import SwiftUI
 
 struct ContentView: View {
+    
     @State private var text1 = ""
     
     var body: some View {
@@ -17,7 +17,7 @@ struct ContentView: View {
             
             TextField("Example 2", text: $text1)
                 .fixedSize()
-
+            
             TextField("Example 3", text: $text1)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             
@@ -38,16 +38,15 @@ struct ContentView: View {
                 }
             })
             
-            TextField("Example 8", text: $text1) {
+            TextField("Example 8", text: $text1, onCommit:  {
                 print("on commit")
-            }
+            })
             
         }
         .padding()
         .frame(width: 480, height: 300)
     }
 }
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

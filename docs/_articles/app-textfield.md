@@ -1,11 +1,11 @@
 ---
 title: TextField
-date: 2019-12-05
+date: 2021-04-04
 ---
 
 The TextField structure is a control that provides an editable text field. Various modifiers are available to customize the appearance and text alignment. Actions can be performed when editing begins and ends for the text field or when the return key is pressed.
 
-![text field](/swift-macos/images/text-field.png)
+![text field](/swift-macos/images/textfield.png)
 
 ```swift
 import SwiftUI
@@ -40,9 +40,9 @@ struct ContentView: View {
                 }
             })
 
-            TextField("Example 8", text: $text1) {
+            TextField("Example 8", text: $text1, onCommit:  {
                 print("on commit")
-            }
+            })
 
         }
         .padding()
