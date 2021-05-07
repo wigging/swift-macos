@@ -5,15 +5,6 @@ date: 2020-07-11
 
 By pressing certain key combinations (keyboard shortcut), you can do things that normally need a mouse, trackpad, or other input source. For example, to use Command ⌘ + C, press and hold the Command ⌘ key, then the C key, then release both keys.
 
-**Contents**
-
-- [Symbols](#symbols)
-- [Common shortcuts](#common-shortcuts)
-- [Xcode shortcuts](#xcode-shortcuts)
-- [macOS shortcuts](#macos-shortcuts)
-- [Finder shortcuts](#finder-shortcuts)
-- [Document shortcuts](#document-shortcuts)
-
 ## Symbols
 
 Many app menus and keyboard keys display symbols that represent modifier keys. These keys can be combined with other key combinations to perform actions.
