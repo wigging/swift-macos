@@ -1,7 +1,7 @@
 ---
-title: Sidebar navigation
-date: 2021-05-15
 ---
+
+## Sidebar navigation
 
 A sidebar can be used to select a destination view in a navigation-based app. This is accomplished by wrapping the views in a `NavigationView` and using `NavigationLink` to display the different views. In the example below, an `AppStorage` property remembers the selected view.
 

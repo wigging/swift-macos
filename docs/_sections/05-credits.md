@@ -1,7 +1,7 @@
 ---
-title: Credits
-date: 2021-02-28
 ---
+
+## Credits
 
 The About window in a Mac application is viewed by selecting the app's name in the top menu bar, then choosing the About item in the menu. The image below displays Safari's About window.
 

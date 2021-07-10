@@ -4,83 +4,87 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="stylesheet" href="/swift-macos/style.css">
-
-    <title>Swift macOS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="syntax.css">
+    <title>🖥 Swift macOS</title>
 </head>
 <body>
+
+    <!-- Navigation Bar -->
+
+    <nav class="navbar sticky-top navbar-expand-md navbar-dark bg-dark mb-5">
+        <div class="container">
+            <span class="navbar-brand mb-0 h1">Swift macOS</span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topbar" aria-controls="topbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="topbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#contents">Contents</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://github.com/wigging/swift-macos">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md">
+                <h1>🖥 Swift Programming for macOS</h1>
+                <p>There are plenty of books, videos, and online resources for developing iOS apps. Despite the fact that iPhone and iPad apps require a Mac for code development, there is little information about actually creating native Mac applications. The examples provided below demonstrate various aspects of Mac app development using the latest versions of Swift and SwiftUI. Hopefully these examples will provide a useful resource for Mac developers. The code repository for this website is located on GitHub at <a href="https://github.com/wigging/swift-macos">wigging/swift-macos</a>.</p>
+
+                <h2 id="contents">Contents</h2>
+                <ul>
+                    <li><a href="#getting-started">Getting started</a></li>
+                    <li><a href="#appstorage">AppStorage</a></li>
+                    <li><a href="#blur-effect">Blur effect</a></li>
+                    <li><a href="#button-styles">Button styles</a></li>
+                    <li><a href="#credits">Credits</a></li>
+                    <li><a href="#cursor">Cursor</a></li>
+                    <li><a href="#grid-lines">Grid lines</a></li>
+                    <li><a href="#image">Image</a></li>
+                    <li><a href="#nspasteboard">NSPasteboard</a></li>
+                    <li><a href="#picker-control">Picker control</a></li>
+                    <li><a href="#progressview">ProgressView</a></li>
+                    <li><a href="#scrollview">ScrollView</a></li>
+                    <li><a href="#sidebar-navigation">Sidebar navigation</a></li>
+                    <li><a href="#sidebar-toggle">Sidebar toggle</a></li>
+                    <li><a href="#stepper">Stepper</a></li>
+                    <li><a href="#text">Text</a></li>
+                    <li><a href="#textfield">TextField</a></li>
+                    <li><a href="#viewbuilder">ViewBuilder</a></li>
+                    <li><a href="#webview">WebView</a></li>
+                    <li><a href="#window-size">Window size</a></li>
+                </ul>
+
+                {% for section in site.sections %}
+                    {{ section.content }}
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md">
+                <p class="text-center small my-5">Gavin Wiggins © 2021</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
 <div class="container">
-
-    <!---------------------------- Banner ---------------------------->
-
-    <div class="row">
-        <div class="col-md">
-            <h1><strong>🍎 🖥 Swift Programming for macOS</strong></h1>
-            <hr>
-            <p>There are plenty of books, videos, and online resources for developing iOS apps. Despite the fact that iPhone and iPad apps require a Mac for code development, there is little information about actually creating native Mac applications. The examples provided below demonstrate various aspects of Mac app development using the latest versions of Swift and SwiftUI. Hopefully these examples will provide a useful resource for Mac developers. The code repository for this website is located on GitHub at <a href="https://github.com/wigging/swift-macos">wigging/swift-macos</a>.</p>
-        </div>
-    </div>
-
-    <!---------------------------- Table of Contents ---------------------------->
-
-    <div class="row">
-        <div class="col-md">
-            <h2>Contents</h2>
-            <hr>
-        </div>
-    </div>
-
-    <div class="row">
-
-        <!-- Column 1 -->
-
-        <div class="col-md">
-            <h5>Getting started</h5>
-            <ul>
-                <li><a href="{{ site.baseurl }}{% link _articles/get-started-xcode.md %}">Install Xcode</a></li>
-                <li><a href="{{ site.baseurl }}{% link _articles/get-started-remove-old-sims.md %}">Remove old simulators</a></li>
-                <li><a href="{{ site.baseurl }}{% link _articles/get-started-resources.md %}">Resources</a></li>
-                <li><a href="{{ site.baseurl }}{% link _articles/get-started-keyboard-shortcuts.md %}">Keyboard shortcuts</a></li>
-            </ul>
-
-            <h5>Swift</h5>
-            <ul>
-                <li><a href="{{ site.baseurl }}{% link _articles/swift-array.md %}">Array</a></li>
-                <li><a href="{{ site.baseurl }}{% link _articles/swift-strides.md %}">Strides</a></li>
-            </ul>
-        </div>
-
-        <!-- Column 2 -->
-
-        <div class="col-md">
-            <h5>App development</h5>
-            <ul>
-                <li><a href="{{ site.baseurl }}{% link _articles/app-appstorage.md %}">AppStorage property</a></li>
-                <li><a href="{{ site.baseurl }}{% link _articles/app-blur-effect.md %}">Blur effect</a></li>
-                <li><a href="{{ site.baseurl }}{% link _articles/app-button-styles.md %}">Button styles</a></li>
-                <li><a href="{{ site.baseurl }}{% link _articles/app-credits.md %}">Credits</a></li>
-                <li><a href="{{ site.baseurl }}{% link _articles/app-cursor.md %}">Cursor</a></li>
-                <li><a href="{{ site.baseurl }}{% link _articles/app-grid-lines.md %}">Grid lines</a></li>
-                <li><a href="{{ site.baseurl }}{% link _articles/app-image.md %}">Image</a></li>
-                <li><a href="{{ site.baseurl }}{% link _articles/app-nspasteboard.md %}">NSPasteboard</a></li>
-                <li><a href="{{ site.baseurl }}{% link _articles/app-picker-control.md %}">Picker control</a></li>
-                <li><a href="{{ site.baseurl }}{% link _articles/app-progressview.md %}">ProgressView</a></li>
-                <li><a href="{{ site.baseurl }}{% link _articles/app-scrollview.md %}">ScrollView</a></li>
-                <li><a href="{{ site.baseurl }}{% link _articles/app-sidebar-nav.md %}">Sidebar navigation</a></li>
-                <li><a href="{{ site.baseurl }}{% link _articles/app-sidebar-toggle.md %}">Sidebar toggle</a></li>
-                <li><a href="{{ site.baseurl }}{% link _articles/app-stepper.md %}">Stepper</a></li>
-                <li><a href="{{ site.baseurl }}{% link _articles/app-text.md %}">Text</a></li>
-                <li><a href="{{ site.baseurl }}{% link _articles/app-textfield.md %}">TextField</a></li>
-                <li><a href="{{ site.baseurl }}{% link _articles/app-viewbuilder.md %}">ViewBuilder</a></li>
-                <li><a href="{{ site.baseurl }}{% link _articles/app-webview.md %}">WebView</a></li>
-                <li><a href="{{ site.baseurl }}{% link _articles/app-window-size.md %}">Window size</a></li>
-                <li><a href="{{ site.baseurl }}{% link _articles/macos-prefkey-view-width.md %}">PreferenceKey view width</a></li>
-            </ul>
-        </div>
-    </div>
 
     <!---------------------------- Contact ---------------------------->
 
@@ -103,13 +107,7 @@
         </div>
     </div>
 
-    <!---------------------------- Footer ---------------------------->
-
-    <div class="row my-5">
-        <div class="col-md">
-            <p class="text-center small my-5">Gavin Wiggins © 2021</p>
-        </div>
-    </div>
 </div>
+
 </body>
 </html>

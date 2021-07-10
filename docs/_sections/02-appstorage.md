@@ -1,7 +1,7 @@
 ---
-title: AppStorage property
-date: 2021-02-22
 ---
+
+## AppStorage
 
 The `@AppStorage` property wrapper reads and writes values from `UserDefaults`. The example below saves a fruit name (a string) to the "fruit" key in `UserDefaults`. When the app is relaunched, the saved fruit name will be displayed in the text label. Enter a fruit in the text field then click the "Save fruit" button to save a new fruit to the "fruit" key in `UserDefaults`.
 

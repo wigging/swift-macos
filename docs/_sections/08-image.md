@@ -1,7 +1,7 @@
 ---
-title: Image
-date: 2021-04-06
 ---
+
+## Image
 
 An Image view is used to display an image. For the example below, an image named "homer" is added to the Assets catalog then the image is displayed in the window while preserving its aspect ratio.
 

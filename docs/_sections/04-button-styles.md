@@ -1,7 +1,7 @@
 ---
-title: Button styles
-date: 2021-02-21
 ---
+
+## Button styles
 
 Several built-in button styles are available for macOS such as the `PlainButtonStyle`, `LinkButtonStyle`, and `BorderlessButtonStyle`. The `BorderedButtonStyle` is also the default button style. To create a custom appearance for a button, use the `ButtonStyle` protocol. To fully customize the button's appearance and behavior, use the `PrimitiveButtonStyle` protocol.
 

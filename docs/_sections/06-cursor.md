@@ -1,7 +1,7 @@
 ---
-title: Cursor
-date: 2021-03-12
 ---
+
+## Cursor
 
 The mouse pointer (or cursor) is represented by an arrow on the screen. Different cursors are available in macOS to indicate actions that the user can take with the mouse. See the [NSCursor documentation][1] for a list of all the available cursors.
 

@@ -1,15 +1,4 @@
-baseurl: /swift-macos
-
 collections:
-  articles:
-    output: true
-    permalink: /:title
+  - sections
 
-defaults:
-  - scope:
-      path: ""
-      type: "articles"
-    values:
-      layout: "article"
-
-exclude: [README.md, Gemfile]
+exclude: [Gemfile]
