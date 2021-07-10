@@ -21,7 +21,7 @@ body {
 }
 
 h2 {
-    margin-top: 3rem;
+    margin-top: 4rem;
     scroll-margin-top: 5rem;
 }
 
@@ -33,6 +33,12 @@ img {
 pre code {
     white-space: pre;
     word-wrap: normal;
+}
+
+ul {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
 }
 
 /*--- Mobile screens ---*/
