@@ -1,22 +1,28 @@
+/*--- All screens ---*/
+
+.container {
+    max-width: 700px;
+}
+
+.large-img {
+    max-width: 100%;
+}
+
 a {
     text-decoration: none;
 }
 
 a:hover {
     color: #4407E6;
-    background: #EEEEEE;
 }
 
 body {
     background-color: #fffff8;
 }
 
-h1 {
-    margin-top: 60px;
-}
-
 h2 {
-    margin-top: 40px;
+    margin-top: 3rem;
+    scroll-margin-top: 5rem;
 }
 
 img {
@@ -29,15 +35,13 @@ pre code {
     word-wrap: normal;
 }
 
-.container {
-    max-width: 700px;
-}
+/*--- Mobile screens ---*/
 
-.large-img {
-    max-width: 100%;
-}
+@media only screen and (max-width: 600px) {
 
-@media (max-width: 480px) {
+    h2 {
+        scroll-margin-top: 10rem;
+    }
 
     img {
         max-width: 100%;
