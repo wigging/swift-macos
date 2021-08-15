@@ -1,7 +1,6 @@
 ---
+title: Blur effect
 ---
-
-## Blur effect
 
 The blur modifier can be used to blur a view.
 

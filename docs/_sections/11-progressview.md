@@ -1,7 +1,6 @@
 ---
+title: ProgressView
 ---
-
-## ProgressView
 
 A `ProgressView` represents completion of a task or the occurance of an activity with an unknown completion time. A default value of 1.0 is used for the total value when tracking completion progress. As the example demonstrates below, different configurations of a progress view are possible.
 

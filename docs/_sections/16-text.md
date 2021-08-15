@@ -1,7 +1,6 @@
 ---
+title: Text
 ---
-
-## Text
 
 A Text view displays one or more lines of read-only text.
 

@@ -1,7 +1,6 @@
 ---
+title: Stepper
 ---
-
-## Stepper
 
 The stepper control increments and decrements a value. A closed range can be used to limit the applicable stepper values.
 

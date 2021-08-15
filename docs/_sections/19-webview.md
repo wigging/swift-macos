@@ -1,7 +1,6 @@
 ---
+title: WebView
 ---
-
-## WebView
 
 A `WKWebView` from the WebKit framework is used to display web content in a window. The web view can be wrapped with `NSViewRepresentable` to make it usable with SwiftUI. Content for the web view can be loaded from an HTML file, from a string containing HTML, or from a URL representing a website address. Don't forget to enable "Outgoing Connections" in the target's "App Sandbox"; otherwise, the website will not display in the app.
 

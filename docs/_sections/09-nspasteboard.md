@@ -1,7 +1,6 @@
 ---
+title: NSPasteboard
 ---
-
-## NSPasteboard
 
 The typical way to copy text is to select it with the mouse then press ⌘C. To do this in code, use the `NSPasteboard` class to transfer text to the pasteboard server.
 

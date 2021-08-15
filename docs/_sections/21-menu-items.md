@@ -1,7 +1,6 @@
 ---
+title: Menu items
 ---
-
-## Menu items
 
 Menus in Mac apps are typically located at the top of the screen in the menu bar. Menu items can be added to an app's menu using the `commands` modifier on the `WindowGroup`.
 

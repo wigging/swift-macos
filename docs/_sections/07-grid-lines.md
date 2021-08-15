@@ -1,7 +1,6 @@
 ---
+title: Grid lines
 ---
-
-## Grid lines
 
 A GeometryReader can be used to equally space lines in a view even when that view changes size. This is accomplished by using the width and height of the container view to determine the spacing of the lines.
 

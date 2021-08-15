@@ -1,7 +1,6 @@
 ---
+title: ViewBuilder
 ---
-
-## ViewBuilder
 
 The `@ViewBuilder` attribute can be used to build views from closures. To demonstrate, three views are defined as shown below:
 

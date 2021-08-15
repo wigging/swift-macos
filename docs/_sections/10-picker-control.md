@@ -1,7 +1,6 @@
 ---
+title: Picker control
 ---
-
-## Picker control
 
 The picker control selects an item from a set of values. The appearance of the picker can be changed by using different styles and modifiers.
 

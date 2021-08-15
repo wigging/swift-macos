@@ -21,12 +21,12 @@ body {
 }
 
 h1 {
+    margin-bottom: 2rem;
     margin-top: 4rem;
 }
 
 h2 {
     margin-top: 4rem;
-    scroll-margin-top: 5rem;
 }
 
 img {

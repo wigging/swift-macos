@@ -1,6 +1,15 @@
 baseurl: /swift-macos
 
 collections:
-  - sections
+  sections:
+    output: true
+    permalink: /:title
+
+defaults:
+  - scope:
+      path: ""
+      type: "sections"
+    values:
+      layout: "section"
 
 exclude: [Gemfile]

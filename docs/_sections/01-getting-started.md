@@ -1,7 +1,6 @@
 ---
+title: Getting started
 ---
-
-## Getting started
 
 The first step (other than getting a Mac) is to download Xcode from the Mac App Store.
 
