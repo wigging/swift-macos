@@ -20,6 +20,10 @@ body {
     background-color: #fffff8;
 }
 
+h1 {
+    margin-top: 4rem;
+}
+
 h2 {
     margin-top: 4rem;
     scroll-margin-top: 5rem;
