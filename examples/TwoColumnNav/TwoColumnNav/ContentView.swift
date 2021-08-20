@@ -1,12 +1,10 @@
----
-title: Sidebar navigation
----
+//
+//  ContentView.swift
+//  TwoColumnNav
+//
+//  Created by Gavin Wiggins on 8/19/21.
+//
 
-A sidebar can be used to select a destination view in a navigation-based app. This is accomplished by wrapping the views in a `NavigationView` and using `NavigationLink` to display the different views. In the example below, an `AppStorage` property remembers the selected view.
-
-![sidebar navigation](/swift-macos/images/sidebarnav.png)
-
-```swift
 import SwiftUI
 
 struct DetailView: View {
@@ -81,4 +79,3 @@ struct ContentView: View {
         .frame(width: 500, height: 300)
     }
 }
-```

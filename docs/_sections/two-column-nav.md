@@ -1,14 +1,16 @@
-//
-//  ContentView.swift
-//  SidebarNavigation
-//
-//  Created by Gavin Wiggins on 5/13/21.
-//
+---
+title: Two column NavigationView
+---
 
+A two column `NavigationView` creates a sidebar with a list of items. In the example shown below, selecting an item in the sidebar will change the detail view. An `AppStorage` property is used to remember the selected item.
+
+![two column navigation](/swift-macos/images/twocolnav.png)
+
+```swift
 import SwiftUI
 
 struct DetailView: View {
-    
+
     var selected: String?
     @AppStorage("selectedStore") private var selectedStore = ""
 
@@ -70,7 +72,7 @@ private func toggleSidebar() {
 }
 
 struct ContentView: View {
-    
+
     var body: some View {
         NavigationView {
             Sidebar()
@@ -79,9 +81,4 @@ struct ContentView: View {
         .frame(width: 500, height: 300)
     }
 }
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+```
