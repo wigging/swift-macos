@@ -4,7 +4,7 @@ title: Three column NavigationView
 
 A three column `NavigationView` is created using a similar approach as the two column `NavigationView`. The middle column has a fixed minimum width of 200 but the frame's `minWidth` can be specified with a value greater than 200.
 
-![three column navigation](/swift-macos/images/threecolnav.png)
+<img src="/swift-macos/images/threecolnav.png" alt="three column navigation" class="image600">
 
 ```swift
 import SwiftUI

@@ -33,6 +33,11 @@ img {
     max-width: 400px;
 }
 
+.image600 {
+    max-width: 600px;
+    width: 100%;
+}
+
 /* Make code blocks scroll horizontally */
 pre code {
     white-space: pre;
