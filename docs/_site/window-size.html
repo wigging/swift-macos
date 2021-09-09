@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/swift-macos/style.css">
+    <link rel="stylesheet" href="/swift-macos/syntax.css">
+    <title>Swift macOS</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md">
+                <h1>Window size</h1>
+
+                <p>The window size is defined by the frame size of the containing view. In this example the VStack frame is set to a width of 500 and height of 300 which makes the window width 500 and height 300.</p>
+
+<p><img src="/swift-macos/images/window-size.png" alt="window size" /></p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">import</span> <span class="kt">SwiftUI</span>
+
+<span class="kd">struct</span> <span class="kt">ContentView</span> <span class="p">:</span> <span class="kt">View</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="kd">some</span> <span class="kt">View</span> <span class="p">{</span>
+        <span class="kt">VStack</span> <span class="p">{</span>
+            <span class="kt">Text</span><span class="p">(</span><span class="s">"Window size is 500 by 300"</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="o">.</span><span class="nf">frame</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">300</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+            </div>
+        </div>
+
+        <div class="row my-5">
+            <div class="col-md">
+                <p><a href="/swift-macos/"><b>← Back</b></a></p>
+            </div>
+        </div>
+
+        <div class="row my-5">
+            <div class="col-md">
+                <p class="text-center small">Gavin Wiggins © 2021</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

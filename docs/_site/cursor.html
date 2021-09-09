@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/swift-macos/style.css">
+    <link rel="stylesheet" href="/swift-macos/syntax.css">
+    <title>Swift macOS</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md">
+                <h1>Cursor</h1>
+
+                <p>The mouse pointer (or cursor) is represented by an arrow on the screen. Different cursors are available in macOS to indicate actions that the user can take with the mouse. See the <a href="https://developer.apple.com/documentation/appkit/nscursor">NSCursor documentation</a> for a list of all the available cursors.</p>
+
+<p><img src="/swift-macos/images/cursors.png" alt="cursors" /></p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">import</span> <span class="kt">SwiftUI</span>
+
+<span class="kd">struct</span> <span class="kt">ContentView</span><span class="p">:</span> <span class="kt">View</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="kd">some</span> <span class="kt">View</span> <span class="p">{</span>
+        <span class="kt">VStack</span><span class="p">(</span><span class="nv">spacing</span><span class="p">:</span> <span class="mi">25</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">Text</span><span class="p">(</span><span class="s">"Hover over each button to change cursor."</span><span class="p">)</span>
+
+            <span class="c1">// i-beam cursor</span>
+            <span class="kt">Button</span><span class="p">(</span><span class="s">" i-beam "</span><span class="p">)</span> <span class="p">{}</span>
+                <span class="o">.</span><span class="nf">onHover</span><span class="p">(</span><span class="nv">perform</span><span class="p">:</span> <span class="p">{</span> <span class="n">hovering</span> <span class="k">in</span>
+                    <span class="n">hovering</span> <span class="p">?</span> <span class="kt">NSCursor</span><span class="o">.</span><span class="n">iBeam</span><span class="o">.</span><span class="nf">push</span><span class="p">()</span> <span class="p">:</span> <span class="kt">NSCursor</span><span class="o">.</span><span class="nf">pop</span><span class="p">()</span>
+                <span class="p">})</span>
+
+            <span class="c1">// crosshair cursor</span>
+            <span class="kt">Button</span><span class="p">(</span><span class="s">" crosshair "</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+                <span class="o">.</span><span class="nf">onHover</span><span class="p">(</span><span class="nv">perform</span><span class="p">:</span> <span class="p">{</span> <span class="n">hovering</span> <span class="k">in</span>
+                    <span class="n">hovering</span> <span class="p">?</span> <span class="kt">NSCursor</span><span class="o">.</span><span class="n">crosshair</span><span class="o">.</span><span class="nf">push</span><span class="p">()</span> <span class="p">:</span> <span class="kt">NSCursor</span><span class="o">.</span><span class="nf">pop</span><span class="p">()</span>
+                <span class="p">})</span>
+
+            <span class="c1">// close-hand cursor</span>
+            <span class="kt">Button</span><span class="p">(</span><span class="s">" closed-hand "</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+                <span class="o">.</span><span class="nf">onHover</span><span class="p">(</span><span class="nv">perform</span><span class="p">:</span> <span class="p">{</span> <span class="n">hovering</span> <span class="k">in</span>
+                    <span class="n">hovering</span> <span class="p">?</span> <span class="kt">NSCursor</span><span class="o">.</span><span class="n">closedHand</span><span class="o">.</span><span class="nf">push</span><span class="p">()</span> <span class="p">:</span> <span class="kt">NSCursor</span><span class="o">.</span><span class="nf">pop</span><span class="p">()</span>
+                <span class="p">})</span>
+
+            <span class="c1">// open-hand cursor</span>
+            <span class="kt">Button</span><span class="p">(</span><span class="s">" open-hand "</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+                <span class="o">.</span><span class="nf">onHover</span><span class="p">(</span><span class="nv">perform</span><span class="p">:</span> <span class="p">{</span> <span class="n">hovering</span> <span class="k">in</span>
+                    <span class="n">hovering</span> <span class="p">?</span> <span class="kt">NSCursor</span><span class="o">.</span><span class="n">openHand</span><span class="o">.</span><span class="nf">push</span><span class="p">()</span> <span class="p">:</span> <span class="kt">NSCursor</span><span class="o">.</span><span class="nf">pop</span><span class="p">()</span>
+                <span class="p">})</span>
+
+            <span class="c1">// pointing-hand cursor</span>
+            <span class="kt">Button</span><span class="p">(</span><span class="s">" pointing-hand "</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+                <span class="o">.</span><span class="nf">onHover</span><span class="p">(</span><span class="nv">perform</span><span class="p">:</span> <span class="p">{</span> <span class="n">hovering</span> <span class="k">in</span>
+                    <span class="n">hovering</span> <span class="p">?</span> <span class="kt">NSCursor</span><span class="o">.</span><span class="n">pointingHand</span><span class="o">.</span><span class="nf">push</span><span class="p">()</span> <span class="p">:</span> <span class="kt">NSCursor</span><span class="o">.</span><span class="nf">pop</span><span class="p">()</span>
+                <span class="p">})</span>
+        <span class="p">}</span>
+        <span class="o">.</span><span class="nf">frame</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">300</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+            </div>
+        </div>
+
+        <div class="row my-5">
+            <div class="col-md">
+                <p><a href="/swift-macos/"><b>← Back</b></a></p>
+            </div>
+        </div>
+
+        <div class="row my-5">
+            <div class="col-md">
+                <p class="text-center small">Gavin Wiggins © 2021</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/swift-macos/style.css">
+    <link rel="stylesheet" href="/swift-macos/syntax.css">
+    <title>Swift macOS</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md">
+                <h1>Three column NavigationView</h1>
+
+                <p>A three column <code class="language-plaintext highlighter-rouge">NavigationView</code> is created using a similar approach as the two column <code class="language-plaintext highlighter-rouge">NavigationView</code>. The middle column has a fixed minimum width of 200 but the frame’s <code class="language-plaintext highlighter-rouge">minWidth</code> can be specified with a value greater than 200.</p>
+
+<p><img src="/swift-macos/images/threecolnav.png" alt="three column navigation" class="image600" /></p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">import</span> <span class="kt">SwiftUI</span>
+
+<span class="kd">struct</span> <span class="kt">Group</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span>
+    <span class="k">let</span> <span class="nv">items</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span>
+<span class="p">}</span>
+
+<span class="k">let</span> <span class="nv">groups</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="kt">Group</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Group A"</span><span class="p">,</span> <span class="nv">items</span><span class="p">:</span> <span class="p">[</span><span class="s">"Item 1"</span><span class="p">,</span> <span class="s">"Item 2"</span><span class="p">]),</span>
+    <span class="kt">Group</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Group B"</span><span class="p">,</span> <span class="nv">items</span><span class="p">:</span> <span class="p">[</span><span class="s">"Item 3"</span><span class="p">]),</span>
+    <span class="kt">Group</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="s">"Group C"</span><span class="p">,</span> <span class="nv">items</span><span class="p">:</span> <span class="p">[</span><span class="s">"Item 4"</span><span class="p">,</span> <span class="s">"Item 5"</span><span class="p">,</span> <span class="s">"Item 6"</span><span class="p">])</span>
+<span class="p">]</span>
+
+<span class="kd">struct</span> <span class="kt">Sidebar</span><span class="p">:</span> <span class="kt">View</span> <span class="p">{</span>
+    <span class="kd">@State</span> <span class="kd">private</span> <span class="k">var</span> <span class="nv">selection</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span>
+
+    <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="kd">some</span> <span class="kt">View</span> <span class="p">{</span>
+        <span class="kt">List</span><span class="p">(</span><span class="n">groups</span><span class="p">,</span> <span class="nv">id</span><span class="p">:</span> <span class="p">\</span><span class="o">.</span><span class="k">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> <span class="p">{</span> <span class="n">group</span> <span class="k">in</span>
+            <span class="kt">NavigationLink</span><span class="p">(</span><span class="n">group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="nv">destination</span><span class="p">:</span> <span class="kt">Itembar</span><span class="p">(</span><span class="nv">items</span><span class="p">:</span> <span class="n">group</span><span class="o">.</span><span class="n">items</span><span class="p">),</span> <span class="nv">tag</span><span class="p">:</span> <span class="n">group</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="nv">selection</span><span class="p">:</span> <span class="err">$</span><span class="n">selection</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="o">.</span><span class="nf">frame</span><span class="p">(</span><span class="nv">minWidth</span><span class="p">:</span> <span class="mi">150</span><span class="p">)</span>
+        <span class="o">.</span><span class="nf">listStyle</span><span class="p">(</span><span class="kt">SidebarListStyle</span><span class="p">())</span>
+        <span class="o">.</span><span class="n">toolbar</span> <span class="p">{</span>
+            <span class="kt">Button</span><span class="p">(</span>
+                <span class="nv">action</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="kt">NSApp</span><span class="o">.</span><span class="n">keyWindow</span><span class="p">?</span><span class="o">.</span><span class="n">contentViewController</span><span class="p">?</span><span class="o">.</span><span class="nf">tryToPerform</span><span class="p">(</span><span class="kd">#selector(</span><span class="nf">NSSplitViewController.toggleSidebar(_:)</span><span class="kd">)</span><span class="p">,</span> <span class="nv">with</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+                <span class="p">},</span> <span class="nv">label</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="kt">Label</span><span class="p">(</span><span class="s">"Toggle sidebar"</span><span class="p">,</span> <span class="nv">systemImage</span><span class="p">:</span> <span class="s">"sidebar.left"</span><span class="p">)</span>
+            <span class="p">})</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">struct</span> <span class="kt">Itembar</span><span class="p">:</span> <span class="kt">View</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">items</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span>
+    <span class="kd">@State</span> <span class="kd">private</span> <span class="k">var</span> <span class="nv">selection</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span>
+
+    <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="kd">some</span> <span class="kt">View</span> <span class="p">{</span>
+        <span class="kt">List</span><span class="p">(</span><span class="n">items</span><span class="p">,</span> <span class="nv">id</span><span class="p">:</span> <span class="p">\</span><span class="o">.</span><span class="k">self</span><span class="p">)</span> <span class="p">{</span> <span class="n">item</span> <span class="k">in</span>
+            <span class="kt">NavigationLink</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="nv">destination</span><span class="p">:</span> <span class="kt">DetailView</span><span class="p">(</span><span class="nv">detailText</span><span class="p">:</span> <span class="n">item</span><span class="p">),</span> <span class="nv">tag</span><span class="p">:</span> <span class="n">item</span><span class="p">,</span> <span class="nv">selection</span><span class="p">:</span> <span class="err">$</span><span class="n">selection</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">struct</span> <span class="kt">DetailView</span><span class="p">:</span> <span class="kt">View</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">detailText</span><span class="p">:</span> <span class="kt">String</span>
+    <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="kd">some</span> <span class="kt">View</span> <span class="p">{</span>
+        <span class="kt">Text</span><span class="p">(</span><span class="s">"The selection is </span><span class="se">\(</span><span class="n">detailText</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">struct</span> <span class="kt">ContentView</span><span class="p">:</span> <span class="kt">View</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="kd">some</span> <span class="kt">View</span> <span class="p">{</span>
+        <span class="kt">NavigationView</span> <span class="p">{</span>
+            <span class="kt">Sidebar</span><span class="p">()</span>
+            <span class="kt">Text</span><span class="p">(</span><span class="s">"Select a Group"</span><span class="p">)</span>
+            <span class="kt">Text</span><span class="p">(</span><span class="s">"Select an Item"</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="o">.</span><span class="nf">frame</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">700</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">400</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">struct</span> <span class="kt">ContentView_Previews</span><span class="p">:</span> <span class="kt">PreviewProvider</span> <span class="p">{</span>
+    <span class="kd">static</span> <span class="k">var</span> <span class="nv">previews</span><span class="p">:</span> <span class="kd">some</span> <span class="kt">View</span> <span class="p">{</span>
+        <span class="kt">ContentView</span><span class="p">()</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+            </div>
+        </div>
+
+        <div class="row my-5">
+            <div class="col-md">
+                <p><a href="/swift-macos/"><b>← Back</b></a></p>
+            </div>
+        </div>
+
+        <div class="row my-5">
+            <div class="col-md">
+                <p class="text-center small">Gavin Wiggins © 2021</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

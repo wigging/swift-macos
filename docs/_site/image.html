@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/swift-macos/style.css">
+    <link rel="stylesheet" href="/swift-macos/syntax.css">
+    <title>Swift macOS</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md">
+                <h1>Image</h1>
+
+                <p>An Image view is used to display an image. For the example below, an image named “homer” is added to the Assets catalog then the image is displayed in the window while preserving its aspect ratio.</p>
+
+<p><img src="/swift-macos/images/image.png" alt="image of homer" /></p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">import</span> <span class="kt">SwiftUI</span>
+
+<span class="kd">struct</span> <span class="kt">ContentView</span><span class="p">:</span> <span class="kt">View</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="kd">some</span> <span class="kt">View</span> <span class="p">{</span>
+        <span class="kt">VStack</span> <span class="p">{</span>
+            <span class="kt">Image</span><span class="p">(</span><span class="s">"homer"</span><span class="p">)</span>
+                <span class="o">.</span><span class="nf">resizable</span><span class="p">()</span>
+                <span class="o">.</span><span class="nf">aspectRatio</span><span class="p">(</span><span class="nv">contentMode</span><span class="p">:</span> <span class="o">.</span><span class="n">fit</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="o">.</span><span class="nf">padding</span><span class="p">()</span>
+        <span class="o">.</span><span class="nf">frame</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">300</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="sf-symbols">SF Symbols</h2>
+
+<p>Images can also be created using the system name of an SF Symbol. Use the <a href="https://developer.apple.com/sf-symbols/">SF Symbols app</a> to look up the names of the available system images.</p>
+
+<p><img src="/swift-macos/images/image-sfsymbols.png" alt="image sf symbol" /></p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">import</span> <span class="kt">SwiftUI</span>
+
+<span class="kd">struct</span> <span class="kt">ContentView</span><span class="p">:</span> <span class="kt">View</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="kd">some</span> <span class="kt">View</span> <span class="p">{</span>
+        <span class="kt">VStack</span><span class="p">(</span><span class="nv">spacing</span><span class="p">:</span> <span class="mi">20</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">Text</span><span class="p">(</span><span class="s">"Images as SF Symbols"</span><span class="p">)</span>
+
+            <span class="kt">Image</span><span class="p">(</span><span class="nv">systemName</span><span class="p">:</span> <span class="s">"trash"</span><span class="p">)</span>
+
+            <span class="kt">Image</span><span class="p">(</span><span class="nv">systemName</span><span class="p">:</span> <span class="s">"trash.fill"</span><span class="p">)</span>
+
+            <span class="kt">Image</span><span class="p">(</span><span class="nv">systemName</span><span class="p">:</span> <span class="s">"gear"</span><span class="p">)</span>
+                <span class="o">.</span><span class="nf">font</span><span class="p">(</span><span class="o">.</span><span class="nf">system</span><span class="p">(</span><span class="nv">size</span><span class="p">:</span> <span class="mi">32</span><span class="p">,</span> <span class="nv">weight</span><span class="p">:</span> <span class="o">.</span><span class="n">bold</span><span class="p">))</span>
+
+            <span class="kt">Image</span><span class="p">(</span><span class="nv">systemName</span><span class="p">:</span> <span class="s">"gear"</span><span class="p">)</span>
+                <span class="o">.</span><span class="nf">imageScale</span><span class="p">(</span><span class="o">.</span><span class="n">large</span><span class="p">)</span>
+
+            <span class="kt">Image</span><span class="p">(</span><span class="nv">systemName</span><span class="p">:</span> <span class="s">"paperplane.circle.fill"</span><span class="p">)</span>
+                <span class="o">.</span><span class="nf">renderingMode</span><span class="p">(</span><span class="o">.</span><span class="n">original</span><span class="p">)</span><span class="o">.</span><span class="nf">font</span><span class="p">(</span><span class="o">.</span><span class="n">largeTitle</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="o">.</span><span class="nf">frame</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">300</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h2 id="system-images">System images</h2>
+
+<p>Named images specific to macOS can be displayed using the appropriate <code class="language-plaintext highlighter-rouge">NSImage.Name</code> string. See <a href="https://developer.apple.com/documentation/appkit/nsimage/name">Apple’s documentation</a> for a list of the available system image names.</p>
+
+<p><img src="/swift-macos/images/image-system.png" alt="image system images" /></p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">import</span> <span class="kt">SwiftUI</span>
+
+<span class="kd">struct</span> <span class="kt">ContentView</span><span class="p">:</span> <span class="kt">View</span> <span class="p">{</span>
+
+    <span class="k">let</span> <span class="nv">prefs</span> <span class="o">=</span> <span class="kt">NSImage</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="kt">NSImage</span><span class="o">.</span><span class="n">preferencesGeneralName</span><span class="p">)</span><span class="o">!</span>
+    <span class="k">let</span> <span class="nv">user</span> <span class="o">=</span> <span class="kt">NSImage</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="kt">NSImage</span><span class="o">.</span><span class="n">userAccountsName</span><span class="p">)</span><span class="o">!</span>
+    <span class="k">let</span> <span class="nv">advanced</span> <span class="o">=</span> <span class="kt">NSImage</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="kt">NSImage</span><span class="o">.</span><span class="n">advancedName</span><span class="p">)</span><span class="o">!</span>
+    <span class="k">let</span> <span class="nv">computer</span> <span class="o">=</span> <span class="kt">NSImage</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="kt">NSImage</span><span class="o">.</span><span class="n">computerName</span><span class="p">)</span><span class="o">!</span>
+    <span class="k">let</span> <span class="nv">folder</span> <span class="o">=</span> <span class="kt">NSImage</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="kt">NSImage</span><span class="o">.</span><span class="n">folderName</span><span class="p">)</span><span class="o">!</span>
+
+    <span class="k">let</span> <span class="nv">caution</span> <span class="o">=</span> <span class="kt">NSImage</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="kt">NSImage</span><span class="o">.</span><span class="n">cautionName</span><span class="p">)</span><span class="o">!</span>
+    <span class="k">let</span> <span class="nv">group</span> <span class="o">=</span> <span class="kt">NSImage</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="kt">NSImage</span><span class="o">.</span><span class="n">userGroupName</span><span class="p">)</span><span class="o">!</span>
+    <span class="k">let</span> <span class="nv">guest</span> <span class="o">=</span> <span class="kt">NSImage</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="kt">NSImage</span><span class="o">.</span><span class="n">userGuestName</span><span class="p">)</span><span class="o">!</span>
+    <span class="k">let</span> <span class="nv">font</span> <span class="o">=</span> <span class="kt">NSImage</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="kt">NSImage</span><span class="o">.</span><span class="n">fontPanelName</span><span class="p">)</span><span class="o">!</span>
+    <span class="k">let</span> <span class="nv">info</span> <span class="o">=</span> <span class="kt">NSImage</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="kt">NSImage</span><span class="o">.</span><span class="n">infoName</span><span class="p">)</span><span class="o">!</span>
+
+    <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="kd">some</span> <span class="kt">View</span> <span class="p">{</span>
+        <span class="kt">VStack</span> <span class="p">{</span>
+            <span class="kt">Text</span><span class="p">(</span><span class="s">"System images available in macOS"</span><span class="p">)</span>
+            <span class="kt">HStack</span><span class="p">(</span><span class="nv">spacing</span><span class="p">:</span> <span class="mi">60</span><span class="p">)</span> <span class="p">{</span>
+                <span class="kt">VStack</span><span class="p">(</span><span class="nv">spacing</span><span class="p">:</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="kt">Image</span><span class="p">(</span><span class="nv">nsImage</span><span class="p">:</span> <span class="n">prefs</span><span class="p">)</span>
+                    <span class="kt">Image</span><span class="p">(</span><span class="nv">nsImage</span><span class="p">:</span> <span class="n">user</span><span class="p">)</span>
+                    <span class="kt">Image</span><span class="p">(</span><span class="nv">nsImage</span><span class="p">:</span> <span class="n">advanced</span><span class="p">)</span>
+                    <span class="kt">Image</span><span class="p">(</span><span class="nv">nsImage</span><span class="p">:</span> <span class="n">computer</span><span class="p">)</span>
+                    <span class="kt">Image</span><span class="p">(</span><span class="nv">nsImage</span><span class="p">:</span> <span class="n">folder</span><span class="p">)</span>
+                <span class="p">}</span>
+                <span class="kt">VStack</span><span class="p">(</span><span class="nv">spacing</span><span class="p">:</span> <span class="mi">10</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="kt">Image</span><span class="p">(</span><span class="nv">nsImage</span><span class="p">:</span> <span class="n">caution</span><span class="p">)</span>
+                    <span class="kt">Image</span><span class="p">(</span><span class="nv">nsImage</span><span class="p">:</span> <span class="n">group</span><span class="p">)</span>
+                    <span class="kt">Image</span><span class="p">(</span><span class="nv">nsImage</span><span class="p">:</span> <span class="n">guest</span><span class="p">)</span>
+                    <span class="kt">Image</span><span class="p">(</span><span class="nv">nsImage</span><span class="p">:</span> <span class="n">font</span><span class="p">)</span>
+                    <span class="kt">Image</span><span class="p">(</span><span class="nv">nsImage</span><span class="p">:</span> <span class="n">info</span><span class="p">)</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="o">.</span><span class="nf">frame</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">300</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+            </div>
+        </div>
+
+        <div class="row my-5">
+            <div class="col-md">
+                <p><a href="/swift-macos/"><b>← Back</b></a></p>
+            </div>
+        </div>
+
+        <div class="row my-5">
+            <div class="col-md">
+                <p class="text-center small">Gavin Wiggins © 2021</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/swift-macos/style.css">
+    <link rel="stylesheet" href="/swift-macos/syntax.css">
+    <title>Swift macOS</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md">
+                <h1>Sidebar toggle</h1>
+
+                <p>A sidebar view can be displayed or hidden using the <code class="language-plaintext highlighter-rouge">toggleSidebar()</code> feature from an <code class="language-plaintext highlighter-rouge">NSSplitViewController</code>. At the time of writing this article, SwiftUI does not have this feature but hopefully an upcoming WWDC will offer a SwiftUI solution.</p>
+
+<p><img src="/swift-macos/images/sidebartoggle.png" alt="sidebar toggle" /></p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">import</span> <span class="kt">SwiftUI</span>
+
+<span class="kd">struct</span> <span class="kt">Sidebar</span><span class="p">:</span> <span class="kt">View</span> <span class="p">{</span>
+
+    <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="kd">some</span> <span class="kt">View</span> <span class="p">{</span>
+        <span class="kt">List</span> <span class="p">{</span>
+            <span class="kt">Label</span><span class="p">(</span><span class="s">"Books"</span><span class="p">,</span> <span class="nv">systemImage</span><span class="p">:</span> <span class="s">"book.closed"</span><span class="p">)</span>
+            <span class="kt">Label</span><span class="p">(</span><span class="s">"Tutorials"</span><span class="p">,</span> <span class="nv">systemImage</span><span class="p">:</span> <span class="s">"list.bullet.rectangle"</span><span class="p">)</span>
+            <span class="kt">Label</span><span class="p">(</span><span class="s">"Video Tutorials"</span><span class="p">,</span> <span class="nv">systemImage</span><span class="p">:</span> <span class="s">"tv"</span><span class="p">)</span>
+            <span class="kt">Label</span><span class="p">(</span><span class="s">"Contacts"</span><span class="p">,</span> <span class="nv">systemImage</span><span class="p">:</span> <span class="s">"mail.stack"</span><span class="p">)</span>
+            <span class="kt">Label</span><span class="p">(</span><span class="s">"Search"</span><span class="p">,</span> <span class="nv">systemImage</span><span class="p">:</span> <span class="s">"magnifyingglass"</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="o">.</span><span class="nf">listStyle</span><span class="p">(</span><span class="kt">SidebarListStyle</span><span class="p">())</span>
+        <span class="o">.</span><span class="n">toolbar</span> <span class="p">{</span>
+            <span class="kt">Button</span><span class="p">(</span><span class="nv">action</span><span class="p">:</span> <span class="n">toggleSidebar</span><span class="p">,</span> <span class="nv">label</span><span class="p">:</span> <span class="p">{</span>
+                <span class="kt">Image</span><span class="p">(</span><span class="nv">systemName</span><span class="p">:</span> <span class="s">"sidebar.left"</span><span class="p">)</span><span class="o">.</span><span class="nf">help</span><span class="p">(</span><span class="s">"Toggle Sidebar"</span><span class="p">)</span>
+            <span class="p">})</span>
+        <span class="p">}</span>
+        <span class="o">.</span><span class="nf">frame</span><span class="p">(</span><span class="nv">minWidth</span><span class="p">:</span> <span class="mi">150</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">private</span> <span class="kd">func</span> <span class="nf">toggleSidebar</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">NSApp</span><span class="o">.</span><span class="n">keyWindow</span><span class="p">?</span><span class="o">.</span><span class="n">contentViewController</span><span class="p">?</span><span class="o">.</span><span class="nf">tryToPerform</span><span class="p">(</span><span class="kd">#selector(</span><span class="nf">NSSplitViewController.toggleSidebar(_:)</span><span class="kd">)</span><span class="p">,</span> <span class="nv">with</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="kd">struct</span> <span class="kt">ContentView</span><span class="p">:</span> <span class="kt">View</span> <span class="p">{</span>
+
+    <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="kd">some</span> <span class="kt">View</span> <span class="p">{</span>
+        <span class="kt">NavigationView</span> <span class="p">{</span>
+            <span class="kt">Sidebar</span><span class="p">()</span>
+            <span class="kt">Text</span><span class="p">(</span><span class="s">"Use button to toggle sidebar."</span><span class="p">)</span>
+                <span class="o">.</span><span class="nf">frame</span><span class="p">(</span><span class="nv">minWidth</span><span class="p">:</span> <span class="mi">200</span><span class="p">)</span>
+        <span class="p">}</span>
+        <span class="o">.</span><span class="nf">frame</span><span class="p">(</span><span class="nv">width</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">300</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>The sidebar view can also be toggled with a keyboard shortcut using Option-Command-S represented by the symbols <code class="language-plaintext highlighter-rouge">⌥⌘S</code>. This is enabled by adding <code class="language-plaintext highlighter-rouge">SidebarCommands()</code> to the main window group.</p>
+
+<div class="language-swift highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">import</span> <span class="kt">SwiftUI</span>
+
+<span class="kd">@main</span>
+<span class="kd">struct</span> <span class="kt">SidebarToggleApp</span><span class="p">:</span> <span class="kt">App</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">body</span><span class="p">:</span> <span class="kd">some</span> <span class="kt">Scene</span> <span class="p">{</span>
+        <span class="kt">WindowGroup</span> <span class="p">{</span>
+            <span class="kt">ContentView</span><span class="p">()</span>
+        <span class="p">}</span>
+        <span class="o">.</span><span class="n">commands</span> <span class="p">{</span>
+            <span class="kt">SidebarCommands</span><span class="p">()</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+            </div>
+        </div>
+
+        <div class="row my-5">
+            <div class="col-md">
+                <p><a href="/swift-macos/"><b>← Back</b></a></p>
+            </div>
+        </div>
+
+        <div class="row my-5">
+            <div class="col-md">
+                <p class="text-center small">Gavin Wiggins © 2021</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
