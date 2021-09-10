@@ -1,10 +1,10 @@
 ---
-title: DisclusureGroup
+title: DisclosureGroup
 ---
 
-To organize our sidebar view, we can be use `DisclusureGroup`. We can create different sections and specify if they are extended by default when the application launches.
+To organize our sidebar view, we can use `DisclosureGroup`. We can create different sections and specify if they are expanded by default when the application launches.
 
-![sidebar toggle](/swift-macos/images/disclusuregroup.png)
+![sidebar toggle](/swift-macos/images/sidebar-disclosuregroup.png)
 
 ```swift
 import SwiftUI
