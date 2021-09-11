@@ -2,9 +2,9 @@
 
 There are plenty of books, videos, and online resources for developing iOS apps. Despite the fact that iPhone and iPad apps require a Mac for code development, there is very little information about actually creating native Mac applications. The examples in this repository demonstrate various aspects of Mac app development using the latest versions of Swift and SwiftUI. Hopefully the examples and accompanying website will provide a useful resource for Mac developers.
 
-## Example code
+## Examples
 
-Code files are available in the `examples` folder.
+Example Xcode projects are available in the `examples` folder.
 
 ## Website
 
@@ -37,7 +37,7 @@ $ bundle update github-pages
 
 ## Contributing
 
-Submit a Pull Request if you would like to contribute to this project. Questions and other comments can be submitted on the Issues page.
+Submit a Pull Request if you would like to contribute to this project. Questions and other comments can be submitted on the Issues page. If you submit an example Xcode project, make sure Team is set to None in the Signing & Capabilites section in the project settings.
 
 ## Support
 
