@@ -1,5 +1,5 @@
 ---
-title: DisclosureGroup
+title: Sidebar DisclosureGroup
 ---
 
 To organize our sidebar view, we can use `DisclosureGroup`. We can create different sections and specify if they are expanded by default when the application launches.
