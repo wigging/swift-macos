@@ -37,7 +37,7 @@ $ bundle update github-pages
 
 ## Contributing
 
-Submit a Pull Request if you would like to contribute to this project. Questions and other comments can be submitted on the Issues page. If you submit an example Xcode project, make sure Team is set to None in the Signing & Capabilites section in the project settings.
+Submit a Pull Request if you would like to contribute to this project. Questions and other comments can be submitted on the Issues page. If you submit an example Xcode project, make sure Team is set to None in the Signing & Capabilities section in the project settings.
 
 ## Support
 
