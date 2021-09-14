@@ -2,7 +2,7 @@
 title: Preferences Window
 ---
 
-The Prefences is a view to present the app settings stored in `@AppStorage` property wrapper. You need to add `Settings` to you App protocol.
+A preferences window is typically used to present and configure the settings associated with a Mac application. In apps built with SwiftUI, these settings are stored and set using the `@AppStorage` property wrapper. To add a preferenes window to your application, you need to add `Settings` to the app protocol.
 
 ![preferences window](/swift-macos/images/preferences-window.png)
 
@@ -22,7 +22,7 @@ struct PreferencesWindowApp: App {
 }
 ```
 
-Using `TabView` you can group settings into different collections and make them easier to find.
+Using a `TabView` you can group settings into different collections and make them easier to find.
 ![preferences window general](/swift-macos/images/preferences-window-general.png)
 
 ```swift
@@ -48,8 +48,7 @@ struct SettingsView: View {
 }
 ```
 
-Setting "fontSize" as key and its CGFloat value in `@AppStorage`.
-
+Below is an example of setting and storing the `fontSize` value with `@AppStorage`.
 
 ```swift
 import SwiftUI
