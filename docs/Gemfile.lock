@@ -26,7 +26,7 @@ GEM
       ffi (>= 1.15.0)
     eventmachine (1.2.7)
     execjs (2.8.1)
-    faraday (1.7.1)
+    faraday (1.8.0)
       faraday-em_http (~> 1.0)
       faraday-em_synchrony (~> 1.0)
       faraday-excon (~> 1.1)
@@ -226,7 +226,7 @@ GEM
       jekyll-seo-tag (~> 2.1)
     minitest (5.14.4)
     multipart-post (2.1.1)
-    nokogiri (1.12.4)
+    nokogiri (1.12.5)
       mini_portile2 (~> 2.6.1)
       racc (~> 1.4)
     octokit (4.21.0)
@@ -265,8 +265,8 @@ GEM
       thread_safe (~> 0.1)
     unf (0.1.4)
       unf_ext
-    unf_ext (0.0.7.7)
-    unicode-display_width (1.7.0)
+    unf_ext (0.0.8)
+    unicode-display_width (1.8.0)
     zeitwerk (2.4.2)
 
 PLATFORMS
@@ -276,4 +276,4 @@ DEPENDENCIES
   github-pages
 
 BUNDLED WITH
-   2.2.27
+   2.2.28
