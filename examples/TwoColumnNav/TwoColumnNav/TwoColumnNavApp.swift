@@ -2,7 +2,7 @@
 //  TwoColumnNavApp.swift
 //  TwoColumnNav
 //
-//  Created by Gavin Wiggins on 8/19/21.
+//  Created by Gavin Wiggins on 10/6/21.
 //
 
 import SwiftUI

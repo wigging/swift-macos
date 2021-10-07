@@ -3,28 +3,27 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AAAB4ED326CF3DC1005C9E48 /* TwoColumnNavApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAB4ED226CF3DC1005C9E48 /* TwoColumnNavApp.swift */; };
-		AAAB4ED526CF3DC1005C9E48 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAB4ED426CF3DC1005C9E48 /* ContentView.swift */; };
-		AAAB4ED726CF3DC2005C9E48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAAB4ED626CF3DC2005C9E48 /* Assets.xcassets */; };
-		AAAB4EDA26CF3DC2005C9E48 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAAB4ED926CF3DC2005C9E48 /* Preview Assets.xcassets */; };
+		AAF5736C270E871A009DAC95 /* TwoColumnNavApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF5736B270E871A009DAC95 /* TwoColumnNavApp.swift */; };
+		AAF5736E270E871A009DAC95 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF5736D270E871A009DAC95 /* ContentView.swift */; };
+		AAF57370270E871B009DAC95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAF5736F270E871B009DAC95 /* Assets.xcassets */; };
+		AAF57373270E871B009DAC95 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAF57372270E871B009DAC95 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AAAB4ECF26CF3DC1005C9E48 /* TwoColumnNav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwoColumnNav.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AAAB4ED226CF3DC1005C9E48 /* TwoColumnNavApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoColumnNavApp.swift; sourceTree = "<group>"; };
-		AAAB4ED426CF3DC1005C9E48 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		AAAB4ED626CF3DC2005C9E48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AAAB4ED926CF3DC2005C9E48 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		AAAB4EDB26CF3DC2005C9E48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AAAB4EDC26CF3DC2005C9E48 /* TwoColumnNav.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TwoColumnNav.entitlements; sourceTree = "<group>"; };
+		AAF57368270E871A009DAC95 /* TwoColumnNav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwoColumnNav.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAF5736B270E871A009DAC95 /* TwoColumnNavApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoColumnNavApp.swift; sourceTree = "<group>"; };
+		AAF5736D270E871A009DAC95 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AAF5736F270E871B009DAC95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AAF57372270E871B009DAC95 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AAF57374270E871B009DAC95 /* TwoColumnNav.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TwoColumnNav.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		AAAB4ECC26CF3DC1005C9E48 /* Frameworks */ = {
+		AAF57365270E871A009DAC95 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -34,39 +33,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AAAB4EC626CF3DC1005C9E48 = {
+		AAF5735F270E871A009DAC95 = {
 			isa = PBXGroup;
 			children = (
-				AAAB4ED126CF3DC1005C9E48 /* TwoColumnNav */,
-				AAAB4ED026CF3DC1005C9E48 /* Products */,
+				AAF5736A270E871A009DAC95 /* TwoColumnNav */,
+				AAF57369270E871A009DAC95 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		AAAB4ED026CF3DC1005C9E48 /* Products */ = {
+		AAF57369270E871A009DAC95 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AAAB4ECF26CF3DC1005C9E48 /* TwoColumnNav.app */,
+				AAF57368270E871A009DAC95 /* TwoColumnNav.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AAAB4ED126CF3DC1005C9E48 /* TwoColumnNav */ = {
+		AAF5736A270E871A009DAC95 /* TwoColumnNav */ = {
 			isa = PBXGroup;
 			children = (
-				AAAB4ED226CF3DC1005C9E48 /* TwoColumnNavApp.swift */,
-				AAAB4ED426CF3DC1005C9E48 /* ContentView.swift */,
-				AAAB4ED626CF3DC2005C9E48 /* Assets.xcassets */,
-				AAAB4EDB26CF3DC2005C9E48 /* Info.plist */,
-				AAAB4EDC26CF3DC2005C9E48 /* TwoColumnNav.entitlements */,
-				AAAB4ED826CF3DC2005C9E48 /* Preview Content */,
+				AAF5736B270E871A009DAC95 /* TwoColumnNavApp.swift */,
+				AAF5736D270E871A009DAC95 /* ContentView.swift */,
+				AAF5736F270E871B009DAC95 /* Assets.xcassets */,
+				AAF57374270E871B009DAC95 /* TwoColumnNav.entitlements */,
+				AAF57371270E871B009DAC95 /* Preview Content */,
 			);
 			path = TwoColumnNav;
 			sourceTree = "<group>";
 		};
-		AAAB4ED826CF3DC2005C9E48 /* Preview Content */ = {
+		AAF57371270E871B009DAC95 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				AAAB4ED926CF3DC2005C9E48 /* Preview Assets.xcassets */,
+				AAF57372270E871B009DAC95 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -74,13 +72,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AAAB4ECE26CF3DC1005C9E48 /* TwoColumnNav */ = {
+		AAF57367270E871A009DAC95 /* TwoColumnNav */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AAAB4EDF26CF3DC2005C9E48 /* Build configuration list for PBXNativeTarget "TwoColumnNav" */;
+			buildConfigurationList = AAF57377270E871B009DAC95 /* Build configuration list for PBXNativeTarget "TwoColumnNav" */;
 			buildPhases = (
-				AAAB4ECB26CF3DC1005C9E48 /* Sources */,
-				AAAB4ECC26CF3DC1005C9E48 /* Frameworks */,
-				AAAB4ECD26CF3DC1005C9E48 /* Resources */,
+				AAF57364270E871A009DAC95 /* Sources */,
+				AAF57365270E871A009DAC95 /* Frameworks */,
+				AAF57366270E871A009DAC95 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -88,73 +86,74 @@
 			);
 			name = TwoColumnNav;
 			productName = TwoColumnNav;
-			productReference = AAAB4ECF26CF3DC1005C9E48 /* TwoColumnNav.app */;
+			productReference = AAF57368270E871A009DAC95 /* TwoColumnNav.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		AAAB4EC726CF3DC1005C9E48 /* Project object */ = {
+		AAF57360270E871A009DAC95 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1250;
-				LastUpgradeCheck = 1250;
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
 				TargetAttributes = {
-					AAAB4ECE26CF3DC1005C9E48 = {
-						CreatedOnToolsVersion = 12.5.1;
+					AAF57367270E871A009DAC95 = {
+						CreatedOnToolsVersion = 13.0;
 					};
 				};
 			};
-			buildConfigurationList = AAAB4ECA26CF3DC1005C9E48 /* Build configuration list for PBXProject "TwoColumnNav" */;
-			compatibilityVersion = "Xcode 9.3";
+			buildConfigurationList = AAF57363270E871A009DAC95 /* Build configuration list for PBXProject "TwoColumnNav" */;
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = AAAB4EC626CF3DC1005C9E48;
-			productRefGroup = AAAB4ED026CF3DC1005C9E48 /* Products */;
+			mainGroup = AAF5735F270E871A009DAC95;
+			productRefGroup = AAF57369270E871A009DAC95 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AAAB4ECE26CF3DC1005C9E48 /* TwoColumnNav */,
+				AAF57367270E871A009DAC95 /* TwoColumnNav */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		AAAB4ECD26CF3DC1005C9E48 /* Resources */ = {
+		AAF57366270E871A009DAC95 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAAB4EDA26CF3DC2005C9E48 /* Preview Assets.xcassets in Resources */,
-				AAAB4ED726CF3DC2005C9E48 /* Assets.xcassets in Resources */,
+				AAF57373270E871B009DAC95 /* Preview Assets.xcassets in Resources */,
+				AAF57370270E871B009DAC95 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		AAAB4ECB26CF3DC1005C9E48 /* Sources */ = {
+		AAF57364270E871A009DAC95 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAAB4ED526CF3DC1005C9E48 /* ContentView.swift in Sources */,
-				AAAB4ED326CF3DC1005C9E48 /* TwoColumnNavApp.swift in Sources */,
+				AAF5736E270E871A009DAC95 /* ContentView.swift in Sources */,
+				AAF5736C270E871A009DAC95 /* TwoColumnNavApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		AAAB4EDD26CF3DC2005C9E48 /* Debug */ = {
+		AAF57375270E871B009DAC95 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -209,13 +208,13 @@
 			};
 			name = Debug;
 		};
-		AAAB4EDE26CF3DC2005C9E48 /* Release */ = {
+		AAF57376270E871B009DAC95 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -263,7 +262,7 @@
 			};
 			name = Release;
 		};
-		AAAB4EE026CF3DC2005C9E48 /* Debug */ = {
+		AAF57378270E871B009DAC95 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -271,21 +270,25 @@
 				CODE_SIGN_ENTITLEMENTS = TwoColumnNav/TwoColumnNav.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TwoColumnNav/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = TwoColumnNav/Info.plist;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.GavinWiggins.TwoColumnNav;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		AAAB4EE126CF3DC2005C9E48 /* Release */ = {
+		AAF57379270E871B009DAC95 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -293,16 +296,20 @@
 				CODE_SIGN_ENTITLEMENTS = TwoColumnNav/TwoColumnNav.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TwoColumnNav/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = TwoColumnNav/Info.plist;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.GavinWiggins.TwoColumnNav;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -310,25 +317,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AAAB4ECA26CF3DC1005C9E48 /* Build configuration list for PBXProject "TwoColumnNav" */ = {
+		AAF57363270E871A009DAC95 /* Build configuration list for PBXProject "TwoColumnNav" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AAAB4EDD26CF3DC2005C9E48 /* Debug */,
-				AAAB4EDE26CF3DC2005C9E48 /* Release */,
+				AAF57375270E871B009DAC95 /* Debug */,
+				AAF57376270E871B009DAC95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AAAB4EDF26CF3DC2005C9E48 /* Build configuration list for PBXNativeTarget "TwoColumnNav" */ = {
+		AAF57377270E871B009DAC95 /* Build configuration list for PBXNativeTarget "TwoColumnNav" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AAAB4EE026CF3DC2005C9E48 /* Debug */,
-				AAAB4EE126CF3DC2005C9E48 /* Release */,
+				AAF57378270E871B009DAC95 /* Debug */,
+				AAF57379270E871B009DAC95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = AAAB4EC726CF3DC1005C9E48 /* Project object */;
+	rootObject = AAF57360270E871A009DAC95 /* Project object */;
 }
