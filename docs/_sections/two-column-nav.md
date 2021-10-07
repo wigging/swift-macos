@@ -2,60 +2,28 @@
 title: Two column NavigationView
 ---
 
-A two column `NavigationView` creates a sidebar with a list of items. In the example shown below, selecting an item in the sidebar will change the detail view. An `AppStorage` property is used to remember the selected item.
+A two column `NavigationView` creates a sidebar with a list of items and a detail view. In the example shown below, selecting an item in the sidebar will change the detail view. An `AppStorage` property is used to remember the selected item.
 
 ![two column navigation](/swift-macos/images/twocolnav.png)
 
 ```swift
 import SwiftUI
 
-struct DetailView: View {
-
-    var selected: String?
-    @AppStorage("selectedStore") private var selectedStore = ""
-
-    var body: some View {
-        switch selected {
-        case "One":
-            selectedStore = "One"
-            return Text("1️⃣ \(selectedStore) View").font(.title).frame(minWidth: 200)
-        case "Two":
-            selectedStore = "Two"
-            return Text("2️⃣ \(selectedStore) View").font(.title).frame(minWidth: 200)
-        case "Three":
-            selectedStore = "Three"
-            return Text("3️⃣ \(selectedStore) View").font(.title).frame(minWidth: 200)
-        case "Four":
-            selectedStore = "Four"
-            return Text("4️⃣ \(selectedStore) View").font(.title).frame(minWidth: 200)
-        default:
-            return Text("Default View").font(.title).frame(minWidth: 200)
-        }
-    }
+enum Fruit: String, CaseIterable, Identifiable {
+    case apple
+    case orange
+    case mango
+    case lemon
+    var id: String { rawValue }
 }
 
 struct Sidebar: View {
 
-    @State private var selection: String? = nil
-    @AppStorage("selectedStore") private var selectedStore = ""
+    @Binding var selection: Fruit?
 
     var body: some View {
-        List {
-            NavigationLink(destination: DetailView(selected: selection), tag: "One", selection: $selection) {
-                Text("One View")
-            }
-            NavigationLink(destination: DetailView(selected: selection), tag:"Two", selection: $selection) {
-                Text("Two View")
-            }
-            NavigationLink(destination: DetailView(selected: selection), tag:"Three", selection: $selection) {
-                Text("Three View")
-            }
-            NavigationLink(destination: DetailView(selected: selection), tag:"Four", selection: $selection) {
-                Text("Four View")
-            }
-        }
-        .onAppear {
-            selection = selectedStore
+        List(Fruit.allCases, id: \.self, selection: $selection) { fruit in
+            Text(fruit.rawValue)
         }
         .listStyle(SidebarListStyle())
         .toolbar {
@@ -67,16 +35,36 @@ struct Sidebar: View {
     }
 }
 
+struct DetailView: View {
+
+    var selection: Fruit
+
+    var body: some View {
+        switch selection {
+        case .apple:
+            Text("🍎 \(selection.rawValue)").font(.title).frame(minWidth: 200)
+        case .orange:
+            Text("🍊 \(selection.rawValue)").font(.title).frame(minWidth: 200)
+        case .mango:
+            Text("🥭 \(selection.rawValue)").font(.title).frame(minWidth: 200)
+        case .lemon:
+            Text("🍋 \(selection.rawValue)").font(.title).frame(minWidth: 200)
+        }
+    }
+}
+
 private func toggleSidebar() {
     NSApp.keyWindow?.contentViewController?.tryToPerform(#selector(NSSplitViewController.toggleSidebar(_:)), with: nil)
 }
 
 struct ContentView: View {
 
+    @AppStorage("selection") private var selection: Fruit = .apple
+
     var body: some View {
         NavigationView {
-            Sidebar()
-            DetailView()
+            Sidebar(selection: Binding($selection))
+            DetailView(selection: selection)
         }
         .frame(width: 500, height: 300)
     }
