@@ -23,6 +23,7 @@ struct PreferencesWindowApp: App {
 ```
 
 Using a `TabView` you can group settings into different collections and make them easier to find.
+
 ![preferences window general](/swift-macos/images/preferences-window-general.png)
 
 ```swift
