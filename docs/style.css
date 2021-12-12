@@ -25,8 +25,8 @@ h1 {
     margin-top: 4rem;
 }
 
-h2 {
-    margin-top: 4rem;
+h4 {
+    margin-top: 2rem;
 }
 
 img {
@@ -44,7 +44,7 @@ pre code {
     word-wrap: normal;
 }
 
-ul {
+ol, ul {
     columns: 2;
     -webkit-columns: 2;
     -moz-columns: 2;
