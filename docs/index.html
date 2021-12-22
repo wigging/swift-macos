@@ -20,49 +20,25 @@
 
                 <p>Questions, comments, and other feedback can be sent via <a href="mailto:wiggingATmeDOTcom" onclick = "this.href=this.href.replace(/AT/,'&#64;').replace(/DOT/,'&#46;')">Email</a> or <a href="https://twitter.com/wigging">Twitter</a>. Or submit an <a href="https://github.com/wigging/swift-macos/issues">Issue</a> on GitHub. If you would like to support this project, donations can be made to Gavin Wiggins using <a href="https://github.com/sponsors/wigging">GitHub Sponsors</a>, <a href="https://www.patreon.com/wigging">Patreon</a>, <a href="https://www.buymeacoffee.com/wigging">Buy Me A Coffee</a>, or <a href="https://www.paypal.me/gavinwiggins">PayPal</a>. Thank you 😄.</p>
 
-                <h4>Introduction</h4>
+                <h4>Getting started</h4>
                 <ul class="contents-list">
-                    <li><a href="{{ site.baseurl }}{% link _sections/getting-started.md %}">Getting started</a></li>
-                    <li><a href="{{ site.baseurl }}{% link _sections/repl.md %}">REPL</a></li>
-                    <li><a href="{{ site.baseurl }}{% link _sections/resources.md %}">Resources</a></li>
+                {% for gs in site.getting_started %}
+                    <li><a href="{{ site.baseurl }}{{ gs.url }}">{{ gs.title }}</a></li>
+                {% endfor %}
                 </ul>
 
                 <h4>Swift</h4>
                 <ul class="contents-list">
-                    <li><a href="{{ site.baseurl }}{% link _sections/comments.md %}">Comments</a></li>
-                    <li><a href="{{ site.baseurl }}{% link _sections/arrays.md %}">Arrays</a></li>
-                    <li><a href="{{ site.baseurl }}{% link _sections/dictionaries.md %}">Dictionaries</a></li>
-                    <li><a href="{{ site.baseurl }}{% link _sections/strides.md %}">Strides</a></li>
-                    <li><a href="{{ site.baseurl }}{% link _sections/strings.md %}">Strings</a></li>
+                {% for sw in site.swift %}
+                    <li><a href="{{ site.baseurl }}{{ sw.url }}">{{ sw.title }}</a></li>
+                {% endfor %}
                 </ul>
 
                 <h4>SwiftUI</h4>
                 <ul class="contents-list">
-                    <li><a href="{{ site.baseurl }}{% link _sections/appstorage.md %}">AppStorage</a></li>
-                    <li><a href="{{ site.baseurl }}{% link _sections/blur-effect.md %}">Blur effect</a></li>
-                    <li><a href="{{ site.baseurl }}{% link _sections/button-styles.md %}">Button styles</a></li>
-                    <li><a href="{{ site.baseurl }}{% link _sections/credits.md %}">Credits</a></li>
-                    <li><a href="{{ site.baseurl }}{% link _sections/cursor.md %}">Cursor</a></li>
-                    <li><a href="{{ site.baseurl }}{% link _sections/grid-lines.md %}">Grid lines</a></li>
-                    <li><a href="{{ site.baseurl }}{% link _sections/image.md %}">Image</a></li>
-                    <li><a href="{{ site.baseurl }}{% link _sections/nspasteboard.md %}">NSPasteboard</a></li>
-                    <li><a href="{{ site.baseurl }}{% link _sections/picker-control.md %}">Picker control</a></li>
-                    <li><a href="{{ site.baseurl }}{% link _sections/progressview.md %}">ProgressView</a></li>
-                    <li><a href="{{ site.baseurl }}{% link _sections/scrollview.md %}">ScrollView</a></li>
-                    <li><a href="{{ site.baseurl }}{% link _sections/stepper.md %}">Stepper</a></li>
-                    <li><a href="{{ site.baseurl }}{% link _sections/table.md %}">Table</a></li>
-                    <li><a href="{{ site.baseurl }}{% link _sections/text.md %}">Text</a></li>
-                    <li><a href="{{ site.baseurl }}{% link _sections/textfield.md %}">TextField</a></li>
-                    <li><a href="{{ site.baseurl }}{% link _sections/viewbuilder.md %}">ViewBuilder</a></li>
-                    <li><a href="{{ site.baseurl }}{% link _sections/webview.md %}">WebView</a></li>
-                    <li><a href="{{ site.baseurl }}{% link _sections/window-size.md %}">Window size</a></li>
-                    <li><a href="{{ site.baseurl }}{% link _sections/menu-items.md %}">Menu items</a></li>
-                    <li><a href="{{ site.baseurl }}{% link _sections/two-column-nav.md %}">Two column NavigationView</a></li>
-                    <li><a href="{{ site.baseurl }}{% link _sections/three-column-nav.md %}">Three column NavigationView</a></li>
-                    <li><a href="{{ site.baseurl }}{% link _sections/sidebar-toggle.md %}">Sidebar toggle</a></li>
-                    <li><a href="{{ site.baseurl }}{% link _sections/sidebar-disclosuregroup.md %}">Sidebar DisclosureGroup</a></li>
-                    <li><a href="{{ site.baseurl }}{% link _sections/preferences-window.md %}">Preferences Window</a></li>
-                    <li><a href="{{ site.baseurl }}{% link _sections/toolbar-dropdown.md %}">Toolbar dropdown</a></li>
+                {% for su in site.swiftui %}
+                    <li><a href="{{ site.baseurl }}{{ su.url }}">{{ su.title }}</a></li>
+                {% endfor %}
                 </ul>
             </div>
         </div>

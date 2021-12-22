@@ -1,5 +1,5 @@
 ---
-title: REPL
+title: Read Eval Print Loop (REPL)
 ---
 
 The Swift Read Eval Print Loop or REPL is an interactive terminal interface for Swift. Type the `swift` command in the terminal to launch the REPL. The REPL prompt is represented by an angle bracket `>`. Use the `:exit` or Control-D commands to exit the REPL environment.

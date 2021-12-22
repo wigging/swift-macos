@@ -1,5 +1,5 @@
 ---
-title: Getting started
+title: Install Xcode
 ---
 
 The first step (other than getting a Mac) is to download Xcode from the Mac App Store. Visit <https://swift.org> for instructions on how to install Swift on other platforms such as Linux and Windows.

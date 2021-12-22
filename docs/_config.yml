@@ -1,15 +1,31 @@
 baseurl: /swift-macos
 
 collections:
-  sections:
+  getting_started:
     output: true
-    permalink: /:title
+    permalink: /:name
+  swift:
+    output: true
+    permalink: /:name
+  swiftui:
+    output: true
+    permalink: /:name
 
 defaults:
   - scope:
       path: ""
-      type: "sections"
+      type: "getting_started"
     values:
-      layout: "section"
+      layout: "page"
+  - scope:
+      path: ""
+      type: "swift"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "swiftui"
+    values:
+      layout: "page"
 
 exclude: [Gemfile]
