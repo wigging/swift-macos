@@ -2,13 +2,12 @@
 title: Z shell (zsh)
 ---
 
-The Z shell (or zsh) is the default shell for macOS. Below are some setup and configuration notes for zsh on the Mac.
+The Z shell (or zsh) is the default shell for macOS. Below are some setup and configuration notes for using zsh on the Mac.
 
 ## Pure
 
-The first thing to do on a new Mac is install Pure to improve the zsh prompt. Use the suggested theme in the Pure documentation.
-
-https://github.com/sindresorhus/pure
+The first thing to do on a new Mac is install [Pure](https://github.com/sindresorhus/pure
+) to improve the zsh command prompt in the terminal. Use the suggested theme in the Pure documentation.
 
 ## .zshrc
 
