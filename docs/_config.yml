@@ -28,4 +28,4 @@ defaults:
     values:
       layout: "page"
 
-exclude: [Gemfile]
+exclude: [README.md, Gemfile]
