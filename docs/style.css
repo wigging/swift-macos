@@ -21,11 +21,11 @@ body {
 }
 
 h1 {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     margin-top: 4rem;
 }
 
-h4 {
+h2, h4 {
     margin-top: 2rem;
 }
 
