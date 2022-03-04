@@ -63,3 +63,26 @@ pre code {
     }
 
 }
+
+/*--- Dark mode ---*/
+
+@media screen and (prefers-color-scheme: dark) {
+
+    a {
+        color: deepskyblue;
+    }
+
+    a:hover {
+        color: dodgerblue;
+    }
+
+    body {
+        background-color: rgb(41, 42, 47);
+        color: rgb(223, 223, 224);
+    }
+
+    .language-plaintext {
+        color: salmon;
+    }
+
+}
