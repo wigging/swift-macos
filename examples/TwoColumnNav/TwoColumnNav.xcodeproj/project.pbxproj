@@ -7,23 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AAF5736C270E871A009DAC95 /* TwoColumnNavApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF5736B270E871A009DAC95 /* TwoColumnNavApp.swift */; };
-		AAF5736E270E871A009DAC95 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF5736D270E871A009DAC95 /* ContentView.swift */; };
-		AAF57370270E871B009DAC95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAF5736F270E871B009DAC95 /* Assets.xcassets */; };
-		AAF57373270E871B009DAC95 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAF57372270E871B009DAC95 /* Preview Assets.xcassets */; };
+		AA8911E827D2F06F00F33FDE /* TwoColumnNavApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8911E727D2F06F00F33FDE /* TwoColumnNavApp.swift */; };
+		AA8911EA27D2F06F00F33FDE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8911E927D2F06F00F33FDE /* ContentView.swift */; };
+		AA8911EC27D2F07000F33FDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA8911EB27D2F07000F33FDE /* Assets.xcassets */; };
+		AA8911EF27D2F07000F33FDE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA8911EE27D2F07000F33FDE /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AAF57368270E871A009DAC95 /* TwoColumnNav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwoColumnNav.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AAF5736B270E871A009DAC95 /* TwoColumnNavApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoColumnNavApp.swift; sourceTree = "<group>"; };
-		AAF5736D270E871A009DAC95 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		AAF5736F270E871B009DAC95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AAF57372270E871B009DAC95 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		AAF57374270E871B009DAC95 /* TwoColumnNav.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TwoColumnNav.entitlements; sourceTree = "<group>"; };
+		AA8911E427D2F06F00F33FDE /* TwoColumnNav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwoColumnNav.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA8911E727D2F06F00F33FDE /* TwoColumnNavApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoColumnNavApp.swift; sourceTree = "<group>"; };
+		AA8911E927D2F06F00F33FDE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AA8911EB27D2F07000F33FDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA8911EE27D2F07000F33FDE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AA8911F027D2F07000F33FDE /* TwoColumnNav.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TwoColumnNav.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		AAF57365270E871A009DAC95 /* Frameworks */ = {
+		AA8911E127D2F06F00F33FDE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,38 +33,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AAF5735F270E871A009DAC95 = {
+		AA8911DB27D2F06F00F33FDE = {
 			isa = PBXGroup;
 			children = (
-				AAF5736A270E871A009DAC95 /* TwoColumnNav */,
-				AAF57369270E871A009DAC95 /* Products */,
+				AA8911E627D2F06F00F33FDE /* TwoColumnNav */,
+				AA8911E527D2F06F00F33FDE /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		AAF57369270E871A009DAC95 /* Products */ = {
+		AA8911E527D2F06F00F33FDE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AAF57368270E871A009DAC95 /* TwoColumnNav.app */,
+				AA8911E427D2F06F00F33FDE /* TwoColumnNav.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AAF5736A270E871A009DAC95 /* TwoColumnNav */ = {
+		AA8911E627D2F06F00F33FDE /* TwoColumnNav */ = {
 			isa = PBXGroup;
 			children = (
-				AAF5736B270E871A009DAC95 /* TwoColumnNavApp.swift */,
-				AAF5736D270E871A009DAC95 /* ContentView.swift */,
-				AAF5736F270E871B009DAC95 /* Assets.xcassets */,
-				AAF57374270E871B009DAC95 /* TwoColumnNav.entitlements */,
-				AAF57371270E871B009DAC95 /* Preview Content */,
+				AA8911E727D2F06F00F33FDE /* TwoColumnNavApp.swift */,
+				AA8911E927D2F06F00F33FDE /* ContentView.swift */,
+				AA8911EB27D2F07000F33FDE /* Assets.xcassets */,
+				AA8911F027D2F07000F33FDE /* TwoColumnNav.entitlements */,
+				AA8911ED27D2F07000F33FDE /* Preview Content */,
 			);
 			path = TwoColumnNav;
 			sourceTree = "<group>";
 		};
-		AAF57371270E871B009DAC95 /* Preview Content */ = {
+		AA8911ED27D2F07000F33FDE /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				AAF57372270E871B009DAC95 /* Preview Assets.xcassets */,
+				AA8911EE27D2F07000F33FDE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -72,13 +72,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AAF57367270E871A009DAC95 /* TwoColumnNav */ = {
+		AA8911E327D2F06F00F33FDE /* TwoColumnNav */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AAF57377270E871B009DAC95 /* Build configuration list for PBXNativeTarget "TwoColumnNav" */;
+			buildConfigurationList = AA8911F327D2F07000F33FDE /* Build configuration list for PBXNativeTarget "TwoColumnNav" */;
 			buildPhases = (
-				AAF57364270E871A009DAC95 /* Sources */,
-				AAF57365270E871A009DAC95 /* Frameworks */,
-				AAF57366270E871A009DAC95 /* Resources */,
+				AA8911E027D2F06F00F33FDE /* Sources */,
+				AA8911E127D2F06F00F33FDE /* Frameworks */,
+				AA8911E227D2F06F00F33FDE /* Resources */,
 			);
 			buildRules = (
 			);
@@ -86,25 +86,25 @@
 			);
 			name = TwoColumnNav;
 			productName = TwoColumnNav;
-			productReference = AAF57368270E871A009DAC95 /* TwoColumnNav.app */;
+			productReference = AA8911E427D2F06F00F33FDE /* TwoColumnNav.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		AAF57360270E871A009DAC95 /* Project object */ = {
+		AA8911DC27D2F06F00F33FDE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1300;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
 				TargetAttributes = {
-					AAF57367270E871A009DAC95 = {
-						CreatedOnToolsVersion = 13.0;
+					AA8911E327D2F06F00F33FDE = {
+						CreatedOnToolsVersion = 13.2.1;
 					};
 				};
 			};
-			buildConfigurationList = AAF57363270E871A009DAC95 /* Build configuration list for PBXProject "TwoColumnNav" */;
+			buildConfigurationList = AA8911DF27D2F06F00F33FDE /* Build configuration list for PBXProject "TwoColumnNav" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -112,42 +112,42 @@
 				en,
 				Base,
 			);
-			mainGroup = AAF5735F270E871A009DAC95;
-			productRefGroup = AAF57369270E871A009DAC95 /* Products */;
+			mainGroup = AA8911DB27D2F06F00F33FDE;
+			productRefGroup = AA8911E527D2F06F00F33FDE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AAF57367270E871A009DAC95 /* TwoColumnNav */,
+				AA8911E327D2F06F00F33FDE /* TwoColumnNav */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		AAF57366270E871A009DAC95 /* Resources */ = {
+		AA8911E227D2F06F00F33FDE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAF57373270E871B009DAC95 /* Preview Assets.xcassets in Resources */,
-				AAF57370270E871B009DAC95 /* Assets.xcassets in Resources */,
+				AA8911EF27D2F07000F33FDE /* Preview Assets.xcassets in Resources */,
+				AA8911EC27D2F07000F33FDE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		AAF57364270E871A009DAC95 /* Sources */ = {
+		AA8911E027D2F06F00F33FDE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAF5736E270E871A009DAC95 /* ContentView.swift in Sources */,
-				AAF5736C270E871A009DAC95 /* TwoColumnNavApp.swift in Sources */,
+				AA8911EA27D2F06F00F33FDE /* ContentView.swift in Sources */,
+				AA8911E827D2F06F00F33FDE /* TwoColumnNavApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		AAF57375270E871B009DAC95 /* Debug */ = {
+		AA8911F127D2F07000F33FDE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -198,7 +198,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -208,7 +208,7 @@
 			};
 			name = Debug;
 		};
-		AAF57376270E871B009DAC95 /* Release */ = {
+		AA8911F227D2F07000F33FDE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -253,7 +253,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -262,7 +262,7 @@
 			};
 			name = Release;
 		};
-		AAF57378270E871B009DAC95 /* Debug */ = {
+		AA8911F427D2F07000F33FDE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -279,7 +279,6 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.GavinWiggins.TwoColumnNav;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -288,7 +287,7 @@
 			};
 			name = Debug;
 		};
-		AAF57379270E871B009DAC95 /* Release */ = {
+		AA8911F527D2F07000F33FDE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -305,7 +304,6 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.GavinWiggins.TwoColumnNav;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -317,25 +315,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AAF57363270E871A009DAC95 /* Build configuration list for PBXProject "TwoColumnNav" */ = {
+		AA8911DF27D2F06F00F33FDE /* Build configuration list for PBXProject "TwoColumnNav" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AAF57375270E871B009DAC95 /* Debug */,
-				AAF57376270E871B009DAC95 /* Release */,
+				AA8911F127D2F07000F33FDE /* Debug */,
+				AA8911F227D2F07000F33FDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AAF57377270E871B009DAC95 /* Build configuration list for PBXNativeTarget "TwoColumnNav" */ = {
+		AA8911F327D2F07000F33FDE /* Build configuration list for PBXNativeTarget "TwoColumnNav" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AAF57378270E871B009DAC95 /* Debug */,
-				AAF57379270E871B009DAC95 /* Release */,
+				AA8911F427D2F07000F33FDE /* Debug */,
+				AA8911F527D2F07000F33FDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = AAF57360270E871A009DAC95 /* Project object */;
+	rootObject = AA8911DC27D2F06F00F33FDE /* Project object */;
 }

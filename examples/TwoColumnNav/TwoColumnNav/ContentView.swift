@@ -2,69 +2,53 @@
 //  ContentView.swift
 //  TwoColumnNav
 //
-//  Created by Gavin Wiggins on 10/6/21.
+//  Created by Gavin Wiggins on 3/4/22.
 //
 
 import SwiftUI
 
-enum Fruit: String, CaseIterable, Identifiable {
-    case apple
-    case orange
-    case mango
-    case lemon
-    var id: String { rawValue }
-}
-
-struct Sidebar: View {
-
-    @Binding var selection: Fruit?
-
+struct ViewA: View {
     var body: some View {
-        List(Fruit.allCases, id: \.self, selection: $selection) { fruit in
-            Text(fruit.rawValue)
-        }
-        .listStyle(SidebarListStyle())
-        .toolbar {
-            Button(action: toggleSidebar, label: {
-                Image(systemName: "sidebar.left").help("Toggle Sidebar")
-            })
-        }
-        .frame(minWidth: 150)
+        Text("View A 🍎").font(.title)
     }
 }
 
-struct DetailView: View {
-
-    var selection: Fruit
-
+struct ViewB: View {
     var body: some View {
-        switch selection {
-        case .apple:
-            Text("🍎 \(selection.rawValue)").font(.title).frame(minWidth: 200)
-        case .orange:
-            Text("🍊 \(selection.rawValue)").font(.title).frame(minWidth: 200)
-        case .mango:
-            Text("🥭 \(selection.rawValue)").font(.title).frame(minWidth: 200)
-        case .lemon:
-            Text("🍋 \(selection.rawValue)").font(.title).frame(minWidth: 200)
-        }
+        Text("View B 🥝").font(.title)
     }
 }
 
-private func toggleSidebar() {
-    NSApp.keyWindow?.contentViewController?.tryToPerform(#selector(NSSplitViewController.toggleSidebar(_:)), with: nil)
+struct ViewC: View {
+    var body: some View {
+        Text("View C 🍑").font(.title)
+    }
 }
 
 struct ContentView: View {
+    @AppStorage("savedSelection") private var savedSelection: String?
     
-    @AppStorage("selection") private var selection: Fruit = .apple
-
     var body: some View {
         NavigationView {
-            Sidebar(selection: Binding($selection))
-            DetailView(selection: selection)
+            List {
+                NavigationLink("View A", tag: "A", selection: $savedSelection, destination: { ViewA() })
+                NavigationLink("View B", tag: "B", selection: $savedSelection, destination: { ViewB() })
+                NavigationLink("View C", tag: "C", selection: $savedSelection, destination: { ViewC() })
+            }
+            .frame(minWidth: 150)
+            .listStyle(SidebarListStyle())
+            Text("No sidebar item selected.")
         }
         .frame(width: 500, height: 300)
+        .toolbar {
+            ToolbarItem(placement: .navigation) {
+                Button {
+                    NSApp.sendAction(#selector(NSSplitViewController.toggleSidebar(_:)), to: nil, from: nil)
+                } label: {
+                    Image(systemName: "sidebar.left").help("Toggle sidebar")
+                }
+            }
+        }
     }
 }
 

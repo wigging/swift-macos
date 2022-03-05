@@ -2,7 +2,7 @@
 //  TwoColumnNavApp.swift
 //  TwoColumnNav
 //
-//  Created by Gavin Wiggins on 10/6/21.
+//  Created by Gavin Wiggins on 3/4/22.
 //
 
 import SwiftUI
@@ -12,6 +12,9 @@ struct TwoColumnNavApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+        }
+        .commands {
+            SidebarCommands()
         }
     }
 }
