@@ -20,12 +20,12 @@ body {
     background-color: #fffff8;
 }
 
-h1 {
+#title {
     margin-bottom: 3rem;
     margin-top: 4rem;
 }
 
-h2, h4 {
+h1, h2, h4 {
     margin-top: 2rem;
 }
 
