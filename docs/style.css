@@ -1,9 +1,5 @@
 /*--- All screens ---*/
 
-.container {
-    max-width: 700px;
-}
-
 .large-img {
     max-width: 100%;
 }
@@ -27,6 +23,15 @@ body {
 
 h1, h2, h4 {
     margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+}
+
+p, hr, ul, dl {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
 }
 
 img {
@@ -38,10 +43,15 @@ img {
     width: 100%;
 }
 
-/* Make code blocks scroll horizontally */
 pre code {
-    white-space: pre;
-    word-wrap: normal;
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
+}
+
+pre::first-line {
+    line-height: 0;
 }
 
 .contents-list {
@@ -79,10 +89,6 @@ pre code {
     body {
         background-color: rgb(35, 39, 45);
         color: rgb(223, 223, 224);
-    }
-
-    .language-plaintext {
-        color: salmon;
     }
 
 }

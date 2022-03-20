@@ -23,19 +23,20 @@
 
 <!-- Content -->
 
-<h1>Install Xcode</h1>
+<h1>Defaults command line tool</h1>
 <hr>
 
-<p>The first step (other than getting a Mac) is to download Xcode from the Mac
-App Store. Visit <a href="https://swift.org">swift.org</a> for instructions
-on how to install Swift on other platforms such as Linux and Windows.</p>
-
-<p>If you've been using Xcode for a while, you should remove old simulators
-that are no longer supported to clear up some space. Use the following
-terminal command to delete the old simulators:</p>
+<p>User defaults created via UserDefaults or AppStorage can be read and
+deleted using the defaults command line tool. This is useful to clear an
+app's preferences when developing in Xcode by providing the bundle identifier
+to the tool.</p>
 
 <pre><code class="language-bash">
-$ xcrun simctl delete unavailable
+# Read the defaults for the app
+$ defaults read com.GavinWiggins.SidebarNav
+
+# Delete the defaults for the app
+$ defaults delete com.GavinWiggins.SidebarNav
 </code></pre>
 
 <hr class="mt-4">
