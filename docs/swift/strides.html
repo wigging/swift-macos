@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap https://getbootstrap.com -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Highlightjs https://highlightjs.org -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/atom-one-dark-reasonable.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <link rel="stylesheet" href="../style.css">
+    <title>Swift macOS</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+
+<!-- Content -->
+
+<h1>Strides</h1>
+<hr>
+
+<p>Use the stride function to step over values between two limits or
+boundaries. The stride functions can also be used to build arrays with a
+certain range of numbers.</p>
+
+<pre><code class="language-swift">
+// Step from start to end and exclude end value
+
+for s in stride(from: 0, to: 10, by: 2) {
+    print("s is \(s)")
+}
+// s is 0
+// s is 2
+// s is 4
+// s is 6
+// s is 8
+
+// Step from start to end and include end value
+
+for t in stride(from: 0, through: 10, by: 2) {
+    print("t is \(t)")
+}
+// t is 0
+// t is 2
+// t is 4
+// t is 6
+// t is 8
+// t is 10
+</code></pre>
+
+<pre><code class="language-swift">
+// Create an array from a stride sequence
+
+let w = Array(stride(from: 0, to: 10, by: 2))
+print("w is \(w)")
+// w is [0, 2, 4, 6, 8]
+
+let y = Array(stride(from: 0, through: 10, by: 2))
+print("y is \(y)")
+// y is [0, 2, 4, 6, 8, 10]
+</code></pre>
+
+<pre><code class="language-swift">
+// Create an array with specified number of steps using values from another array
+
+let a = [3.4, 5, 2, 8.14, 10, 12]
+let min = a.min() ?? 0.0
+let max = a.max() ?? 1.0
+
+let nSteps = 4.0
+let step = (max - min) / nSteps
+
+let z = Array(stride(from: min, through: max, by: step))
+print("z is \(z)")
+// z is [2.0, 4.5, 7.0, 9.5, 12.0]
+</code></pre>
+
+<hr class="mt-4">
+
+<!-- end Content -->
+
+        <div class="row my-5">
+            <div class="col-md">
+                <p><a href="/"><b>← Back</b></a></p>
+            </div>
+        </div>
+
+        <div class="row my-5">
+            <div class="col-md">
+                <p class="text-center small">Gavin Wiggins © 2022</p>
+            </div>
+        </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
