@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap https://getbootstrap.com -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Highlightjs https://highlightjs.org -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <link rel="stylesheet" href="../style.css">
+    <title>Swift macOS</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+
+<!-- Content -->
+
+<h1>Credits</h1>
+<hr>
+
+<p>The About window in a Mac application is viewed by selecting the app's name
+in the top menu bar, then choosing the About item in the menu. The image
+below displays Safari's About window.</p>
+
+<img src="../images/credits-safari.png" class="mx-auto d-block" style="max-width: 600px;" alt="safari credits">
+
+<p> To add credits to the About window, add a file named Credits.rtf to the
+Xcode project. The text in the RTF file will appear in the About window below
+the app version and copyright. For example, the following text in Credits.rtf
+will appear under the version number in the About window:</p>
+
+<pre><code class="language-plaintext">
+My Credits
+
+These are the credits for this app. They go in a rich text file named
+"Credits" in the Xcode project. See below for an example of a list.
+
+    •   First item is here
+    •   Second item here
+    •   Third item goes here
+    •   Fourth items goes here
+    •   Fifth item is here
+    •   Six item is the last
+</code></pre>
+
+<img src="../images/credits.png" class="mx-auto d-block" style="max-width: 300px;" alt="credits">
+
+<!-- end Content -->
+
+<hr class="mt-4">
+
+        <div class="row my-5">
+            <div class="col-md">
+                <p><a href="/"><b>← Back</b></a></p>
+            </div>
+        </div>
+
+        <div class="row my-5">
+            <div class="col-md">
+                <p class="text-center small">Gavin Wiggins © 2022</p>
+            </div>
+        </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

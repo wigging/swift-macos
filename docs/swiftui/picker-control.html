@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap https://getbootstrap.com -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Highlightjs https://highlightjs.org -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <link rel="stylesheet" href="../style.css">
+    <title>Swift macOS</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+
+<!-- Content -->
+
+<h1>Picker control</h1>
+<hr>
+
+<p>The picker control selects an item from a set of values. The appearance of
+the picker can be changed by using different styles and modifiers.</p>
+
+<img src="../images/picker.png" class="image400" alt="picker control">
+
+<pre><code class="language-swift">
+import SwiftUI
+
+struct ContentView: View {
+
+    let bands = ["Nirvana", "Pearl Jam", "NIN"]
+    @State private var selectedBand = 0
+
+    @State private var selectedName = 0
+
+    var body: some View {
+        VStack(spacing: 20) {
+
+            Picker("Band", selection: $selectedBand) {
+                ForEach(0..&lt;bands.count) {
+                    Text(self.bands[$0])
+                }
+            }
+
+            Picker("Band", selection: $selectedBand) {
+                ForEach(0..&lt;bands.count) {
+                    Text(self.bands[$0])
+                }
+            }
+            .pickerStyle(RadioGroupPickerStyle())
+
+            Picker("Band", selection: $selectedBand) {
+                ForEach(0..&lt;bands.count) {
+                    Text(self.bands[$0])
+                }
+            }
+            .pickerStyle(SegmentedPickerStyle())
+
+            Picker("Name", selection: $selectedName) {
+                Text("Homer Simpson").tag(0)
+                Text("Lisa Simpson").tag(1)
+                Text("Bart Simpson").tag(2)
+            }
+            .fixedSize()
+
+            Picker("Name", selection: $selectedName) {
+                Text("Homer Simpson").tag(0)
+                Text("Lisa Simpson").tag(1)
+                Text("Bart Simpson").tag(2)
+            }
+            .labelsHidden()
+            .fixedSize()
+
+        }
+        .padding()
+        .frame(width: 400, height: 300)
+    }
+}
+</code></pre>
+
+<!-- end Content -->
+
+        <hr class="mt-4">
+
+        <div class="row my-5">
+            <div class="col-md">
+                <p><a href="/"><b>← Back</b></a></p>
+            </div>
+        </div>
+
+        <div class="row my-5">
+            <div class="col-md">
+                <p class="text-center small">Gavin Wiggins © 2022</p>
+            </div>
+        </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

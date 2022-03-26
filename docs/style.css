@@ -1,9 +1,5 @@
 /*--- All screens ---*/
 
-.large-img {
-    max-width: 100%;
-}
-
 a {
     text-decoration: none;
 }
@@ -14,11 +10,6 @@ a:hover {
 
 body {
     background-color: #fffff8;
-}
-
-#title {
-    margin-bottom: 3rem;
-    margin-top: 4rem;
 }
 
 h1, h2, h4 {
@@ -35,12 +26,7 @@ p, hr, ul, dl {
 }
 
 img {
-    max-width: 400px;
-}
-
-.image600 {
-    max-width: 600px;
-    width: 100%;
+    margin-bottom: 20px;
 }
 
 pre code {
@@ -58,6 +44,25 @@ pre::first-line {
     columns: 2;
     -webkit-columns: 2;
     -moz-columns: 2;
+}
+
+.image400 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px;
+}
+
+.image600 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+}
+
+#title {
+    margin-bottom: 3rem;
+    margin-top: 4rem;
 }
 
 /*--- Mobile screens ---*/

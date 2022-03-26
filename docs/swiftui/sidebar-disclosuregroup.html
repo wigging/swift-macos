@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap https://getbootstrap.com -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Highlightjs https://highlightjs.org -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <link rel="stylesheet" href="../style.css">
+    <title>Swift macOS</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+
+<!-- Content -->
+
+<h1>Sidebar DisclosureGroup</h1>
+<hr>
+
+<p>To organize our sidebar view, we can use DisclosureGroup. We can create
+different sections and specify if they are expanded by default when the
+application launches.</p>
+
+<img src="../images/sidebar-disclosuregroup.png" class="image400" alt="sidebar disclosuregroup">
+
+<pre><code class="language-swift">
+import SwiftUI
+
+struct Sidebar: View {
+
+    @State private var isExpanded: Bool = true
+
+    var body: some View {
+        List {
+            DisclosureGroup(isExpanded:$isExpanded) {
+                Label("Books", systemImage: "book.closed")
+                Label("Tutorials", systemImage: "list.bullet.rectangle")
+                Label("Video Tutorials", systemImage: "tv")
+                Label("Contacts", systemImage: "mail.stack")
+                Label("Search", systemImage: "magnifyingglass")
+            } label: {
+                Label("All", systemImage: "list.bullet.rectangle")
+            }
+        }
+        .listStyle(SidebarListStyle())
+        .toolbar {
+            Button(action: toggleSidebar, label: {
+                Image(systemName: "sidebar.left").help("Toggle Sidebar")
+            })
+        }
+        .frame(minWidth: 150)
+    }
+}
+
+private func toggleSidebar() {
+    NSApp.keyWindow?.contentViewController?.tryToPerform(#selector(NSSplitViewController.toggleSidebar(_:)), with: nil)
+}
+
+struct ContentView: View {
+
+    var body: some View {
+        NavigationView {
+            Sidebar()
+            Text("Use button to toggle sidebar.")
+                .frame(minWidth: 200)
+        }
+        .frame(width: 500, height: 300)
+    }
+}
+</code></pre>
+
+<pre><code class="language-swift">
+import SwiftUI
+
+@main
+struct SidebarToggleApp: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+        .commands {
+            SidebarCommands()
+        }
+    }
+}
+</code></pre>
+
+<!-- end Content -->
+
+        <hr class="mt-4">
+
+        <div class="row my-5">
+            <div class="col-md">
+                <p><a href="/"><b>← Back</b></a></p>
+            </div>
+        </div>
+
+        <div class="row my-5">
+            <div class="col-md">
+                <p class="text-center small">Gavin Wiggins © 2022</p>
+            </div>
+        </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

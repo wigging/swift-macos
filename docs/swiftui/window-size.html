@@ -23,20 +23,26 @@
 
 <!-- Content -->
 
-<h1>Defaults command line tool</h1>
+<h1>Window size</h1>
 <hr>
 
-<p>User defaults created via UserDefaults or AppStorage can be read and
-deleted using the defaults command line tool. This is useful to clear an
-app's preferences when developing in Xcode by providing the bundle identifier
-to the tool.</p>
+<p>The window size is defined by the frame size of the containing view. In
+this example the VStack frame is set to a width of 500 and height of 300
+which makes the window width 500 and height 300.</p>
 
-<pre><code class="language-bash">
-# Read the defaults for the app
-$ defaults read com.GavinWiggins.SidebarNav
+<img src="../images/window-size.png" class="image400" alt="window size">
 
-# Delete the defaults for the app
-$ defaults delete com.GavinWiggins.SidebarNav
+<pre><code class="language-swift">
+import SwiftUI
+
+struct ContentView : View {
+    var body: some View {
+        VStack {
+            Text("Window size is 500 by 300")
+        }
+        .frame(width: 500, height: 300)
+    }
+}
 </code></pre>
 
 <!-- end Content -->
