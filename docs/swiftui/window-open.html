@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap https://getbootstrap.com -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Highlightjs https://highlightjs.org -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <link rel="stylesheet" href="../style.css">
+    <title>Swift macOS</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+
+<!-- Content -->
+
+<h1>Open a window</h1>
+<hr>
+
+<p>To open a window using SwiftUI, first add a WindowGroup that will display
+the window's view. Use the handlesExternalEvents modifier to indicate the
+event that is used to display the window.</p>
+
+<img src="../images/window-open.png" class="image600" alt="open a window">
+
+<pre><code class="language-swift">
+import SwiftUI
+
+@main
+struct WindowOpenApp: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+
+        WindowGroup("My Info Window") {
+            InfoView()
+        }
+        .handlesExternalEvents(matching: ["infowindow"])
+    }
+}
+</code></pre>
+
+<pre><code class="language-swift">
+import SwiftUI
+
+struct InfoView: View {
+    var body: some View {
+        Text("Some text goes here")
+            .padding()
+            .frame(width: 300, height: 200)
+    }
+}
+</code></pre>
+
+<p>A Button is used to open the window. The button's action defines the URL
+related to the app's URL scheme and event.</p>
+
+<pre><code class="language-swift">
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        VStack {
+            Text("Click button to open the window")
+            Button("Open Info Window") {
+                if let url = URL(string: "windowapp://infowindow") {
+                    NSWorkspace.shared.open(url)
+                }
+            }
+        }
+        .padding()
+        .frame(width: 300, height: 200)
+    }
+}
+</code></pre>
+
+<p>Finally, to get all of this to work properly, define the URL scheme in the
+Xcode project's settings at Target &rarr; Info &rarr; URL Types.</p>
+
+<img src="../images/window-open-url.png" class="image1000" alt="url scheme">
+
+<!-- end Content -->
+
+        </div>
+    </div>
+
+    <div class="row my-5">
+        <div class="col-md">
+            <hr>
+            <p><a href="/swift-macos"><b>← Back</b></a></p>
+        </div>
+    </div>
+
+    <div class="row my-5">
+        <div class="col-md">
+            <p class="text-center small">Gavin Wiggins © 2022</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
