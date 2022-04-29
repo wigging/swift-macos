@@ -133,9 +133,9 @@ private func setupMetal(arr1: [Float], arr2: [Float]) -> (MTLCommandBuffer?, MTL
     let gpuFunctionLibrary = device?.makeDefaultLibrary()
     let adderGpuFunction = gpuFunctionLibrary?.makeFunction(name: "adder")
 
-    var adderComputePipelineState: MTLComputePipelineState!
+    var pipelineState: MTLComputePipelineState!
     do {
-        adderComputePipelineState = try device?.makeComputePipelineState(function: adderGpuFunction!)
+        pipelineState = try device?.makeComputePipelineState(function: adderGpuFunction!)
     } catch {
       print(error)
     }
@@ -144,14 +144,14 @@ private func setupMetal(arr1: [Float], arr2: [Float]) -> (MTLCommandBuffer?, MTL
     let count = arr1.count
 
     let arr1Buff = device?.makeBuffer(bytes: arr1,
-                                      length: MemoryLayout&lt;Float&gt;.size * count,
+                                      length: MemoryLayout<Float>.size * count,
                                       options: .storageModeShared)
 
     let arr2Buff = device?.makeBuffer(bytes: arr2,
-                                      length: MemoryLayout&lt;Float&gt;.size * count,
+                                      length: MemoryLayout<Float>.size * count,
                                       options: .storageModeShared)
 
-    let resultBuff = device?.makeBuffer(length: MemoryLayout&lt;Float&gt;.size * count,
+    let resultBuff = device?.makeBuffer(length: MemoryLayout<Float>.size * count,
                                         options: .storageModeShared)
 
     // Create a buffer to be sent to the command queue
@@ -159,7 +159,7 @@ private func setupMetal(arr1: [Float], arr2: [Float]) -> (MTLCommandBuffer?, MTL
 
     // Create an encoder to set values on the compute function
     let commandEncoder = commandBuffer?.makeComputeCommandEncoder()
-    commandEncoder?.setComputePipelineState(adderComputePipelineState)
+    commandEncoder?.setComputePipelineState(pipelineState)
 
     // Set the parameters of our GPU function
     commandEncoder?.setBuffer(arr1Buff, offset: 0, index: 0)
@@ -168,7 +168,7 @@ private func setupMetal(arr1: [Float], arr2: [Float]) -> (MTLCommandBuffer?, MTL
 
     // Figure out how many threads we need to use for our operation
     let threadsPerGrid = MTLSize(width: count, height: 1, depth: 1)
-    let maxThreadsPerThreadgroup = adderComputePipelineState.maxTotalThreadsPerThreadgroup // 1024
+    let maxThreadsPerThreadgroup = pipelineState.maxTotalThreadsPerThreadgroup
     let threadsPerThreadgroup = MTLSize(width: maxThreadsPerThreadgroup, height: 1, depth: 1)
     commandEncoder?.dispatchThreads(threadsPerGrid, threadsPerThreadgroup: threadsPerThreadgroup)
 
@@ -226,8 +226,8 @@ import Foundation
 private let n = 5_000_000
 
 // Create two random arrays of size n
-private var array1 = (1...n).map{ _ in Float.random(in: 1...10) }
-private var array2 = (1...n).map{ _ in Float.random(in: 1...10) }
+private let array1 = (1...n).map{ _ in Float.random(in: 1...10) }
+private let array2 = (1...n).map{ _ in Float.random(in: 1...10) }
 
 // Add two arrays using Swift
 addSwift(array1, array2)

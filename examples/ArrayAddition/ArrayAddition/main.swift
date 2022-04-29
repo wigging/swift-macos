@@ -15,8 +15,8 @@ import Foundation
 private let n = 5_000_000
 
 // Create two random arrays of size n
-private var array1 = (1...n).map{ _ in Float.random(in: 1...10) }
-private var array2 = (1...n).map{ _ in Float.random(in: 1...10) }
+private let array1 = (1...n).map{ _ in Float.random(in: 1...10) }
+private let array2 = (1...n).map{ _ in Float.random(in: 1...10) }
 
 // Add two arrays using Swift
 addSwift(array1, array2)

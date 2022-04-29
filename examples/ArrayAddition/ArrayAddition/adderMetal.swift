@@ -19,9 +19,9 @@ private func setupMetal(arr1: [Float], arr2: [Float]) -> (MTLCommandBuffer?, MTL
     let gpuFunctionLibrary = device?.makeDefaultLibrary()
     let adderGpuFunction = gpuFunctionLibrary?.makeFunction(name: "adder")
     
-    var adderComputePipelineState: MTLComputePipelineState!
+    var pipelineState: MTLComputePipelineState!
     do {
-        adderComputePipelineState = try device?.makeComputePipelineState(function: adderGpuFunction!)
+        pipelineState = try device?.makeComputePipelineState(function: adderGpuFunction!)
     } catch {
       print(error)
     }
@@ -45,7 +45,7 @@ private func setupMetal(arr1: [Float], arr2: [Float]) -> (MTLCommandBuffer?, MTL
     
     // Create an encoder to set values on the compute function
     let commandEncoder = commandBuffer?.makeComputeCommandEncoder()
-    commandEncoder?.setComputePipelineState(adderComputePipelineState)
+    commandEncoder?.setComputePipelineState(pipelineState)
     
     // Set the parameters of our GPU function
     commandEncoder?.setBuffer(arr1Buff, offset: 0, index: 0)
@@ -54,7 +54,7 @@ private func setupMetal(arr1: [Float], arr2: [Float]) -> (MTLCommandBuffer?, MTL
     
     // Figure out how many threads we need to use for our operation
     let threadsPerGrid = MTLSize(width: count, height: 1, depth: 1)
-    let maxThreadsPerThreadgroup = adderComputePipelineState.maxTotalThreadsPerThreadgroup
+    let maxThreadsPerThreadgroup = pipelineState.maxTotalThreadsPerThreadgroup
     let threadsPerThreadgroup = MTLSize(width: maxThreadsPerThreadgroup, height: 1, depth: 1)
     commandEncoder?.dispatchThreads(threadsPerGrid, threadsPerThreadgroup: threadsPerThreadgroup)
     
