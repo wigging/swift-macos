@@ -12,6 +12,10 @@ struct ContentView: View {
         VStack {
             // Basic text view
             Text("Hello there")
+            
+            // Text with inline image
+            Text("Empty trash \(Image(systemName: "trash"))")
+                .padding()
         }
         .frame(width: 400, height: 300)
     }
