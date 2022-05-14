@@ -26,14 +26,15 @@
 <h1>Elapsed time</h1>
 <hr>
 
-<p>Use DispatchTime to calculate the elapsed time for some Swift code. In the
-example below, the sleep function causes a delay of 4 seconds which is
-calculated by the elapsed variable.</p>
+<p>Below are two examples of measuring elapsed time in Swift. The sleep function
+is used to delay the code execution for 4 seconds. Consequently, the elapsed
+time for both examples is approximately 4 seconds.</p>
 
 <pre><code class="language-swift">
-// example.swift
+import Foundation
 
-import Cocoa
+// Example 1
+// ---------------------------------------------------------------------------
 
 let tic = DispatchTime.now().uptimeNanoseconds
 
@@ -41,15 +42,27 @@ sleep(4)
 
 let toc = DispatchTime.now().uptimeNanoseconds
 
-let elapsed = (toc - tic) / 1_000_000_000
-print("Elapsed time is \(elapsed) seconds")
+print("Elapsed time is \((toc - tic) / 1_000_000_000) seconds")
+
+// Example 2
+// ---------------------------------------------------------------------------
+
+let tic2 = CFAbsoluteTimeGetCurrent()
+
+sleep(4)
+
+let toc2 = CFAbsoluteTimeGetCurrent()
+
+print("Elapsed time is \(toc2 - tic2) seconds")
 </code></pre>
 
-<p>Running the above example in the terminal gives the following output:</p>
+<p>Running the above examples in a file named elapsedtime.swift gives the
+following output:</p>
 
 <pre><code class="language-bash">
-$ swift example.swift
+$ swift elapsedtime.swift
 Elapsed time is 4 seconds
+Elapsed time is 4.000399947166443 seconds
 </code></pre>
 
 <!-- end Content -->
