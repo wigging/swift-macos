@@ -67,7 +67,7 @@ private func setupMetal(arr1: [Float], arr2: [Float]) -> (MTLCommandBuffer?, MTL
 func addMetal(_ arr1: [Float], _ arr2: [Float]) {
     
     let (commandBuffer, resultBuff) = setupMetal(arr1: arr1, arr2: arr2)
-    let tic = DispatchTime.now().uptimeNanoseconds
+    let tic = CFAbsoluteTimeGetCurrent()
 
     // Push this command to the command queue for processing
     commandBuffer?.commit()
@@ -77,12 +77,11 @@ func addMetal(_ arr1: [Float], _ arr2: [Float]) {
     
     // Get the pointer to the beginning of our data
     let count = arr1.count
-    var resultBufferPointer = resultBuff?.contents().bindMemory(to: Float.self, capacity: MemoryLayout<Float>.size * count)
+    var resultBufferPointer = resultBuff?.contents().bindMemory(to: Float.self, capacity: count)
     
     // Print out elapsed time
-    let toc = DispatchTime.now().uptimeNanoseconds
-    let elapsed = Float(toc - tic) / 1_000_000_000
-    print("\nMetal GPU elapsed time is \(elapsed) s")
+    let toc = CFAbsoluteTimeGetCurrent()
+    print("\nMetal GPU elapsed time is \(toc - tic) s")
     
     // Print out the results
     for i in 0..<3 {

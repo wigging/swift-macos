@@ -9,15 +9,14 @@ import Accelerate
 
 func addAccel(_ arr1: [Float], _ arr2: [Float]) {
     
-    let tic = DispatchTime.now().uptimeNanoseconds
+    let tic = CFAbsoluteTimeGetCurrent()
 
     // Add two arrays and store results
     let y = vDSP.add(arr1, arr2)
     
     // Print out elapsed time
-    let toc = DispatchTime.now().uptimeNanoseconds
-    let elapsed = Float(toc - tic) / 1_000_000_000
-    print("\nAccelerate vDSP elapsed time is \(elapsed) s")
+    let toc = CFAbsoluteTimeGetCurrent()
+    print("\nAccelerate vDSP elapsed time is \(toc - tic) s")
     
     // Print out some results
     for i in 0..<3 {

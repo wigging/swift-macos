@@ -9,7 +9,7 @@ import Foundation
 
 func addSwift(_ arr1: [Float], _ arr2: [Float]) {
 
-    let tic = DispatchTime.now().uptimeNanoseconds
+    let tic = CFAbsoluteTimeGetCurrent()
 
     // Add two arrays and store results
     let count = arr1.count
@@ -20,9 +20,8 @@ func addSwift(_ arr1: [Float], _ arr2: [Float]) {
     }
 
     // Print out the elapsed time
-    let toc = DispatchTime.now().uptimeNanoseconds
-    let elapsed = Float(toc - tic) / 1_000_000_000
-    print("\nSwift elapsed time is \(elapsed) s")
+    let toc = CFAbsoluteTimeGetCurrent()
+    print("\nSwift elapsed time is \(toc - tic) s")
     
     // Print out some results
     for i in 0..<3 {
