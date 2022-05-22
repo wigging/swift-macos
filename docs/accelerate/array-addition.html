@@ -26,6 +26,21 @@
 <h1>Element-wise array addition</h1>
 <hr>
 
+<p>Element-wise array addition can be accomplished with the Accelerate
+vDSP.add function as shown below. This approach offers massive speed
+improvements for large arrays compared to adding the elements in a
+for-loop.</p>
+
+<pre><code class="language-swift">
+import Accelerate
+
+let x: [Float] = [3, 4.5, 8]
+let y: [Float] = [2, 1.2, 7.4]
+let z = vDSP.add(x, y)
+
+// z is [5.0, 5.7, 15.4]
+</code></pre>
+
 <p>There are several ways to perform element-wise array addition with Swift
 arrays. One approach is to use a for-loop, the other approach is to use the
 Accelerate framework or a Metal GPU compute kernel. Examples of these

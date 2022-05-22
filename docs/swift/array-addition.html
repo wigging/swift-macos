@@ -26,6 +26,21 @@
 <h1>Element-wise array addition</h1>
 <hr>
 
+<p>Use a for-loop to add elements in arrays.</p>
+
+<pre><code class="language-swift">
+let x: [Float] = [3, 4.5, 8]
+let y: [Float] = [2, 1.2, 7.4]
+
+var z = [Float](repeating: 0, count: x.count)
+
+for i in 0..&lt;x.count {
+    zz[i] = x[i] + y[i]
+}
+
+// z is [5.0, 5.7, 15.4]
+</code></pre>
+
 <p>There are several ways to perform element-wise array addition with Swift
 arrays. One approach is to use a for-loop, the other approach is to use the
 Accelerate framework or a Metal GPU compute kernel. Examples of these
