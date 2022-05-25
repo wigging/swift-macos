@@ -28,8 +28,75 @@
 
 <p>There are several ways to perform element-wise array addition with Swift
 arrays. One approach is to use a for-loop, the other approach is to use the
-Accelerate framework or a Metal GPU compute kernel. The Metal approach is
-shown here.</p>
+Accelerate framework or a Metal GPU compute kernel. Examples of these
+approaches are given below and an elapsed time comparison is given in the
+Summary section.</p>
+
+<h2>Swift</h2>
+
+<p>Adding elements of two arrays using pure Swift is demonstrated below using
+a for-loop. This can be slow for large arrays.</p>
+
+<pre><code class="language-swift">
+import Foundation
+
+func addSwift(_ arr1: [Float], _ arr2: [Float]) {
+
+    let tic = CFAbsoluteTimeGetCurrent()
+
+    // Add two arrays and store results
+    let count = arr1.count
+    var result = [Float](repeating: 0.0, count: count)
+
+    for i in 0..&lt;count {
+        result[i] = arr1[i] + arr2[i]
+    }
+
+    // Print out the elapsed time
+    let toc = CFAbsoluteTimeGetCurrent()
+    print("\nSwift elapsed time is \(toc - tic) s")
+
+    // Print out some results
+    for i in 0..&lt;<3 {
+        let a1 = String(format: "%.4f", arr1[i])
+        let a2 = String(format: "%.4f", arr2[i])
+        let y = String(format: "%.4f", result[i])
+        print("\(a1) + \(a2) = \(y)")
+    }
+}
+</code></pre>
+
+<h2>Accelerate</h2>
+
+<p>The Accelerate framework provides the vDSP.add function to add elements of
+two arrays. This approach provides a significant speed boost for adding large
+arrays.</p>
+
+<pre><code class="language-swift">
+import Accelerate
+
+func addAccel(_ arr1: [Float], _ arr2: [Float]) {
+
+    let tic = CFAbsoluteTimeGetCurrent()
+
+    // Add two arrays and store results
+    let y = vDSP.add(arr1, arr2)
+
+    // Print out elapsed time
+    let toc = CFAbsoluteTimeGetCurrent()
+    print("\nAccelerate vDSP elapsed time is \(toc - tic) s")
+
+    // Print out some results
+    for i in 0..&lt;<3 {
+        let a1 = String(format: "%.4f", arr1[i])
+        let a2 = String(format: "%.4f", arr2[i])
+        let y = String(format: "%.4f", y[i])
+        print("\(a1) + \(a2) = \(y)")
+    }
+}
+</code></pre>
+
+<h2>Metal</h2>
 
 <p>The Metal compute kernal for adding the elements of two arrays is given below.</p>
 
@@ -139,7 +206,15 @@ func addMetal(_ arr1: [Float], _ arr2: [Float]) {
 }
 </code></pre>
 
-<p>The main file for running this Metal example is shown below.</p>
+<h2>Summary</h2>
+
+<p>The main file for running the above examples is shown below. The table
+gives elapsed times from running the example code on a MacBook Pro with a 2.6
+GHz 6-core Intel i7 CPU, 32 GB of RAM, and a 4 GB AMD Radeon Pro 5500m GPU.
+Before running the Xcode project, the GPU Frame Capture and API Validation
+were disabled for Metal. Based on the results, the Accelerate function is the
+fastest and the Swift for-loop is the slowest when adding two arrays with
+5,000,000 elements.</p>
 
 <pre><code class="language-swift">
 import Foundation
@@ -151,9 +226,38 @@ private let n = 5_000_000
 private let array1 = (1...n).map{ _ in Float.random(in: 1...10) }
 private let array2 = (1...n).map{ _ in Float.random(in: 1...10) }
 
+// Add two arrays using Swift
+addSwift(array1, array2)
+
+// Add two arrays using Accelerate vDSP
+addAccel(array1, array2)
+
 // Add two arrays using Metal on the GPU
 addMetal(array1, array2)
 </code></pre>
+
+<table class="table table-dark table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Method</th>
+            <th scope="col">Elapsed time (s)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Swift</td>
+            <td>3.3896</td>
+        </tr>
+        <tr>
+            <td>Accelerate</td>
+            <td>0.006299</td>
+        </tr>
+        <tr>
+            <td>Metal</td>
+            <td>0.01030</td>
+        </tr>
+    </tbody>
+</table>
 
 <!-- end Content -->
 
