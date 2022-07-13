@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap https://getbootstrap.com -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Highlightjs https://highlightjs.org -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <link rel="stylesheet" href="../style.css">
+    <title>Swift macOS</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+
+<!-- Content -->
+
+<h1>Date formatting</h1>
+<hr>
+
+<p>Examples of creating a formatted date string are shown below. The output of
+each print function is given as a comment below the function.</p>
+
+<pre><code class="language-swift">
+import Foundation
+
+// Create a date variable for the current date and time
+let date = Date()
+
+// Example 1
+
+let d1 = date.formatted()
+print(d1)
+// 7/12/2022, 9:18 PM
+
+// Example 2
+
+let d2 = date.formatted(date: .abbreviated, time: .shortened)
+print(d2)
+// Jul 12, 2022, 9:18 PM
+
+// Example 3
+
+let d3 = date.formatted(date: .numeric, time: .omitted)
+print(d3)
+// 7/12/2022
+
+// Example 4
+
+let d4 = date.formatted(
+    .dateTime
+    .day(.twoDigits)
+    .weekday(.short)
+    .month(.abbreviated))
+
+print(d4)
+// Tu, Jul 12
+</code></pre>
+
+<!-- end Content -->
+
+        </div>
+    </div>
+
+    <div class="row my-5">
+        <div class="col-md">
+            <hr>
+            <p><a href="/swift-macos"><b>← Back</b></a></p>
+        </div>
+    </div>
+
+    <div class="row my-5">
+        <div class="col-md">
+            <p class="text-center small">Gavin Wiggins © 2022</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
