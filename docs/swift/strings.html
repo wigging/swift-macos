@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap https://getbootstrap.com -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
     <!-- Highlightjs https://highlightjs.org -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github-dark.min.css">
@@ -16,33 +16,26 @@
     <title>Swift macOS</title>
 </head>
 <body>
-
 <div class="container">
     <div class="row">
         <div class="col-md">
 
-<!-- Content -->
-
 <h1>Strings</h1>
+<h6>November 12, 2022</h6>
 <hr>
 
-<p>A string in Swift is represented by characters wrapped with double
-quotation marks " ". Multiline strings are wrapped with three double
-quotation marks """ """. Use a backslash \ to ignore a line break in a
-multiline string.</p>
+<p>A string in Swift is represented by characters wrapped with double quotation marks <code>" "</code>. Multiline strings are wrapped with three double quotation marks <code>""" """</code>. Use a backslash <code>\</code> to ignore a line break in a multiline string.</p>
+<pre><code class="language-swift">// A string literal
 
-<pre><code class="language-swift">
-// A string literal
-
-let a = "This is a string"
+let a = &quot;This is a string&quot;
 
 // Multiline string
 
-let multi = """
+let multi = &quot;&quot;&quot;
 This is an example
 of a multiline
 string
-"""
+&quot;&quot;&quot;
 // Prints the following:
 // This is an example
 // of a multiline
@@ -51,45 +44,33 @@ string
 
 // Multiline string with indentation
 
-let indented = """
+let indented = &quot;&quot;&quot;
 The next line
   is indented from the left.
-"""
+&quot;&quot;&quot;
 // Prints the following:
 // The next line
 //   is indented from the left.
 
 // Ignore line breaks in a multiline string
 
-let ignored = """
+let ignored = &quot;&quot;&quot;
 This is the first line \
 which doesn't break.
 And this is the second line.
-"""
+&quot;&quot;&quot;
 // Prints the following:
 // This is the first line which doesn't break.
 // And this is the second line.
 </code></pre>
 
-<hr class="mt-4">
-
-<!-- end Content -->
-
-        <div class="row my-5">
-            <div class="col-md">
-                <p><a href="/swift-macos"><b>← Back</b></a></p>
-            </div>
         </div>
-
-        <div class="row my-5">
-            <div class="col-md">
-                <p class="text-center small">Gavin Wiggins © 2022</p>
-            </div>
-        </div>
-
+    </div>
+    <div class="row my-5">
+        <div class="col-md">
+            <p class="text-center small my-5">🍎 🖥 Swift Programming for macOS <br> by Gavin Wiggins © 2022</p>
         </div>
     </div>
 </div>
-
 </body>
 </html>

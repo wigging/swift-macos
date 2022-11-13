@@ -1,49 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+---
+title: Terminal setup and commands
+date: November 10, 2022
+---
 
-    <!-- Bootstrap https://getbootstrap.com -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+Mac developers often work in the Terminal to use the Swift package manager, install macOS packages with Homebrew, collaborate on projects with Git and GitHub, run server side Swift code, etc. Below are some tips for working in the macOS Terminal.
 
-    <!-- Highlightjs https://highlightjs.org -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github-dark.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
+## Pure
 
-    <link rel="stylesheet" href="../style.css">
-    <title>Swift macOS</title>
-</head>
-<body>
+The Z shell (or zsh) is the default shell for macOS. [Pure](https://github.com/sindresorhus/pure) improves the zsh command prompt in the terminal. Use the suggested theme in the Pure documentation.
 
-<div class="container">
-    <div class="row">
-        <div class="col-md">
+## Zsh configuration
 
-<!-- Content -->
+Create a ~/.zshrc file to configure the Z shell. The .zshrc file shown below assumes Pure, Xcode, and Miniconda have been installed on the Mac.
 
-<h1>Terminal</h1>
-<hr>
-
-<p>Mac developers often work in the Terminal to use the Swift package manager,
-install macOS packages with Homebrew, collaborate on projects with Git and
-GitHub, run server side Swift code, etc. Below are some tips for working in
-the macOS Terminal.</p>
-
-<h2>Pure</h2>
-
-<p>The Z shell (or zsh) is the default shell for macOS. <a
-href="https://github.com/sindresorhus/pure">Pure</a> improves the zsh command
-prompt in the terminal. Use the suggested theme in the Pure
-documentation.</p>
-
-<h2>Zsh configuration</h2>
-
-<p>Create a ~/.zshrc file to configure the Z shell. The .zshrc file shown
-below assumes Pure, Xcode, and Miniconda have been installed on the Mac.</p>
-
-<pre><code class="language-bash">
+```bash
 # Pure prompt configuration
 # https://github.com/sindresorhus/pure
 # ----------------------------------------------------------------------------
@@ -103,11 +73,11 @@ if [[ -v VSCODE_GIT_IPC_HANDLE ]]; then
     conda deactivate
     conda activate
 fi
-</code></pre>
+```
 
-<h2>Keyboard shortcuts</h2>
+## Keyboard shortcuts
 
-<p>Various keyboard shortcuts for working with the command line prompt.</p>
+Various keyboard shortcuts for working with the command line prompt.
 
 <dl>
     <dt>Ctrl + a</dt>
@@ -120,9 +90,9 @@ fi
     <dd>Clear up to the beginning</dd>
 </dl>
 
-<h2>General commands</h2>
+## General commands
 
-<pre><code class="language-bash">
+```bash
 # My preferred permissions for folders and files
 chmod 755   # folder permissions
 chmod 644   # file permissions
@@ -144,44 +114,21 @@ rm -rf folderA/
 # Move all files from one folder to another folder. Example below demonstrates
 # moving all the files from the Downloads folder to the Videos folder
 mv ~/Downloads/* ~/Videos
-</code></pre>
+```
 
-<h2>Commands specific to macOS</h2>
+## Commands specific to macOS
 
-<p>Open a file from the macOS terminal.</p>
+Open a file from the macOS terminal.
 
-<pre><code class="language-bash">
+```bash
 open fileA.txt            # open a file in its default application
 open -a safari fileA.txt  # opens with the specified application
 open -R fileA.txt         # selects the file in a Finder window
-</code></pre>
+```
 
-<p>Mount and unmount a volume on a Mac.</p>
+## Mount and unmount a volume on a Mac.
 
-<pre><code class="language-bash">
+```
 hdiutil attach Secure.dmg       # mount a dmg volume named "Secure.dmg"
 hdiutil detach /Volumes/Secure  # unmount a volume named "Secure"
-</code></pre>
-
-<hr class="mt-4">
-
-<!-- end Content -->
-
-        <div class="row my-5">
-            <div class="col-md">
-                <p><a href="/swift-macos"><b>← Back</b></a></p>
-            </div>
-        </div>
-
-        <div class="row my-5">
-            <div class="col-md">
-                <p class="text-center small">Gavin Wiggins © 2022</p>
-            </div>
-        </div>
-
-        </div>
-    </div>
-</div>
-
-</body>
-</html>
+```

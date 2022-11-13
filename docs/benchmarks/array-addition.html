@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap https://getbootstrap.com -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
     <!-- Highlightjs https://highlightjs.org -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github-dark.min.css">
@@ -16,29 +16,18 @@
     <title>Swift macOS</title>
 </head>
 <body>
-
 <div class="container">
     <div class="row">
         <div class="col-md">
 
-<!-- Content -->
-
 <h1>Element-wise array addition</h1>
+<h6>November 12, 2022</h6>
 <hr>
 
-<p>There are several ways to perform element-wise array addition with Swift
-arrays. One approach is to use a for-loop, the other approach is to use the
-Accelerate framework or a Metal GPU compute kernel. Examples of these
-approaches are given below and an elapsed time comparison is given in the
-Summary section.</p>
-
-<h2>Swift</h2>
-
-<p>Adding elements of two arrays using pure Swift is demonstrated below using
-a for-loop. This can be slow for large arrays.</p>
-
-<pre><code class="language-swift">
-import Foundation
+<p>There are several ways to perform element-wise array addition with Swift arrays. One approach is to use a for-loop, the other approach is to use the Accelerate framework or a Metal GPU compute kernel. Examples of these approaches are given below and an elapsed time comparison is given in the Summary section.</p>
+<h2>Using Swift</h2>
+<p>Adding elements of two arrays using pure Swift is demonstrated below using a for-loop. This can be slow for large arrays.</p>
+<pre><code class="language-swift">import Foundation
 
 func addSwift(_ arr1: [Float], _ arr2: [Float]) {
 
@@ -54,26 +43,20 @@ func addSwift(_ arr1: [Float], _ arr2: [Float]) {
 
     // Print out the elapsed time
     let toc = CFAbsoluteTimeGetCurrent()
-    print("\nSwift elapsed time is \(toc - tic) s")
+    print(&quot;\nSwift elapsed time is \(toc - tic) s&quot;)
 
     // Print out some results
-    for i in 0..&lt;<3 {
-        let a1 = String(format: "%.4f", arr1[i])
-        let a2 = String(format: "%.4f", arr2[i])
-        let y = String(format: "%.4f", result[i])
-        print("\(a1) + \(a2) = \(y)")
+    for i in 0..&lt;3 {
+        let a1 = String(format: &quot;%.4f&quot;, arr1[i])
+        let a2 = String(format: &quot;%.4f&quot;, arr2[i])
+        let y = String(format: &quot;%.4f&quot;, result[i])
+        print(&quot;\(a1) + \(a2) = \(y)&quot;)
     }
 }
 </code></pre>
-
-<h2>Accelerate</h2>
-
-<p>The Accelerate framework provides the vDSP.add function to add elements of
-two arrays. This approach provides a significant speed boost for adding large
-arrays.</p>
-
-<pre><code class="language-swift">
-import Accelerate
+<h2>Using Accelerate</h2>
+<p>The Accelerate framework provides the vDSP.add function to add elements of two arrays. This approach provides a significant speed boost for adding large arrays.</p>
+<pre><code class="language-swift">import Accelerate
 
 func addAccel(_ arr1: [Float], _ arr2: [Float]) {
 
@@ -84,24 +67,20 @@ func addAccel(_ arr1: [Float], _ arr2: [Float]) {
 
     // Print out elapsed time
     let toc = CFAbsoluteTimeGetCurrent()
-    print("\nAccelerate vDSP elapsed time is \(toc - tic) s")
+    print(&quot;\nAccelerate vDSP elapsed time is \(toc - tic) s&quot;)
 
     // Print out some results
-    for i in 0..&lt;<3 {
-        let a1 = String(format: "%.4f", arr1[i])
-        let a2 = String(format: "%.4f", arr2[i])
-        let y = String(format: "%.4f", y[i])
-        print("\(a1) + \(a2) = \(y)")
+    for i in 0..&lt;3 {
+        let a1 = String(format: &quot;%.4f&quot;, arr1[i])
+        let a2 = String(format: &quot;%.4f&quot;, arr2[i])
+        let y = String(format: &quot;%.4f&quot;, y[i])
+        print(&quot;\(a1) + \(a2) = \(y)&quot;)
     }
 }
 </code></pre>
-
-<h2>Metal</h2>
-
+<h2>Using Metal</h2>
 <p>The Metal compute kernal for adding the elements of two arrays is given below.</p>
-
-<pre><code class="language-cpp">
-#include &lt;metal_stdlib&gt;
+<pre><code class="language-cpp">#include &lt;metal_stdlib&gt;
 using namespace metal;
 
 kernel void adder(
@@ -113,13 +92,10 @@ kernel void adder(
     result[index] = array1[index] + array2[index];
 }
 </code></pre>
-
 <p>Next, the adder kernel function is implemented in the Metal compute pipeline as shown below.</p>
+<pre class="pre1000"><code class="language-swift">import MetalKit
 
-<pre><code class="language-swift" style="max-width: 880px;">
-import MetalKit
-
-private func setupMetal(arr1: [Float], arr2: [Float]) -> (MTLCommandBuffer?, MTLBuffer?) {
+private func setupMetal(arr1: [Float], arr2: [Float]) -&gt; (MTLCommandBuffer?, MTLBuffer?) {
 
     // Get the Metal GPU device
     let device = MTLCreateSystemDefaultDevice()
@@ -129,7 +105,7 @@ private func setupMetal(arr1: [Float], arr2: [Float]) -> (MTLCommandBuffer?, MTL
 
     // Get our Metal GPU function
     let gpuFunctionLibrary = device?.makeDefaultLibrary()
-    let adderGpuFunction = gpuFunctionLibrary?.makeFunction(name: "adder")
+    let adderGpuFunction = gpuFunctionLibrary?.makeFunction(name: &quot;adder&quot;)
 
     var pipelineState: MTLComputePipelineState!
     do {
@@ -142,14 +118,14 @@ private func setupMetal(arr1: [Float], arr2: [Float]) -> (MTLCommandBuffer?, MTL
     let count = arr1.count
 
     let arr1Buff = device?.makeBuffer(bytes: arr1,
-                                      length: MemoryLayout<Float>.size * count,
+                                      length: MemoryLayout&lt;Float&gt;.size * count,
                                       options: .storageModeShared)
 
     let arr2Buff = device?.makeBuffer(bytes: arr2,
-                                      length: MemoryLayout<Float>.size * count,
+                                      length: MemoryLayout&lt;Float&gt;.size * count,
                                       options: .storageModeShared)
 
-    let resultBuff = device?.makeBuffer(length: MemoryLayout<Float>.size * count,
+    let resultBuff = device?.makeBuffer(length: MemoryLayout&lt;Float&gt;.size * count,
                                         options: .storageModeShared)
 
     // Create a buffer to be sent to the command queue
@@ -193,31 +169,21 @@ func addMetal(_ arr1: [Float], _ arr2: [Float]) {
 
     // Print out elapsed time
     let toc = CFAbsoluteTimeGetCurrent()
-    print("\nMetal GPU elapsed time is \(toc - tic) s")
+    print(&quot;\nMetal GPU elapsed time is \(toc - tic) s&quot;)
 
     // Print out the results
-    for i in 0..&lt;<3 {
-        let a1 = String(format: "%.4f", arr1[i])
-        let a2 = String(format: "%.4f", arr2[i])
-        let y = String(format: "%.4f", Float(resultBufferPointer!.pointee))
-        print("\(a1) + \(a2) = \(y)")
+    for i in 0..&lt;3 {
+        let a1 = String(format: &quot;%.4f&quot;, arr1[i])
+        let a2 = String(format: &quot;%.4f&quot;, arr2[i])
+        let y = String(format: &quot;%.4f&quot;, Float(resultBufferPointer!.pointee))
+        print(&quot;\(a1) + \(a2) = \(y)&quot;)
         resultBufferPointer = resultBufferPointer?.advanced(by: 1)
     }
 }
 </code></pre>
-
 <h2>Summary</h2>
-
-<p>The main file for running the above examples is shown below. The table
-gives elapsed times from running the example code on a MacBook Pro with a 2.6
-GHz 6-core Intel i7 CPU, 32 GB of RAM, and a 4 GB AMD Radeon Pro 5500m GPU.
-Before running the Xcode project, the GPU Frame Capture and API Validation
-were disabled for Metal. Based on the results, the Accelerate function is the
-fastest and the Swift for-loop is the slowest when adding two arrays with
-5,000,000 elements.</p>
-
-<pre><code class="language-swift">
-import Foundation
+<p>The main file for running the above examples is shown below. The table gives elapsed times from running the example code on a MacBook Pro with a 2.6 GHz 6-core Intel i7 CPU, 32 GB of RAM, and a 4 GB AMD Radeon Pro 5500m GPU. Before running the Xcode project, the GPU Frame Capture and API Validation were disabled for Metal. Based on the results, the Accelerate function is the fastest and the Swift for-loop is the slowest when adding two arrays with 5,000,000 elements.</p>
+<pre><code class="language-swift">import Foundation
 
 // Size of each array
 private let n = 5_000_000
@@ -235,7 +201,6 @@ addAccel(array1, array2)
 // Add two arrays using Metal on the GPU
 addMetal(array1, array2)
 </code></pre>
-
 <table class="table table-dark table-hover">
     <thead>
         <tr>
@@ -259,24 +224,13 @@ addMetal(array1, array2)
     </tbody>
 </table>
 
-<!-- end Content -->
-
         </div>
     </div>
-
     <div class="row my-5">
         <div class="col-md">
-            <hr>
-            <p><a href="/swift-macos"><b>← Back</b></a></p>
-        </div>
-    </div>
-
-    <div class="row my-5">
-        <div class="col-md">
-            <p class="text-center small">Gavin Wiggins © 2022</p>
+            <p class="text-center small my-5">🍎 🖥 Swift Programming for macOS <br> by Gavin Wiggins © 2022</p>
         </div>
     </div>
 </div>
-
 </body>
 </html>

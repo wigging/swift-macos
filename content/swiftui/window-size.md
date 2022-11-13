@@ -1,0 +1,21 @@
+---
+title: Window size
+date: November 13, 2022
+---
+
+The window size is defined by the frame size of the containing view. In this example the VStack frame is set to a width of 500 and height of 300 which makes the window width 500 and height 300.
+
+<img src="../images/window-size.png" style="max-width:400px;" alt="window size">
+
+```swift
+import SwiftUI
+
+struct ContentView : View {
+    var body: some View {
+        VStack {
+            Text("Window size is 500 by 300")
+        }
+        .frame(width: 500, height: 300)
+    }
+}
+```

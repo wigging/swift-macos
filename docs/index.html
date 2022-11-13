@@ -1,117 +1,119 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap https://getbootstrap.com -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="style.css">
+    <!-- Highlightjs https://highlightjs.org -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Swift macOS</title>
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md">
-                <h1 id="title" class="text-center"><b>Swift Programming for macOS</b> <br>🍎 🖥</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+            <h1 class="text-center"><b>🍎 🖥 Swift Programming for macOS</b></h1>
+            <br>
+            <p>There are plenty of books, videos, and online resources for developing iOS apps. Despite the fact that iPhone and iPad apps require a Mac for code development, there is little information about actually creating native Mac applications. The examples provided below demonstrate various aspects of Mac app development using the latest versions of Swift and SwiftUI. Hopefully these examples will provide a useful resource for Mac developers. The repository for this website and the example code is available on <a href="https://github.com/wigging/swift-macos">GitHub</a>.</p>
+            <p>Questions, comments, and other feedback can be sent via <a href="mailto:wiggingATmeDOTcom" onclick = "this.href=this.href.replace(/AT/,'&#64;').replace(/DOT/,'&#46;')">Email</a> or <a href="https://twitter.com/wigging">Twitter</a>. Or submit an <a href="https://github.com/wigging/swift-macos/issues">Issue</a> on GitHub. If you would like to support this project, donations can be made to Gavin Wiggins using <a href="https://github.com/sponsors/wigging">GitHub Sponsors</a>, <a href="https://www.patreon.com/wigging">Patreon</a>, <a href="https://www.buymeacoffee.com/wigging">Buy Me A Coffee</a>, or <a href="https://www.paypal.me/gavinwiggins">PayPal</a>. Thank you 😄.</p>
 
-                <p>There are plenty of books, videos, and online resources for developing iOS apps. Despite the fact that iPhone and iPad apps require a Mac for code development, there is little information about actually creating native Mac applications. The examples provided below demonstrate various aspects of Mac app development using the latest versions of Swift and SwiftUI. Hopefully these examples will provide a useful resource for Mac developers. The repository for this website and the example code is available on <a href="https://github.com/wigging/swift-macos">GitHub</a>.</p>
+            <h4>Getting started</h4>
+            <hr>
+            <ul style="columns:2;">
+                <li><a href="getstarted/install-xcode.html">Install Xcode</a></li>
+                <li><a href="getstarted/git-github.html">Git and GitHub</a></li>
+                <li><a href="getstarted/terminal.html">Terminal setup and commands</a></li>
+                <li><a href="getstarted/defaults-tool.html">Defaults command line tool</a></li>
+                <li><a href="getstarted/repl.html">Read Eval Print Loop (REPL)</a></li>
+                <li><a href="getstarted/resources.html">Resources</a></li>
+            </ul>
 
-                <p>Questions, comments, and other feedback can be sent via <a href="mailto:wiggingATmeDOTcom" onclick = "this.href=this.href.replace(/AT/,'&#64;').replace(/DOT/,'&#46;')">Email</a> or <a href="https://twitter.com/wigging">Twitter</a>. Or submit an <a href="https://github.com/wigging/swift-macos/issues">Issue</a> on GitHub. If you would like to support this project, donations can be made to Gavin Wiggins using <a href="https://github.com/sponsors/wigging">GitHub Sponsors</a>, <a href="https://www.patreon.com/wigging">Patreon</a>, <a href="https://www.buymeacoffee.com/wigging">Buy Me A Coffee</a>, or <a href="https://www.paypal.me/gavinwiggins">PayPal</a>. Thank you 😄.</p>
+            <h4>Swift</h4>
+            <hr>
+            <ul style="columns:2;">
+                <li><a href="swift/arrays.html">Arrays</a></li>
+                <li><a href="swift/comments.html">Comments</a></li>
+                <li><a href="swift/date-formatting.html">Date formatting</a></li>
+                <li><a href="swift/dictionaries.html">Dictionaries</a></li>
+                <li><a href="swift/elapsed-time.html">Elapsed time</a></li>
+                <li><a href="swift/array-addition.html">Element-wise array addition</a></li>
+                <li><a href="swift/range.html">Range</a></li>
+                <li><a href="swift/strides.html">Strides</a></li>
+                <li><a href="swift/strings.html">Strings</a></li>
+            </ul>
 
-                <h4>Getting started</h4>
-                <hr>
-                <ul class="contents-list">
-                    <li><a href="getting-started/install-xcode.html">Install Xcode</a></li>
-                    <li><a href="getting-started/git-github.html">Git and GitHub</a></li>
-                    <li><a href="getting-started/terminal.html">Terminal</a></li>
-                    <li><a href="getting-started/defaults-tool.html">Defaults tool</a></li>
-                    <li><a href="getting-started/repl.html">Read Eval Print Loop (REPL)</a></li>
-                    <li><a href="getting-started/resources.html">Resources</a></li>
-                </ul>
+            <h4>SwiftUI</h4>
+            <hr>
+            <ul style="columns:2;">
+                <li><a href="swiftui/appstorage.html">AppStorage</a></li>
+                <li><a href="swiftui/blur-effect.html">Blur effect</a></li>
+                <li><a href="swiftui/button-styles.html">Button styles</a></li>
+                <li><a href="swiftui/credits.html">Credits</a></li>
+                <li><a href="swiftui/cursors.html">Cursors</a></li>
+                <li><a href="swiftui/grid-lines.html">Grid lines</a></li>
+                <li><a href="swiftui/images-symbols.html">Images and symbols</a></li>
+                <li><a href="swiftui/label.html">Label</a></li>
+                <li><a href="swiftui/menu-items.html">Menu items</a></li>
+                <li><a href="swiftui/nspasteboard.html">NSPasteboard</a></li>
+                <li><a href="swiftui/window-open.html">Open a window</a></li>
+                <li><a href="swiftui/path-markers.html">Path markers</a></li>
+                <li><a href="swiftui/picker-control.html">Picker control</a></li>
+                <li><a href="swiftui/prefs-window.html">Preferences window</a></li>
+                <li><a href="swiftui/progressview.html">ProgressView</a></li>
+                <li><a href="swiftui/scrollview.html">ScrollView</a></li>
+                <li><a href="swiftui/sidebar-disclosuregroup.html">Sidebar DisclosureGroup</a></li>
+                <li><a href="swiftui/sidebar-toggle.html">Sidebar toggle</a></li>
+                <li><a href="swiftui/sine-wave.html">Sine wave</a></li>
+                <li><a href="swiftui/stepper.html">Stepper</a></li>
+                <li><a href="swiftui/table.html">Table</a></li>
+                <li><a href="swiftui/text.html">Text</a></li>
+                <li><a href="swiftui/textfield.html">TextField</a></li>
+                <li><a href="swiftui/two-column-nav.html">Two column NavigationView</a></li>
+                <li><a href="swiftui/three-column-nav.html">Three column NavigationView</a></li>
+                <li><a href="swiftui/toggle-animation.html">Toggle animation</a></li>
+                <li><a href="swiftui/toolbar-dropdown.html">Toolbar dropdown</a></li>
+                <li><a href="swiftui/viewbuilder.html">ViewBuilder</a></li>
+                <li><a href="swiftui/viewtapgesture.html">View Tap Gesture</a></li>
+                <li><a href="swiftui/webview.html">WebView</a></li>
+                <li><a href="swiftui/window-size.html">Window size</a></li>
+                <li><a href="swiftui/window-toolbar-style.html">Window and toolbar style</a></li>
+            </ul>
 
-                <h4>Swift</h4>
-                <hr>
-                <ul class="contents-list">
-                    <li><a href="swift/arrays.html">Arrays</a></li>
-                    <li><a href="swift/comments.html">Comments</a></li>
-                    <li><a href="swift/date-formatting.html">Date formatting</a></li>
-                    <li><a href="swift/dictionaries.html">Dictionaries</a></li>
-                    <li><a href="swift/elapsed-time.html">Elapsed time</a></li>
-                    <li><a href="swift/array-addition.html">Element-wise array addition</a></li>
-                    <li><a href="swift/range.html">Range</a></li>
-                    <li><a href="swift/strides.html">Strides</a></li>
-                    <li><a href="swift/strings.html">Strings</a></li>
-                </ul>
+            <h4>Accelerate</h4>
+            <hr>
+            <ul style="columns:2;">
+                <li><a href="accelerate/absolute.html">Absolute value</a></li>
+                <li><a href="accelerate/array-addition.html">Element-wise array addition</a></li>
+                <li><a href="accelerate/reverse.html">Reverse array elements</a></li>
+                <li><a href="accelerate/sort.html">Sort array values</a></li>
+            </ul>
 
-                <h4>SwiftUI</h4>
-                <hr>
-                <ul class="contents-list">
-                    <li><a href="swiftui/appstorage.html">AppStorage</a></li>
-                    <li><a href="swiftui/blur-effect.html">Blur effect</a></li>
-                    <li><a href="swiftui/button-styles.html">Button styles</a></li>
-                    <li><a href="swiftui/credits.html">Credits</a></li>
-                    <li><a href="swiftui/cursors.html">Cursors</a></li>
-                    <li><a href="swiftui/grid-lines.html">Grid lines</a></li>
-                    <li><a href="swiftui/image.html">Image</a></li>
-                    <li><a href="swiftui/label.html">Label</a></li>
-                    <li><a href="swiftui/menu-items.html">Menu items</a></li>
-                    <li><a href="swiftui/nspasteboard.html">NSPasteboard</a></li>
-                    <li><a href="swiftui/window-open.html">Open a window</a></li>
-                    <li><a href="swiftui/path-markers.html">Path markers</a></li>
-                    <li><a href="swiftui/picker-control.html">Picker control</a></li>
-                    <li><a href="swiftui/prefs-window.html">Preferences window</a></li>
-                    <li><a href="swiftui/progressview.html">ProgressView</a></li>
-                    <li><a href="swiftui/scrollview.html">ScrollView</a></li>
-                    <li><a href="swiftui/sidebar-disclosuregroup.html">Sidebar DisclosureGroup</a></li>
-                    <li><a href="swiftui/sidebar-toggle.html">Sidebar toggle</a></li>
-                    <li><a href="swiftui/sine-wave.html">Sine wave</a></li>
-                    <li><a href="swiftui/stepper.html">Stepper</a></li>
-                    <li><a href="swiftui/table.html">Table</a></li>
-                    <li><a href="swiftui/text.html">Text</a></li>
-                    <li><a href="swiftui/textfield.html">TextField</a></li>
-                    <li><a href="swiftui/two-column-nav.html">Two column NavigationView</a></li>
-                    <li><a href="swiftui/three-column-nav.html">Three column NavigationView</a></li>
-                    <li><a href="swiftui/toggle-animation.html">Toggle animation</a></li>
-                    <li><a href="swiftui/toolbar-dropdown.html">Toolbar dropdown</a></li>
-                    <li><a href="swiftui/viewbuilder.html">ViewBuilder</a></li>
-                    <li><a href="swiftui/viewtapgesture.html">View Tap Gesture</a></li>
-                    <li><a href="swiftui/webview.html">WebView</a></li>
-                    <li><a href="swiftui/window-size.html">Window size</a></li>
-                    <li><a href="swiftui/window-toolbar-style.html">Window and toolbar style</a></li>
-                </ul>
+            <h4>Metal</h4>
+            <hr>
+            <ul>
+                <li><a href="metal/array-addition.html">Element-wise array addition</a></li>
+                <li><a href="metal/particles.html">Particles</a></li>
+            </ul>
 
-                <h4>Accelerate</h4>
-                <hr>
-                <ul class="contents-list">
-                    <li><a href="accelerate/absolute.html">Absolute value</a></li>
-                    <li><a href="accelerate/array-addition.html">Element-wise array addition</a></li>
-                    <li><a href="accelerate/reverse.html">Reverse</a></li>
-                    <li><a href="accelerate/sort.html">Sort</a></li>
-                </ul>
-
-
-                <h4>Metal</h4>
-                <hr>
-                <ul class="contents-list">
-                    <li><a href="metal/array-addition.html">Element-wise array addition</a></li>
-                    <li><a href="metal/particles.html">Particles</a></li>
-                </ul>
-
-                <h4>Benchmarks</h4>
-                <hr>
-                <ul>
-                    <li><a href="benchmarks/array-addition.html">Element-wise array addition</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="row my-5">
-            <div class="col-md">
-                <p class="text-center small">Gavin Wiggins © 2022</p>
-            </div>
+            <h4>Benchmarks</h4>
+            <hr>
+            <ul>
+                <li><a href="benchmarks/array-addition.html">Element-wise array addition</a></li>
+            </ul>
         </div>
     </div>
+    <div class="row my-5">
+        <div class="col-md">
+            <p class="text-center small my-5">🍎 🖥 Swift Programming for macOS <br> by Gavin Wiggins © 2022</p>
+        </div>
+    </div>
+</div>
 </body>
 </html>

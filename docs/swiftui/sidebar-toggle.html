@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap https://getbootstrap.com -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
     <!-- Highlightjs https://highlightjs.org -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/github-dark.min.css">
@@ -16,40 +16,33 @@
     <title>Swift macOS</title>
 </head>
 <body>
-
 <div class="container">
     <div class="row">
         <div class="col-md">
 
-<!-- Content -->
-
 <h1>Sidebar toggle</h1>
+<h6>November 13, 2022</h6>
 <hr>
 
-<p>A sidebar view can be displayed or hidden using the toggleSidebar
-() feature from an NSSplitViewController. At the time of writing this
-article, SwiftUI does not have this feature but hopefully an upcoming WWDC
-will offer a SwiftUI solution.</p>
-
-<img src="../images/sidebartoggle.png" class="image400" alt="sidebar toggle">
-
-<pre><code class="language-swift" style="max-width: 1040px;">
+<p>A sidebar view can be displayed or hidden using the toggleSidebar() feature from an NSSplitViewController. At the time of writing this article, SwiftUI does not have this feature but hopefully an upcoming WWDC will offer a SwiftUI solution.</p>
+<p><img src="../images/sidebartoggle.png" style="max-width:400px;" alt="sidebar toggle"></p>
+<pre class="pre1000"><code class="language-swift">&lt;pre&gt;&lt;code class=&quot;language-swift&quot; style=&quot;max-width: 1040px;&quot;&gt;
 import SwiftUI
 
 struct Sidebar: View {
 
     var body: some View {
         List {
-            Label("Books", systemImage: "book.closed")
-            Label("Tutorials", systemImage: "list.bullet.rectangle")
-            Label("Video Tutorials", systemImage: "tv")
-            Label("Contacts", systemImage: "mail.stack")
-            Label("Search", systemImage: "magnifyingglass")
+            Label(&quot;Books&quot;, systemImage: &quot;book.closed&quot;)
+            Label(&quot;Tutorials&quot;, systemImage: &quot;list.bullet.rectangle&quot;)
+            Label(&quot;Video Tutorials&quot;, systemImage: &quot;tv&quot;)
+            Label(&quot;Contacts&quot;, systemImage: &quot;mail.stack&quot;)
+            Label(&quot;Search&quot;, systemImage: &quot;magnifyingglass&quot;)
         }
         .listStyle(SidebarListStyle())
         .toolbar {
             Button(action: toggleSidebar, label: {
-                Image(systemName: "sidebar.left").help("Toggle Sidebar")
+                Image(systemName: &quot;sidebar.left&quot;).help(&quot;Toggle Sidebar&quot;)
             })
         }
         .frame(minWidth: 150)
@@ -65,20 +58,15 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             Sidebar()
-            Text("Use button to toggle sidebar.")
+            Text(&quot;Use button to toggle sidebar.&quot;)
                 .frame(minWidth: 200)
         }
         .frame(width: 500, height: 300)
     }
 }
 </code></pre>
-
-<p>The sidebar view can also be toggled with a keyboard shortcut using
-Option-Command-S represented by the symbols ⌥⌘S. This is enabled by adding
-SidebarCommands() to the main window group.</p>
-
-<pre><code class="language-swift">
-import SwiftUI
+<p>The sidebar view can also be toggled with a keyboard shortcut using Option-Command-S represented by the symbols ⌥⌘S. This is enabled by adding SidebarCommands() to the main window group.</p>
+<pre><code class="language-swift">import SwiftUI
 
 @main
 struct SidebarToggleApp: App {
@@ -93,25 +81,13 @@ struct SidebarToggleApp: App {
 }
 </code></pre>
 
-<!-- end Content -->
-
-        <hr class="mt-4">
-
-        <div class="row my-5">
-            <div class="col-md">
-                <p><a href="/swift-macos"><b>← Back</b></a></p>
-            </div>
         </div>
-
-        <div class="row my-5">
-            <div class="col-md">
-                <p class="text-center small">Gavin Wiggins © 2022</p>
-            </div>
-        </div>
-
+    </div>
+    <div class="row my-5">
+        <div class="col-md">
+            <p class="text-center small my-5">🍎 🖥 Swift Programming for macOS <br> by Gavin Wiggins © 2022</p>
         </div>
     </div>
 </div>
-
 </body>
 </html>
