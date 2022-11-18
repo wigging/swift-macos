@@ -1,21 +1,58 @@
 ---
 title: Window size
-date: November 13, 2022
+date: November 17, 2022
 ---
 
-The window size is defined by the frame size of the containing view. In this example the VStack frame is set to a width of 500 and height of 300 which makes the window width 500 and height 300.
-
-<img src="../images/window-size.png" style="max-width:400px;" alt="window size">
+The desired window size is determined by the resizability of the WindowGroup. As shown below, the resizability of the window is based on the ContentView.
 
 ```swift
 import SwiftUI
 
-struct ContentView : View {
-    var body: some View {
-        VStack {
-            Text("Window size is 500 by 300")
+@main
+struct WindowSizeApp: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
         }
-        .frame(width: 500, height: 300)
+        .windowResizability(.contentSize)
     }
 }
 ```
+
+The size of the ContentView is defined by the frame size. This example generates a 300x200 fixed window size.
+
+```swift
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        VStack {
+            Image(systemName: "globe").imageScale(.large)
+            Text("Hello, world!").fontWeight(.bold)
+        }
+        .frame(width: 300, height: 200)
+        .background(.orange)
+    }
+}
+```
+
+<img src="../images/window300x200.png" style="max-width:300px;" alt="window size">
+
+A resizable window is created with the example shown below. Its minimum size is 200x200 and its maximum size is 500x400.
+
+```swift
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        VStack {
+            Image(systemName: "globe").imageScale(.large)
+            Text("Hello, world!").fontWeight(.bold)
+        }
+        .frame(minWidth: 200, maxWidth: 500, minHeight: 200, maxHeight: 400)
+        .background(.purple)
+    }
+}
+```
+
+<img src="../images/window500x400.png" style="max-width:500px;" alt="window size">
