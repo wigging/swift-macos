@@ -1,6 +1,14 @@
 # 🍎 🖥 Swift Programming for macOS
 
-There are plenty of books, videos, and online resources for developing iOS apps. Despite the fact that iPhone and iPad apps require a Mac for code development, there is very little information about actually creating native Mac applications. The examples in this repository demonstrate various aspects of Mac app development using the latest versions of Swift and SwiftUI. Hopefully the examples and accompanying website will provide a useful resource for Mac developers. The website is available at https://gavinw.me/swift-macos while example Xcode projects are located in the `examples` folder.
+There are plenty of books, videos, and online resources for developing iOS apps. Despite the fact that iPhone and iPad apps require a Mac for code development, there is very little information about actually creating native Mac applications. The examples in this repository demonstrate various aspects of Mac app development using the latest versions of Swift and SwiftUI. Hopefully the examples and accompanying website will provide a useful resource for Mac developers.
+
+## Examples
+
+Example code is located in the `swift-scripts` and `xcode-projects` folders.
+
+## Website
+
+The website is available at https://gavinw.me/swift-macos. It is generated with the [genja](https://github.com/wigging/genja) tool where Markdown files are in the `content` folder and the generated HTML files are in the `docs` folder.
 
 ## Contributing
 
@@ -12,4 +20,4 @@ Support this project by using the **:heart: Sponsor** button at the top of this 
 
 ## License
 
-Code in this repository is available under the MIT License - see the [LICENSE](LICENSE) file for more information.
+Code in this repository is available under the MIT License - see the [LICENSE](LICENSE.md) file for more information.
