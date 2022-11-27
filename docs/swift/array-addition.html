@@ -21,7 +21,7 @@
         <div class="col-md">
 
 <h1>Element-wise array addition</h1>
-<h6>November 12, 2022</h6>
+<h6>November 27, 2022</h6>
 <hr>
 
 <p>Use a for-loop to add elements in arrays.</p>
@@ -30,10 +30,11 @@ let y: [Float] = [2, 1.2, 7.4]
 
 var z = [Float](repeating: 0, count: x.count)
 
-for i in 0..&amp;lt;x.count {
+for i in 0..&lt;x.count {
     z[i] = x[i] + y[i]
 }
 
+// This gives the following
 // z is [5.0, 5.7, 15.4]
 </code></pre>
 
