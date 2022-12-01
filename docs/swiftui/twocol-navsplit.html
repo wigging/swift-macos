@@ -21,11 +21,25 @@
         <div class="col-md">
 
 <h1>Two column NavigationSplitView</h1>
-<h6>November 22, 2022</h6>
+<h6>November 30, 2022</h6>
 <hr>
 
-<p>A two column <code>NavigationSplitView</code> creates a sidebar with a list of items and a detail view. In the example shown below, selecting an item in the sidebar will change the contents of the detail view.</p>
+<p>A two column <code>NavigationSplitView</code> creates a sidebar with a list of items and a detail view. In the example shown below, selecting an item in the sidebar will change the contents of the detail view. Notice the <code>SidebarCommands()</code> enables Hide Sidebar and Show Sidebar items in the View menu.</p>
 <p><img src="../images/twocol-navsplit1.png" style="max-width:500px;" alt="two column navsplit"></p>
+<pre><code class="language-swift">import SwiftUI
+
+@main
+struct TwoColNavSplitApp: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+        .commands {
+            SidebarCommands()
+        }
+    }
+}
+</code></pre>
 <pre><code class="language-swift">import SwiftUI
 
 struct AppleView: View {

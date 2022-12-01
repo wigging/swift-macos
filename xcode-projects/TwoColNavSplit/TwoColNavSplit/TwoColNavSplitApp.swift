@@ -13,5 +13,8 @@ struct TwoColNavSplitApp: App {
         WindowGroup {
             ContentView()
         }
+        .commands {
+            SidebarCommands()
+        }
     }
 }

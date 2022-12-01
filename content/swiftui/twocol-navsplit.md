@@ -1,11 +1,27 @@
 ---
 title: Two column NavigationSplitView
-date: November 22, 2022
+date: November 30, 2022
 ---
 
-A two column `NavigationSplitView` creates a sidebar with a list of items and a detail view. In the example shown below, selecting an item in the sidebar will change the contents of the detail view.
+A two column `NavigationSplitView` creates a sidebar with a list of items and a detail view. In the example shown below, selecting an item in the sidebar will change the contents of the detail view. Notice the `SidebarCommands()` enables Hide Sidebar and Show Sidebar items in the View menu.
 
 <img src="../images/twocol-navsplit1.png" style="max-width:500px;" alt="two column navsplit">
+
+```swift
+import SwiftUI
+
+@main
+struct TwoColNavSplitApp: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+        .commands {
+            SidebarCommands()
+        }
+    }
+}
+```
 
 ```swift
 import SwiftUI
