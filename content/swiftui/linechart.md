@@ -110,7 +110,7 @@ struct ContentView: View {
 }
 ```
 
-For this example, the line chart data is an array of tuple values and circle symbols represent each data point on the line.
+For this example, the chart data is provided has an array of tuple values. Circle symbols are represent each data point on the line mark.
 
 <img src="../images/linechart3.png" style="max-width:400px;" alt="line chart">
 
