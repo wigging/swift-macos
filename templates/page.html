@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+<div class="col">
+    <h1>{{ page.title }}</h1>
+    {% if page.date %}
+        <h6>{{ page.date | date(format="%B %e, %Y") }}</h6>
+    {% endif %}
+    <hr>
+    {{ page.content | safe }}
+</div>
+</div>
+<div class="row my-5">
+<div class="col">
+    <p class="text-center small my-5">
+        <a href="/">Swift Programming for macOS</a> © 2023 <br>
+        Built by <a href="https://gavinw.me">Gavin Wiggins</a>
+    </p>
+</div>
+</div>
+{% endblock content %}

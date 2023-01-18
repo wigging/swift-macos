@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+<div class="col">
+    <h1 class="text-center">Swift Programming for macOS<br>🍎 🖥</h1>
+
+    <p>There are plenty of books, videos, and online resources for developing iOS apps. Despite the fact that iPhone and iPad apps require a Mac for code development, there is little information about actually creating native Mac applications. The examples provided below demonstrate various aspects of Mac app development using the latest versions of Swift and SwiftUI. Hopefully these examples will provide a useful resource for Mac developers. This website and example code are available on <a href="https://github.com/wigging/swift-macos">GitHub</a>.</p>
+
+    <p>Questions, comments, and other feedback can be sent via <a href="mailto:wiggingATmeDOTcom" onclick = "this.href=this.href.replace(/AT/,'&#64;').replace(/DOT/,'&#46;')">Email</a>, <a href="https://fosstodon.org/@wigging">Mastodon</a>, or <a href="https://twitter.com/wigging">Twitter</a>. Or submit an Issue on GitHub. If you would like to support this project, donations can be made to Gavin Wiggins using <a href="https://github.com/sponsors/wigging">GitHub Sponsors</a>, <a href="https://www.patreon.com/wigging">Patreon</a>, <a href="https://www.buymeacoffee.com/wigging">Buy Me A Coffee</a>, or <a href="https://www.paypal.me/gavinwiggins">PayPal</a>. Thank you 😄.</p>
+
+    <h2>Swift</h2>
+    <hr>
+
+    {% set section = get_section(path="swift/_index.md") %}
+    <ul style="columns:2;">
+    {% for page in section.pages %}
+        <li><a href="{{ page.permalink }}">{{ page.title }}</a></li>
+    {% endfor %}
+    </ul>
+
+    <h2>SwiftUI</h2>
+    <hr>
+
+    {% set section = get_section(path="swiftui/_index.md") %}
+    <ul style="columns:2;">
+    {% for page in section.pages %}
+        <li><a href="{{ page.permalink }}">{{ page.title }}</a></li>
+    {% endfor %}
+    </ul>
+</div>
+</div>
+<div class="row my-5">
+<div class="col">
+    <p class="text-center small my-5">
+        Swift Programming for macOS © 2023 <br>
+        Built by <a href="https://gavinw.me">Gavin Wiggins</a>
+    </p>
+</div>
+</div>
+{% endblock content %}
