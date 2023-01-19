@@ -1,13 +1,19 @@
-# The URL the site will be built for
+# The base URL of the site; the only required configuration variable.
 base_url = "https://gavinw.me/swift-macos"
 
-# Whether to automatically compile all Sass files in the sass directory
+# The site title and description; used in feeds by default.
+title = "Swift Programming for macOS"
+description = "Examples for creating native Mac apps using Swift and SwiftUI"
+
+# When set to "true", the Sass files in the `sass` directory in the site root are compiled.
+# Sass files in theme directories are always compiled.
 compile_sass = false
 
-# Whether to build a search index to be used later on by a JavaScript library
+# When set to "true", a search index is built from the pages and section
+# content for `default_language`.
 build_search_index = true
 
-# Override the default output directory which is `public`
+# For overriding the default output directory `public`, set it to another value (e.g.: "docs")
 output_dir = "docs"
 
 # When set to "true", a feed is automatically generated.
@@ -19,6 +25,5 @@ generate_feed = true
 feed_filename = "rss.xml"
 
 [markdown]
-# Whether to do syntax highlighting
-# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
+# When set to "true", all code blocks are highlighted.
 highlight_code = true
