@@ -5,7 +5,7 @@ date = 2022-11-13
 
 An example of fading text in and out using a toggle is given below. Without the animation modifier, the text would just appear or disappear below the toggle button.
 
-<p><img src="/img/toggle-animate.png" style="max-width:400px;" alt="toggle animate"></p>
+<p><img src="/img/toggle-animation.png" style="max-width:400px;" alt="toggle animate"></p>
 
 ```swift
 import SwiftUI

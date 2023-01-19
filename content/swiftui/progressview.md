@@ -5,7 +5,7 @@ date = 2022-11-13
 
 A ProgressView represents completion of a task or the occurance of an activity with an unknown completion time. A default value of 1.0 is used for the total value when tracking completion progress. As the example demonstrates below, different configurations of a progress view are possible.
 
-<p><img src="/img/progressview.png" style="max-width:400px;" alt="progress view"></p>
+<p><img src="/img/progressview1.png" style="max-width:400px;" alt="progress view"></p>
 
 ```swift
 import SwiftUI

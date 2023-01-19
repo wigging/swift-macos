@@ -5,7 +5,7 @@ date = 2022-11-13
 
 A preferences window is typically used to present and configure the settings associated with a Mac application. In apps built with SwiftUI, these settings are stored and set using the AppStorage property wrapper. To add a preferenes window to your application, you need to add a Settings group to the main App struct.
 
-<p><img src="/img/prefs-window.png" style="max-width:400px;" alt="preferences window"></p>
+<p><img src="/img/prefs-window1.png" style="max-width:400px;" alt="preferences window"></p>
 
 ```swift
 import SwiftUI
@@ -25,7 +25,7 @@ struct PreferencesWindowApp: App {
 
 Using a TabView you can group settings into different collections and make them easier to find. Below is an example of setting and storing the fontSize value with AppStorage.
 
-<p><img src="/img/prefs-window-general.png" style="max-width:400px;" alt="preferences window"></p>
+<p><img src="/img/prefs-window2.png" style="max-width:400px;" alt="preferences window"></p>
 
 ```swift
 import SwiftUI
