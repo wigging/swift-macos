@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://gavinw.me/swift-macos/rss.xml" rel="alternate" type="application/rss+xml" title="RSS">
+    <link href="https://gavinw.me/swift-macos/styles.css" rel="stylesheet">
+    <title>Swift macOS</title>
+</head>
+<body>
+<div class="container">
+    
+<div class="row">
+<div class="col">
+    <h1>AppStorage</h1>
+    
+        <h6>November 13, 2022</h6>
+    
+    <hr>
+    <p>The <code>@AppStorage</code> property wrapper reads and writes values from user defaults. The example below saves a fruit name (a string) to the fruit key in user defaults. When the app is relaunched, the saved fruit name will be displayed in the text label. Enter a fruit in the text field then click the save fruit button to save a new fruit to the fruit key in user defaults.</p>
+<p><img src="/img/appstorage-property.png" style="max-width:400px;" alt="app storage property"></p>
+<pre data-lang="swift" style="background-color:#2b303b;color:#c0c5ce;" class="language-swift "><code class="language-swift" data-lang="swift"><span style="color:#b48ead;">import </span><span>SwiftUI
+</span><span>
+</span><span style="color:#b48ead;">struct</span><span> ContentView: View {
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">@State private var</span><span> thefruit = </span><span style="color:#a3be8c;">&quot;&quot;
+</span><span>    </span><span style="color:#b48ead;">@AppStorage</span><span>(</span><span style="color:#a3be8c;">&quot;fruit&quot;</span><span>) </span><span style="color:#b48ead;">var</span><span> fruit = </span><span style="color:#a3be8c;">&quot;&quot;
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">var</span><span> body: some View {
+</span><span>        VStack(spacing: </span><span style="color:#d08770;">20</span><span>) {
+</span><span>            TextField(</span><span style="color:#a3be8c;">&quot;Enter fruit&quot;</span><span>, text: $thefruit)
+</span><span>                .multilineTextAlignment(.center)
+</span><span>                .frame(maxWidth: </span><span style="color:#d08770;">200</span><span>)
+</span><span>            Button(</span><span style="color:#a3be8c;">&quot;Save fruit&quot;</span><span>) {
+</span><span>                fruit = thefruit
+</span><span>            }
+</span><span>            Text(</span><span style="color:#a3be8c;">&quot;Saved fruit: </span><span>\(fruit)</span><span style="color:#a3be8c;">&quot;</span><span>)
+</span><span>        }
+</span><span>        .frame(width: </span><span style="color:#d08770;">400</span><span>, height: </span><span style="color:#d08770;">100</span><span>)
+</span><span>        .padding()
+</span><span>    }
+</span><span>}
+</span></code></pre>
+
+</div>
+</div>
+<div class="row my-5">
+<div class="col">
+    <p class="text-center small my-5">
+        <a href="/">Swift Programming for macOS</a> © 2023 <br>
+        Built by <a href="https://gavinw.me">Gavin Wiggins</a>
+    </p>
+</div>
+</div>
+
+</div>
+</body>
+</html>

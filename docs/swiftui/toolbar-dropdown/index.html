@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://gavinw.me/swift-macos/rss.xml" rel="alternate" type="application/rss+xml" title="RSS">
+    <link href="https://gavinw.me/swift-macos/styles.css" rel="stylesheet">
+    <title>Swift macOS</title>
+</head>
+<body>
+<div class="container">
+    
+<div class="row">
+<div class="col">
+    <h1>Toolbar dropdown</h1>
+    
+        <h6>November 13, 2022</h6>
+    
+    <hr>
+    <p>Place a menu in a toolbar item to display a dropdown when the toolbar item is clicked.</p>
+<p><img src="/img/toolbardropdown.png" style="max-width:400px;" alt="toolbar dropdown"></p>
+<pre data-lang="swift" style="background-color:#2b303b;color:#c0c5ce;" class="language-swift "><code class="language-swift" data-lang="swift"><span style="color:#b48ead;">import </span><span>SwiftUI
+</span><span>
+</span><span style="color:#b48ead;">struct</span><span> ContentView: View {
+</span><span>    </span><span style="color:#b48ead;">var</span><span> body: some View {
+</span><span>        VStack {
+</span><span>            Text(</span><span style="color:#a3be8c;">&quot;Click the toolbar item to see a dropdown menu.&quot;</span><span>)
+</span><span>        }
+</span><span>        .toolbar {
+</span><span>            ToolbarItem {
+</span><span>                Menu {
+</span><span>                    Button(</span><span style="color:#a3be8c;">&quot;Open in Preview&quot;</span><span>, action: {})
+</span><span>                    Button(</span><span style="color:#a3be8c;">&quot;Save as PDF&quot;</span><span>, action: {})
+</span><span>                } label: {
+</span><span>                    Label(</span><span style="color:#a3be8c;">&quot;Star&quot;</span><span>, systemImage: </span><span style="color:#a3be8c;">&quot;star.fill&quot;</span><span>)
+</span><span>                }
+</span><span>            }
+</span><span>        }
+</span><span>        .frame(width: </span><span style="color:#d08770;">400</span><span>, height: </span><span style="color:#d08770;">300</span><span>)
+</span><span>    }
+</span><span>}
+</span></code></pre>
+
+</div>
+</div>
+<div class="row my-5">
+<div class="col">
+    <p class="text-center small my-5">
+        <a href="/">Swift Programming for macOS</a> © 2023 <br>
+        Built by <a href="https://gavinw.me">Gavin Wiggins</a>
+    </p>
+</div>
+</div>
+
+</div>
+</body>
+</html>

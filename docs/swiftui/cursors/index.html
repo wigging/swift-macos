@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://gavinw.me/swift-macos/rss.xml" rel="alternate" type="application/rss+xml" title="RSS">
+    <link href="https://gavinw.me/swift-macos/styles.css" rel="stylesheet">
+    <title>Swift macOS</title>
+</head>
+<body>
+<div class="container">
+    
+<div class="row">
+<div class="col">
+    <h1>Cursors</h1>
+    
+        <h6>November 13, 2022</h6>
+    
+    <hr>
+    <p>The mouse pointer (or cursor) is represented by an arrow on the screen. Different cursors are available in macOS to indicate actions that the user can take with the mouse. See the <a href="https://developer.apple.com/documentation/appkit/nscursor">NSCursor documentation</a> for a list of all the available cursors.</p>
+<p><img src="/img/cursors.png" style="max-width:400px;" alt="cursors"></p>
+<pre data-lang="swift" style="background-color:#2b303b;color:#c0c5ce;" class="language-swift "><code class="language-swift" data-lang="swift"><span style="color:#b48ead;">import </span><span>SwiftUI
+</span><span>
+</span><span style="color:#b48ead;">struct</span><span> ContentView: View {
+</span><span>    </span><span style="color:#b48ead;">var</span><span> body: some View {
+</span><span>        VStack(spacing: </span><span style="color:#d08770;">25</span><span>) {
+</span><span>            Text(</span><span style="color:#a3be8c;">&quot;Hover over each button to change cursor.&quot;</span><span>)
+</span><span>
+</span><span>            </span><span style="color:#65737e;">// i-beam cursor
+</span><span>            Button(</span><span style="color:#a3be8c;">&quot; i-beam &quot;</span><span>) {}
+</span><span>                .onHover(perform: { hovering </span><span style="color:#b48ead;">in
+</span><span>                    hovering ? NSCursor.iBeam.push() : NSCursor.pop()
+</span><span>                })
+</span><span>
+</span><span>            </span><span style="color:#65737e;">// crosshair cursor
+</span><span>            Button(</span><span style="color:#a3be8c;">&quot; crosshair &quot;</span><span>) { }
+</span><span>                .onHover(perform: { hovering </span><span style="color:#b48ead;">in
+</span><span>                    hovering ? NSCursor.crosshair.push() : NSCursor.pop()
+</span><span>                })
+</span><span>
+</span><span>            </span><span style="color:#65737e;">// close-hand cursor
+</span><span>            Button(</span><span style="color:#a3be8c;">&quot; closed-hand &quot;</span><span>) { }
+</span><span>                .onHover(perform: { hovering </span><span style="color:#b48ead;">in
+</span><span>                    hovering ? NSCursor.closedHand.push() : NSCursor.pop()
+</span><span>                })
+</span><span>
+</span><span>            </span><span style="color:#65737e;">// open-hand cursor
+</span><span>            Button(</span><span style="color:#a3be8c;">&quot; open-hand &quot;</span><span>) { }
+</span><span>                .onHover(perform: { hovering </span><span style="color:#b48ead;">in
+</span><span>                    hovering ? NSCursor.openHand.push() : NSCursor.pop()
+</span><span>                })
+</span><span>
+</span><span>            </span><span style="color:#65737e;">// pointing-hand cursor
+</span><span>            Button(</span><span style="color:#a3be8c;">&quot; pointing-hand &quot;</span><span>) { }
+</span><span>                .onHover(perform: { hovering </span><span style="color:#b48ead;">in
+</span><span>                    hovering ? NSCursor.pointingHand.push() : NSCursor.pop()
+</span><span>                })
+</span><span>        }
+</span><span>        .frame(width: </span><span style="color:#d08770;">400</span><span>, height: </span><span style="color:#d08770;">300</span><span>)
+</span><span>    }
+</span><span>}
+</span></code></pre>
+
+</div>
+</div>
+<div class="row my-5">
+<div class="col">
+    <p class="text-center small my-5">
+        <a href="/">Swift Programming for macOS</a> © 2023 <br>
+        Built by <a href="https://gavinw.me">Gavin Wiggins</a>
+    </p>
+</div>
+</div>
+
+</div>
+</body>
+</html>

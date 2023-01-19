@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://gavinw.me/swift-macos/rss.xml" rel="alternate" type="application/rss+xml" title="RSS">
+    <link href="https://gavinw.me/swift-macos/styles.css" rel="stylesheet">
+    <title>Swift macOS</title>
+</head>
+<body>
+<div class="container">
+    
+<div class="row">
+<div class="col">
+    <h1>Date formatting</h1>
+    
+        <h6>November 12, 2022</h6>
+    
+    <hr>
+    <p>Examples of creating a formatted date string are shown below. The output of each print function is given as a comment below the function.</p>
+<pre data-lang="swift" style="background-color:#2b303b;color:#c0c5ce;" class="language-swift "><code class="language-swift" data-lang="swift"><span style="color:#b48ead;">import </span><span>Foundation
+</span><span>
+</span><span style="color:#65737e;">// Create a date variable for the current date and time
+</span><span style="color:#b48ead;">let</span><span> date = Date()
+</span><span>
+</span><span style="color:#65737e;">// Example 1
+</span><span>
+</span><span style="color:#b48ead;">let</span><span> d1 = date.formatted()
+</span><span>print(d1)
+</span><span style="color:#65737e;">// 7/12/2022, 9:18 PM
+</span><span>
+</span><span style="color:#65737e;">// Example 2
+</span><span>
+</span><span style="color:#b48ead;">let</span><span> d2 = date.formatted(date: .abbreviated, time: .shortened)
+</span><span>print(d2)
+</span><span style="color:#65737e;">// Jul 12, 2022, 9:18 PM
+</span><span>
+</span><span style="color:#65737e;">// Example 3
+</span><span>
+</span><span style="color:#b48ead;">let</span><span> d3 = date.formatted(date: .numeric, time: .omitted)
+</span><span>print(d3)
+</span><span style="color:#65737e;">// 7/12/2022
+</span><span>
+</span><span style="color:#65737e;">// Example 4
+</span><span>
+</span><span style="color:#b48ead;">let</span><span> d4 = date.formatted(
+</span><span>    .dateTime
+</span><span>    .day(.twoDigits)
+</span><span>    .weekday(.short)
+</span><span>    .month(.abbreviated))
+</span><span>
+</span><span>print(d4)
+</span><span style="color:#65737e;">// Tu, Jul 12
+</span></code></pre>
+
+</div>
+</div>
+<div class="row my-5">
+<div class="col">
+    <p class="text-center small my-5">
+        <a href="/">Swift Programming for macOS</a> © 2023 <br>
+        Built by <a href="https://gavinw.me">Gavin Wiggins</a>
+    </p>
+</div>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://gavinw.me/swift-macos/rss.xml" rel="alternate" type="application/rss+xml" title="RSS">
+    <link href="https://gavinw.me/swift-macos/styles.css" rel="stylesheet">
+    <title>Swift macOS</title>
+</head>
+<body>
+<div class="container">
+    
+<div class="row">
+<div class="col">
+    <h1>Grid lines</h1>
+    
+        <h6>November 13, 2022</h6>
+    
+    <hr>
+    <p>A GeometryReader can be used to equally space lines in a view even when that view changes size. This is accomplished by using the width and height of the container view to determine the spacing of the lines.</p>
+<p><img src="/img/geom-grid-lines.png" style="max-width:400px;" alt="grid lines"></p>
+<pre data-lang="swift" style="background-color:#2b303b;color:#c0c5ce;" class="language-swift "><code class="language-swift" data-lang="swift"><span style="color:#b48ead;">import </span><span>SwiftUI
+</span><span>
+</span><span style="color:#b48ead;">struct</span><span> ContentView: View {
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> xSteps = </span><span style="color:#d08770;">5  </span><span style="color:#65737e;">// purple lines for x-axis grid
+</span><span>    </span><span style="color:#b48ead;">let</span><span> ySteps = </span><span style="color:#d08770;">4  </span><span style="color:#65737e;">// black lines for y-axis grid
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">var</span><span> body: some View {
+</span><span>        ZStack(alignment: .top) {
+</span><span>            GeometryReader { geometry </span><span style="color:#b48ead;">in
+</span><span>                Rectangle()
+</span><span>                    .fill(Color.gray)
+</span><span>
+</span><span>                </span><span style="color:#65737e;">// x-axis grid shown as purple lines
+</span><span>                ForEach(</span><span style="color:#d08770;">0</span><span>..&amp;lt;</span><span style="color:#b48ead;">self</span><span>.xSteps+</span><span style="color:#d08770;">1</span><span>) {
+</span><span>                    Rectangle()
+</span><span>                        .fill(Color.purple)
+</span><span>                        .frame(width: </span><span style="color:#d08770;">3</span><span>)
+</span><span>                        .offset(x: geometry.size.width / CGFloat(</span><span style="color:#b48ead;">self</span><span>.xSteps) * CGFloat($</span><span style="color:#d08770;">0</span><span>), y: </span><span style="color:#d08770;">0</span><span>.</span><span style="color:#d08770;">0</span><span>)
+</span><span>                }
+</span><span>
+</span><span>                </span><span style="color:#65737e;">// y-axis grid shown as black lines
+</span><span>                ForEach(</span><span style="color:#d08770;">0</span><span>..&amp;lt;</span><span style="color:#b48ead;">self</span><span>.ySteps+</span><span style="color:#d08770;">1</span><span>) {
+</span><span>                    Rectangle()
+</span><span>                        .fill(Color.black)
+</span><span>                        .frame(height: </span><span style="color:#d08770;">3</span><span>)
+</span><span>                        .offset(x: </span><span style="color:#d08770;">0</span><span>.</span><span style="color:#d08770;">0</span><span>, y: geometry.size.height / CGFloat(</span><span style="color:#b48ead;">self</span><span>.ySteps) * CGFloat($</span><span style="color:#d08770;">0</span><span>))
+</span><span>                }
+</span><span>            }
+</span><span>        }
+</span><span>        .frame(minWidth: </span><span style="color:#d08770;">400</span><span>, minHeight: </span><span style="color:#d08770;">300</span><span>)
+</span><span>        .padding()
+</span><span>        .background(Color.secondary)
+</span><span>    }
+</span><span>}
+</span></code></pre>
+
+</div>
+</div>
+<div class="row my-5">
+<div class="col">
+    <p class="text-center small my-5">
+        <a href="/">Swift Programming for macOS</a> © 2023 <br>
+        Built by <a href="https://gavinw.me">Gavin Wiggins</a>
+    </p>
+</div>
+</div>
+
+</div>
+</body>
+</html>

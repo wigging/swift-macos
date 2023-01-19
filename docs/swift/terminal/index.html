@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://gavinw.me/swift-macos/rss.xml" rel="alternate" type="application/rss+xml" title="RSS">
+    <link href="https://gavinw.me/swift-macos/styles.css" rel="stylesheet">
+    <title>Swift macOS</title>
+</head>
+<body>
+<div class="container">
+    
+<div class="row">
+<div class="col">
+    <h1>Terminal setup and commands</h1>
+    
+        <h6>November 10, 2022</h6>
+    
+    <hr>
+    <p>Mac developers often work in the Terminal to use the Swift package manager, install macOS packages with Homebrew, collaborate on projects with Git and GitHub, run server side Swift code, etc. Below are some tips for working in the macOS Terminal.</p>
+<h2 id="pure">Pure</h2>
+<p>The Z shell (or zsh) is the default shell for macOS. <a href="https://github.com/sindresorhus/pure">Pure</a> improves the zsh command prompt in the terminal. Use the suggested theme in the Pure documentation.</p>
+<h2 id="zsh-configuration">Zsh configuration</h2>
+<p>Create a ~/.zshrc file to configure the Z shell. The .zshrc file shown below assumes Pure, Xcode, and Miniconda have been installed on the Mac.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#65737e;"># Pure prompt configuration
+</span><span style="color:#65737e;"># https://github.com/sindresorhus/pure
+</span><span style="color:#65737e;"># ----------------------------------------------------------------------------
+</span><span>
+</span><span style="color:#bf616a;">fpath</span><span>+=$</span><span style="color:#bf616a;">HOME</span><span style="color:#a3be8c;">/.zsh/pure
+</span><span>
+</span><span style="color:#bf616a;">autoload -U</span><span> promptinit; </span><span style="color:#bf616a;">promptinit
+</span><span style="color:#bf616a;">prompt</span><span> pure
+</span><span>
+</span><span style="color:#bf616a;">PURE_GIT_DOWN_ARROW</span><span>=</span><span style="color:#a3be8c;">⬇︎
+</span><span>
+</span><span style="color:#bf616a;">PURE_GIT_UP_ARROW</span><span>=</span><span style="color:#a3be8c;">⬆︎
+</span><span>
+</span><span style="color:#65737e;"># Coreutils aliases
+</span><span style="color:#65737e;"># brew install coreutils
+</span><span style="color:#65737e;"># ----------------------------------------------------------------------------
+</span><span>
+</span><span style="color:#65737e;"># List files line-by-line including hidden files
+</span><span style="color:#96b5b4;">alias </span><span style="color:#8fa1b3;">la</span><span>=&quot;</span><span style="color:#a3be8c;">gls -aho --group-directories-first --color=auto</span><span>&quot;
+</span><span>
+</span><span style="color:#65737e;"># List files line-by-line excluding hidden files
+</span><span style="color:#96b5b4;">alias </span><span style="color:#8fa1b3;">ll</span><span>=&quot;</span><span style="color:#a3be8c;">gls -ho --group-directories-first --color=auto</span><span>&quot;
+</span><span>
+</span><span style="color:#65737e;"># Zsh configuration
+</span><span style="color:#65737e;"># ----------------------------------------------------------------------------
+</span><span>
+</span><span style="color:#65737e;"># Change to ~/Desktop when launching terminal
+</span><span style="color:#96b5b4;">cd </span><span style="color:#bf616a;">~</span><span>/Desktop
+</span><span>
+</span><span style="color:#65737e;"># Enable completion system
+</span><span style="color:#bf616a;">autoload -Uz</span><span> compinit &amp;&amp; </span><span style="color:#bf616a;">compinit
+</span><span>
+</span><span style="color:#65737e;"># Enable color for `ls` output
+</span><span style="color:#b48ead;">export </span><span style="color:#bf616a;">CLICOLOR</span><span>=</span><span style="color:#a3be8c;">1
+</span><span>
+</span><span style="color:#65737e;"># Set VIM as the default terminal editor
+</span><span style="color:#b48ead;">export </span><span style="color:#bf616a;">VISUAL</span><span>=</span><span style="color:#a3be8c;">vim
+</span><span style="color:#b48ead;">export </span><span style="color:#bf616a;">EDITOR</span><span>=</span><span style="color:#a3be8c;">vim
+</span><span>
+</span><span style="color:#65737e;"># Use ipdb as the Python breakpoint() debugger
+</span><span style="color:#b48ead;">export </span><span style="color:#bf616a;">PYTHONBREAKPOINT</span><span>=</span><span style="color:#a3be8c;">ipdb.set_trace
+</span><span>
+</span><span style="color:#65737e;"># Open Sublime Text from command line
+</span><span style="color:#96b5b4;">alias </span><span style="color:#8fa1b3;">subl</span><span>=&quot;</span><span style="color:#a3be8c;">/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl</span><span>&quot;
+</span><span>
+</span><span style="color:#65737e;"># Change directory without using `cd`
+</span><span style="color:#bf616a;">setopt</span><span> AUTO_CD
+</span><span>
+</span><span style="color:#65737e;"># List files after changing directory
+</span><span style="color:#b48ead;">function </span><span style="color:#8fa1b3;">chpwd</span><span>() {
+</span><span>    </span><span style="color:#bf616a;">emulate -L</span><span> zsh
+</span><span>    </span><span style="color:#bf616a;">la
+</span><span>}
+</span><span>
+</span><span style="color:#65737e;"># Workaround for Visual Studio Code integrated terminal
+</span><span style="color:#b48ead;">if </span><span style="color:#96b5b4;">[[ </span><span style="color:#bf616a;">-v</span><span> VSCODE_GIT_IPC_HANDLE </span><span style="color:#96b5b4;">]]</span><span>; </span><span style="color:#b48ead;">then
+</span><span>    </span><span style="color:#bf616a;">conda</span><span> deactivate
+</span><span>    </span><span style="color:#bf616a;">conda</span><span> activate
+</span><span style="color:#b48ead;">fi
+</span></code></pre>
+<h2 id="keyboard-shortcuts">Keyboard shortcuts</h2>
+<p>Various keyboard shortcuts for working with the command line prompt.</p>
+<dl>
+    <dt>Ctrl + a</dt>
+    <dd>Go to beginning of the line</dd>
+    <dt>Ctrl + c</dt>
+    <dd>Cancel the command</dd>
+    <dt>Ctrl + e</dt>
+    <dd>Go to end of the line</dd>
+    <dt>Ctrl + u</dt>
+    <dd>Clear up to the beginning</dd>
+</dl>
+<h2 id="general-commands">General commands</h2>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#65737e;"># My preferred permissions for folders and files
+</span><span style="color:#bf616a;">chmod</span><span> 755   </span><span style="color:#65737e;"># folder permissions
+</span><span style="color:#bf616a;">chmod</span><span> 644   </span><span style="color:#65737e;"># file permissions
+</span><span>
+</span><span style="color:#65737e;"># Copy all the files in a folder into another folder
+</span><span style="color:#bf616a;">cp -R</span><span> folderA/. folderB
+</span><span>
+</span><span style="color:#65737e;"># List the contents of a folder or of a specified folder
+</span><span style="color:#bf616a;">ls
+</span><span style="color:#bf616a;">ls</span><span> folderA/
+</span><span>
+</span><span style="color:#65737e;"># Rename a file or folder
+</span><span style="color:#bf616a;">mv</span><span> oldname.txt newname.txt
+</span><span style="color:#bf616a;">mv</span><span> oldfolder/ newfolder/
+</span><span>
+</span><span style="color:#65737e;"># Remove a folder that already contains files
+</span><span style="color:#bf616a;">rm -rf</span><span> folderA/
+</span><span>
+</span><span style="color:#65737e;"># Move all files from one folder to another folder. Example below demonstrates
+</span><span style="color:#65737e;"># moving all the files from the Downloads folder to the Videos folder
+</span><span style="color:#bf616a;">mv ~</span><span>/Downloads/* </span><span style="color:#bf616a;">~</span><span>/Videos
+</span></code></pre>
+<h2 id="commands-specific-to-macos">Commands specific to macOS</h2>
+<p>Open a file from the macOS terminal.</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">open</span><span> fileA.txt            </span><span style="color:#65737e;"># open a file in its default application
+</span><span style="color:#bf616a;">open -a</span><span> safari fileA.txt  </span><span style="color:#65737e;"># opens with the specified application
+</span><span style="color:#bf616a;">open -R</span><span> fileA.txt         </span><span style="color:#65737e;"># selects the file in a Finder window
+</span></code></pre>
+<h2 id="mount-and-unmount-a-volume-on-a-mac">Mount and unmount a volume on a Mac.</h2>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>hdiutil attach Secure.dmg       # mount a dmg volume named &quot;Secure.dmg&quot;
+</span><span>hdiutil detach /Volumes/Secure  # unmount a volume named &quot;Secure&quot;
+</span></code></pre>
+
+</div>
+</div>
+<div class="row my-5">
+<div class="col">
+    <p class="text-center small my-5">
+        <a href="/">Swift Programming for macOS</a> © 2023 <br>
+        Built by <a href="https://gavinw.me">Gavin Wiggins</a>
+    </p>
+</div>
+</div>
+
+</div>
+</body>
+</html>

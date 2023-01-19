@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://gavinw.me/swift-macos/rss.xml" rel="alternate" type="application/rss+xml" title="RSS">
+    <link href="https://gavinw.me/swift-macos/styles.css" rel="stylesheet">
+    <title>Swift macOS</title>
+</head>
+<body>
+<div class="container">
+    
+<div class="row">
+<div class="col">
+    <h1>WebView</h1>
+    
+        <h6>November 13, 2022</h6>
+    
+    <hr>
+    <p>A WKWebView from the WebKit framework is used to display web content in a window. The web view can be wrapped with NSViewRepresentable to make it usable with SwiftUI. Content for the web view can be loaded from an HTML file, from a string containing HTML, or from a URL representing a website address. Don't forget to enable &quot;Outgoing Connections&quot; in the target's &quot;App Sandbox&quot;; otherwise, the website will not display in the app.</p>
+<h2 id="load-an-html-file">Load an HTML file</h2>
+<pre data-lang="html" style="background-color:#2b303b;color:#c0c5ce;" class="language-html "><code class="language-html" data-lang="html"><span style="color:#65737e;">&lt;!-- page.html --&gt;
+</span><span>
+</span><span>&lt;</span><span style="color:#bf616a;">html</span><span>&gt;
+</span><span>&lt;</span><span style="color:#bf616a;">head</span><span>&gt;
+</span><span>&lt;</span><span style="color:#bf616a;">meta </span><span style="color:#d08770;">charset</span><span>=&quot;</span><span style="color:#a3be8c;">utf-8</span><span>&quot;&gt;
+</span><span>&lt;</span><span style="color:#bf616a;">style</span><span>&gt;
+</span><span>    </span><span style="color:#8fa1b3;">:</span><span style="color:#b48ead;">root </span><span>{ color-scheme: light dark; }
+</span><span>&lt;/</span><span style="color:#bf616a;">style</span><span>&gt;
+</span><span>&lt;/</span><span style="color:#bf616a;">head</span><span>&gt;
+</span><span>&lt;</span><span style="color:#bf616a;">body</span><span>&gt;
+</span><span>    &lt;</span><span style="color:#bf616a;">h1</span><span>&gt;Hello again friend 😁&lt;/</span><span style="color:#bf616a;">h1</span><span>&gt;
+</span><span>    &lt;</span><span style="color:#bf616a;">p</span><span>&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+</span><span>    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+</span><span>    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+</span><span>    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+</span><span>    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+</span><span>    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/</span><span style="color:#bf616a;">p</span><span>&gt;
+</span><span>    &lt;</span><span style="color:#bf616a;">p</span><span>&gt;Done.&lt;/</span><span style="color:#bf616a;">p</span><span>&gt;
+</span><span>&lt;/</span><span style="color:#bf616a;">body</span><span>&gt;
+</span><span>&lt;/</span><span style="color:#bf616a;">html</span><span>&gt;
+</span></code></pre>
+<pre data-lang="swift" style="background-color:#2b303b;color:#c0c5ce;" class="language-swift "><code class="language-swift" data-lang="swift"><span style="color:#b48ead;">import </span><span>SwiftUI
+</span><span style="color:#b48ead;">import </span><span>WebKit
+</span><span>
+</span><span style="color:#b48ead;">struct</span><span> WebView: NSViewRepresentable {
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> htmlFile: String
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">func </span><span>makeNSView(context: Context) -&gt; WKWebView {
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">guard let</span><span> url = Bundle.main.url(forResource: </span><span style="color:#b48ead;">self</span><span>.htmlFile, withExtension: </span><span style="color:#a3be8c;">&quot;html&quot;</span><span>) </span><span style="color:#b48ead;">else</span><span> {
+</span><span>            </span><span style="color:#b48ead;">return</span><span> WKWebView()
+</span><span>        }
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">let</span><span> webview = WKWebView()
+</span><span>        webview.loadFileURL(url, allowingReadAccessTo: url)
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">return</span><span> webview
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">func </span><span>updateNSView(_ nsView: WKWebView, context: Context) { }
+</span><span>}
+</span></code></pre>
+<pre data-lang="swift" style="background-color:#2b303b;color:#c0c5ce;" class="language-swift "><code class="language-swift" data-lang="swift"><span style="color:#b48ead;">import </span><span>SwiftUI
+</span><span>
+</span><span style="color:#b48ead;">struct</span><span> ContentView: View {
+</span><span>    </span><span style="color:#b48ead;">var</span><span> body: some View {
+</span><span>        WebView(htmlFile: </span><span style="color:#a3be8c;">&quot;page&quot;</span><span>)
+</span><span>            .padding()
+</span><span>            .frame(width: </span><span style="color:#d08770;">480</span><span>, height: </span><span style="color:#d08770;">600</span><span>)
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h2 id="load-a-string-containing-html">Load a string containing HTML</h2>
+<pre data-lang="swift" style="background-color:#2b303b;color:#c0c5ce;" class="language-swift "><code class="language-swift" data-lang="swift"><span style="color:#b48ead;">import </span><span>SwiftUI
+</span><span style="color:#b48ead;">import </span><span>WebKit
+</span><span>
+</span><span style="color:#b48ead;">struct</span><span> WebView: NSViewRepresentable {
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> content: String
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">func </span><span>makeNSView(context: Context) -&gt; WKWebView {
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">let</span><span> webview = WKWebView()
+</span><span>        webview.loadHTMLString(</span><span style="color:#b48ead;">self</span><span>.content, baseURL: </span><span style="color:#d08770;">nil</span><span>)
+</span><span>        </span><span style="color:#b48ead;">return</span><span> webview
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">func </span><span>updateNSView(_ nsView: WKWebView, context: Context) { }
+</span><span>}
+</span></code></pre>
+<pre data-lang="swift" style="background-color:#2b303b;color:#c0c5ce;" class="language-swift "><code class="language-swift" data-lang="swift"><span style="color:#b48ead;">import </span><span>SwiftUI
+</span><span>
+</span><span style="color:#b48ead;">let</span><span> htmlContent = </span><span style="color:#a3be8c;">&quot;&quot;&quot;
+</span><span style="color:#a3be8c;">&lt;html&gt;
+</span><span style="color:#a3be8c;">&lt;head&gt;
+</span><span style="color:#a3be8c;">&lt;style&gt;
+</span><span style="color:#a3be8c;">    :root { color-scheme: light dark; }
+</span><span style="color:#a3be8c;">&lt;/style&gt;
+</span><span style="color:#a3be8c;">&lt;/head&gt;
+</span><span style="color:#a3be8c;">&lt;body&gt;
+</span><span style="color:#a3be8c;">    &lt;h1&gt;Hello friend!&lt;/h1&gt;
+</span><span style="color:#a3be8c;">    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+</span><span style="color:#a3be8c;">    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+</span><span style="color:#a3be8c;">    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+</span><span style="color:#a3be8c;">    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+</span><span style="color:#a3be8c;">    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+</span><span style="color:#a3be8c;">    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+</span><span style="color:#a3be8c;">    &lt;p&gt;Done.&lt;/p&gt;
+</span><span style="color:#a3be8c;">&lt;/body&gt;
+</span><span style="color:#a3be8c;">&lt;/html&gt;
+</span><span style="color:#a3be8c;">&quot;&quot;&quot;
+</span><span>
+</span><span style="color:#b48ead;">struct</span><span> ContentView: View {
+</span><span>    </span><span style="color:#b48ead;">var</span><span> body: some View {
+</span><span>        WebView(content: htmlContent)
+</span><span>            .padding()
+</span><span>            .frame(width: </span><span style="color:#d08770;">480</span><span>, height: </span><span style="color:#d08770;">600</span><span>)
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h2 id="load-from-a-url">Load from a URL</h2>
+<pre data-lang="swift" style="background-color:#2b303b;color:#c0c5ce;" class="language-swift "><code class="language-swift" data-lang="swift"><span style="color:#b48ead;">import </span><span>SwiftUI
+</span><span style="color:#b48ead;">import </span><span>WebKit
+</span><span>
+</span><span style="color:#b48ead;">struct</span><span> WebView: NSViewRepresentable {
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">let</span><span> url: String
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">func </span><span>makeNSView(context: Context) -&gt; WKWebView {
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">guard let</span><span> url = URL(string: </span><span style="color:#b48ead;">self</span><span>.url) </span><span style="color:#b48ead;">else</span><span> {
+</span><span>            </span><span style="color:#b48ead;">return</span><span> WKWebView()
+</span><span>        }
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">let</span><span> webview = WKWebView()
+</span><span>        </span><span style="color:#b48ead;">let</span><span> request = URLRequest(url: url)
+</span><span>        webview.load(request)
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">return</span><span> webview
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">func </span><span>updateNSView(_ nsView: WKWebView, context: Context) { }
+</span><span>}
+</span></code></pre>
+<pre data-lang="swift" style="background-color:#2b303b;color:#c0c5ce;" class="language-swift "><code class="language-swift" data-lang="swift"><span style="color:#b48ead;">import </span><span>SwiftUI
+</span><span>
+</span><span style="color:#b48ead;">struct</span><span> ContentView: View {
+</span><span>    </span><span style="color:#b48ead;">var</span><span> body: some View {
+</span><span>        WebView(url: </span><span style="color:#a3be8c;">&quot;https://www.apple.com&quot;</span><span>)
+</span><span>            .padding()
+</span><span>            .frame(width: </span><span style="color:#d08770;">480</span><span>, height: </span><span style="color:#d08770;">600</span><span>)
+</span><span>    }
+</span><span>}
+</span></code></pre>
+
+</div>
+</div>
+<div class="row my-5">
+<div class="col">
+    <p class="text-center small my-5">
+        <a href="/">Swift Programming for macOS</a> © 2023 <br>
+        Built by <a href="https://gavinw.me">Gavin Wiggins</a>
+    </p>
+</div>
+</div>
+
+</div>
+</body>
+</html>

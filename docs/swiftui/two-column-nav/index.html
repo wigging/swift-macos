@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://gavinw.me/swift-macos/rss.xml" rel="alternate" type="application/rss+xml" title="RSS">
+    <link href="https://gavinw.me/swift-macos/styles.css" rel="stylesheet">
+    <title>Swift macOS</title>
+</head>
+<body>
+<div class="container">
+    
+<div class="row">
+<div class="col">
+    <h1>Two column NavigationView</h1>
+    
+        <h6>November 13, 2022</h6>
+    
+    <hr>
+    <p>A two column NavigationView creates a sidebar with a list of items and a content view. In the example shown below, selecting an item in the sidebar will change the content view. An @AppStorage property is used to remember the selected item.</p>
+<p><img src="/img/twocolnav.png" style="max-width:400px;" alt="two column navigation"></p>
+<pre data-lang="swift" style="background-color:#2b303b;color:#c0c5ce;" class="language-swift "><code class="language-swift" data-lang="swift"><span style="color:#b48ead;">import </span><span>SwiftUI
+</span><span>
+</span><span style="color:#b48ead;">struct</span><span> ViewA: View {
+</span><span>    </span><span style="color:#b48ead;">var</span><span> body: some View {
+</span><span>        Text(</span><span style="color:#a3be8c;">&quot;View A 🍎&quot;</span><span>).font(.title)
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">struct</span><span> ViewB: View {
+</span><span>    </span><span style="color:#b48ead;">var</span><span> body: some View {
+</span><span>        Text(</span><span style="color:#a3be8c;">&quot;View B 🥝&quot;</span><span>).font(.title)
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">struct</span><span> ViewC: View {
+</span><span>    </span><span style="color:#b48ead;">var</span><span> body: some View {
+</span><span>        Text(</span><span style="color:#a3be8c;">&quot;View C 🍑&quot;</span><span>).font(.title)
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">struct</span><span> ContentView: View {
+</span><span>    </span><span style="color:#b48ead;">@AppStorage</span><span>(</span><span style="color:#a3be8c;">&quot;savedSelection&quot;</span><span>) </span><span style="color:#b48ead;">private var</span><span> savedSelection: String?
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">var</span><span> body: some View {
+</span><span>        NavigationView {
+</span><span>            List {
+</span><span>                NavigationLink(</span><span style="color:#a3be8c;">&quot;View A&quot;</span><span>, tag: </span><span style="color:#a3be8c;">&quot;A&quot;</span><span>, selection: $savedSelection, destination: { ViewA() })
+</span><span>                NavigationLink(</span><span style="color:#a3be8c;">&quot;View B&quot;</span><span>, tag: </span><span style="color:#a3be8c;">&quot;B&quot;</span><span>, selection: $savedSelection, destination: { ViewB() })
+</span><span>                NavigationLink(</span><span style="color:#a3be8c;">&quot;View C&quot;</span><span>, tag: </span><span style="color:#a3be8c;">&quot;C&quot;</span><span>, selection: $savedSelection, destination: { ViewC() })
+</span><span>            }
+</span><span>            .frame(minWidth: </span><span style="color:#d08770;">150</span><span>)
+</span><span>            .listStyle(SidebarListStyle())
+</span><span>            Text(</span><span style="color:#a3be8c;">&quot;No sidebar item selected.&quot;</span><span>)
+</span><span>        }
+</span><span>        .frame(width: </span><span style="color:#d08770;">500</span><span>, height: </span><span style="color:#d08770;">300</span><span>)
+</span><span>        .toolbar {
+</span><span>            ToolbarItem(placement: .navigation) {
+</span><span>                Button {
+</span><span>                    NSApp.sendAction(#selector(NSSplitViewController.toggleSidebar(_:)), to: </span><span style="color:#d08770;">nil</span><span>, from: </span><span style="color:#d08770;">nil</span><span>)
+</span><span>                } label: {
+</span><span>                    Image(systemName: </span><span style="color:#a3be8c;">&quot;sidebar.left&quot;</span><span>).help(</span><span style="color:#a3be8c;">&quot;Toggle sidebar&quot;</span><span>)
+</span><span>                }
+</span><span>            }
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h2 id="fill-content-view">Fill content view</h2>
+<p>To fill the entire content view, set the frame's max width and max height to infinity. This is demonstarated by the red and orange views shown below.</p>
+<p><img src="/img/twocolnav2.png" style="max-width:400px;" alt="two column navigation"></p>
+<pre data-lang="swift" style="background-color:#2b303b;color:#c0c5ce;" class="language-swift "><code class="language-swift" data-lang="swift"><span style="color:#b48ead;">import </span><span>SwiftUI
+</span><span>
+</span><span style="color:#b48ead;">struct</span><span> RedView: View {
+</span><span>    </span><span style="color:#b48ead;">var</span><span> body: some View {
+</span><span>        VStack {
+</span><span>            Text(</span><span style="color:#a3be8c;">&quot;Red View&quot;</span><span>).font(.title)
+</span><span>            Text(</span><span style="color:#a3be8c;">&quot;🍎&quot;</span><span>).font(.title)
+</span><span>        }
+</span><span>        .navigationTitle(</span><span style="color:#a3be8c;">&quot;Red View&quot;</span><span>)
+</span><span>        .frame(maxWidth: .infinity, maxHeight: .infinity)
+</span><span>        .background(.red)
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">struct</span><span> OrangeView: View {
+</span><span>    </span><span style="color:#b48ead;">var</span><span> body: some View {
+</span><span>        VStack {
+</span><span>            Text(</span><span style="color:#a3be8c;">&quot;Orange View&quot;</span><span>).font(.title)
+</span><span>            Text(</span><span style="color:#a3be8c;">&quot;🍊&quot;</span><span>).font(.title)
+</span><span>        }
+</span><span>        .navigationTitle(</span><span style="color:#a3be8c;">&quot;Orange View&quot;</span><span>)
+</span><span>        .frame(maxWidth: .infinity, maxHeight: .infinity)
+</span><span>        .background(.orange)
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span style="color:#b48ead;">struct</span><span> ContentView: View {
+</span><span>    </span><span style="color:#b48ead;">@AppStorage</span><span>(</span><span style="color:#a3be8c;">&quot;savedSelection&quot;</span><span>) </span><span style="color:#b48ead;">private var</span><span> savedSelection: String?
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">var</span><span> body: some View {
+</span><span>        NavigationView {
+</span><span>            List {
+</span><span>                NavigationLink(</span><span style="color:#a3be8c;">&quot;Red View&quot;</span><span>, tag: </span><span style="color:#a3be8c;">&quot;red&quot;</span><span>, selection: $savedSelection, destination: { RedView() })
+</span><span>                NavigationLink(</span><span style="color:#a3be8c;">&quot;Orange View&quot;</span><span>, tag: </span><span style="color:#a3be8c;">&quot;orange&quot;</span><span>, selection: $savedSelection, destination: { OrangeView() })
+</span><span>            }
+</span><span>            .frame(minWidth: </span><span style="color:#d08770;">150</span><span>)
+</span><span>            .listStyle(SidebarListStyle())
+</span><span>
+</span><span>            Text(</span><span style="color:#a3be8c;">&quot;No sidebar item selected.&quot;</span><span>)
+</span><span>        }
+</span><span>        .toolbar {
+</span><span>            ToolbarItem(placement: .navigation) {
+</span><span>                Button {
+</span><span>                    NSApp.sendAction(#selector(NSSplitViewController.toggleSidebar(_:)), to: </span><span style="color:#d08770;">nil</span><span>, from: </span><span style="color:#d08770;">nil</span><span>)
+</span><span>                } label: {
+</span><span>                    Image(systemName: </span><span style="color:#a3be8c;">&quot;sidebar.left&quot;</span><span>).help(</span><span style="color:#a3be8c;">&quot;Toggle sidebar&quot;</span><span>)
+</span><span>                }
+</span><span>            }
+</span><span>        }
+</span><span>        .frame(width: </span><span style="color:#d08770;">500</span><span>, height: </span><span style="color:#d08770;">300</span><span>)
+</span><span>    }
+</span><span>}
+</span></code></pre>
+
+</div>
+</div>
+<div class="row my-5">
+<div class="col">
+    <p class="text-center small my-5">
+        <a href="/">Swift Programming for macOS</a> © 2023 <br>
+        Built by <a href="https://gavinw.me">Gavin Wiggins</a>
+    </p>
+</div>
+</div>
+
+</div>
+</body>
+</html>

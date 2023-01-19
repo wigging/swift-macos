@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://gavinw.me/swift-macos/rss.xml" rel="alternate" type="application/rss+xml" title="RSS">
+    <link href="https://gavinw.me/swift-macos/styles.css" rel="stylesheet">
+    <title>Swift macOS</title>
+</head>
+<body>
+<div class="container">
+    
+<div class="row">
+<div class="col">
+    <h1>Window size</h1>
+    
+        <h6>November 17, 2022</h6>
+    
+    <hr>
+    <p>The desired window size is determined by the resizability of the WindowGroup. As shown below, the resizability of the window is based on the ContentView.</p>
+<pre data-lang="swift" style="background-color:#2b303b;color:#c0c5ce;" class="language-swift "><code class="language-swift" data-lang="swift"><span style="color:#b48ead;">import </span><span>SwiftUI
+</span><span>
+</span><span style="color:#b48ead;">@main
+</span><span style="color:#b48ead;">struct</span><span> WindowSizeApp: App {
+</span><span>    </span><span style="color:#b48ead;">var</span><span> body: some Scene {
+</span><span>        WindowGroup {
+</span><span>            ContentView()
+</span><span>        }
+</span><span>        .windowResizability(.contentSize)
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<p>The size of the ContentView is defined by the frame size. This example generates a 300x200 fixed window size.</p>
+<pre data-lang="swift" style="background-color:#2b303b;color:#c0c5ce;" class="language-swift "><code class="language-swift" data-lang="swift"><span style="color:#b48ead;">import </span><span>SwiftUI
+</span><span>
+</span><span style="color:#b48ead;">struct</span><span> ContentView: View {
+</span><span>    </span><span style="color:#b48ead;">var</span><span> body: some View {
+</span><span>        VStack {
+</span><span>            Image(systemName: </span><span style="color:#a3be8c;">&quot;globe&quot;</span><span>).imageScale(.large)
+</span><span>            Text(</span><span style="color:#a3be8c;">&quot;Hello, world!&quot;</span><span>).fontWeight(.bold)
+</span><span>        }
+</span><span>        .frame(width: </span><span style="color:#d08770;">300</span><span>, height: </span><span style="color:#d08770;">200</span><span>)
+</span><span>        .background(.orange)
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<p><img src="/img/window300x200.png" style="max-width:300px;" alt="window size"></p>
+<p>A resizable window is created with the example shown below. Its minimum size is 200x200 and its maximum size is 500x400.</p>
+<pre data-lang="swift" style="background-color:#2b303b;color:#c0c5ce;" class="language-swift "><code class="language-swift" data-lang="swift"><span style="color:#b48ead;">import </span><span>SwiftUI
+</span><span>
+</span><span style="color:#b48ead;">struct</span><span> ContentView: View {
+</span><span>    </span><span style="color:#b48ead;">var</span><span> body: some View {
+</span><span>        VStack {
+</span><span>            Image(systemName: </span><span style="color:#a3be8c;">&quot;globe&quot;</span><span>).imageScale(.large)
+</span><span>            Text(</span><span style="color:#a3be8c;">&quot;Hello, world!&quot;</span><span>).fontWeight(.bold)
+</span><span>        }
+</span><span>        .frame(minWidth: </span><span style="color:#d08770;">200</span><span>, maxWidth: </span><span style="color:#d08770;">500</span><span>, minHeight: </span><span style="color:#d08770;">200</span><span>, maxHeight: </span><span style="color:#d08770;">400</span><span>)
+</span><span>        .background(.purple)
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<p><img src="/img/window500x400.png" style="max-width:500px;" alt="window size"></p>
+
+</div>
+</div>
+<div class="row my-5">
+<div class="col">
+    <p class="text-center small my-5">
+        <a href="/">Swift Programming for macOS</a> © 2023 <br>
+        Built by <a href="https://gavinw.me">Gavin Wiggins</a>
+    </p>
+</div>
+</div>
+
+</div>
+</body>
+</html>
