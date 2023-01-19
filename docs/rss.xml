@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-      <title></title>
+      <title>Swift Programming for macOS</title>
         <link>https://gavinw.me/swift-macos</link>
-        <description></description>
+        <description>Examples for creating native Mac apps using Swift and SwiftUI</description>
         <generator>Zola</generator>
         <language>en</language>
         <atom:link href="https://gavinw.me/swift-macos/rss.xml" rel="self" type="application/rss+xml"/>
