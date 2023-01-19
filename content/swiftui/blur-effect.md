@@ -5,8 +5,8 @@ date = 2022-11-13
 
 The blur modifier, denoted by `.blur`, can be used to blur a view.
 
-<p><img src="/img/blur-effect1.png" style="max-width:400px;" alt="blur effect"></p>
-<p><img src="/img/blur-effect2.png" style="max-width:400px;" alt="blur effect"></p>
+<p><img src="/swift-macos/img/blur-effect1.png" style="max-width:400px;" alt="blur effect"></p>
+<p><img src="/swift-macos/img/blur-effect2.png" style="max-width:400px;" alt="blur effect"></p>
 
 ```swift
 import SwiftUI

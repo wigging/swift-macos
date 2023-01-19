@@ -5,7 +5,7 @@ date = 2022-11-13
 
 An Image view is used to display an image. For the example below, an image named "homer" is added to the Assets catalog then the image is displayed in the window while preserving its aspect ratio.
 
-<p><img src="/img/images-symbols1.png" style="max-width:400px;" alt="image"></p>
+<p><img src="/swift-macos/img/images-symbols1.png" style="max-width:400px;" alt="image"></p>
 
 ```swift
 import SwiftUI
@@ -27,7 +27,7 @@ struct ContentView: View {
 
 Images can also be created using the system name of an SF Symbol. Use the [SF Symbols app](https://developer.apple.com/sf-symbols/) to look up the names of the available system images.
 
-<p><img src="/img/images-symbols2.png" style="max-width:400px;" alt="image sf symbols"></p>
+<p><img src="/swift-macos/img/images-symbols2.png" style="max-width:400px;" alt="image sf symbols"></p>
 
 ```swift
 import SwiftUI
@@ -59,7 +59,7 @@ struct ContentView: View {
 
 Named images specific to macOS can be displayed using the appropriate NSImage.Name string. See [Apple's documentation](https://developer.apple.com/documentation/appkit/nsimage/name) for a list of the available system image names.
 
-<p><img src="/img/images-symbols3.png" style="max-width:400px;" alt="system images"></p>
+<p><img src="/swift-macos/img/images-symbols3.png" style="max-width:400px;" alt="system images"></p>
 
 ```swift
 import SwiftUI

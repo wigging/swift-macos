@@ -21,7 +21,7 @@ struct LineChartApp: App {
 
 A basic line chart using an array of structs is demonstrated below. Notice a minimum frame width and height is used so the chart will change size with the window.
 
-<p><img src="/img/linechart1.png" style="max-width:400px;" alt="line chart"></p>
+<p><img src="/swift-macos/img/linechart1.png" style="max-width:400px;" alt="line chart"></p>
 
 ```swift
 import SwiftUI
@@ -64,7 +64,7 @@ struct ContentView: View {
 
 In this example, a `ForEach` loop is used with an array of structs. The x and y axis labels are centered and the y axis is moved to the left side of the chart view.
 
-<p><img src="/img/linechart2.png" style="max-width:400px;" alt="line chart"></p>
+<p><img src="/swift-macos/img/linechart2.png" style="max-width:400px;" alt="line chart"></p>
 
 ```swift
 import SwiftUI
@@ -112,7 +112,7 @@ struct ContentView: View {
 
 For this example, the chart data is provided has an array of tuple values and circle symbols represent each data point on the line.
 
-<p><img src="/img/linechart3.png" style="max-width:400px;" alt="line chart"></p>
+<p><img src="/swift-macos/img/linechart3.png" style="max-width:400px;" alt="line chart"></p>
 
 ```swift
 import SwiftUI

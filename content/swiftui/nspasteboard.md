@@ -5,7 +5,7 @@ date = 2022-11-13
 
 The typical way to copy text is to select it with the mouse then press ⌘C. To do this in code, use the NSPasteboard class to transfer text to the pasteboard server.
 
-<p><img src="/img/nspasteboard.png" style="max-width:400px;" alt="pasteboard"></p>
+<p><img src="/swift-macos/img/nspasteboard.png" style="max-width:400px;" alt="pasteboard"></p>
 
 ```swift
 import SwiftUI

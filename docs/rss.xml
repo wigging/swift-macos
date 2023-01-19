@@ -268,7 +268,7 @@
 &lt;&#x2F;span&gt;&lt;span&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;A basic line chart using an array of structs is demonstrated below. Notice a minimum frame width and height is used so the chart will change size with the window.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;linechart1.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;line chart&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;linechart1.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;line chart&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;Charts
 &lt;&#x2F;span&gt;&lt;span&gt;
@@ -307,7 +307,7 @@
 &lt;&#x2F;span&gt;&lt;span&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;In this example, a &lt;code&gt;ForEach&lt;&#x2F;code&gt; loop is used with an array of structs. The x and y axis labels are centered and the y axis is moved to the left side of the chart view.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;linechart2.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;line chart&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;linechart2.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;line chart&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;Charts
 &lt;&#x2F;span&gt;&lt;span&gt;
@@ -351,7 +351,7 @@
 &lt;&#x2F;span&gt;&lt;span&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;For this example, the chart data is provided has an array of tuple values and circle symbols represent each data point on the line.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;linechart3.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;line chart&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;linechart3.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;line chart&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;Charts
 &lt;&#x2F;span&gt;&lt;span&gt;
@@ -387,7 +387,7 @@
             <link>https://gavinw.me/swift-macos/swiftui/twocol-navsplit/</link>
             <guid>https://gavinw.me/swift-macos/swiftui/twocol-navsplit/</guid>
             <description>&lt;p&gt;A two column &lt;code&gt;NavigationSplitView&lt;&#x2F;code&gt; creates a sidebar with a list of items and a detail view. In the example shown below, selecting an item in the sidebar will change the contents of the detail view. Notice the &lt;code&gt;SidebarCommands()&lt;&#x2F;code&gt; enables Hide Sidebar and Show Sidebar items in the View menu.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;twocol-navsplit1.png&quot; style=&quot;max-width:500px;&quot; alt=&quot;two column navsplit&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;twocol-navsplit1.png&quot; style=&quot;max-width:500px;&quot; alt=&quot;two column navsplit&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;@main
@@ -480,7 +480,7 @@
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;set-sidebar-width&quot;&gt;Set sidebar width&lt;&#x2F;h2&gt;
 &lt;p&gt;Set a fixed width for the sidebar column using the &lt;code&gt;navigationSplitViewColumnWidth&lt;&#x2F;code&gt; modifier function.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;twocol-navsplit2.png&quot; style=&quot;max-width:500px;&quot; alt=&quot;two column navsplit&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;twocol-navsplit2.png&quot; style=&quot;max-width:500px;&quot; alt=&quot;two column navsplit&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct&lt;&#x2F;span&gt;&lt;span&gt; ContentView: View {
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;@State private var&lt;&#x2F;span&gt;&lt;span&gt; selectedFruit: Fruit = .apple
@@ -518,7 +518,7 @@
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;fill-detail-view&quot;&gt;Fill detail view&lt;&#x2F;h2&gt;
 &lt;p&gt;To fix the size of the window, set the resizability of the main window group as shown below. Next, to fill the entire detail view column, set the frame&#x27;s max width and max height to infinity for each view. Use the &lt;code&gt;navigationTitle&lt;&#x2F;code&gt; to change the window title based on the selected view.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;twocol-navsplit3.png&quot; style=&quot;max-width:500px;&quot; alt=&quot;two column navsplit&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;twocol-navsplit3.png&quot; style=&quot;max-width:500px;&quot; alt=&quot;two column navsplit&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;@main
@@ -766,7 +766,7 @@
 &lt;&#x2F;span&gt;&lt;span&gt;    }
 &lt;&#x2F;span&gt;&lt;span&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;window-size1.png&quot; style=&quot;max-width:300px;&quot; alt=&quot;window size&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;window-size1.png&quot; style=&quot;max-width:300px;&quot; alt=&quot;window size&quot;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;A resizable window is created with the example shown below. Its minimum size is 200x200 and its maximum size is 500x400.&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
@@ -781,7 +781,7 @@
 &lt;&#x2F;span&gt;&lt;span&gt;    }
 &lt;&#x2F;span&gt;&lt;span&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;window-size2.png&quot; style=&quot;max-width:500px;&quot; alt=&quot;window size&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;window-size2.png&quot; style=&quot;max-width:500px;&quot; alt=&quot;window size&quot;&gt;&lt;&#x2F;p&gt;
 </description>
         </item>
         <item>
@@ -790,7 +790,7 @@
             <link>https://gavinw.me/swift-macos/swiftui/appstorage/</link>
             <guid>https://gavinw.me/swift-macos/swiftui/appstorage/</guid>
             <description>&lt;p&gt;The &lt;code&gt;@AppStorage&lt;&#x2F;code&gt; property wrapper reads and writes values from user defaults. The example below saves a fruit name (a string) to the fruit key in user defaults. When the app is relaunched, the saved fruit name will be displayed in the text label. Enter a fruit in the text field then click the save fruit button to save a new fruit to the fruit key in user defaults.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;appstorage.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;app storage property&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;appstorage.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;app storage property&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct&lt;&#x2F;span&gt;&lt;span&gt; ContentView: View {
@@ -821,8 +821,8 @@
             <link>https://gavinw.me/swift-macos/swiftui/blur-effect/</link>
             <guid>https://gavinw.me/swift-macos/swiftui/blur-effect/</guid>
             <description>&lt;p&gt;The blur modifier, denoted by &lt;code&gt;.blur&lt;&#x2F;code&gt;, can be used to blur a view.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;blur-effect1.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;blur effect&quot;&gt;&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;blur-effect2.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;blur effect&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;blur-effect1.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;blur effect&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;blur-effect2.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;blur effect&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct&lt;&#x2F;span&gt;&lt;span&gt; ContentView: View {
@@ -855,7 +855,7 @@
             <link>https://gavinw.me/swift-macos/swiftui/button-styles/</link>
             <guid>https://gavinw.me/swift-macos/swiftui/button-styles/</guid>
             <description>&lt;p&gt;Several built-in button styles are available for macOS such as the PlainButtonStyle, LinkButtonStyle, and BorderlessButtonStyle. The BorderedButtonStyle is also the default button style. To create a custom appearance for a button, use the ButtonStyle protocol. To fully customize the button&#x27;s appearance and behavior, use the PrimitiveButtonStyle protocol.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;button-styles.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;button styles&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;button-styles.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;button styles&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct&lt;&#x2F;span&gt;&lt;span&gt; RoundedButtonStyle: ButtonStyle {
@@ -948,7 +948,7 @@
             <link>https://gavinw.me/swift-macos/swiftui/credits/</link>
             <guid>https://gavinw.me/swift-macos/swiftui/credits/</guid>
             <description>&lt;p&gt;The About window in a Mac application is viewed by selecting the app&#x27;s name in the top menu bar, then choosing the About item in the menu. The image below displays Safari&#x27;s About window.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;credits1.png&quot; style=&quot;max-width:600px;&quot; alt=&quot;safari credits&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;credits1.png&quot; style=&quot;max-width:600px;&quot; alt=&quot;safari credits&quot;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;To add credits to the About window, add a file named Credits.rtf to the Xcode project. The text in the RTF file will appear in the About window below the app version and copyright. For example, the following text in Credits.rtf will appear under the version number in the About window:&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2b303b;color:#c0c5ce;&quot;&gt;&lt;code&gt;&lt;span&gt;My Credits
 &lt;&#x2F;span&gt;&lt;span&gt;
@@ -962,7 +962,7 @@
 &lt;&#x2F;span&gt;&lt;span&gt;    •   Fifth item is here
 &lt;&#x2F;span&gt;&lt;span&gt;    •   Six item is the last
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;credits2.png&quot; style=&quot;max-width:300px;&quot; alt=&quot;credits&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;credits2.png&quot; style=&quot;max-width:300px;&quot; alt=&quot;credits&quot;&gt;&lt;&#x2F;p&gt;
 </description>
         </item>
         <item>
@@ -971,7 +971,7 @@
             <link>https://gavinw.me/swift-macos/swiftui/cursors/</link>
             <guid>https://gavinw.me/swift-macos/swiftui/cursors/</guid>
             <description>&lt;p&gt;The mouse pointer (or cursor) is represented by an arrow on the screen. Different cursors are available in macOS to indicate actions that the user can take with the mouse. See the &lt;a href=&quot;https:&#x2F;&#x2F;developer.apple.com&#x2F;documentation&#x2F;appkit&#x2F;nscursor&quot;&gt;NSCursor documentation&lt;&#x2F;a&gt; for a list of all the available cursors.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;cursors.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;cursors&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;cursors.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;cursors&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct&lt;&#x2F;span&gt;&lt;span&gt; ContentView: View {
@@ -1021,7 +1021,7 @@
             <link>https://gavinw.me/swift-macos/swiftui/grid-lines/</link>
             <guid>https://gavinw.me/swift-macos/swiftui/grid-lines/</guid>
             <description>&lt;p&gt;A GeometryReader can be used to equally space lines in a view even when that view changes size. This is accomplished by using the width and height of the container view to determine the spacing of the lines.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;grid-lines.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;grid lines&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;grid-lines.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;grid lines&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct&lt;&#x2F;span&gt;&lt;span&gt; ContentView: View {
@@ -1066,7 +1066,7 @@
             <link>https://gavinw.me/swift-macos/swiftui/images-symbols/</link>
             <guid>https://gavinw.me/swift-macos/swiftui/images-symbols/</guid>
             <description>&lt;p&gt;An Image view is used to display an image. For the example below, an image named &amp;quot;homer&amp;quot; is added to the Assets catalog then the image is displayed in the window while preserving its aspect ratio.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;images-symbols1.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;image&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;images-symbols1.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;image&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct&lt;&#x2F;span&gt;&lt;span&gt; ContentView: View {
@@ -1083,7 +1083,7 @@
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;sf-symbols&quot;&gt;SF Symbols&lt;&#x2F;h2&gt;
 &lt;p&gt;Images can also be created using the system name of an SF Symbol. Use the &lt;a href=&quot;https:&#x2F;&#x2F;developer.apple.com&#x2F;sf-symbols&#x2F;&quot;&gt;SF Symbols app&lt;&#x2F;a&gt; to look up the names of the available system images.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;images-symbols2.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;image sf symbols&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;images-symbols2.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;image sf symbols&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct&lt;&#x2F;span&gt;&lt;span&gt; ContentView: View {
@@ -1110,7 +1110,7 @@
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;system-images&quot;&gt;System images&lt;&#x2F;h2&gt;
 &lt;p&gt;Named images specific to macOS can be displayed using the appropriate NSImage.Name string. See &lt;a href=&quot;https:&#x2F;&#x2F;developer.apple.com&#x2F;documentation&#x2F;appkit&#x2F;nsimage&#x2F;name&quot;&gt;Apple&#x27;s documentation&lt;&#x2F;a&gt; for a list of the available system image names.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;images-symbols3.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;system images&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;images-symbols3.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;system images&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct&lt;&#x2F;span&gt;&lt;span&gt; ContentView: View {
@@ -1159,7 +1159,7 @@
             <link>https://gavinw.me/swift-macos/swiftui/label/</link>
             <guid>https://gavinw.me/swift-macos/swiftui/label/</guid>
             <description>&lt;p&gt;Use a Label to show text and an icon side by side. The icon can be either an SF Symbol or your own image. The label can be scaled with the font modifier. A completely custom label can be created using custom views for the text and icon.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;label.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;label text&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;label.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;label text&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct&lt;&#x2F;span&gt;&lt;span&gt; ContentView: View {
@@ -1196,7 +1196,7 @@
             <link>https://gavinw.me/swift-macos/swiftui/labeledcontent/</link>
             <guid>https://gavinw.me/swift-macos/swiftui/labeledcontent/</guid>
             <description>&lt;p&gt;The LabeledContent view is comprised of a label and content. Usually, it displays the label on the leading edge and the content on the trailing edge. This is similar to using an HStack containing two views.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;labeledcontent.png&quot; style=&quot;max-width:300px;&quot; alt=&quot;labeled content&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;labeledcontent.png&quot; style=&quot;max-width:300px;&quot; alt=&quot;labeled content&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct&lt;&#x2F;span&gt;&lt;span&gt; ContentView: View {
@@ -1224,7 +1224,7 @@
             <link>https://gavinw.me/swift-macos/swiftui/menu-items/</link>
             <guid>https://gavinw.me/swift-macos/swiftui/menu-items/</guid>
             <description>&lt;p&gt;Menus in Mac apps are typically located at the top of the screen in the menu bar. Menu items can be added to an app&#x27;s menu using the commands modifier on the WindowGroup.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;menu-items.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;menu items&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;menu-items.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;menu items&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;@main
@@ -1272,7 +1272,7 @@
             <link>https://gavinw.me/swift-macos/swiftui/nspasteboard/</link>
             <guid>https://gavinw.me/swift-macos/swiftui/nspasteboard/</guid>
             <description>&lt;p&gt;The typical way to copy text is to select it with the mouse then press ⌘C. To do this in code, use the NSPasteboard class to transfer text to the pasteboard server.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;nspasteboard.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;pasteboard&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;nspasteboard.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;pasteboard&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct&lt;&#x2F;span&gt;&lt;span&gt; ContentView: View {
@@ -1305,7 +1305,7 @@
             <link>https://gavinw.me/swift-macos/swiftui/path-markers/</link>
             <guid>https://gavinw.me/swift-macos/swiftui/path-markers/</guid>
             <description>&lt;p&gt;Markers can be added to a line path by stacking two views in a ZStack. The line is drawn as a path using LineShape while the markers (filled circles) are created in the MarkersView.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;path-markers.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;path markers&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;path-markers.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;path markers&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct&lt;&#x2F;span&gt;&lt;span&gt; MarkersView: View {
@@ -1374,7 +1374,7 @@
             <link>https://gavinw.me/swift-macos/swiftui/picker-control/</link>
             <guid>https://gavinw.me/swift-macos/swiftui/picker-control/</guid>
             <description>&lt;p&gt;The picker control selects an item from a set of values. The appearance of the picker can be changed by using different styles and modifiers.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;picker-control.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;picker control&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;picker-control.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;picker control&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct&lt;&#x2F;span&gt;&lt;span&gt; ContentView: View {
@@ -1436,7 +1436,7 @@
             <link>https://gavinw.me/swift-macos/swiftui/prefs-window/</link>
             <guid>https://gavinw.me/swift-macos/swiftui/prefs-window/</guid>
             <description>&lt;p&gt;A preferences window is typically used to present and configure the settings associated with a Mac application. In apps built with SwiftUI, these settings are stored and set using the AppStorage property wrapper. To add a preferenes window to your application, you need to add a Settings group to the main App struct.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;prefs-window1.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;preferences window&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;prefs-window1.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;preferences window&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;@main
@@ -1452,7 +1452,7 @@
 &lt;&#x2F;span&gt;&lt;span&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Using a TabView you can group settings into different collections and make them easier to find. Below is an example of setting and storing the fontSize value with AppStorage.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;prefs-window2.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;preferences window&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;prefs-window2.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;preferences window&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct&lt;&#x2F;span&gt;&lt;span&gt; SettingsView: View {
@@ -1514,7 +1514,7 @@
             <link>https://gavinw.me/swift-macos/swiftui/progressview/</link>
             <guid>https://gavinw.me/swift-macos/swiftui/progressview/</guid>
             <description>&lt;p&gt;A ProgressView represents completion of a task or the occurance of an activity with an unknown completion time. A default value of 1.0 is used for the total value when tracking completion progress. As the example demonstrates below, different configurations of a progress view are possible.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;progressview1.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;progress view&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;progressview1.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;progress view&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct&lt;&#x2F;span&gt;&lt;span&gt; ContentView: View {
@@ -1556,7 +1556,7 @@
 &lt;&#x2F;span&gt;&lt;span&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;The next example uses a state variable x to update the progress view by 10 when the &amp;quot;Add 10&amp;quot; button is clicked. A progress view is often associated with a background task; consequently, the progress view must be updated on the main thread. This is demonstrated with the &amp;quot;Add 20 bg&amp;quot; button in the example shown below.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;progressview2.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;progress view&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;progressview2.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;progress view&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct&lt;&#x2F;span&gt;&lt;span&gt; ContentView: View {
@@ -1603,7 +1603,7 @@
             <link>https://gavinw.me/swift-macos/swiftui/scrollview/</link>
             <guid>https://gavinw.me/swift-macos/swiftui/scrollview/</guid>
             <description>&lt;p&gt;The scroll view displays its content within a scrollable area of the window.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;scrollview.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;scroll view&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;scrollview.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;scroll view&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct&lt;&#x2F;span&gt;&lt;span&gt; ContentView: View {
@@ -1643,7 +1643,7 @@
             <link>https://gavinw.me/swift-macos/swiftui/sidebar-disclosuregroup/</link>
             <guid>https://gavinw.me/swift-macos/swiftui/sidebar-disclosuregroup/</guid>
             <description>&lt;p&gt;To organize our sidebar view, we can use DisclosureGroup. We can create different sections and specify if they are expanded by default when the application launches.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;sidebar-disclosuregroup.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;sidebar disclosuregroup&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;sidebar-disclosuregroup.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;sidebar disclosuregroup&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct&lt;&#x2F;span&gt;&lt;span&gt; Sidebar: View {
@@ -1710,7 +1710,7 @@
             <link>https://gavinw.me/swift-macos/swiftui/sidebar-toggle/</link>
             <guid>https://gavinw.me/swift-macos/swiftui/sidebar-toggle/</guid>
             <description>&lt;p&gt;A sidebar view can be displayed or hidden using the toggleSidebar() feature from an NSSplitViewController. At the time of writing this article, SwiftUI does not have this feature but hopefully an upcoming WWDC will offer a SwiftUI solution.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;sidebar-toggle.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;sidebar toggle&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;sidebar-toggle.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;sidebar toggle&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct&lt;&#x2F;span&gt;&lt;span&gt; Sidebar: View {
@@ -1772,7 +1772,7 @@
             <link>https://gavinw.me/swift-macos/swiftui/sine-wave/</link>
             <guid>https://gavinw.me/swift-macos/swiftui/sine-wave/</guid>
             <description>&lt;p&gt;To draw a sine wave, create a shape that draws a line using x and y values. The values must be converted to the proper points within the view&#x27;s frame. Markers represent points on the drawn line.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;sine-wave1.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;sine wave&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;sine-wave1.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;sine wave&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct&lt;&#x2F;span&gt;&lt;span&gt; MarkersView: View {
@@ -1885,7 +1885,7 @@
 &lt;&#x2F;span&gt;&lt;span&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;The Python example below provides a comparison to the Swift version.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;sine-wave2.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;sine wave&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;sine-wave2.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;sine wave&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;numpy as np
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;matplotlib.pyplot as plt
 &lt;&#x2F;span&gt;&lt;span&gt;
@@ -1910,7 +1910,7 @@
             <link>https://gavinw.me/swift-macos/swiftui/stepper/</link>
             <guid>https://gavinw.me/swift-macos/swiftui/stepper/</guid>
             <description>&lt;p&gt;The stepper control increments and decrements a value. A closed range can be used to limit the applicable stepper values.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;stepper.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;stepper&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;stepper.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;stepper&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct&lt;&#x2F;span&gt;&lt;span&gt; ContentView: View {
@@ -1969,7 +1969,7 @@
             <link>https://gavinw.me/swift-macos/swiftui/table/</link>
             <guid>https://gavinw.me/swift-macos/swiftui/table/</guid>
             <description>&lt;p&gt;A Table presents rows and columns of data that can be selected and sorted. A basic example is shown below.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;table1.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;basic table&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;table1.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;basic table&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct&lt;&#x2F;span&gt;&lt;span&gt; Person: Identifiable {
@@ -1996,7 +1996,7 @@
 &lt;&#x2F;span&gt;&lt;span&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;To enable selectable rows in the table, use a selection variable. Select multiple rows by clicking rows while holding the command or shift key. Or click and drag the cursor across multiple rows.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;table2.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;table selection&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;table2.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;table selection&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct&lt;&#x2F;span&gt;&lt;span&gt; Person: Identifiable {
@@ -2031,7 +2031,7 @@
 &lt;&#x2F;span&gt;&lt;span&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Sort a table by binding to an array of sort descriptors. Click the column header to sort the table based on that column&#x27;s key path.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;table3.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;table sort&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;table3.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;table sort&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct&lt;&#x2F;span&gt;&lt;span&gt; Person: Identifiable {
@@ -2076,7 +2076,7 @@
             <link>https://gavinw.me/swift-macos/swiftui/text/</link>
             <guid>https://gavinw.me/swift-macos/swiftui/text/</guid>
             <description>&lt;p&gt;A Text view displays one or more lines of read-only text.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;text1.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;text&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;text1.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;text&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct&lt;&#x2F;span&gt;&lt;span&gt; ContentView: View {
@@ -2095,7 +2095,7 @@
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;font&quot;&gt;Font&lt;&#x2F;h2&gt;
 &lt;p&gt;Use the font instance method to apply a specific font to an individual Text view.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;text2.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;text font&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;text2.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;text font&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct&lt;&#x2F;span&gt;&lt;span&gt; ContentView: View {
@@ -2144,7 +2144,7 @@
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;styles&quot;&gt;Styles&lt;&#x2F;h2&gt;
 &lt;p&gt;The Text view in SwiftUI provides several modifiers to customize the appearance and style of the text.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;text3.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;text styles&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;text3.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;text styles&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct&lt;&#x2F;span&gt;&lt;span&gt; ContentView: View {
@@ -2172,7 +2172,7 @@
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;vertical-text&quot;&gt;Vertical text&lt;&#x2F;h2&gt;
 &lt;p&gt;Vertical text can be accomplished by rotating a text view 90 degrees. To rotate the frame of the text view, the fixed size modifier must be implemented along with defining the frame size.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;text4.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;vertical text&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;text4.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;vertical text&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct&lt;&#x2F;span&gt;&lt;span&gt; ContentView: View {
@@ -2198,7 +2198,7 @@
             <link>https://gavinw.me/swift-macos/swiftui/textfield/</link>
             <guid>https://gavinw.me/swift-macos/swiftui/textfield/</guid>
             <description>&lt;p&gt;The TextField structure is a control that provides an editable text field. Various modifiers are available to customize the appearance and text alignment. Actions can be performed when editing begins and ends for the text field or when the return key is pressed.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;textfield.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;text field&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;textfield.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;text field&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct&lt;&#x2F;span&gt;&lt;span&gt; ContentView: View {
@@ -2249,7 +2249,7 @@
             <link>https://gavinw.me/swift-macos/swiftui/three-column-nav/</link>
             <guid>https://gavinw.me/swift-macos/swiftui/three-column-nav/</guid>
             <description>&lt;p&gt;A three column NavigationView is created using a similar approach as the two column NavigationView. The middle column has a fixed minimum width of 200 but the frame&#x27;s minWidth can be specified with a value greater than 200.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;three-column-nav.png&quot; style=&quot;max-width:600px;&quot; alt=&quot;three column navigation&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;three-column-nav.png&quot; style=&quot;max-width:600px;&quot; alt=&quot;three column navigation&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct&lt;&#x2F;span&gt;&lt;span&gt; Group {
@@ -2326,7 +2326,7 @@
             <link>https://gavinw.me/swift-macos/swiftui/toggle-animation/</link>
             <guid>https://gavinw.me/swift-macos/swiftui/toggle-animation/</guid>
             <description>&lt;p&gt;An example of fading text in and out using a toggle is given below. Without the animation modifier, the text would just appear or disappear below the toggle button.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;toggle-animation.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;toggle animate&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;toggle-animation.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;toggle animate&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct&lt;&#x2F;span&gt;&lt;span&gt; ContentView: View {
@@ -2353,7 +2353,7 @@
             <link>https://gavinw.me/swift-macos/swiftui/toolbar-dropdown/</link>
             <guid>https://gavinw.me/swift-macos/swiftui/toolbar-dropdown/</guid>
             <description>&lt;p&gt;Place a menu in a toolbar item to display a dropdown when the toolbar item is clicked.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;toolbar-dropdown.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;toolbar dropdown&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;toolbar-dropdown.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;toolbar dropdown&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct&lt;&#x2F;span&gt;&lt;span&gt; ContentView: View {
@@ -2383,7 +2383,7 @@
             <link>https://gavinw.me/swift-macos/swiftui/two-column-nav/</link>
             <guid>https://gavinw.me/swift-macos/swiftui/two-column-nav/</guid>
             <description>&lt;p&gt;A two column NavigationView creates a sidebar with a list of items and a content view. In the example shown below, selecting an item in the sidebar will change the content view. An @AppStorage property is used to remember the selected item.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;two-column-nav1.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;two column navigation&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;two-column-nav1.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;two column navigation&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct&lt;&#x2F;span&gt;&lt;span&gt; ViewA: View {
@@ -2433,7 +2433,7 @@
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h2 id=&quot;fill-content-view&quot;&gt;Fill content view&lt;&#x2F;h2&gt;
 &lt;p&gt;To fill the entire content view, set the frame&#x27;s max width and max height to infinity. This is demonstarated by the red and orange views shown below.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;two-column-nav2.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;two column navigation&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;two-column-nav2.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;two column navigation&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct&lt;&#x2F;span&gt;&lt;span&gt; RedView: View {
@@ -2560,7 +2560,7 @@
 &lt;&#x2F;span&gt;&lt;span&gt;    }
 &lt;&#x2F;span&gt;&lt;span&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;viewbuilder.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;view builder&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;viewbuilder.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;view builder&quot;&gt;&lt;&#x2F;p&gt;
 </description>
         </item>
         <item>
@@ -2595,7 +2595,7 @@
 &lt;&#x2F;span&gt;&lt;span&gt;    }
 &lt;&#x2F;span&gt;&lt;span&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;viewtapgesture.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;view tap gesture&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;viewtapgesture.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;view tap gesture&quot;&gt;&lt;&#x2F;p&gt;
 </description>
         </item>
         <item>
@@ -2748,7 +2748,7 @@
             <link>https://gavinw.me/swift-macos/swiftui/window-open/</link>
             <guid>https://gavinw.me/swift-macos/swiftui/window-open/</guid>
             <description>&lt;p&gt;To open a window using SwiftUI, first add a WindowGroup that will display the window&#x27;s view. Use the handlesExternalEvents modifier to indicate the event that is used to display the window.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;window-open1.png&quot; style=&quot;max-width:600px;&quot; alt=&quot;open a window&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;window-open1.png&quot; style=&quot;max-width:600px;&quot; alt=&quot;open a window&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;@main
@@ -2794,7 +2794,7 @@
 &lt;&#x2F;span&gt;&lt;span&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Finally, to get all of this to work properly, define the URL scheme in the Xcode project&#x27;s settings at Target → Info → URL Types.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;window-open2.png&quot; style=&quot;max-width:1000px;&quot; alt=&quot;url scheme&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;window-open2.png&quot; style=&quot;max-width:1000px;&quot; alt=&quot;url scheme&quot;&gt;&lt;&#x2F;p&gt;
 </description>
         </item>
         <item>
@@ -2804,7 +2804,7 @@
             <guid>https://gavinw.me/swift-macos/swiftui/window-toolbar-style/</guid>
             <description>&lt;p&gt;The window and toolbar style can be defined with the windowStyle() and windowToolbarStyle() modifiers for the WindowGroup in the main app struct. Some of the styles are demonstrated below.&lt;&#x2F;p&gt;
 &lt;p&gt;This example shows the default window and toolbar styles.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;windowstyle1.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;default window style&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;windowstyle1.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;default window style&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;@main
@@ -2819,7 +2819,7 @@
 &lt;&#x2F;span&gt;&lt;span&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;A window with a unified compact toolbar is shown below.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;windowstyle2.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;unified compact window style&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;windowstyle2.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;unified compact window style&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;@main
@@ -2834,7 +2834,7 @@
 &lt;&#x2F;span&gt;&lt;span&gt;}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Lastly, a window with a hidden title bar and a unified compact toolbar is demonstrated.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;windowstyle3.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;hidden title window style&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;windowstyle3.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;hidden title window style&quot;&gt;&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;@main
@@ -2981,7 +2981,7 @@
             <link>https://gavinw.me/swift-macos/swift/metal-particles/</link>
             <guid>https://gavinw.me/swift-macos/swift/metal-particles/</guid>
             <description>&lt;p&gt;This example uses Metal to draw particles (pixels) in a view. The particles move throughout the view based on their position and velocity. This example is inspired by the &lt;a href=&quot;https:&#x2F;&#x2F;metalkit.org&#x2F;2017&#x2F;11&#x2F;30&#x2F;working-with-particles-in-metal-part-3&#x2F;&quot;&gt;Working with Particles in Metal part 3&lt;&#x2F;a&gt; article by Marius Horga. However, this example is implemented with SwiftUI for macOS whereas Marius&#x27; example runs in an Xcode playground.&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;metal-particles.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;metal particles&quot;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;swift-macos&#x2F;img&#x2F;metal-particles.png&quot; style=&quot;max-width:400px;&quot; alt=&quot;metal particles&quot;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;The main view and window is setup in the SwiftUI ContentView.&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;swift&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-swift &quot;&gt;&lt;code class=&quot;language-swift&quot; data-lang=&quot;swift&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;SwiftUI
 &lt;&#x2F;span&gt;&lt;span&gt;

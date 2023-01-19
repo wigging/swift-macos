@@ -5,7 +5,7 @@ date = 2022-11-30
 
 A two column `NavigationSplitView` creates a sidebar with a list of items and a detail view. In the example shown below, selecting an item in the sidebar will change the contents of the detail view. Notice the `SidebarCommands()` enables Hide Sidebar and Show Sidebar items in the View menu.
 
-<p><img src="/img/twocol-navsplit1.png" style="max-width:500px;" alt="two column navsplit"></p>
+<p><img src="/swift-macos/img/twocol-navsplit1.png" style="max-width:500px;" alt="two column navsplit"></p>
 
 ```swift
 import SwiftUI
@@ -109,7 +109,7 @@ struct ContentView: View {
 
 Set a fixed width for the sidebar column using the `navigationSplitViewColumnWidth` modifier function.
 
-<p><img src="/img/twocol-navsplit2.png" style="max-width:500px;" alt="two column navsplit"></p>
+<p><img src="/swift-macos/img/twocol-navsplit2.png" style="max-width:500px;" alt="two column navsplit"></p>
 
 ```swift
 struct ContentView: View {
@@ -155,7 +155,7 @@ struct ContentView: View {
 
 To fix the size of the window, set the resizability of the main window group as shown below. Next, to fill the entire detail view column, set the frame's max width and max height to infinity for each view. Use the `navigationTitle` to change the window title based on the selected view.
 
-<p><img src="/img/twocol-navsplit3.png" style="max-width:500px;" alt="two column navsplit"></p>
+<p><img src="/swift-macos/img/twocol-navsplit3.png" style="max-width:500px;" alt="two column navsplit"></p>
 
 ```swift
 import SwiftUI

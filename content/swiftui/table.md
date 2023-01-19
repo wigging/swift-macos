@@ -5,7 +5,7 @@ date = 2022-11-13
 
 A Table presents rows and columns of data that can be selected and sorted. A basic example is shown below.
 
-<p><img src="/img/table1.png" style="max-width:400px;" alt="basic table"></p>
+<p><img src="/swift-macos/img/table1.png" style="max-width:400px;" alt="basic table"></p>
 
 ```swift
 import SwiftUI
@@ -36,7 +36,7 @@ struct ContentView: View {
 
 To enable selectable rows in the table, use a selection variable. Select multiple rows by clicking rows while holding the command or shift key. Or click and drag the cursor across multiple rows.
 
-<p><img src="/img/table2.png" style="max-width:400px;" alt="table selection"></p>
+<p><img src="/swift-macos/img/table2.png" style="max-width:400px;" alt="table selection"></p>
 
 ```swift
 import SwiftUI
@@ -75,7 +75,7 @@ struct ContentView: View {
 
 Sort a table by binding to an array of sort descriptors. Click the column header to sort the table based on that column's key path.
 
-<p><img src="/img/table3.png" style="max-width:400px;" alt="table sort"></p>
+<p><img src="/swift-macos/img/table3.png" style="max-width:400px;" alt="table sort"></p>
 
 ```swift
 import SwiftUI

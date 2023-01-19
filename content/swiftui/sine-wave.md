@@ -5,7 +5,7 @@ date = 2022-11-13
 
 To draw a sine wave, create a shape that draws a line using x and y values. The values must be converted to the proper points within the view's frame. Markers represent points on the drawn line.
 
-<p><img src="/img/sine-wave1.png" style="max-width:400px;" alt="sine wave"></p>
+<p><img src="/swift-macos/img/sine-wave1.png" style="max-width:400px;" alt="sine wave"></p>
 
 ```swift
 import SwiftUI
@@ -125,7 +125,7 @@ struct ContentView: View {
 
 The Python example below provides a comparison to the Swift version.
 
-<p><img src="/img/sine-wave2.png" style="max-width:400px;" alt="sine wave"></p>
+<p><img src="/swift-macos/img/sine-wave2.png" style="max-width:400px;" alt="sine wave"></p>
 
 ```swift
 import numpy as np

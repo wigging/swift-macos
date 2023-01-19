@@ -5,7 +5,7 @@ date = 2022-11-13
 
 The stepper control increments and decrements a value. A closed range can be used to limit the applicable stepper values.
 
-<p><img src="/img/stepper.png" style="max-width:400px;" alt="stepper"></p>
+<p><img src="/swift-macos/img/stepper.png" style="max-width:400px;" alt="stepper"></p>
 
 ```swift
 import SwiftUI
