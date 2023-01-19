@@ -1,10 +1,14 @@
 # 🍎 🖥 Swift Programming for macOS
 
-There are plenty of books, videos, and online resources for developing iOS apps. Despite the fact that iPhone and iPad apps require a Mac for code development, there is very little information about actually creating native Mac applications. The examples in this repository demonstrate various aspects of Mac app development using the latest versions of Swift and SwiftUI. Hopefully the examples will provide a useful resource for Mac developers. The examples are discussed on my personal website at https://gavinw.me.
+There are plenty of books, videos, and online resources for developing iOS apps. Despite the fact that iPhone and iPad apps require a Mac for code development, there is very little information about actually creating native Mac applications. The examples in this repository and the accompanying website demonstrate various aspects of Mac app development using the latest versions of Swift and SwiftUI. Hopefully the examples and website will provide a useful resource for Mac developers. The website is available at https://gavinw.me/swift-macos.
 
 ## Examples
 
 Example code is located in the `swift-scripts` and `xcode-projects` folders.
+
+## Website
+
+The website is generated with [Zola](https://www.getzola.org) using the `content`, `static`, `templates` folders, and the `config.toml` file. It is hosted with GitHub Pages from the `docs` folder.
 
 ## Contributing
 
