@@ -60,4 +60,4 @@ struct ContentView: View {
 
 Finally, to get all of this to work properly, define the URL scheme in the Xcode project's settings at Target &rarr; Info &rarr; URL Types.
 
-<p><img src="../img/window-open2.png" style="max-width:1000px;" alt="url scheme"></p>
+<img src="../img/window-open2.png" style="max-width:1000px;" alt="url scheme">

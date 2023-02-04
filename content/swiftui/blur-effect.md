@@ -1,6 +1,6 @@
 ---
 title: Blur effect
-date: November 13, 2022
+date: February 4, 2023
 ---
 
 The blur modifier, denoted by `.blur`, can be used to blur a view.
@@ -8,7 +8,7 @@ The blur modifier, denoted by `.blur`, can be used to blur a view.
 <p><img src="../img/blur-effect1.png" style="max-width:400px;" alt="blur effect"></p>
 <p><img src="../img/blur-effect2.png" style="max-width:400px;" alt="blur effect"></p>
 
-```swift
+``` { .swift .pre1000 }
 import SwiftUI
 
 struct ContentView: View {

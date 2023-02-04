@@ -114,7 +114,7 @@ kernel void adder(
 
 Next, the adder kernel function is implemented in the Metal compute pipeline as shown below.
 
-```swift
+``` { .swift .pre1000 }
 import MetalKit
 
 private func setupMetal(arr1: [Float], arr2: [Float]) -> (MTLCommandBuffer?, MTLBuffer?) {

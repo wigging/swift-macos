@@ -5,6 +5,27 @@
     "feed_url": "https://gavinw.me/swift-macos/feed.json",
     "items": [
         {
+            "id": "https://gavinw.me/swift-macos/swiftui/blur-effect.html",
+            "url": "https://gavinw.me/swift-macos/swiftui/blur-effect.html",
+            "title": "Blur effect",
+            "date_published": "2023-02-04T00:00:00Z",
+            "content_html": "<p>The blur modifier, denoted by <code>.blur</code>, can be used to blur a view.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/blur-effect.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swiftui/sine-wave.html",
+            "url": "https://gavinw.me/swift-macos/swiftui/sine-wave.html",
+            "title": "Sine wave",
+            "date_published": "2023-02-04T00:00:00Z",
+            "content_html": "<p>To draw a sine wave, create a shape that draws a line using x and y values. The values must be converted to the proper points within the view's frame. Markers represent points on the drawn line.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/sine-wave.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swiftui/grid-lines.html",
+            "url": "https://gavinw.me/swift-macos/swiftui/grid-lines.html",
+            "title": "Grid lines",
+            "date_published": "2023-02-04T00:00:00Z",
+            "content_html": "<p>A GeometryReader can be used to equally space lines in a view even when that view changes size. This is accomplished by using the width and height of the container view to determine the spacing of the lines.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/grid-lines.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://gavinw.me/swift-macos/swift/element-array-addition.html",
             "url": "https://gavinw.me/swift-macos/swift/element-array-addition.html",
             "title": "Element-wise array addition",
@@ -187,25 +208,11 @@
             "content_html": "<p>An Image view is used to display an image. For the example below, an image named \"homer\" is added to the Assets catalog then the image is displayed in the window while preserving its aspect ratio.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/images-symbols.html\">Continue reading...</a></p>"
         },
         {
-            "id": "https://gavinw.me/swift-macos/swiftui/blur-effect.html",
-            "url": "https://gavinw.me/swift-macos/swiftui/blur-effect.html",
-            "title": "Blur effect",
-            "date_published": "2022-11-13T00:00:00Z",
-            "content_html": "<p>The blur modifier, denoted by <code>.blur</code>, can be used to blur a view.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/blur-effect.html\">Continue reading...</a></p>"
-        },
-        {
             "id": "https://gavinw.me/swift-macos/swiftui/stepper.html",
             "url": "https://gavinw.me/swift-macos/swiftui/stepper.html",
             "title": "Stepper",
             "date_published": "2022-11-13T00:00:00Z",
             "content_html": "<p>The stepper control increments and decrements a value. A closed range can be used to limit the applicable stepper values.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/stepper.html\">Continue reading...</a></p>"
-        },
-        {
-            "id": "https://gavinw.me/swift-macos/swiftui/sine-wave.html",
-            "url": "https://gavinw.me/swift-macos/swiftui/sine-wave.html",
-            "title": "Sine wave",
-            "date_published": "2022-11-13T00:00:00Z",
-            "content_html": "<p>To draw a sine wave, create a shape that draws a line using x and y values. The values must be converted to the proper points within the view's frame. Markers represent points on the drawn line.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/sine-wave.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/swift-macos/swiftui/sidebar-disclosuregroup.html",
@@ -255,13 +262,6 @@
             "title": "Cursors",
             "date_published": "2022-11-13T00:00:00Z",
             "content_html": "<p>The mouse pointer (or cursor) is represented by an arrow on the screen. Different cursors are available in macOS to indicate actions that the user can take with the mouse. See the <a href=\"https://developer.apple.com/documentation/appkit/nscursor\">NSCursor documentation</a> for a list of all the available cursors.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/cursors.html\">Continue reading...</a></p>"
-        },
-        {
-            "id": "https://gavinw.me/swift-macos/swiftui/grid-lines.html",
-            "url": "https://gavinw.me/swift-macos/swiftui/grid-lines.html",
-            "title": "Grid lines",
-            "date_published": "2022-11-13T00:00:00Z",
-            "content_html": "<p>A GeometryReader can be used to equally space lines in a view even when that view changes size. This is accomplished by using the width and height of the container view to determine the spacing of the lines.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/grid-lines.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/swift-macos/swift/dictionaries.html",
