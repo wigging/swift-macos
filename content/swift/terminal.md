@@ -1,7 +1,7 @@
-+++
-title = "Terminal setup and commands"
-date = 2022-11-10
-+++
+---
+title: Terminal setup and commands
+date: November 10, 2022
+---
 
 Mac developers often work in the Terminal to use the Swift package manager, install macOS packages with Homebrew, collaborate on projects with Git and GitHub, run server side Swift code, etc. Below are some tips for working in the macOS Terminal.
 

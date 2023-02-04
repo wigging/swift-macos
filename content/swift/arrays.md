@@ -1,7 +1,7 @@
-+++
-title = "Arrays"
-date = 2022-11-27
-+++
+---
+title: Arrays
+date: November 27, 2022
+---
 
 An array in Swift is an ordered collection of values. It is written as `Array<Element>` or in a shorthand form using square brackets `[Element]` where element is the type of values stored in the array.
 

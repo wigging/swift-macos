@@ -1,7 +1,7 @@
-+++
-title = "Dictionaries"
-date = 2022-11-12
-+++
+---
+title: Dictionaries
+date: November 12, 2022
+---
 
 A dictionary in Swift is a list of key-value pairs separated by colons and surrounded by square brackets such as `[key: value]`. Values returned from a dictionary are optional because the key may not exist in the dictionary.
 

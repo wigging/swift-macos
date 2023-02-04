@@ -1,11 +1,11 @@
-+++
-title = "LabeledContent"
-date = 2022-11-13
-+++
+---
+title: LabeledContent
+date: November 13, 2022
+---
 
 The LabeledContent view is comprised of a label and content. Usually, it displays the label on the leading edge and the content on the trailing edge. This is similar to using an HStack containing two views.
 
-<p><img src="/swift-macos/img/labeledcontent.png" style="max-width:300px;" alt="labeled content"></p>
+<p><img src="../img/labeledcontent.png" style="max-width:300px;" alt="labeled content"></p>
 
 ```swift
 import SwiftUI

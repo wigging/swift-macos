@@ -1,7 +1,7 @@
-+++
-title = "View Tap Gesture"
-date = 2022-11-13
-+++
+---
+title: View Tap Gesture
+date: November 13, 2022
+---
 
 Use a view's tap gesture modifier to perform an action when the view is tapped (clicked). The count parameter defines how many taps (or clicks) are needed to perform the action.
 
@@ -33,4 +33,4 @@ struct ContentView: View {
 }
 ```
 
-<p><img src="/swift-macos/img/viewtapgesture.png" style="max-width:400px;" alt="view tap gesture"></p>
+<p><img src="../img/viewtapgesture.png" style="max-width:400px;" alt="view tap gesture"></p>

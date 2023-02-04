@@ -1,7 +1,7 @@
-+++
-title = "Window size"
-date = 2022-11-17
-+++
+---
+title: Window size
+date: November 17, 2022
+---
 
 The desired window size is determined by the resizability of the WindowGroup. As shown below, the resizability of the window is based on the ContentView.
 
@@ -36,7 +36,7 @@ struct ContentView: View {
 }
 ```
 
-<p><img src="/swift-macos/img/window-size1.png" style="max-width:300px;" alt="window size"></p>
+<p><img src="../img/window-size1.png" style="max-width:300px;" alt="window size"></p>
 
 A resizable window is created with the example shown below. Its minimum size is 200x200 and its maximum size is 500x400.
 
@@ -55,4 +55,4 @@ struct ContentView: View {
 }
 ```
 
-<p><img src="/swift-macos/img/window-size2.png" style="max-width:500px;" alt="window size"></p>
+<p><img src="../img/window-size2.png" style="max-width:500px;" alt="window size"></p>

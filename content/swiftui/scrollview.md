@@ -1,11 +1,11 @@
-+++
-title = "ScrollView"
-date = 2022-11-13
-+++
+---
+title: ScrollView
+date: November 13, 2022
+---
 
 The scroll view displays its content within a scrollable area of the window.
 
-<p><img src="/swift-macos/img/scrollview.png" style="max-width:400px;" alt="scroll view"></p>
+<p><img src="../img/scrollview.png" style="max-width:400px;" alt="scroll view"></p>
 
 ```swift
 import SwiftUI

@@ -1,7 +1,7 @@
-+++
-title = "Strings"
-date = 2022-11-12
-+++
+---
+title: Strings
+date: November 12, 2022
+---
 
 A string in Swift is represented by characters wrapped with double quotation marks `" "`. Multiline strings are wrapped with three double quotation marks `""" """`. Use a backslash `\` to ignore a line break in a multiline string.
 

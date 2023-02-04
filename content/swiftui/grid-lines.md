@@ -1,11 +1,11 @@
-+++
-title = "Grid lines"
-date = 2022-11-13
-+++
+---
+title: Grid lines
+date: November 13, 2022
+---
 
 A GeometryReader can be used to equally space lines in a view even when that view changes size. This is accomplished by using the width and height of the container view to determine the spacing of the lines.
 
-<p><img src="/swift-macos/img/grid-lines.png" style="max-width:400px;" alt="grid lines"></p>
+<p><img src="../img/grid-lines.png" style="max-width:400px;" alt="grid lines"></p>
 
 ```swift
 import SwiftUI

@@ -1,7 +1,7 @@
-+++
-title = "Element-wise array addition"
-date = 2023-01-16
-+++
+---
+title: Element-wise array addition
+date: January 16, 2023
+---
 
 There are several ways to perform element-wise array addition with Swift arrays. One approach is to use a for-loop, another approach is to use the Accelerate framework, and yet another approach is to use a Metal GPU compute kernel. An example of each approach is given below and an elapsed time comparison for adding two large arrays is given in the Summary section.
 

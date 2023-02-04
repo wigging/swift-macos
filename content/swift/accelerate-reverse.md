@@ -1,7 +1,7 @@
-+++
-title = "Reverse array elements"
-date = 2022-11-11
-+++
+---
+title: Reverse array elements
+date: November 11, 2022
+---
 
 Reverse the order of elements in an array using the vDSP.reverse function. Values in the array must be Float or Double.
 

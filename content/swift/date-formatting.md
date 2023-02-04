@@ -1,7 +1,7 @@
-+++
-title = "Date formatting"
-date = 2022-11-12
-+++
+---
+title: Date formatting
+date: November 12, 2022
+---
 
 Examples of creating a formatted date string are shown below. The output of each print function is given as a comment below the function.
 

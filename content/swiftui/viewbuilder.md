@@ -1,7 +1,7 @@
-+++
-title = "ViewBuilder"
-date = 2022-11-13
-+++
+---
+title: ViewBuilder
+date: November 13, 2022
+---
 
 The `@ViewBuilder` attribute can be used to build views from closures. To demonstrate, three views are defined as shown below:
 
@@ -75,4 +75,4 @@ struct ContentView: View {
 }
 ```
 
-<p><img src="/swift-macos/img/viewbuilder.png" style="max-width:400px;" alt="view builder"></p>
+<p><img src="../img/viewbuilder.png" style="max-width:400px;" alt="view builder"></p>

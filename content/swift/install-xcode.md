@@ -1,7 +1,7 @@
-+++
-title = "Install Xcode"
-date = 2022-11-09
-+++
+---
+title: Install Xcode
+date: November 9, 2022
+---
 
 The first step (other than getting a Mac) is to download Xcode from the Mac App Store. Visit [swift.org](https://swift.org) for instructions on how to install Swift on other platforms such as Linux and Windows.
 

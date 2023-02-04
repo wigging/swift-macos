@@ -1,7 +1,7 @@
-+++
-title = "Comments"
-date = 2022-11-12
-+++
+---
+title: Comments
+date: November 12, 2022
+---
 
 Single-line comments begin with two forward-slashes `//` while multiline comments are wrapped with forward-slashes and asterisks such as `/* */`.
 

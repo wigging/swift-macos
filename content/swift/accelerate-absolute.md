@@ -1,7 +1,7 @@
-+++
-title = "Absolute value"
-date = 2022-11-11
-+++
+---
+title: Absolute value
+date: November 11, 2022
+---
 
 Get the absolute values of a vector using the vDSP.absolute function.
 

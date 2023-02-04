@@ -1,7 +1,7 @@
-+++
-title = "Range"
-date = 2022-11-12
-+++
+---
+title: Range
+date: November 12, 2022
+---
 
 Check if a value is within a given range using the contains method.
 

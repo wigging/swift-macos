@@ -1,41 +1,63 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-{% block content %}
-<div class="row">
-<div class="col">
-    <h1 class="text-center">Swift Programming for macOS<br>🍎 🖥</h1>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
-    <p>There are plenty of books, videos, and online resources for developing iOS apps. Despite the fact that iPhone and iPad apps require a Mac for code development, there is little information about actually creating native Mac applications. The examples discussed below demonstrate various aspects of Mac app development using the latest versions of Swift and SwiftUI. Hopefully these examples will provide a useful resource for Mac developers.</p>
+    <!-- JSON feed -->
+    <link href="https://gavinw.me/swift-macos/feed.json" rel="alternate" type="application/feed+json" title="Swift macOS">
 
-    <p>This website and example code are available on <a href="https://github.com/wigging/swift-macos">GitHub</a>. An RSS feed is available for subscribing to new content and updates. Questions, comments, and other feedback can be sent via <a href="mailto:wiggingATmeDOTcom" onclick = "this.href=this.href.replace(/AT/,'&#64;').replace(/DOT/,'&#46;')">Email</a>, <a href="https://fosstodon.org/@wigging">Mastodon</a>, or <a href="https://twitter.com/wigging">Twitter</a>. Or submit an Issue on GitHub. If you would like to support this project, donations can be made to Gavin Wiggins using <a href="https://github.com/sponsors/wigging">GitHub Sponsors</a>, <a href="https://www.patreon.com/wigging">Patreon</a>, <a href="https://www.buymeacoffee.com/wigging">Buy Me A Coffee</a>, or <a href="https://www.paypal.me/gavinwiggins">PayPal</a>. Thank you 😄.</p>
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
 
-    <h2>Swift</h2>
-    <hr>
+    <title>Swift macOS</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
 
-    {% set section = get_section(path="swift/_index.md") %}
-    <ul style="columns:2;">
-    {% for page in section.pages %}
-        <li><a href="{{ page.permalink }}">{{ page.title }}</a></li>
-    {% endfor %}
-    </ul>
+        <h1 class="text-center">Swift Programming for macOS<br>🍎 🖥</h1>
 
-    <h2>SwiftUI</h2>
-    <hr>
+        <p>There are plenty of books, videos, and online resources for developing iOS apps. Despite the fact that iPhone and iPad apps require a Mac for code development, there is little information about actually creating native Mac applications. The examples discussed below demonstrate various aspects of Mac app development using the latest versions of Swift and SwiftUI. Hopefully these examples will provide a useful resource for Mac developers.</p>
 
-    {% set section = get_section(path="swiftui/_index.md") %}
-    <ul style="columns:2;">
-    {% for page in section.pages %}
-        <li><a href="{{ page.permalink }}">{{ page.title }}</a></li>
-    {% endfor %}
-    </ul>
+        <p>This website and example code are available on <a href="https://github.com/wigging/swift-macos">GitHub</a>. An RSS feed is available for subscribing to new content and updates. Questions, comments, and other feedback can be sent via <a href="mailto:wiggingATmeDOTcom" onclick = "this.href=this.href.replace(/AT/,'&#64;').replace(/DOT/,'&#46;')">Email</a>, <a href="https://fosstodon.org/@wigging">Mastodon</a>, or <a href="https://twitter.com/wigging">Twitter</a>. Or submit an Issue on GitHub. If you would like to support this project, donations can be made to Gavin Wiggins using <a href="https://github.com/sponsors/wigging">GitHub Sponsors</a>, <a href="https://www.patreon.com/wigging">Patreon</a>, <a href="https://www.buymeacoffee.com/wigging">Buy Me A Coffee</a>, or <a href="https://www.paypal.me/gavinwiggins">PayPal</a>. Thank you 😄.</p>
+
+        <p>Subscribe to this site using the <a href="https://gavinw.me/swift-macos/feed.json">JSON Feed</a>.</p>
+
+        <h2>Swift</h2>
+        <hr>
+        <ul style="columns:2;">
+        {% for page in pages %}
+        {% if page.section == 'swift' %}
+            <li><a href="{{ page.link }}">{{ page.title }}</a></li>
+        {% endif %}
+        {% endfor %}
+        </ul>
+
+        <h2>Swift UI</h2>
+        <hr>
+        <ul style="columns:2;">
+        {% for page in pages %}
+        {% if page.section == 'swiftui' %}
+            <li><a href="{{ page.link }}">{{ page.title }}</a></li>
+        {% endif %}
+        {% endfor %}
+        </ul>
+
+        </div>
+    </div>
+    <div class="row my-5">
+    <div class="col">
+        <p class="text-center small my-5">
+            Swift Programming for macOS © 2023 <br>
+            Built by <a href="https://gavinw.me">Gavin Wiggins</a>
+        </p>
+    </div>
+    </div>
 </div>
-</div>
-<div class="row my-5">
-<div class="col">
-    <p class="text-center small my-5">
-        Swift Programming for macOS © 2023 <br>
-        Built by <a href="https://gavinw.me">Gavin Wiggins</a>
-    </p>
-</div>
-</div>
-{% endblock content %}
+</body>
+</html>

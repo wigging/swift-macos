@@ -1,7 +1,7 @@
-+++
-title = "Resources"
-date = 2022-11-10
-+++
+---
+title: Resources
+date: November 10, 2022
+---
 
 There are limited resources for developing native modern Mac apps (even from Apple). But below are some links that Mac developers may find useful.
 

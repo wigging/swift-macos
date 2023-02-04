@@ -1,7 +1,7 @@
-+++
-title = "Strides"
-date = 2022-11-12
-+++
+---
+title: Strides
+date: November 12, 2022
+---
 
 Use the stride function to step over values between two limits or boundaries. The stride functions can also be used to build arrays with a certain range of numbers.
 

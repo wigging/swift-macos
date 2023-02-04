@@ -1,7 +1,7 @@
-+++
-title = "Sort array values"
-date = 2022-11-11
-+++
+---
+title: Sort array values
+date: November 11, 2022
+---
 
 Sort the values in an array by ascending or descending order. Values of the array must be Float or Double.
 
