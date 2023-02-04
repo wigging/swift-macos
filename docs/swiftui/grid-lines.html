@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- Highlightjs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <!-- JSON feed -->
+    <link href="https://gavinw.me/swift-macos/feed.json" rel="alternate" type="application/feed+json" title="Swift macOS">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles.css">
+
+    <title>Swift macOS</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+
+        <h1>Grid lines</h1>
+        <h6>November 13, 2022</h6>
+        <hr>
+
+        <p>A GeometryReader can be used to equally space lines in a view even when that view changes size. This is accomplished by using the width and height of the container view to determine the spacing of the lines.</p>
+<p><img src="../img/grid-lines.png" style="max-width:400px;" alt="grid lines"></p>
+
+<pre><code class="language-swift">import SwiftUI
+
+struct ContentView: View {
+
+    let xSteps = 5  // purple lines for x-axis grid
+    let ySteps = 4  // black lines for y-axis grid
+
+    var body: some View {
+        ZStack(alignment: .top) {
+            GeometryReader { geometry in
+                Rectangle()
+                    .fill(Color.gray)
+
+                // x-axis grid shown as purple lines
+                ForEach(0..&amp;lt;self.xSteps+1) {
+                    Rectangle()
+                        .fill(Color.purple)
+                        .frame(width: 3)
+                        .offset(x: geometry.size.width / CGFloat(self.xSteps) * CGFloat($0), y: 0.0)
+                }
+
+                // y-axis grid shown as black lines
+                ForEach(0..&amp;lt;self.ySteps+1) {
+                    Rectangle()
+                        .fill(Color.black)
+                        .frame(height: 3)
+                        .offset(x: 0.0, y: geometry.size.height / CGFloat(self.ySteps) * CGFloat($0))
+                }
+            }
+        }
+        .frame(minWidth: 400, minHeight: 300)
+        .padding()
+        .background(Color.secondary)
+    }
+}
+</code></pre>
+
+        </div>
+    </div>
+    <div class="row my-5">
+    <div class="col">
+        <p class="text-center small my-5">
+            <a href="https://gavinw.me/swift-macos/">Swift Programming for macOS</a> © 2023 <br>
+            Built by <a href="https://gavinw.me">Gavin Wiggins</a>
+        </p>
+    </div>
+    </div>
+</div>
+</body>
+</html>

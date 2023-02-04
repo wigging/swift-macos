@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- Highlightjs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <!-- JSON feed -->
+    <link href="https://gavinw.me/swift-macos/feed.json" rel="alternate" type="application/feed+json" title="Swift macOS">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles.css">
+
+    <title>Swift macOS</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+
+        <h1>Toolbar dropdown</h1>
+        <h6>November 13, 2022</h6>
+        <hr>
+
+        <p>Place a menu in a toolbar item to display a dropdown when the toolbar item is clicked.</p>
+<p><img src="../img/toolbar-dropdown.png" style="max-width:400px;" alt="toolbar dropdown"></p>
+
+<pre><code class="language-swift">import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        VStack {
+            Text(&quot;Click the toolbar item to see a dropdown menu.&quot;)
+        }
+        .toolbar {
+            ToolbarItem {
+                Menu {
+                    Button(&quot;Open in Preview&quot;, action: {})
+                    Button(&quot;Save as PDF&quot;, action: {})
+                } label: {
+                    Label(&quot;Star&quot;, systemImage: &quot;star.fill&quot;)
+                }
+            }
+        }
+        .frame(width: 400, height: 300)
+    }
+}
+</code></pre>
+
+        </div>
+    </div>
+    <div class="row my-5">
+    <div class="col">
+        <p class="text-center small my-5">
+            <a href="https://gavinw.me/swift-macos/">Swift Programming for macOS</a> © 2023 <br>
+            Built by <a href="https://gavinw.me">Gavin Wiggins</a>
+        </p>
+    </div>
+    </div>
+</div>
+</body>
+</html>

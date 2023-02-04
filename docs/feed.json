@@ -1,0 +1,379 @@
+{
+    "version": "https://jsonfeed.org/version/1.1",
+    "title": "Swift Programming for macOS",
+    "home_page_url": "https://gavinw.me/swift-macos/",
+    "feed_url": "https://gavinw.me/swift-macos/feed.json",
+    "items": [
+        {
+            "id": "https://gavinw.me/swift-macos/swift/element-array-addition.html",
+            "url": "https://gavinw.me/swift-macos/swift/element-array-addition.html",
+            "title": "Element-wise array addition",
+            "date_published": "2023-01-16T00:00:00Z",
+            "content_html": "<p>There are several ways to perform element-wise array addition with Swift arrays. One approach is to use a for-loop, another approach is to use the Accelerate framework, and yet another approach is to use a Metal GPU compute kernel. An example of each approach is given below and an elapsed time comparison for adding two large arrays is given in the Summary section.</p><p><a href=\"https://gavinw.me/swift-macos/swift/element-array-addition.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swiftui/linechart.html",
+            "url": "https://gavinw.me/swift-macos/swiftui/linechart.html",
+            "title": "Line chart",
+            "date_published": "2022-12-12T00:00:00Z",
+            "content_html": "<p>All of the examples on this page have the window resizability set to the content size. This allows the size of the window to be defined by the chart view.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/linechart.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swiftui/twocol-navsplit.html",
+            "url": "https://gavinw.me/swift-macos/swiftui/twocol-navsplit.html",
+            "title": "Two column NavigationSplitView",
+            "date_published": "2022-11-30T00:00:00Z",
+            "content_html": "<p>A two column <code>NavigationSplitView</code> creates a sidebar with a list of items and a detail view. In the example shown below, selecting an item in the sidebar will change the contents of the detail view. Notice the <code>SidebarCommands()</code> enables Hide Sidebar and Show Sidebar items in the View menu.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/twocol-navsplit.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swift/arrays.html",
+            "url": "https://gavinw.me/swift-macos/swift/arrays.html",
+            "title": "Arrays",
+            "date_published": "2022-11-27T00:00:00Z",
+            "content_html": "<p>An array in Swift is an ordered collection of values. It is written as <code>Array&lt;Element&gt;</code> or in a shorthand form using square brackets <code>[Element]</code> where element is the type of values stored in the array.</p><p><a href=\"https://gavinw.me/swift-macos/swift/arrays.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swiftui/window-size.html",
+            "url": "https://gavinw.me/swift-macos/swiftui/window-size.html",
+            "title": "Window size",
+            "date_published": "2022-11-17T00:00:00Z",
+            "content_html": "<p>The desired window size is determined by the resizability of the WindowGroup. As shown below, the resizability of the window is based on the ContentView.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/window-size.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swiftui/text.html",
+            "url": "https://gavinw.me/swift-macos/swiftui/text.html",
+            "title": "Text",
+            "date_published": "2022-11-13T00:00:00Z",
+            "content_html": "<p>A Text view displays one or more lines of read-only text.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/text.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swiftui/label.html",
+            "url": "https://gavinw.me/swift-macos/swiftui/label.html",
+            "title": "Label",
+            "date_published": "2022-11-13T00:00:00Z",
+            "content_html": "<p>Use a Label to show text and an icon side by side. The icon can be either an SF Symbol or your own image. The label can be scaled with the font modifier. A completely custom label can be created using custom views for the text and icon.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/label.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swiftui/nspasteboard.html",
+            "url": "https://gavinw.me/swift-macos/swiftui/nspasteboard.html",
+            "title": "NSPasteboard",
+            "date_published": "2022-11-13T00:00:00Z",
+            "content_html": "<p>The typical way to copy text is to select it with the mouse then press \u2318C. To do this in code, use the NSPasteboard class to transfer text to the pasteboard server.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/nspasteboard.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swiftui/viewtapgesture.html",
+            "url": "https://gavinw.me/swift-macos/swiftui/viewtapgesture.html",
+            "title": "View Tap Gesture",
+            "date_published": "2022-11-13T00:00:00Z",
+            "content_html": "<p>Use a view's tap gesture modifier to perform an action when the view is tapped (clicked). The count parameter defines how many taps (or clicks) are needed to perform the action.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/viewtapgesture.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swiftui/sidebar-toggle.html",
+            "url": "https://gavinw.me/swift-macos/swiftui/sidebar-toggle.html",
+            "title": "Sidebar toggle",
+            "date_published": "2022-11-13T00:00:00Z",
+            "content_html": "<p>A sidebar view can be displayed or hidden using the toggleSidebar() feature from an NSSplitViewController. At the time of writing this article, SwiftUI does not have this feature but hopefully an upcoming WWDC will offer a SwiftUI solution.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/sidebar-toggle.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swiftui/window-toolbar-style.html",
+            "url": "https://gavinw.me/swift-macos/swiftui/window-toolbar-style.html",
+            "title": "Window and toolbar style",
+            "date_published": "2022-11-13T00:00:00Z",
+            "content_html": "<p>The window and toolbar style can be defined with the windowStyle() and windowToolbarStyle() modifiers for the WindowGroup in the main app struct. Some of the styles are demonstrated below.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/window-toolbar-style.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swiftui/toggle-animation.html",
+            "url": "https://gavinw.me/swift-macos/swiftui/toggle-animation.html",
+            "title": "Toggle animation",
+            "date_published": "2022-11-13T00:00:00Z",
+            "content_html": "<p>An example of fading text in and out using a toggle is given below. Without the animation modifier, the text would just appear or disappear below the toggle button.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/toggle-animation.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swiftui/appstorage.html",
+            "url": "https://gavinw.me/swift-macos/swiftui/appstorage.html",
+            "title": "AppStorage",
+            "date_published": "2022-11-13T00:00:00Z",
+            "content_html": "<p>The <code>@AppStorage</code> property wrapper reads and writes values from user defaults. The example below saves a fruit name (a string) to the fruit key in user defaults. When the app is relaunched, the saved fruit name will be displayed in the text label. Enter a fruit in the text field then click the save fruit button to save a new fruit to the fruit key in user defaults.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/appstorage.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swiftui/scrollview.html",
+            "url": "https://gavinw.me/swift-macos/swiftui/scrollview.html",
+            "title": "ScrollView",
+            "date_published": "2022-11-13T00:00:00Z",
+            "content_html": "<p>The scroll view displays its content within a scrollable area of the window.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/scrollview.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swiftui/button-styles.html",
+            "url": "https://gavinw.me/swift-macos/swiftui/button-styles.html",
+            "title": "Button styles",
+            "date_published": "2022-11-13T00:00:00Z",
+            "content_html": "<p>Several built-in button styles are available for macOS such as the PlainButtonStyle, LinkButtonStyle, and BorderlessButtonStyle. The BorderedButtonStyle is also the default button style. To create a custom appearance for a button, use the ButtonStyle protocol. To fully customize the button's appearance and behavior, use the PrimitiveButtonStyle protocol.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/button-styles.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swiftui/credits.html",
+            "url": "https://gavinw.me/swift-macos/swiftui/credits.html",
+            "title": "Credits",
+            "date_published": "2022-11-13T00:00:00Z",
+            "content_html": "<p>The About window in a Mac application is viewed by selecting the app's name in the top menu bar, then choosing the About item in the menu. The image below displays Safari's About window.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/credits.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swiftui/path-markers.html",
+            "url": "https://gavinw.me/swift-macos/swiftui/path-markers.html",
+            "title": "Path markers",
+            "date_published": "2022-11-13T00:00:00Z",
+            "content_html": "<p>Markers can be added to a line path by stacking two views in a ZStack. The line is drawn as a path using LineShape while the markers (filled circles) are created in the MarkersView.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/path-markers.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swiftui/webview.html",
+            "url": "https://gavinw.me/swift-macos/swiftui/webview.html",
+            "title": "WebView",
+            "date_published": "2022-11-13T00:00:00Z",
+            "content_html": "<p>A WKWebView from the WebKit framework is used to display web content in a window. The web view can be wrapped with NSViewRepresentable to make it usable with SwiftUI. Content for the web view can be loaded from an HTML file, from a string containing HTML, or from a URL representing a website address. Don't forget to enable \"Outgoing Connections\" in the target's \"App Sandbox\"; otherwise, the website will not display in the app.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/webview.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swiftui/textfield.html",
+            "url": "https://gavinw.me/swift-macos/swiftui/textfield.html",
+            "title": "TextField",
+            "date_published": "2022-11-13T00:00:00Z",
+            "content_html": "<p>The TextField structure is a control that provides an editable text field. Various modifiers are available to customize the appearance and text alignment. Actions can be performed when editing begins and ends for the text field or when the return key is pressed.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/textfield.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swiftui/table.html",
+            "url": "https://gavinw.me/swift-macos/swiftui/table.html",
+            "title": "Table",
+            "date_published": "2022-11-13T00:00:00Z",
+            "content_html": "<p>A Table presents rows and columns of data that can be selected and sorted. A basic example is shown below.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/table.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swiftui/viewbuilder.html",
+            "url": "https://gavinw.me/swift-macos/swiftui/viewbuilder.html",
+            "title": "ViewBuilder",
+            "date_published": "2022-11-13T00:00:00Z",
+            "content_html": "<p>The <code>@ViewBuilder</code> attribute can be used to build views from closures. To demonstrate, three views are defined as shown below:</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/viewbuilder.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swiftui/three-column-nav.html",
+            "url": "https://gavinw.me/swift-macos/swiftui/three-column-nav.html",
+            "title": "Three column NavigationView",
+            "date_published": "2022-11-13T00:00:00Z",
+            "content_html": "<p>A three column NavigationView is created using a similar approach as the two column NavigationView. The middle column has a fixed minimum width of 200 but the frame's minWidth can be specified with a value greater than 200.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/three-column-nav.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swiftui/progressview.html",
+            "url": "https://gavinw.me/swift-macos/swiftui/progressview.html",
+            "title": "ProgressView",
+            "date_published": "2022-11-13T00:00:00Z",
+            "content_html": "<p>A ProgressView represents completion of a task or the occurance of an activity with an unknown completion time. A default value of 1.0 is used for the total value when tracking completion progress. As the example demonstrates below, different configurations of a progress view are possible.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/progressview.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swiftui/toolbar-dropdown.html",
+            "url": "https://gavinw.me/swift-macos/swiftui/toolbar-dropdown.html",
+            "title": "Toolbar dropdown",
+            "date_published": "2022-11-13T00:00:00Z",
+            "content_html": "<p>Place a menu in a toolbar item to display a dropdown when the toolbar item is clicked.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/toolbar-dropdown.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swiftui/picker-control.html",
+            "url": "https://gavinw.me/swift-macos/swiftui/picker-control.html",
+            "title": "Picker control",
+            "date_published": "2022-11-13T00:00:00Z",
+            "content_html": "<p>The picker control selects an item from a set of values. The appearance of the picker can be changed by using different styles and modifiers.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/picker-control.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swiftui/images-symbols.html",
+            "url": "https://gavinw.me/swift-macos/swiftui/images-symbols.html",
+            "title": "Images and symbols",
+            "date_published": "2022-11-13T00:00:00Z",
+            "content_html": "<p>An Image view is used to display an image. For the example below, an image named \"homer\" is added to the Assets catalog then the image is displayed in the window while preserving its aspect ratio.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/images-symbols.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swiftui/blur-effect.html",
+            "url": "https://gavinw.me/swift-macos/swiftui/blur-effect.html",
+            "title": "Blur effect",
+            "date_published": "2022-11-13T00:00:00Z",
+            "content_html": "<p>The blur modifier, denoted by <code>.blur</code>, can be used to blur a view.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/blur-effect.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swiftui/stepper.html",
+            "url": "https://gavinw.me/swift-macos/swiftui/stepper.html",
+            "title": "Stepper",
+            "date_published": "2022-11-13T00:00:00Z",
+            "content_html": "<p>The stepper control increments and decrements a value. A closed range can be used to limit the applicable stepper values.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/stepper.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swiftui/sine-wave.html",
+            "url": "https://gavinw.me/swift-macos/swiftui/sine-wave.html",
+            "title": "Sine wave",
+            "date_published": "2022-11-13T00:00:00Z",
+            "content_html": "<p>To draw a sine wave, create a shape that draws a line using x and y values. The values must be converted to the proper points within the view's frame. Markers represent points on the drawn line.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/sine-wave.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swiftui/sidebar-disclosuregroup.html",
+            "url": "https://gavinw.me/swift-macos/swiftui/sidebar-disclosuregroup.html",
+            "title": "Sidebar DisclosureGroup",
+            "date_published": "2022-11-13T00:00:00Z",
+            "content_html": "<p>To organize our sidebar view, we can use DisclosureGroup. We can create different sections and specify if they are expanded by default when the application launches.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/sidebar-disclosuregroup.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swiftui/prefs-window.html",
+            "url": "https://gavinw.me/swift-macos/swiftui/prefs-window.html",
+            "title": "Preferences window",
+            "date_published": "2022-11-13T00:00:00Z",
+            "content_html": "<p>A preferences window is typically used to present and configure the settings associated with a Mac application. In apps built with SwiftUI, these settings are stored and set using the AppStorage property wrapper. To add a preferenes window to your application, you need to add a Settings group to the main App struct.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/prefs-window.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swiftui/labeledcontent.html",
+            "url": "https://gavinw.me/swift-macos/swiftui/labeledcontent.html",
+            "title": "LabeledContent",
+            "date_published": "2022-11-13T00:00:00Z",
+            "content_html": "<p>The LabeledContent view is comprised of a label and content. Usually, it displays the label on the leading edge and the content on the trailing edge. This is similar to using an HStack containing two views.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/labeledcontent.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swiftui/window-open.html",
+            "url": "https://gavinw.me/swift-macos/swiftui/window-open.html",
+            "title": "Open a window",
+            "date_published": "2022-11-13T00:00:00Z",
+            "content_html": "<p>To open a window using SwiftUI, first add a WindowGroup that will display the window's view. Use the handlesExternalEvents modifier to indicate the event that is used to display the window.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/window-open.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swiftui/menu-items.html",
+            "url": "https://gavinw.me/swift-macos/swiftui/menu-items.html",
+            "title": "Menu items",
+            "date_published": "2022-11-13T00:00:00Z",
+            "content_html": "<p>Menus in Mac apps are typically located at the top of the screen in the menu bar. Menu items can be added to an app's menu using the commands modifier on the WindowGroup.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/menu-items.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swiftui/two-column-nav.html",
+            "url": "https://gavinw.me/swift-macos/swiftui/two-column-nav.html",
+            "title": "Two column NavigationView",
+            "date_published": "2022-11-13T00:00:00Z",
+            "content_html": "<p>A two column NavigationView creates a sidebar with a list of items and a content view. In the example shown below, selecting an item in the sidebar will change the content view. An @AppStorage property is used to remember the selected item.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/two-column-nav.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swiftui/cursors.html",
+            "url": "https://gavinw.me/swift-macos/swiftui/cursors.html",
+            "title": "Cursors",
+            "date_published": "2022-11-13T00:00:00Z",
+            "content_html": "<p>The mouse pointer (or cursor) is represented by an arrow on the screen. Different cursors are available in macOS to indicate actions that the user can take with the mouse. See the <a href=\"https://developer.apple.com/documentation/appkit/nscursor\">NSCursor documentation</a> for a list of all the available cursors.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/cursors.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swiftui/grid-lines.html",
+            "url": "https://gavinw.me/swift-macos/swiftui/grid-lines.html",
+            "title": "Grid lines",
+            "date_published": "2022-11-13T00:00:00Z",
+            "content_html": "<p>A GeometryReader can be used to equally space lines in a view even when that view changes size. This is accomplished by using the width and height of the container view to determine the spacing of the lines.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/grid-lines.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swift/dictionaries.html",
+            "url": "https://gavinw.me/swift-macos/swift/dictionaries.html",
+            "title": "Dictionaries",
+            "date_published": "2022-11-12T00:00:00Z",
+            "content_html": "<p>A dictionary in Swift is a list of key-value pairs separated by colons and surrounded by square brackets such as <code>[key: value]</code>. Values returned from a dictionary are optional because the key may not exist in the dictionary.</p><p><a href=\"https://gavinw.me/swift-macos/swift/dictionaries.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swift/strides.html",
+            "url": "https://gavinw.me/swift-macos/swift/strides.html",
+            "title": "Strides",
+            "date_published": "2022-11-12T00:00:00Z",
+            "content_html": "<p>Use the stride function to step over values between two limits or boundaries. The stride functions can also be used to build arrays with a certain range of numbers.</p><p><a href=\"https://gavinw.me/swift-macos/swift/strides.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swift/metal-particles.html",
+            "url": "https://gavinw.me/swift-macos/swift/metal-particles.html",
+            "title": "Particles",
+            "date_published": "2022-11-12T00:00:00Z",
+            "content_html": "<p>This example uses Metal to draw particles (pixels) in a view. The particles move throughout the view based on their position and velocity. This example is inspired by the <a href=\"https://metalkit.org/2017/11/30/working-with-particles-in-metal-part-3/\">Working with Particles in Metal part 3</a> article by Marius Horga. However, this example is implemented with SwiftUI for macOS whereas Marius' example runs in an Xcode playground.</p><p><a href=\"https://gavinw.me/swift-macos/swift/metal-particles.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swift/strings.html",
+            "url": "https://gavinw.me/swift-macos/swift/strings.html",
+            "title": "Strings",
+            "date_published": "2022-11-12T00:00:00Z",
+            "content_html": "<p>A string in Swift is represented by characters wrapped with double quotation marks <code>\" \"</code>. Multiline strings are wrapped with three double quotation marks <code>\"\"\" \"\"\"</code>. Use a backslash <code>\\</code> to ignore a line break in a multiline string.</p><p><a href=\"https://gavinw.me/swift-macos/swift/strings.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swift/comments.html",
+            "url": "https://gavinw.me/swift-macos/swift/comments.html",
+            "title": "Comments",
+            "date_published": "2022-11-12T00:00:00Z",
+            "content_html": "<p>Single-line comments begin with two forward-slashes <code>//</code> while multiline comments are wrapped with forward-slashes and asterisks such as <code>/* */</code>.</p><p><a href=\"https://gavinw.me/swift-macos/swift/comments.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swift/elapsed-time.html",
+            "url": "https://gavinw.me/swift-macos/swift/elapsed-time.html",
+            "title": "Elapsed time",
+            "date_published": "2022-11-12T00:00:00Z",
+            "content_html": "<p>Below are two examples of measuring elapsed time in Swift. The sleep function is used to delay the code execution for 4 seconds. Consequently, the elapsed time for both examples is approximately 4 seconds.</p><p><a href=\"https://gavinw.me/swift-macos/swift/elapsed-time.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swift/date-formatting.html",
+            "url": "https://gavinw.me/swift-macos/swift/date-formatting.html",
+            "title": "Date formatting",
+            "date_published": "2022-11-12T00:00:00Z",
+            "content_html": "<p>Examples of creating a formatted date string are shown below. The output of each print function is given as a comment below the function.</p><p><a href=\"https://gavinw.me/swift-macos/swift/date-formatting.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swift/range.html",
+            "url": "https://gavinw.me/swift-macos/swift/range.html",
+            "title": "Range",
+            "date_published": "2022-11-12T00:00:00Z",
+            "content_html": "<p>Check if a value is within a given range using the contains method.</p><p><a href=\"https://gavinw.me/swift-macos/swift/range.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swift/accelerate-sort.html",
+            "url": "https://gavinw.me/swift-macos/swift/accelerate-sort.html",
+            "title": "Sort array values",
+            "date_published": "2022-11-11T00:00:00Z",
+            "content_html": "<p>Sort the values in an array by ascending or descending order. Values of the array must be Float or Double.</p><p><a href=\"https://gavinw.me/swift-macos/swift/accelerate-sort.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swift/accelerate-absolute.html",
+            "url": "https://gavinw.me/swift-macos/swift/accelerate-absolute.html",
+            "title": "Absolute value",
+            "date_published": "2022-11-11T00:00:00Z",
+            "content_html": "<p>Get the absolute values of a vector using the vDSP.absolute function.</p><p><a href=\"https://gavinw.me/swift-macos/swift/accelerate-absolute.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swift/accelerate-reverse.html",
+            "url": "https://gavinw.me/swift-macos/swift/accelerate-reverse.html",
+            "title": "Reverse array elements",
+            "date_published": "2022-11-11T00:00:00Z",
+            "content_html": "<p>Reverse the order of elements in an array using the vDSP.reverse function. Values in the array must be Float or Double.</p><p><a href=\"https://gavinw.me/swift-macos/swift/accelerate-reverse.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swift/resources.html",
+            "url": "https://gavinw.me/swift-macos/swift/resources.html",
+            "title": "Resources",
+            "date_published": "2022-11-10T00:00:00Z",
+            "content_html": "<p>There are limited resources for developing native modern Mac apps (even from Apple). But below are some links that Mac developers may find useful.</p><p><a href=\"https://gavinw.me/swift-macos/swift/resources.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swift/defaults-tool.html",
+            "url": "https://gavinw.me/swift-macos/swift/defaults-tool.html",
+            "title": "Defaults command line tool",
+            "date_published": "2022-11-10T00:00:00Z",
+            "content_html": "<p>User defaults created via UserDefaults or AppStorage can be read and deleted using the defaults command line tool. This is useful to clear an app's preferences when developing in Xcode by providing the bundle identifier to the tool.</p><p><a href=\"https://gavinw.me/swift-macos/swift/defaults-tool.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swift/terminal.html",
+            "url": "https://gavinw.me/swift-macos/swift/terminal.html",
+            "title": "Terminal setup and commands",
+            "date_published": "2022-11-10T00:00:00Z",
+            "content_html": "<p>Mac developers often work in the Terminal to use the Swift package manager, install macOS packages with Homebrew, collaborate on projects with Git and GitHub, run server side Swift code, etc. Below are some tips for working in the macOS Terminal.</p><p><a href=\"https://gavinw.me/swift-macos/swift/terminal.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swift/repl.html",
+            "url": "https://gavinw.me/swift-macos/swift/repl.html",
+            "title": "Read Eval Print Loop (REPL)",
+            "date_published": "2022-11-10T00:00:00Z",
+            "content_html": "<p>The Swift Read Eval Print Loop or REPL is an interactive terminal interface for Swift. Type the swift command in the terminal to launch the REPL. The REPL prompt is represented by an angle bracket &gt;. Use the :exit or Control-D commands to exit the REPL environment.</p><p><a href=\"https://gavinw.me/swift-macos/swift/repl.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/swift/install-xcode.html",
+            "url": "https://gavinw.me/swift-macos/swift/install-xcode.html",
+            "title": "Install Xcode",
+            "date_published": "2022-11-09T00:00:00Z",
+            "content_html": "<p>The first step (other than getting a Mac) is to download Xcode from the Mac App Store. Visit <a href=\"https://swift.org\">swift.org</a> for instructions on how to install Swift on other platforms such as Linux and Windows.</p><p><a href=\"https://gavinw.me/swift-macos/swift/install-xcode.html\">Continue reading...</a></p>"
+        }
+    ]
+}

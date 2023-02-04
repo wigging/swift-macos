@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- Highlightjs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <!-- JSON feed -->
+    <link href="https://gavinw.me/swift-macos/feed.json" rel="alternate" type="application/feed+json" title="Swift macOS">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles.css">
+
+    <title>Swift macOS</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+
+        <h1>WebView</h1>
+        <h6>November 13, 2022</h6>
+        <hr>
+
+        <p>A WKWebView from the WebKit framework is used to display web content in a window. The web view can be wrapped with NSViewRepresentable to make it usable with SwiftUI. Content for the web view can be loaded from an HTML file, from a string containing HTML, or from a URL representing a website address. Don't forget to enable "Outgoing Connections" in the target's "App Sandbox"; otherwise, the website will not display in the app.</p>
+<h2>Load an HTML file</h2>
+<pre><code class="language-html">&lt;!-- page.html --&gt;
+
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;style&gt;
+    :root { color-scheme: light dark; }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello again friend 😁&lt;/h1&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+    &lt;p&gt;Done.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<pre><code class="language-swift">import SwiftUI
+import WebKit
+
+struct WebView: NSViewRepresentable {
+
+    let htmlFile: String
+
+    func makeNSView(context: Context) -&gt; WKWebView {
+
+        guard let url = Bundle.main.url(forResource: self.htmlFile, withExtension: &quot;html&quot;) else {
+            return WKWebView()
+        }
+
+        let webview = WKWebView()
+        webview.loadFileURL(url, allowingReadAccessTo: url)
+
+        return webview
+    }
+
+    func updateNSView(_ nsView: WKWebView, context: Context) { }
+}
+</code></pre>
+<pre><code class="language-swift">import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        WebView(htmlFile: &quot;page&quot;)
+            .padding()
+            .frame(width: 480, height: 600)
+    }
+}
+</code></pre>
+<h2>Load a string containing HTML</h2>
+<pre><code class="language-swift">import SwiftUI
+import WebKit
+
+struct WebView: NSViewRepresentable {
+
+    let content: String
+
+    func makeNSView(context: Context) -&gt; WKWebView {
+
+        let webview = WKWebView()
+        webview.loadHTMLString(self.content, baseURL: nil)
+        return webview
+    }
+
+    func updateNSView(_ nsView: WKWebView, context: Context) { }
+}
+</code></pre>
+<pre><code class="language-swift">import SwiftUI
+
+let htmlContent = &quot;&quot;&quot;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+    :root { color-scheme: light dark; }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello friend!&lt;/h1&gt;
+    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+    &lt;p&gt;Done.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&quot;&quot;&quot;
+
+struct ContentView: View {
+    var body: some View {
+        WebView(content: htmlContent)
+            .padding()
+            .frame(width: 480, height: 600)
+    }
+}
+</code></pre>
+<h2>Load from a URL</h2>
+<pre><code class="language-swift">import SwiftUI
+import WebKit
+
+struct WebView: NSViewRepresentable {
+
+    let url: String
+
+    func makeNSView(context: Context) -&gt; WKWebView {
+
+        guard let url = URL(string: self.url) else {
+            return WKWebView()
+        }
+
+        let webview = WKWebView()
+        let request = URLRequest(url: url)
+        webview.load(request)
+
+        return webview
+    }
+
+    func updateNSView(_ nsView: WKWebView, context: Context) { }
+}
+</code></pre>
+<pre><code class="language-swift">import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        WebView(url: &quot;https://www.apple.com&quot;)
+            .padding()
+            .frame(width: 480, height: 600)
+    }
+}
+</code></pre>
+
+        </div>
+    </div>
+    <div class="row my-5">
+    <div class="col">
+        <p class="text-center small my-5">
+            <a href="https://gavinw.me/swift-macos/">Swift Programming for macOS</a> © 2023 <br>
+            Built by <a href="https://gavinw.me">Gavin Wiggins</a>
+        </p>
+    </div>
+    </div>
+</div>
+</body>
+</html>

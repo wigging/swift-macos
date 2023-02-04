@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- Highlightjs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <!-- JSON feed -->
+    <link href="https://gavinw.me/swift-macos/feed.json" rel="alternate" type="application/feed+json" title="Swift macOS">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles.css">
+
+    <title>Swift macOS</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+
+        <h1>Images and symbols</h1>
+        <h6>November 13, 2022</h6>
+        <hr>
+
+        <p>An Image view is used to display an image. For the example below, an image named "homer" is added to the Assets catalog then the image is displayed in the window while preserving its aspect ratio.</p>
+<p><img src="../img/images-symbols1.png" style="max-width:400px;" alt="image"></p>
+
+<pre><code class="language-swift">import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        VStack {
+            Image(&quot;homer&quot;)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+        }
+        .padding()
+        .frame(width: 400, height: 300)
+    }
+}
+</code></pre>
+<h2>SF Symbols</h2>
+<p>Images can also be created using the system name of an SF Symbol. Use the <a href="https://developer.apple.com/sf-symbols/">SF Symbols app</a> to look up the names of the available system images.</p>
+<p><img src="../img/images-symbols2.png" style="max-width:400px;" alt="image sf symbols"></p>
+
+<pre><code class="language-swift">import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        VStack(spacing: 20) {
+            Text(&quot;Images as SF Symbols&quot;)
+
+            Image(systemName: &quot;trash&quot;)
+
+            Image(systemName: &quot;trash.fill&quot;)
+
+            Image(systemName: &quot;gear&quot;)
+                .font(.system(size: 32, weight: .bold))
+
+            Image(systemName: &quot;gear&quot;)
+                .imageScale(.large)
+
+            Image(systemName: &quot;paperplane.circle.fill&quot;)
+                .renderingMode(.original).font(.largeTitle)
+        }
+        .frame(width: 400, height: 300)
+    }
+}
+</code></pre>
+<h2>System images</h2>
+<p>Named images specific to macOS can be displayed using the appropriate NSImage.Name string. See <a href="https://developer.apple.com/documentation/appkit/nsimage/name">Apple's documentation</a> for a list of the available system image names.</p>
+<p><img src="../img/images-symbols3.png" style="max-width:400px;" alt="system images"></p>
+
+<pre><code class="language-swift">import SwiftUI
+
+struct ContentView: View {
+
+    let prefs = NSImage(named: NSImage.preferencesGeneralName)!
+    let user = NSImage(named: NSImage.userAccountsName)!
+    let advanced = NSImage(named: NSImage.advancedName)!
+    let computer = NSImage(named: NSImage.computerName)!
+    let folder = NSImage(named: NSImage.folderName)!
+
+    let caution = NSImage(named: NSImage.cautionName)!
+    let group = NSImage(named: NSImage.userGroupName)!
+    let guest = NSImage(named: NSImage.userGuestName)!
+    let font = NSImage(named: NSImage.fontPanelName)!
+    let info = NSImage(named: NSImage.infoName)!
+
+    var body: some View {
+        VStack {
+            Text(&quot;System images available in macOS&quot;)
+            HStack(spacing: 60) {
+                VStack(spacing: 10) {
+                    Image(nsImage: prefs)
+                    Image(nsImage: user)
+                    Image(nsImage: advanced)
+                    Image(nsImage: computer)
+                    Image(nsImage: folder)
+                }
+                VStack(spacing: 10) {
+                    Image(nsImage: caution)
+                    Image(nsImage: group)
+                    Image(nsImage: guest)
+                    Image(nsImage: font)
+                    Image(nsImage: info)
+                }
+            }
+        }
+        .frame(width: 400, height: 300)
+    }
+}
+</code></pre>
+
+        </div>
+    </div>
+    <div class="row my-5">
+    <div class="col">
+        <p class="text-center small my-5">
+            <a href="https://gavinw.me/swift-macos/">Swift Programming for macOS</a> © 2023 <br>
+            Built by <a href="https://gavinw.me">Gavin Wiggins</a>
+        </p>
+    </div>
+    </div>
+</div>
+</body>
+</html>
