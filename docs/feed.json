@@ -5,6 +5,13 @@
     "feed_url": "https://gavinw.me/swift-macos/feed.json",
     "items": [
         {
+            "id": "https://gavinw.me/swift-macos/swiftui/window-resizability.html",
+            "url": "https://gavinw.me/swift-macos/swiftui/window-resizability.html",
+            "title": "Window resizability",
+            "date_published": "2023-02-21T00:00:00Z",
+            "content_html": "<p>The desired window size is determined by the <code>windowResizability</code> method of the <code>WindowGroup</code>. The example below uses the frame of the content view to fix the window size to 300x200.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/window-resizability.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://gavinw.me/swift-macos/swiftui/blur-effect.html",
             "url": "https://gavinw.me/swift-macos/swiftui/blur-effect.html",
             "title": "Blur effect",
@@ -52,13 +59,6 @@
             "title": "Arrays",
             "date_published": "2022-11-27T00:00:00Z",
             "content_html": "<p>An array in Swift is an ordered collection of values. It is written as <code>Array&lt;Element&gt;</code> or in a shorthand form using square brackets <code>[Element]</code> where element is the type of values stored in the array.</p><p><a href=\"https://gavinw.me/swift-macos/swift/arrays.html\">Continue reading...</a></p>"
-        },
-        {
-            "id": "https://gavinw.me/swift-macos/swiftui/window-size.html",
-            "url": "https://gavinw.me/swift-macos/swiftui/window-size.html",
-            "title": "Window size",
-            "date_published": "2022-11-17T00:00:00Z",
-            "content_html": "<p>The desired window size is determined by the resizability of the WindowGroup. As shown below, the resizability of the window is based on the ContentView.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/window-size.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/swift-macos/swiftui/text.html",

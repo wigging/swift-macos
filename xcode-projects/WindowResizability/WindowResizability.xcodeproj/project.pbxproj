@@ -7,23 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AAF2F6842921D99F0001317D /* WindowSizeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF2F6832921D99F0001317D /* WindowSizeApp.swift */; };
-		AAF2F6862921D99F0001317D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF2F6852921D99F0001317D /* ContentView.swift */; };
-		AAF2F6882921D9A10001317D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAF2F6872921D9A10001317D /* Assets.xcassets */; };
-		AAF2F68B2921D9A10001317D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAF2F68A2921D9A10001317D /* Preview Assets.xcassets */; };
+		AAEE7F5829A5BB52005DE51B /* WindowResizabilityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEE7F5729A5BB52005DE51B /* WindowResizabilityApp.swift */; };
+		AAEE7F5A29A5BB52005DE51B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEE7F5929A5BB52005DE51B /* ContentView.swift */; };
+		AAEE7F5C29A5BB53005DE51B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAEE7F5B29A5BB53005DE51B /* Assets.xcassets */; };
+		AAEE7F5F29A5BB53005DE51B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAEE7F5E29A5BB53005DE51B /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AAF2F6802921D99F0001317D /* WindowSize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WindowSize.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AAF2F6832921D99F0001317D /* WindowSizeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowSizeApp.swift; sourceTree = "<group>"; };
-		AAF2F6852921D99F0001317D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		AAF2F6872921D9A10001317D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AAF2F68A2921D9A10001317D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		AAF2F68C2921D9A10001317D /* WindowSize.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WindowSize.entitlements; sourceTree = "<group>"; };
+		AAEE7F5429A5BB52005DE51B /* WindowResizability.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WindowResizability.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAEE7F5729A5BB52005DE51B /* WindowResizabilityApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowResizabilityApp.swift; sourceTree = "<group>"; };
+		AAEE7F5929A5BB52005DE51B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AAEE7F5B29A5BB53005DE51B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AAEE7F5E29A5BB53005DE51B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AAEE7F6029A5BB53005DE51B /* WindowResizability.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WindowResizability.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		AAF2F67D2921D99F0001317D /* Frameworks */ = {
+		AAEE7F5129A5BB52005DE51B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,38 +33,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AAF2F6772921D99F0001317D = {
+		AAEE7F4B29A5BB52005DE51B = {
 			isa = PBXGroup;
 			children = (
-				AAF2F6822921D99F0001317D /* WindowSize */,
-				AAF2F6812921D99F0001317D /* Products */,
+				AAEE7F5629A5BB52005DE51B /* WindowResizability */,
+				AAEE7F5529A5BB52005DE51B /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		AAF2F6812921D99F0001317D /* Products */ = {
+		AAEE7F5529A5BB52005DE51B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AAF2F6802921D99F0001317D /* WindowSize.app */,
+				AAEE7F5429A5BB52005DE51B /* WindowResizability.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AAF2F6822921D99F0001317D /* WindowSize */ = {
+		AAEE7F5629A5BB52005DE51B /* WindowResizability */ = {
 			isa = PBXGroup;
 			children = (
-				AAF2F6832921D99F0001317D /* WindowSizeApp.swift */,
-				AAF2F6852921D99F0001317D /* ContentView.swift */,
-				AAF2F6872921D9A10001317D /* Assets.xcassets */,
-				AAF2F68C2921D9A10001317D /* WindowSize.entitlements */,
-				AAF2F6892921D9A10001317D /* Preview Content */,
+				AAEE7F5729A5BB52005DE51B /* WindowResizabilityApp.swift */,
+				AAEE7F5929A5BB52005DE51B /* ContentView.swift */,
+				AAEE7F5B29A5BB53005DE51B /* Assets.xcassets */,
+				AAEE7F6029A5BB53005DE51B /* WindowResizability.entitlements */,
+				AAEE7F5D29A5BB53005DE51B /* Preview Content */,
 			);
-			path = WindowSize;
+			path = WindowResizability;
 			sourceTree = "<group>";
 		};
-		AAF2F6892921D9A10001317D /* Preview Content */ = {
+		AAEE7F5D29A5BB53005DE51B /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				AAF2F68A2921D9A10001317D /* Preview Assets.xcassets */,
+				AAEE7F5E29A5BB53005DE51B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -72,39 +72,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AAF2F67F2921D99F0001317D /* WindowSize */ = {
+		AAEE7F5329A5BB52005DE51B /* WindowResizability */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AAF2F68F2921D9A10001317D /* Build configuration list for PBXNativeTarget "WindowSize" */;
+			buildConfigurationList = AAEE7F6329A5BB53005DE51B /* Build configuration list for PBXNativeTarget "WindowResizability" */;
 			buildPhases = (
-				AAF2F67C2921D99F0001317D /* Sources */,
-				AAF2F67D2921D99F0001317D /* Frameworks */,
-				AAF2F67E2921D99F0001317D /* Resources */,
+				AAEE7F5029A5BB52005DE51B /* Sources */,
+				AAEE7F5129A5BB52005DE51B /* Frameworks */,
+				AAEE7F5229A5BB52005DE51B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = WindowSize;
-			productName = WindowSize;
-			productReference = AAF2F6802921D99F0001317D /* WindowSize.app */;
+			name = WindowResizability;
+			productName = WindowResizability;
+			productReference = AAEE7F5429A5BB52005DE51B /* WindowResizability.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		AAF2F6782921D99F0001317D /* Project object */ = {
+		AAEE7F4C29A5BB52005DE51B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1410;
-				LastUpgradeCheck = 1410;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
 				TargetAttributes = {
-					AAF2F67F2921D99F0001317D = {
-						CreatedOnToolsVersion = 14.1;
+					AAEE7F5329A5BB52005DE51B = {
+						CreatedOnToolsVersion = 14.2;
 					};
 				};
 			};
-			buildConfigurationList = AAF2F67B2921D99F0001317D /* Build configuration list for PBXProject "WindowSize" */;
+			buildConfigurationList = AAEE7F4F29A5BB52005DE51B /* Build configuration list for PBXProject "WindowResizability" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -112,42 +112,42 @@
 				en,
 				Base,
 			);
-			mainGroup = AAF2F6772921D99F0001317D;
-			productRefGroup = AAF2F6812921D99F0001317D /* Products */;
+			mainGroup = AAEE7F4B29A5BB52005DE51B;
+			productRefGroup = AAEE7F5529A5BB52005DE51B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AAF2F67F2921D99F0001317D /* WindowSize */,
+				AAEE7F5329A5BB52005DE51B /* WindowResizability */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		AAF2F67E2921D99F0001317D /* Resources */ = {
+		AAEE7F5229A5BB52005DE51B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAF2F68B2921D9A10001317D /* Preview Assets.xcassets in Resources */,
-				AAF2F6882921D9A10001317D /* Assets.xcassets in Resources */,
+				AAEE7F5F29A5BB53005DE51B /* Preview Assets.xcassets in Resources */,
+				AAEE7F5C29A5BB53005DE51B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		AAF2F67C2921D99F0001317D /* Sources */ = {
+		AAEE7F5029A5BB52005DE51B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAF2F6862921D99F0001317D /* ContentView.swift in Sources */,
-				AAF2F6842921D99F0001317D /* WindowSizeApp.swift in Sources */,
+				AAEE7F5A29A5BB52005DE51B /* ContentView.swift in Sources */,
+				AAEE7F5829A5BB52005DE51B /* WindowResizabilityApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		AAF2F68D2921D9A10001317D /* Debug */ = {
+		AAEE7F6129A5BB53005DE51B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -197,7 +197,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -207,7 +207,7 @@
 			};
 			name = Debug;
 		};
-		AAF2F68E2921D9A10001317D /* Release */ = {
+		AAEE7F6229A5BB53005DE51B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -251,7 +251,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -260,16 +260,16 @@
 			};
 			name = Release;
 		};
-		AAF2F6902921D9A10001317D /* Debug */ = {
+		AAEE7F6429A5BB53005DE51B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = WindowSize/WindowSize.entitlements;
+				CODE_SIGN_ENTITLEMENTS = WindowResizability/WindowResizability.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"WindowSize/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"WindowResizability/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -278,23 +278,23 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.GavinWiggins.WindowSize;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GavinWiggins.WindowResizability;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		AAF2F6912921D9A10001317D /* Release */ = {
+		AAEE7F6529A5BB53005DE51B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = WindowSize/WindowSize.entitlements;
+				CODE_SIGN_ENTITLEMENTS = WindowResizability/WindowResizability.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"WindowSize/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"WindowResizability/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -303,7 +303,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.GavinWiggins.WindowSize;
+				PRODUCT_BUNDLE_IDENTIFIER = com.GavinWiggins.WindowResizability;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -313,25 +313,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AAF2F67B2921D99F0001317D /* Build configuration list for PBXProject "WindowSize" */ = {
+		AAEE7F4F29A5BB52005DE51B /* Build configuration list for PBXProject "WindowResizability" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AAF2F68D2921D9A10001317D /* Debug */,
-				AAF2F68E2921D9A10001317D /* Release */,
+				AAEE7F6129A5BB53005DE51B /* Debug */,
+				AAEE7F6229A5BB53005DE51B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AAF2F68F2921D9A10001317D /* Build configuration list for PBXNativeTarget "WindowSize" */ = {
+		AAEE7F6329A5BB53005DE51B /* Build configuration list for PBXNativeTarget "WindowResizability" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AAF2F6902921D9A10001317D /* Debug */,
-				AAF2F6912921D9A10001317D /* Release */,
+				AAEE7F6429A5BB53005DE51B /* Debug */,
+				AAEE7F6529A5BB53005DE51B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = AAF2F6782921D99F0001317D /* Project object */;
+	rootObject = AAEE7F4C29A5BB52005DE51B /* Project object */;
 }

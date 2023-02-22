@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- Highlightjs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <!-- JSON feed -->
+    <link href="https://gavinw.me/swift-macos/feed.json" rel="alternate" type="application/feed+json" title="Swift macOS">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles.css">
+
+    <title>Swift macOS</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+
+        <h1>Window resizability</h1>
+        <h6>February 21, 2023</h6>
+        <hr>
+
+        <p>The desired window size is determined by the <code>windowResizability</code> method of the <code>WindowGroup</code>. The example below uses the frame of the content view to fix the window size to 300x200.</p>
+<pre><code class="language-swift">// WindowResizabilityApp.swift
+
+import SwiftUI
+
+@main
+struct WindowResizabilityApp: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+                .frame(width: 300, height: 200)
+                .background(.orange)
+        }
+        .windowResizability(.contentSize)
+    }
+}
+</code></pre>
+<pre><code class="language-swift">// ContentView.swift
+
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        VStack {
+            Image(systemName: &quot;globe&quot;).imageScale(.large)
+            Text(&quot;Hello, world!&quot;).fontWeight(.bold)
+        }
+    }
+}
+</code></pre>
+<p><img src="../img/window-resize1.png" style="max-width:300px;" alt="window size"></p>
+
+<p>In the next example, a resizable window is created by defining the minimum and maximum size of the content view's frame. The minimum window size is 200x200 and its maximum size is 500x400.</p>
+<pre><code class="language-swift">// WindowResizabilityApp.swift
+
+import SwiftUI
+
+@main
+struct WindowResizabilityApp: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+                .frame(minWidth: 200, maxWidth: 500, minHeight: 200, maxHeight: 400)
+                .background(.purple)
+        }
+        .windowResizability(.contentSize)
+    }
+}
+</code></pre>
+<pre><code class="language-swift">// ContentView.swift
+
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        VStack {
+            Image(systemName: &quot;globe&quot;).imageScale(.large)
+            Text(&quot;Hello, world!&quot;).fontWeight(.bold)
+        }
+    }
+}
+</code></pre>
+<p><img src="../img/window-resize2.png" style="max-width:500px;" alt="window size"></p>
+
+        </div>
+    </div>
+    <div class="row my-5">
+    <div class="col">
+        <p class="text-center small my-5">
+            <a href="https://gavinw.me/swift-macos/">Swift Programming for macOS</a> © 2023 <br>
+            Built by <a href="https://gavinw.me">Gavin Wiggins</a>
+        </p>
+    </div>
+    </div>
+</div>
+</body>
+</html>
