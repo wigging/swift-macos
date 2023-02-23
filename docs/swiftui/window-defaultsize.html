@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- Highlightjs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <!-- JSON feed -->
+    <link href="https://gavinw.me/swift-macos/feed.json" rel="alternate" type="application/feed+json" title="Swift macOS">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles.css">
+
+    <title>Swift macOS</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+
+        <h1>Window default size</h1>
+        <h6>February 22, 2023</h6>
+        <hr>
+
+        <p>The default window size in this example is set to 400x200. If the window size is changed by dragging the corner or side, then the new size becomes the default size when the app is relaunched. Delete the app's container to restore the app to its default state.</p>
+<pre><code class="language-swift">// WindowDefaultSizeApp.swift
+
+import SwiftUI
+
+@main
+struct WindowDefaultSizeApp: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+        .defaultSize(width: 400, height: 200)
+    }
+}
+</code></pre>
+<pre><code class="language-swift">// ContentView.swift
+
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        VStack {
+            Image(systemName: &quot;globe&quot;)
+                .imageScale(.large)
+                .foregroundColor(.accentColor)
+            Text(&quot;Hello, world!&quot;)
+                .padding(.bottom)
+            Text(&quot;&quot;&quot;
+            Reset window to default size by deleting
+            ~/Library/Containers/com.GavinWiggins.WindowDefaultSize
+            &quot;&quot;&quot;)
+        }
+        .padding()
+    }
+}
+</code></pre>
+<p><img src="../img/window-defaultsize.png" style="max-width:400px;" alt="window default size"></p>
+
+        </div>
+    </div>
+    <div class="row my-5">
+    <div class="col">
+        <p class="text-center small my-5">
+            <a href="https://gavinw.me/swift-macos/">Swift Programming for macOS</a> © 2023 <br>
+            Built by <a href="https://gavinw.me">Gavin Wiggins</a>
+        </p>
+    </div>
+    </div>
+</div>
+</body>
+</html>

@@ -5,6 +5,13 @@
     "feed_url": "https://gavinw.me/swift-macos/feed.json",
     "items": [
         {
+            "id": "https://gavinw.me/swift-macos/swiftui/window-defaultsize.html",
+            "url": "https://gavinw.me/swift-macos/swiftui/window-defaultsize.html",
+            "title": "Window default size",
+            "date_published": "2023-02-22T00:00:00Z",
+            "content_html": "<p>The default window size in this example is set to 400x200. If the window size is changed by dragging the corner or side, then the new size becomes the default size when the app is relaunched. Delete the app's container to restore the app to its default state.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/window-defaultsize.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://gavinw.me/swift-macos/swiftui/window-resizability.html",
             "url": "https://gavinw.me/swift-macos/swiftui/window-resizability.html",
             "title": "Window resizability",
