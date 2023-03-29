@@ -26,7 +26,7 @@
         <div class="col-md">
 
         <h1>Line chart</h1>
-        <h6>December 12, 2022</h6>
+        <h6>March 28, 2023</h6>
         <hr>
 
         <p>All of the examples on this page have the window resizability set to the content size. This allows the size of the window to be defined by the chart view.</p>
@@ -152,6 +152,29 @@ struct ContentView: View {
         }
         .chartXAxisLabel(&quot;The x-axis&quot;)
         .chartYAxisLabel(&quot;The y-axis&quot;)
+        .padding()
+        .frame(minWidth: 400, minHeight: 300)
+    }
+}
+</code></pre>
+<p>In this last example, the chart data is just an array of values where circle symbols represent each data point on the line.</p>
+<p><img src="../img/linechart4.png" style="max-width:400px;" alt="line chart"></p>
+
+<pre><code class="language-swift">import SwiftUI
+import Charts
+
+struct ContentView: View {
+
+    let ydata = [1, 4.5, 3, 6, 7, 5.2, 9, 12.5]
+
+    var body: some View {
+        Chart(0..&lt;ydata.count, id: \.self) { idx in
+            LineMark(
+                x: .value(&quot;X values&quot;, idx),
+                y: .value(&quot;Y values&quot;, ydata[idx])
+            )
+            .symbol(.circle)
+        }
         .padding()
         .frame(minWidth: 400, minHeight: 300)
     }

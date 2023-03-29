@@ -32,7 +32,7 @@
         <hr>
         <ul style="columns:2;">
         {% for page in pages %}
-        {% if page.section == 'swift' %}
+        {% if page.category == 'swift' %}
             <li><a href="{{ page.link }}">{{ page.title }}</a></li>
         {% endif %}
         {% endfor %}
@@ -42,7 +42,7 @@
         <hr>
         <ul style="columns:2;">
         {% for page in pages %}
-        {% if page.section == 'swiftui' %}
+        {% if page.category == 'swiftui' %}
             <li><a href="{{ page.link }}">{{ page.title }}</a></li>
         {% endif %}
         {% endfor %}

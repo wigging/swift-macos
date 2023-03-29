@@ -1,6 +1,6 @@
 ---
 title: Line chart
-date: December 12, 2022
+date: March 28, 2023
 ---
 
 All of the examples on this page have the window resizability set to the content size. This allows the size of the window to be defined by the chart view.
@@ -137,6 +137,32 @@ struct ContentView: View {
         }
         .chartXAxisLabel("The x-axis")
         .chartYAxisLabel("The y-axis")
+        .padding()
+        .frame(minWidth: 400, minHeight: 300)
+    }
+}
+```
+
+In this last example, the chart data is just an array of values where circle symbols represent each data point on the line.
+
+<p><img src="../img/linechart4.png" style="max-width:400px;" alt="line chart"></p>
+
+```swift
+import SwiftUI
+import Charts
+
+struct ContentView: View {
+
+    let ydata = [1, 4.5, 3, 6, 7, 5.2, 9, 12.5]
+
+    var body: some View {
+        Chart(0..<ydata.count, id: \.self) { idx in
+            LineMark(
+                x: .value("X values", idx),
+                y: .value("Y values", ydata[idx])
+            )
+            .symbol(.circle)
+        }
         .padding()
         .frame(minWidth: 400, minHeight: 300)
     }

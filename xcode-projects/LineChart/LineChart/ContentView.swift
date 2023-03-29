@@ -91,29 +91,51 @@ import Charts
 // Line chart example using array of tuple values and symbol
 // ---------------------------------------------------------------------------
 
-let y = [1, 4.5, 3, 6, 7, 5.2, 9, 12.5, 5]
+//let y = [1, 4.5, 3, 6, 7, 5.2, 9, 12.5, 5]
+//
+//var data: [(Int, Double)] {
+//    let x = Array(0..<y.count)
+//    return Array(zip(x, y))
+//}
+//
+//struct ContentView: View {
+//
+//    var body: some View {
+//        Chart(data, id: \.0) {
+//            LineMark(
+//                x: .value("X values", $0),
+//                y: .value("Y values", $1)
+//            )
+//            .symbol(.circle)
+//        }
+//        .chartXAxisLabel("The x-axis")
+//        .chartYAxisLabel("The y-axis")
+//        .padding()
+//        .frame(minWidth: 400, minHeight: 300)
+//    }
+//}
 
-var data: [(Int, Double)] {
-    let x = Array(0..<y.count)
-    return Array(zip(x, y))
-}
+// Line chart example using array of values and symbol
+// ---------------------------------------------------------------------------
 
 struct ContentView: View {
-
+    
+    let ydata = [1, 4.5, 3, 6, 7, 5.2, 9, 12.5]
+    
     var body: some View {
-        Chart(data, id: \.0) {
+        Chart(0..<ydata.count, id: \.self) { idx in
             LineMark(
-                x: .value("X values", $0),
-                y: .value("Y values", $1)
+                x: .value("X values", idx),
+                y: .value("Y values", ydata[idx])
             )
             .symbol(.circle)
         }
-        .chartXAxisLabel("The x-axis")
-        .chartYAxisLabel("The y-axis")
         .padding()
         .frame(minWidth: 400, minHeight: 300)
     }
 }
+
+// ---------------------------------------------------------------------------
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

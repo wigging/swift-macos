@@ -5,6 +5,13 @@
     "feed_url": "https://gavinw.me/swift-macos/feed.json",
     "items": [
         {
+            "id": "https://gavinw.me/swift-macos/swiftui/linechart.html",
+            "url": "https://gavinw.me/swift-macos/swiftui/linechart.html",
+            "title": "Line chart",
+            "date_published": "2023-03-28T00:00:00Z",
+            "content_html": "<p>All of the examples on this page have the window resizability set to the content size. This allows the size of the window to be defined by the chart view.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/linechart.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://gavinw.me/swift-macos/swiftui/window-defaultsize.html",
             "url": "https://gavinw.me/swift-macos/swiftui/window-defaultsize.html",
             "title": "Window default size",
@@ -45,13 +52,6 @@
             "title": "Element-wise array addition",
             "date_published": "2023-01-16T00:00:00Z",
             "content_html": "<p>There are several ways to perform element-wise array addition with Swift arrays. One approach is to use a for-loop, another approach is to use the Accelerate framework, and yet another approach is to use a Metal GPU compute kernel. An example of each approach is given below and an elapsed time comparison for adding two large arrays is given in the Summary section.</p><p><a href=\"https://gavinw.me/swift-macos/swift/element-array-addition.html\">Continue reading...</a></p>"
-        },
-        {
-            "id": "https://gavinw.me/swift-macos/swiftui/linechart.html",
-            "url": "https://gavinw.me/swift-macos/swiftui/linechart.html",
-            "title": "Line chart",
-            "date_published": "2022-12-12T00:00:00Z",
-            "content_html": "<p>All of the examples on this page have the window resizability set to the content size. This allows the size of the window to be defined by the chart view.</p><p><a href=\"https://gavinw.me/swift-macos/swiftui/linechart.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/swift-macos/swiftui/twocol-navsplit.html",
