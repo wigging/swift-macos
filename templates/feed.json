@@ -1,8 +1,8 @@
 {
     "version": "https://jsonfeed.org/version/1.1",
     "title": "Swift Programming for macOS",
-    "home_page_url": "https://gavinw.me/swift-macos/",
-    "feed_url": "https://gavinw.me/swift-macos/feed.json",
+    "home_page_url": "https://wigging.me/swift-macos/",
+    "feed_url": "https://wigging.me/swift-macos/feed.json",
     "items": [
     {% for feed in feeds %}
         {
