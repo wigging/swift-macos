@@ -5,6 +5,13 @@
     "feed_url": "https://wigging.me/swift-macos/feed.json",
     "items": [
         {
+            "id": "https://wigging.me/swift-macos/swift/directory-contents.html",
+            "url": "https://wigging.me/swift-macos/swift/directory-contents.html",
+            "title": "Directory contents",
+            "date_published": "2023-04-18T00:00:00Z",
+            "content_html": "<p>This example uses the <code>FileManager</code> class to list the contents of a folder (directory) located on the Desktop. The printed output from running this example as <code>main.swift</code> is also given below.</p><p><a href=\"https://wigging.me/swift-macos/swift/directory-contents.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://wigging.me/swift-macos/swiftui/linechart.html",
             "url": "https://wigging.me/swift-macos/swiftui/linechart.html",
             "title": "Line chart",
