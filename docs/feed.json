@@ -5,6 +5,13 @@
     "feed_url": "https://wigging.me/swift-macos/feed.json",
     "items": [
         {
+            "id": "https://wigging.me/swift-macos/swiftui/async-for-loop.html",
+            "url": "https://wigging.me/swift-macos/swiftui/async-for-loop.html",
+            "title": "Async for-in loop",
+            "date_published": "2023-06-13T00:00:00Z",
+            "content_html": "<p>Use an asynchronous operation to update a SwiftUI Text view from a for-in loop. In this example, the <code>step</code> variable is updated for each iteration on the main thread. This allows the variable to update the Text view.</p><p><a href=\"https://wigging.me/swift-macos/swiftui/async-for-loop.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://wigging.me/swift-macos/swift/directory-contents.html",
             "url": "https://wigging.me/swift-macos/swift/directory-contents.html",
             "title": "Directory contents",
