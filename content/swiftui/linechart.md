@@ -19,6 +19,8 @@ struct LineChartApp: App {
 }
 ```
 
+## Example 1
+
 A basic line chart using an array of structs is demonstrated below. Notice a minimum frame width and height is used so the chart will change size with the window.
 
 <p><img src="../img/linechart1.png" style="max-width:400px;" alt="line chart"></p>
@@ -61,6 +63,8 @@ struct ContentView: View {
     }
 }
 ```
+
+## Example 2
 
 In this example, a `ForEach` loop is used with an array of structs. The x and y axis labels are centered and the y axis is moved to the left side of the chart view.
 
@@ -110,6 +114,8 @@ struct ContentView: View {
 }
 ```
 
+## Example 3
+
 For this example, the chart data is provided has an array of tuple values and circle symbols represent each data point on the line.
 
 <p><img src="../img/linechart3.png" style="max-width:400px;" alt="line chart"></p>
@@ -143,7 +149,9 @@ struct ContentView: View {
 }
 ```
 
-In this last example, the chart data is just an array of values where circle symbols represent each data point on the line.
+## Example 4
+
+In this example, the chart data is just an array of values where circle symbols represent each data point on the line.
 
 <p><img src="../img/linechart4.png" style="max-width:400px;" alt="line chart"></p>
 
@@ -162,6 +170,34 @@ struct ContentView: View {
                 y: .value("Y values", ydata[idx])
             )
             .symbol(.circle)
+        }
+        .padding()
+        .frame(minWidth: 400, minHeight: 300)
+    }
+}
+```
+
+## Example 5
+
+Here is an example that uses an enumerated array for the chart data and square symbols represent each data point on the line.
+
+<p><img src="../img/linechart5.png" style="max-width:400px;" alt="line chart"></p>
+
+```swift
+import SwiftUI
+import Charts
+
+struct ContentView: View {
+
+    let numbers = [1, 4.5, 3, 6, 7, 5.2, 9, 14.5, 12]
+
+    var body: some View {
+        Chart(Array(numbers.enumerated()), id: \.offset) { index, value in
+            LineMark(
+                x: .value("Index", index),
+                y: .value("Value", value)
+            )
+            .symbol(.square)
         }
         .padding()
         .frame(minWidth: 400, minHeight: 300)
