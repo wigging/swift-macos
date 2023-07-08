@@ -5,6 +5,13 @@
     "feed_url": "https://wigging.me/swift-macos/feed.json",
     "items": [
         {
+            "id": "https://wigging.me/swift-macos/swiftui/heatmap-chart.html",
+            "url": "https://wigging.me/swift-macos/swiftui/heatmap-chart.html",
+            "title": "Heat map chart",
+            "date_published": "2023-07-08T00:00:00Z",
+            "content_html": "<p>Use a <code>RectangleMark()</code> in a Swift Chart to create a 2D heat map of data. In this example, the data is represented using a <code>Grid</code> struct that contains an array of <code>Point</code> structs. The <code>Point</code> struct defines the x and y coordinate of the associated value. The x coordinate is a range based on the number of columns, the y coordinate is a range based on the number of columns, and the value is a random number from 0 to 1. Faint lines may appear on the chart if the frame size is not evenly divisible by the number of rows and columns defined by the <code>Grid</code> struct; this is likely caused by each <code>RectangleMark()</code> not perfectly aligning to the screen pixels.</p><p><a href=\"https://wigging.me/swift-macos/swiftui/heatmap-chart.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://wigging.me/swift-macos/swiftui/async-for-loop.html",
             "url": "https://wigging.me/swift-macos/swiftui/async-for-loop.html",
             "title": "Async for-in loop",
@@ -19,11 +26,11 @@
             "content_html": "<p>This example uses the <code>FileManager</code> class to list the contents of a folder (directory) located on the Desktop. The printed output from running this example as <code>main.swift</code> is also given below.</p><p><a href=\"https://wigging.me/swift-macos/swift/directory-contents.html\">Continue reading...</a></p>"
         },
         {
-            "id": "https://wigging.me/swift-macos/swiftui/linechart.html",
-            "url": "https://wigging.me/swift-macos/swiftui/linechart.html",
+            "id": "https://wigging.me/swift-macos/swiftui/line-chart.html",
+            "url": "https://wigging.me/swift-macos/swiftui/line-chart.html",
             "title": "Line chart",
             "date_published": "2023-03-28T00:00:00Z",
-            "content_html": "<p>All of the examples on this page have the window resizability set to the content size. This allows the size of the window to be defined by the chart view.</p><p><a href=\"https://wigging.me/swift-macos/swiftui/linechart.html\">Continue reading...</a></p>"
+            "content_html": "<p>All of the examples on this page have the window resizability set to the content size. This allows the size of the window to be defined by the chart view.</p><p><a href=\"https://wigging.me/swift-macos/swiftui/line-chart.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://wigging.me/swift-macos/swiftui/window-defaultsize.html",
