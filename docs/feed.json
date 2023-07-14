@@ -5,6 +5,13 @@
     "feed_url": "https://wigging.me/swift-macos/feed.json",
     "items": [
         {
+            "id": "https://wigging.me/swift-macos/swift/arrays.html",
+            "url": "https://wigging.me/swift-macos/swift/arrays.html",
+            "title": "Arrays",
+            "date_published": "2023-07-13T00:00:00Z",
+            "content_html": "<p>An array in Swift is an ordered collection of values. It is written as <code>Array&lt;Element&gt;</code> or in a shorthand form using square brackets <code>[Element]</code> where element is the type of values stored in the array.</p><p><a href=\"https://wigging.me/swift-macos/swift/arrays.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://wigging.me/swift-macos/swiftui/heatmap-chart.html",
             "url": "https://wigging.me/swift-macos/swiftui/heatmap-chart.html",
             "title": "Heat map chart",
@@ -80,13 +87,6 @@
             "title": "Two column NavigationSplitView",
             "date_published": "2022-11-30T00:00:00Z",
             "content_html": "<p>A two column <code>NavigationSplitView</code> creates a sidebar with a list of items and a detail view. In the example shown below, selecting an item in the sidebar will change the contents of the detail view. Notice the <code>SidebarCommands()</code> enables Hide Sidebar and Show Sidebar items in the View menu.</p><p><a href=\"https://wigging.me/swift-macos/swiftui/twocol-navsplit.html\">Continue reading...</a></p>"
-        },
-        {
-            "id": "https://wigging.me/swift-macos/swift/arrays.html",
-            "url": "https://wigging.me/swift-macos/swift/arrays.html",
-            "title": "Arrays",
-            "date_published": "2022-11-27T00:00:00Z",
-            "content_html": "<p>An array in Swift is an ordered collection of values. It is written as <code>Array&lt;Element&gt;</code> or in a shorthand form using square brackets <code>[Element]</code> where element is the type of values stored in the array.</p><p><a href=\"https://wigging.me/swift-macos/swift/arrays.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://wigging.me/swift-macos/swiftui/text.html",
