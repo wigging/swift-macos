@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- Highlightjs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <!-- JSON feed -->
+    <link href="https://wigging.me/swift-macos/feed.json" rel="alternate" type="application/feed+json" title="Swift macOS">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles.css">
+
+    <title>Swift macOS</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+
+        <h1>Image from pixel data</h1>
+        <h6>July 15, 2023</h6>
+        <hr>
+
+        <p>This example demonstrates creating an image from pixel data. The first step is define the width and height of the image, then create some random data of RGB values from 0 to 255.</p>
+<pre><code class="language-swift">// Define width and height of image
+
+let width = 200
+let height = 200
+
+// Create random RGB data
+
+var pixelValues = [UInt8](repeating: 0, count: width * height * 3)
+
+for i in 0..&lt;pixelValues.count {
+    pixelValues[i] = .random(in: 0...255)
+}
+</code></pre>
+<p>Looping over the array is slow, especially for very large arrays. A better approach is to use the Accelerate framework to create the array of random RGB values.</p>
+<pre><code class="language-swift">import Accelerate
+
+// Define width and height of image
+
+let width = 200
+let height = 200
+
+// Create random RGB data
+
+let n = width * height * 3
+var x = [UInt32](repeating: 0, count: n)
+arc4random_buf(&amp;x, n * MemoryLayout&lt;UInt32&gt;.size)
+
+let y = vDSP.integerToFloatingPoint(x, floatingPointType: Float.self)
+let c = 1 / Float(UInt32.max)
+let z = vDSP.multiply(c * 255, y)
+let pixelValues = vDSP.floatingPointToInteger(z, integerType: UInt8.self, rounding: .towardNearestInteger)
+</code></pre>
+<p>After creating the RGB data (pixel values), the <code>vImage.PixelBuffer</code> from the Accelerate framework is used to create the image.</p>
+<pre><code class="language-swift">// Create the image
+
+let buffer = vImage.PixelBuffer(
+    pixelValues: pixelValues,
+    size: .init(width: width, height: height),
+    pixelFormat: vImage.Interleaved8x3.self
+)
+
+let format = vImage_CGImageFormat(
+    bitsPerComponent: 8,
+    bitsPerPixel: 8 * 3,
+    colorSpace: CGColorSpaceCreateDeviceRGB(),
+    bitmapInfo: CGBitmapInfo(rawValue: CGImageAlphaInfo.none.rawValue)
+)!
+
+let image = buffer.makeCGImage(cgImageFormat: format)!
+</code></pre>
+<p><img src="../img/image-pixel-data.png" style="max-width:200px;" alt="image pixel data"></p>
+
+        </div>
+    </div>
+    <div class="row my-5">
+    <div class="col">
+        <p class="text-center small my-5">
+            <a href="https://wigging.me/swift-macos/">Swift Programming for macOS</a> © 2023 <br>
+            Built by <a href="https://wigging.me">Gavin Wiggins</a>
+        </p>
+    </div>
+    </div>
+</div>
+</body>
+</html>

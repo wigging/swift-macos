@@ -5,6 +5,13 @@
     "feed_url": "https://wigging.me/swift-macos/feed.json",
     "items": [
         {
+            "id": "https://wigging.me/swift-macos/swift/image-pixel-data.html",
+            "url": "https://wigging.me/swift-macos/swift/image-pixel-data.html",
+            "title": "Image from pixel data",
+            "date_published": "2023-07-15T00:00:00Z",
+            "content_html": "<p>This example demonstrates creating an image from pixel data. The first step is define the width and height of the image, then create some random data of RGB values from 0 to 255.</p><p><a href=\"https://wigging.me/swift-macos/swift/image-pixel-data.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://wigging.me/swift-macos/swift/arrays.html",
             "url": "https://wigging.me/swift-macos/swift/arrays.html",
             "title": "Arrays",
