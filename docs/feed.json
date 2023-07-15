@@ -8,7 +8,7 @@
             "id": "https://wigging.me/swift-macos/swift/arrays.html",
             "url": "https://wigging.me/swift-macos/swift/arrays.html",
             "title": "Arrays",
-            "date_published": "2023-07-13T00:00:00Z",
+            "date_published": "2023-07-14T00:00:00Z",
             "content_html": "<p>An array in Swift is an ordered collection of values. It is written as <code>Array&lt;Element&gt;</code> or in a shorthand form using square brackets <code>[Element]</code> where element is the type of values stored in the array.</p><p><a href=\"https://wigging.me/swift-macos/swift/arrays.html\">Continue reading...</a></p>"
         },
         {

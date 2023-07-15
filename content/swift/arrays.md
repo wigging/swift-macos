@@ -1,6 +1,6 @@
 ---
 title: Arrays
-date: July 13, 2023
+date: July 14, 2023
 ---
 
 An array in Swift is an ordered collection of values. It is written as `Array<Element>` or in a shorthand form using square brackets `[Element]` where element is the type of values stored in the array.
@@ -50,14 +50,97 @@ print("c is \(c)")
 
 ## Random array
 
-Creating an array filled with random numbers is shown below.
+There are several approaches to creating an array of random numbers in Swift. This example creates an array filled with zeros, then assigns a random number to each element in the array. Notice the random number is within a range of values which is from 0 to 1 in this example.
 
 ```swift
-let z = (1...5).map { _ in Float.random(in: 1...10) }
+var x = [Float](repeating: 0, count: 5)
 
-print("z is \(z)")
-// z is [3.819302, 3.5558195, 3.3727653, 4.035131, 4.2416086]
+for i in 0..<x.count {
+    x[i] = .random(in: 0...1)
+}
+
+// x is [0.8209822, 0.85707325, 0.10973239, 0.119954765, 0.19724935]
 ```
+
+Another approach is to map a random number to each array element as shown in the following example. The size of the array is determined by the range that is mapped.
+
+```swift
+let x = (0..<5).map { _ in Float.random(in: 0...1) }
+
+// x is [0.4514997, 0.41597754, 0.04589182, 0.07227373, 0.9754954]
+
+let z = (1...6).map { _ in Float.random(in: 1...10) }
+
+// z is [2.7215362, 3.2972493, 2.9972453, 7.1019344, 8.892759, 3.715058]
+```
+
+However, the fastest approach for very large arrays is to use functions from the Accelerate framework. In this example, arc4random is used to assign random integers to the array. The integers are converted to Double then multiplied by a scaling factor such that the range of values are from 0 to 1.
+
+```swift
+import Accelerate
+
+let n = 5
+var x = [UInt32](repeating: 0, count: n)
+arc4random_buf(&x, n * MemoryLayout<UInt32>.size)
+
+var y = vDSP.integerToFloatingPoint(x, floatingPointType: Double.self)
+cblas_dscal(Int32(n), 1 / Double(UInt32.max), &y, 1)
+
+// y is [0.8341360464305934, 0.24041946028369002, 0.04481290514692965, 0.6746670607651274, 0.7728101240407699]
+```
+
+And yet another approach is to use the vDSP multiply function as shown below.
+
+```swift
+import Accelerate
+
+let n = 5
+var x = [UInt32](repeating: 0, count: n)
+arc4random_buf(&x, n * MemoryLayout<UInt32>.size)
+
+let y = vDSP.integerToFloatingPoint(x, floatingPointType: Double.self)
+let c = 1 / Double(UInt32.max)
+let z = vDSP.multiply(c, y)
+
+// z is [0.7841595014986023, 0.12211232844789334, 0.6589130530271011, 0.4871890585606892, 0.2029429211288092]
+```
+
+The table below compares the approaches discussed above for creating a large array that contains 1,000,000 random numbers where each random number has a value from 0 to 1. The elapsed time in seconds to create the array is given in the second column. Notice how the Accelerate examples are about 30x faster than the Swift for-loop and map examples.
+
+<table class="table table-dark table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Random array example</th>
+            <th scope="col">Elapsed time (s)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Swift for-loop</td>
+            <td>1.1609</td>
+        </tr>
+        <tr>
+            <td>Swift map</td>
+            <td>1.0556</td>
+        </tr>
+        <tr>
+            <td>Accelerate BLAS Double</td>
+            <td>0.0364</td>
+        </tr>
+        <tr>
+            <td>Accelerate BLAS Float</td>
+            <td>0.0374</td>
+        </tr>
+        <tr>
+            <td>Accelerate vDSP Double</td>
+            <td>0.0396</td>
+        </tr>
+        <tr>
+            <td>Accelerate vDSP Float</td>
+            <td>0.0345</td>
+        </tr>
+    </tbody>
+</table>
 
 ## Range array
 
