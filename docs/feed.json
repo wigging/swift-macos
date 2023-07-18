@@ -5,6 +5,13 @@
     "feed_url": "https://wigging.me/swift-macos/feed.json",
     "items": [
         {
+            "id": "https://wigging.me/swift-macos/swift/normalize-array.html",
+            "url": "https://wigging.me/swift-macos/swift/normalize-array.html",
+            "title": "Normalize array values",
+            "date_published": "2023-07-17T00:00:00Z",
+            "content_html": "<p>In this example, values in an array are normalized to be in the range 0 to 1. The normalized values are calculated using the maximum and minimum values from the original array.</p><p><a href=\"https://wigging.me/swift-macos/swift/normalize-array.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://wigging.me/swift-macos/swift/image-pixel-data.html",
             "url": "https://wigging.me/swift-macos/swift/image-pixel-data.html",
             "title": "Image from pixel data",
