@@ -5,18 +5,18 @@
     "feed_url": "https://wigging.me/swift-macos/feed.json",
     "items": [
         {
+            "id": "https://wigging.me/swift-macos/swift/image-data.html",
+            "url": "https://wigging.me/swift-macos/swift/image-data.html",
+            "title": "Image from data",
+            "date_published": "2023-07-18T00:00:00Z",
+            "content_html": "<p>An image can be created from numerical data using the Core Graphics and Accelerate frameworks. The sections below demonstrate how to create a gray scale image from normalized data and color images from RGB data.</p><p><a href=\"https://wigging.me/swift-macos/swift/image-data.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://wigging.me/swift-macos/swift/normalize-array.html",
             "url": "https://wigging.me/swift-macos/swift/normalize-array.html",
             "title": "Normalize array values",
             "date_published": "2023-07-17T00:00:00Z",
             "content_html": "<p>In this example, values in an array are normalized to be in the range 0 to 1. The normalized values are calculated using the maximum and minimum values from the original array.</p><p><a href=\"https://wigging.me/swift-macos/swift/normalize-array.html\">Continue reading...</a></p>"
-        },
-        {
-            "id": "https://wigging.me/swift-macos/swift/image-pixel-data.html",
-            "url": "https://wigging.me/swift-macos/swift/image-pixel-data.html",
-            "title": "Image from pixel data",
-            "date_published": "2023-07-15T00:00:00Z",
-            "content_html": "<p>This example demonstrates creating an image from pixel data. The first step is define the width and height of the image, then create some random data of RGB values from 0 to 255.</p><p><a href=\"https://wigging.me/swift-macos/swift/image-pixel-data.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://wigging.me/swift-macos/swift/arrays.html",
