@@ -33,6 +33,13 @@ img {
     margin-right: auto;
 }
 
+#inline-img {
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 p, hr, ul, table, dl {
     margin-left: auto;
     margin-right: auto;

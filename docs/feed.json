@@ -5,9 +5,16 @@
     "feed_url": "https://wigging.me/swift-macos/feed.json",
     "items": [
         {
+            "id": "https://wigging.me/swift-macos/swift/image-colormap.html",
+            "url": "https://wigging.me/swift-macos/swift/image-colormap.html",
+            "title": "Image from colormap filter",
+            "date_published": "2023-07-19T00:00:00Z",
+            "content_html": "<p>A colormap can be applied to an image using a Core Image filter. The first step in this process, is to create a gradient image that represents the colormap. The function shown below creates a linear gradient image of the viridis colormap.</p><p><a href=\"https://wigging.me/swift-macos/swift/image-colormap.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://wigging.me/swift-macos/swift/image-data.html",
             "url": "https://wigging.me/swift-macos/swift/image-data.html",
-            "title": "Image from data",
+            "title": "Image from array data",
             "date_published": "2023-07-18T00:00:00Z",
             "content_html": "<p>An image can be created from numerical data using the Core Graphics and Accelerate frameworks. The sections below demonstrate how to create a gray scale image from normalized data and color images from RGB data.</p><p><a href=\"https://wigging.me/swift-macos/swift/image-data.html\">Continue reading...</a></p>"
         },

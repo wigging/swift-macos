@@ -1,5 +1,5 @@
 ---
-title: Image from data
+title: Image from array data
 date: July 18, 2023
 example: swift-macos/xcode-playgrounds/ImageFromData.playground
 ---
