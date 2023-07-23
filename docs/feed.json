@@ -5,6 +5,13 @@
     "feed_url": "https://wigging.me/swift-macos/feed.json",
     "items": [
         {
+            "id": "https://wigging.me/swift-macos/swiftui/image-colormap.html",
+            "url": "https://wigging.me/swift-macos/swiftui/image-colormap.html",
+            "title": "Image from colormap filter",
+            "date_published": "2023-07-22T00:00:00Z",
+            "content_html": "<p>This SwiftUI example demonstrates creating a gray scale image from numerical data. Data is provided as a linear ramp from 0 to 1 (see top image) or as random numbers in the range of 0 to 1 (see bottom image). A colormap filter applies color to the gray scale image using RGB values from the viridis colormap.</p><p><a href=\"https://wigging.me/swift-macos/swiftui/image-colormap.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://wigging.me/swift-macos/swift/image-colormap.html",
             "url": "https://wigging.me/swift-macos/swift/image-colormap.html",
             "title": "Image from colormap filter",
