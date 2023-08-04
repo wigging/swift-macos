@@ -1,6 +1,7 @@
 ---
-title: Particles
-date: November 12, 2022
+title: Metal Particles
+date: August 3, 2023
+example: swift-macos/xcode-projects/MetalParticles
 ---
 
 This example uses Metal to draw particles (pixels) in a view. The particles move throughout the view based on their position and velocity. This example is inspired by the [Working with Particles in Metal part 3](https://metalkit.org/2017/11/30/working-with-particles-in-metal-part-3/) article by Marius Horga. However, this example is implemented with SwiftUI for macOS whereas Marius' example runs in an Xcode playground.
@@ -65,7 +66,7 @@ struct MetalViewRepresentable: NSViewRepresentable {
 
 The Renderer class initializes the Metal device, command queue, pipeline states, and shader functions. This class acts as the MTKViewDelegate to draw the particles in the view. The Particle struct is also defined in this file.
 
-```swift
+``` { .swift .pre1000 }
 import MetalKit
 
 struct Particle {

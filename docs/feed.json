@@ -5,6 +5,13 @@
     "feed_url": "https://wigging.me/swift-macos/feed.json",
     "items": [
         {
+            "id": "https://wigging.me/swift-macos/swiftui/metal-particles.html",
+            "url": "https://wigging.me/swift-macos/swiftui/metal-particles.html",
+            "title": "Metal Particles",
+            "date_published": "2023-08-03T00:00:00Z",
+            "content_html": "<p>This example uses Metal to draw particles (pixels) in a view. The particles move throughout the view based on their position and velocity. This example is inspired by the <a href=\"https://metalkit.org/2017/11/30/working-with-particles-in-metal-part-3/\">Working with Particles in Metal part 3</a> article by Marius Horga. However, this example is implemented with SwiftUI for macOS whereas Marius' example runs in an Xcode playground.</p><p><a href=\"https://wigging.me/swift-macos/swiftui/metal-particles.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://wigging.me/swift-macos/swiftui/image-colormap.html",
             "url": "https://wigging.me/swift-macos/swiftui/image-colormap.html",
             "title": "Image from colormap filter",
@@ -332,13 +339,6 @@
             "title": "Strides",
             "date_published": "2022-11-12T00:00:00Z",
             "content_html": "<p>Use the stride function to step over values between two limits or boundaries. The stride functions can also be used to build arrays with a certain range of numbers.</p><p><a href=\"https://wigging.me/swift-macos/swift/strides.html\">Continue reading...</a></p>"
-        },
-        {
-            "id": "https://wigging.me/swift-macos/swift/metal-particles.html",
-            "url": "https://wigging.me/swift-macos/swift/metal-particles.html",
-            "title": "Particles",
-            "date_published": "2022-11-12T00:00:00Z",
-            "content_html": "<p>This example uses Metal to draw particles (pixels) in a view. The particles move throughout the view based on their position and velocity. This example is inspired by the <a href=\"https://metalkit.org/2017/11/30/working-with-particles-in-metal-part-3/\">Working with Particles in Metal part 3</a> article by Marius Horga. However, this example is implemented with SwiftUI for macOS whereas Marius' example runs in an Xcode playground.</p><p><a href=\"https://wigging.me/swift-macos/swift/metal-particles.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://wigging.me/swift-macos/swift/strings.html",

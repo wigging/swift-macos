@@ -25,8 +25,9 @@
     <div class="row">
         <div class="col-md">
 
-        <h1>Particles</h1>
-        <h6>November 12, 2022</h6>
+        <h1>Metal Particles</h1>
+        <h6>August 3, 2023</h6>
+        <h6>swift-macos/xcode-projects/MetalParticles</h6>
         <hr>
 
         <p>This example uses Metal to draw particles (pixels) in a view. The particles move throughout the view based on their position and velocity. This example is inspired by the <a href="https://metalkit.org/2017/11/30/working-with-particles-in-metal-part-3/">Working with Particles in Metal part 3</a> article by Marius Horga. However, this example is implemented with SwiftUI for macOS whereas Marius' example runs in an Xcode playground.</p>
@@ -83,7 +84,7 @@ struct MetalViewRepresentable: NSViewRepresentable {
 }
 </code></pre>
 <p>The Renderer class initializes the Metal device, command queue, pipeline states, and shader functions. This class acts as the MTKViewDelegate to draw the particles in the view. The Particle struct is also defined in this file.</p>
-<pre><code class="language-swift">import MetalKit
+<pre class="pre1000"><code class="language-swift">import MetalKit
 
 struct Particle {
     var color: SIMD4&lt;Float&gt;
