@@ -5,9 +5,16 @@
     "feed_url": "https://wigging.me/swift-macos/feed.json",
     "items": [
         {
+            "id": "https://wigging.me/swift-macos/swiftui/metal-color.html",
+            "url": "https://wigging.me/swift-macos/swiftui/metal-color.html",
+            "title": "Metal color",
+            "date_published": "2023-08-08T00:00:00Z",
+            "content_html": "<p>Here is a basic example of using Metal to change the color of a view. The sliders change the RGB color values.</p><p><a href=\"https://wigging.me/swift-macos/swiftui/metal-color.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://wigging.me/swift-macos/swiftui/metal-particles.html",
             "url": "https://wigging.me/swift-macos/swiftui/metal-particles.html",
-            "title": "Metal Particles",
+            "title": "Metal particles",
             "date_published": "2023-08-03T00:00:00Z",
             "content_html": "<p>This example uses Metal to draw particles (pixels) in a view. The particles move throughout the view based on their position and velocity. This example is inspired by the <a href=\"https://metalkit.org/2017/11/30/working-with-particles-in-metal-part-3/\">Working with Particles in Metal part 3</a> article by Marius Horga. However, this example is implemented with SwiftUI for macOS whereas Marius' example runs in an Xcode playground.</p><p><a href=\"https://wigging.me/swift-macos/swiftui/metal-particles.html\">Continue reading...</a></p>"
         },
