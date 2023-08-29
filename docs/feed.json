@@ -5,6 +5,13 @@
     "feed_url": "https://wigging.me/swift-macos/feed.json",
     "items": [
         {
+            "id": "https://wigging.me/swift-macos/swiftui/display-scale.html",
+            "url": "https://wigging.me/swift-macos/swiftui/display-scale.html",
+            "title": "Display scale",
+            "date_published": "2023-08-28T00:00:00Z",
+            "content_html": "<p>Get the display scale of the environment with the <code>displayScale</code> value. This can be used to convert a view's dimensions in points to pixels as seen in the example below.</p><p><a href=\"https://wigging.me/swift-macos/swiftui/display-scale.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://wigging.me/swift-macos/swiftui/metal-color.html",
             "url": "https://wigging.me/swift-macos/swiftui/metal-color.html",
             "title": "Metal color",
