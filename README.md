@@ -4,11 +4,11 @@ There are plenty of books, videos, and online resources for developing iOS apps.
 
 ## Examples
 
-Example code is located in the `swift-scripts` and `xcode-projects` folders.
+Example code is located in the `swift-scripts`, `xcode-playgrounds`, and `xcode-projects` folders.
 
 ## Website
 
-The website is available at https://wigging.me/swift-macos. It is generated with the [genja](https://github.com/wigging/genja) tool using the `content`, `docs`, `templates` folders and the `config.json` file. The website is hosted with GitHub Pages from the `docs` folder.
+The website is available at https://wigging.me/swift-macos. It is generated with the [genja](https://github.com/wigging/genja) tool using the `content`, `docs`, and `templates` folders along with the `config.json` file. Also, the image files are located in the `docs/img` folder. The website is hosted with GitHub Pages from the `docs` folder.
 
 ## Contributing
 
