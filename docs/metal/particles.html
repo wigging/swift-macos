@@ -1,34 +1,54 @@
----
-title: Metal particles
-date: August 3, 2023
-example: swift-macos/xcode-projects/MetalParticles
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-This example uses Metal to draw particles (pixels) in a view. The particles move throughout the view based on their position and velocity. This example is inspired by the [Working with Particles in Metal part 3](https://metalkit.org/2017/11/30/working-with-particles-in-metal-part-3/) article by Marius Horga. However, this example is implemented with SwiftUI for macOS whereas Marius' example runs in an Xcode playground.
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
+    <!-- Highlightjs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <!-- JSON feed -->
+    <link href="https://wigging.me/swift-macos/feed.json" rel="alternate" type="application/feed+json" title="Swift macOS">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles.css">
+
+    <title>Swift macOS</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+
+        <h1>Particles</h1>
+        <h6>August 29, 2023</h6>
+        <h6>swift-macos/xcode-projects/MetalParticles</h6>
+        <hr>
+
+        <p>This example uses Metal to draw particles (pixels) in a view. The particles move throughout the view based on their position and velocity. This example is inspired by the <a href="https://metalkit.org/2017/11/30/working-with-particles-in-metal-part-3/">Working with Particles in Metal part 3</a> article by Marius Horga. However, this example is implemented with SwiftUI for macOS whereas Marius' example runs in an Xcode playground.</p>
 <p><img src="../img/metal-particles.png" style="max-width:400px;" alt="metal particles"></p>
 
-The main view and window is setup in the SwiftUI ContentView.
-
-```swift
-import SwiftUI
+<p>The main view and window is setup in the SwiftUI ContentView.</p>
+<pre><code class="language-swift">import SwiftUI
 
 struct ContentView: View {
     var body: some View {
         VStack {
             MetalView()
-            Text("Metal particles 🤘")
+            Text(&quot;Metal particles 🤘&quot;)
         }
         .padding()
         .frame(minWidth: 400, minHeight: 300)
     }
 }
-```
-
-To implement Metal with SwiftUI, you can wrap the MTKView as an NSViewRepresentable which is depicted by the MetalView shown below. The Renderer handles drawing to the view. This approach is adopted from the Ray Wenderlich book [Metal by Tutorials](https://www.raywenderlich.com/books/metal-by-tutorials). A stepper is used to control the number of particles drawn in the view.
-
-```swift
-import SwiftUI
+</code></pre>
+<p>To implement Metal with SwiftUI, you can wrap the MTKView as an NSViewRepresentable which is depicted by the MetalView shown below. The Renderer handles drawing to the view. This approach is adopted from the Ray Wenderlich book <a href="https://www.raywenderlich.com/books/metal-by-tutorials">Metal by Tutorials</a>. A stepper is used to control the number of particles drawn in the view.</p>
+<pre><code class="language-swift">import SwiftUI
 import MetalKit
 
 struct MetalView: View {
@@ -43,7 +63,7 @@ struct MetalView: View {
                 .onAppear {
                     renderer = Renderer(metalView: metalView)
                 }
-            Stepper("Particle count: \(count)", value: $count, in: 5_000...55_000, step: 10_000)
+            Stepper(&quot;Particle count: \(count)&quot;, value: $count, in: 5_000...55_000, step: 10_000)
                 .onChange(of: count) { newValue in
                     renderer?.particleCount = newValue
                     renderer?.initializeBuffers()
@@ -56,23 +76,20 @@ struct MetalViewRepresentable: NSViewRepresentable {
 
     @Binding var metalView: MTKView
 
-    func makeNSView(context: Context) -> some NSView {
+    func makeNSView(context: Context) -&gt; some NSView {
         metalView
     }
 
     func updateNSView(_ uiView: NSViewType, context: Context) { }
 }
-```
-
-The Renderer class initializes the Metal device, command queue, pipeline states, and shader functions. This class acts as the MTKViewDelegate to draw the particles in the view. The Particle struct is also defined in this file.
-
-``` { .swift .pre1000 }
-import MetalKit
+</code></pre>
+<p>The Renderer class initializes the Metal device, command queue, pipeline states, and shader functions. This class acts as the MTKViewDelegate to draw the particles in the view. The Particle struct is also defined in this file.</p>
+<pre class="pre1000"><code class="language-swift">import MetalKit
 
 struct Particle {
-    var color: SIMD4<Float>
-    var position: SIMD2<Float>
-    var velocity: SIMD2<Float>
+    var color: SIMD4&lt;Float&gt;
+    var position: SIMD2&lt;Float&gt;
+    var velocity: SIMD2&lt;Float&gt;
 }
 
 class Renderer: NSObject {
@@ -93,15 +110,15 @@ class Renderer: NSObject {
         guard let device = MTLCreateSystemDefaultDevice(),
               let commandQueue = device.makeCommandQueue()
         else {
-            fatalError("GPU not available")
+            fatalError(&quot;GPU not available&quot;)
         }
 
         Renderer.device = device
         Renderer.commandQueue = commandQueue
 
         let library = device.makeDefaultLibrary()
-        let clearFunc = library?.makeFunction(name: "clearScreen")
-        let drawFunc = library?.makeFunction(name: "drawParticles")
+        let clearFunc = library?.makeFunction(name: &quot;clearScreen&quot;)
+        let drawFunc = library?.makeFunction(name: &quot;drawParticles&quot;)
 
         do {
             clearState = try device.makeComputePipelineState(function: clearFunc!)
@@ -122,7 +139,7 @@ class Renderer: NSObject {
         let side = 800
         var particles: [Particle] = []
 
-        for _ in 0..<particleCount {
+        for _ in 0..&lt;particleCount {
 
             let red = Float.random(in: 0...1)
             let green = Float.random(in: 0...1)
@@ -135,13 +152,13 @@ class Renderer: NSObject {
             let vy = (Float(arc4random() %  10) - 5) / 2
 
             let particle = Particle(
-                color: SIMD4<Float>(red, green, blue, 1),
-                position: SIMD2<Float>(x, y),
-                velocity: SIMD2<Float>(vx, vy))
+                color: SIMD4&lt;Float&gt;(red, green, blue, 1),
+                position: SIMD2&lt;Float&gt;(x, y),
+                velocity: SIMD2&lt;Float&gt;(vx, vy))
             particles.append(particle)
         }
 
-        let size = MemoryLayout<Particle>.stride * particleCount
+        let size = MemoryLayout&lt;Particle&gt;.stride * particleCount
         particleBuffer = Renderer.device.makeBuffer(bytes: particles, length: size)
     }
 }
@@ -177,12 +194,9 @@ extension Renderer: MTKViewDelegate {
         commandbuffer?.commit()
     }
 }
-```
-
-The shader functions are defined in a Metal file along with a Particle struct. The clearScreen kernel function creates a black background for the Metal view. Behavior and drawing of the particles is handled by the drawParticles kernel function.
-
-```cpp
-#include <metal_stdlib>
+</code></pre>
+<p>The shader functions are defined in a Metal file along with a Particle struct. The clearScreen kernel function creates a black background for the Metal view. Behavior and drawing of the particles is handled by the drawParticles kernel function.</p>
+<pre><code class="language-cpp">#include &lt;metal_stdlib&gt;
 using namespace metal;
 
 struct Particle {
@@ -192,14 +206,14 @@ struct Particle {
 };
 
 kernel void clearScreen (
-                            texture2d<half, access::write> output [[texture(0)]],
+                            texture2d&lt;half, access::write&gt; output [[texture(0)]],
                             uint2 id [[thread_position_in_grid]])
 {
     output.write(half4(0), id);
 }
 
 kernel void drawParticles (
-                           texture2d<half, access::write> output [[texture(0)]],
+                           texture2d&lt;half, access::write&gt; output [[texture(0)]],
                            device Particle *particles [[buffer(0)]],
                            uint id [[thread_position_in_grid]])
 {
@@ -210,11 +224,11 @@ kernel void drawParticles (
     float2 position = particle.position;
     float2 velocity = particle.velocity;
 
-    if (position.x < 0 || position.x > width) {
+    if (position.x &lt; 0 || position.x &gt; width) {
         velocity.x *= -1;
     }
 
-    if (position.y < 0 || position.y > height) {
+    if (position.y &lt; 0 || position.y &gt; height) {
         velocity.y *= -1;
     }
 
@@ -235,4 +249,18 @@ kernel void drawParticles (
     output.write(color, pos + uint2( 0, -1));
     output.write(color, pos + uint2( 1, -1));
 }
-```
+</code></pre>
+
+        </div>
+    </div>
+    <div class="row my-5">
+    <div class="col">
+        <p class="text-center small my-5">
+            <a href="https://wigging.me/swift-macos/">Swift Programming for macOS</a> © 2023 <br>
+            Built by <a href="https://wigging.me">Gavin Wiggins</a>
+        </p>
+    </div>
+    </div>
+</div>
+</body>
+</html>

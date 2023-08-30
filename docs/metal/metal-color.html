@@ -1,17 +1,39 @@
----
-title: Metal color
-date: August 8, 2023
-example: swift-macos/xcode-projects/MetalColor
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-Here is a basic example of using Metal to change the color of a view. The sliders change the RGB color values.
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
-<img src="../img/metal-color.png" style="max-width:400px;" alt="metal color">
+    <!-- Highlightjs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 
-The main view is shown below and contains the `MetalView()` where the color is drawn.
+    <!-- JSON feed -->
+    <link href="https://wigging.me/swift-macos/feed.json" rel="alternate" type="application/feed+json" title="Swift macOS">
 
-```swift
-// ContentView.swift
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles.css">
+
+    <title>Swift macOS</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+
+        <h1>Metal color</h1>
+        <h6>August 8, 2023</h6>
+        <h6>swift-macos/xcode-projects/MetalColor</h6>
+        <hr>
+
+        <p>Here is a basic example of using Metal to change the color of a view. The sliders change the RGB color values.</p>
+<p><img src="../img/metal-color.png" style="max-width:400px;" alt="metal color"></p>
+<p>The main view is shown below and contains the <code>MetalView()</code> where the color is drawn.</p>
+<pre><code class="language-swift">// ContentView.swift
 
 import SwiftUI
 
@@ -19,18 +41,15 @@ struct ContentView: View {
     var body: some View {
         VStack {
             MetalView()
-            Text("Adjust the sliders to change color")
+            Text(&quot;Adjust the sliders to change color&quot;)
         }
         .padding()
         .frame(minWidth: 400, minHeight: 300)
     }
 }
-```
-
-The `MetalView` represents a `MTKView` as shown below.
-
-```swift
-// MetalView.swift
+</code></pre>
+<p>The <code>MetalView</code> represents a <code>MTKView</code> as shown below.</p>
+<pre><code class="language-swift">// MetalView.swift
 
 import SwiftUI
 import MetalKit
@@ -39,7 +58,7 @@ struct MetalView: View {
 
     @State private var metalView = MTKView()
     @State private var renderer: Renderer?
-    @State private var color = SIMD4<Float>(0.8, 0.2, 0.7, 1)
+    @State private var color = SIMD4&lt;Float&gt;(0.8, 0.2, 0.7, 1)
 
     var body: some View {
         VStack {
@@ -51,7 +70,7 @@ struct MetalView: View {
                 }
 
             Slider(value: $color.x, in: 0...1) {
-                Text("Red \(color.x, specifier: "%.2f")")
+                Text(&quot;Red \(color.x, specifier: &quot;%.2f&quot;)&quot;)
             }
             .onChange(of: color.x) { newValue in
                 renderer?.color.x = newValue
@@ -59,7 +78,7 @@ struct MetalView: View {
             }
 
             Slider(value: $color.y, in: 0...1) {
-                Text("Green \(color.y, specifier: "%.2f")")
+                Text(&quot;Green \(color.y, specifier: &quot;%.2f&quot;)&quot;)
             }
             .onChange(of: color.y) { newValue in
                 renderer?.color.y = newValue
@@ -67,7 +86,7 @@ struct MetalView: View {
             }
 
             Slider(value: $color.z, in: 0...1) {
-                Text("Blue \(color.z, specifier: "%.2f")")
+                Text(&quot;Blue \(color.z, specifier: &quot;%.2f&quot;)&quot;)
             }
             .onChange(of: color.z) { newValue in
                 renderer?.color.z = newValue
@@ -81,18 +100,15 @@ struct MetalViewRepresentable: NSViewRepresentable {
 
     @Binding var metalView: MTKView
 
-    func makeNSView(context: Context) -> some NSView {
+    func makeNSView(context: Context) -&gt; some NSView {
         metalView
     }
 
     func updateNSView(_ uiView: NSViewType, context: Context) { }
 }
-```
-
-The `Renderer` object sets up the Metal device, pipeline, and buffers for drawing to the view.
-
-```swift
-// Renderer.swift
+</code></pre>
+<p>The <code>Renderer</code> object sets up the Metal device, pipeline, and buffers for drawing to the view.</p>
+<pre><code class="language-swift">// Renderer.swift
 
 import MetalKit
 
@@ -104,7 +120,7 @@ class Renderer: NSObject {
     var colorState: MTLComputePipelineState!
     var colorBuffer: MTLBuffer!
 
-    var color = SIMD4<Float>()
+    var color = SIMD4&lt;Float&gt;()
 
     init(metalView: MTKView) {
 
@@ -113,14 +129,14 @@ class Renderer: NSObject {
         guard let device = MTLCreateSystemDefaultDevice(),
               let commandQueue = device.makeCommandQueue()
         else {
-            fatalError("GPU not available")
+            fatalError(&quot;GPU not available&quot;)
         }
 
         Renderer.device = device
         Renderer.commandQueue = commandQueue
 
         let library = device.makeDefaultLibrary()
-        let colorScreen = library?.makeFunction(name: "colorScreen")
+        let colorScreen = library?.makeFunction(name: &quot;colorScreen&quot;)
 
         do {
             colorState = try device.makeComputePipelineState(function: colorScreen!)
@@ -136,8 +152,8 @@ class Renderer: NSObject {
     }
 
     func initializeBuffer() {
-        let size = MemoryLayout<SIMD4<Float>>.size
-        colorBuffer = Renderer.device.makeBuffer(bytes: &color, length: size)
+        let size = MemoryLayout&lt;SIMD4&lt;Float&gt;&gt;.size
+        colorBuffer = Renderer.device.makeBuffer(bytes: &amp;color, length: size)
     }
 }
 
@@ -171,20 +187,31 @@ extension Renderer: MTKViewDelegate {
         commandBuffer?.commit()
     }
 }
-```
+</code></pre>
+<p>Lastly, the shader function outputs the color for each pixel in the view.</p>
+<pre><code class="language-cpp">// Shader.metal
 
-Lastly, the shader function outputs the color for each pixel in the view.
-
-```cpp
-// Shader.metal
-
-#include <metal_stdlib>
+#include &lt;metal_stdlib&gt;
 using namespace metal;
 
-kernel void colorScreen (texture2d<half, access::write> output [[texture(0)]],
+kernel void colorScreen (texture2d&lt;half, access::write&gt; output [[texture(0)]],
                          device float4 *color [[buffer(0)]],
                          uint2 id [[thread_position_in_grid]])
 {
     output.write(half4(*color), id);
 }
-```
+</code></pre>
+
+        </div>
+    </div>
+    <div class="row my-5">
+    <div class="col">
+        <p class="text-center small my-5">
+            <a href="https://wigging.me/swift-macos/">Swift Programming for macOS</a> © 2023 <br>
+            Built by <a href="https://wigging.me">Gavin Wiggins</a>
+        </p>
+    </div>
+    </div>
+</div>
+</body>
+</html>
