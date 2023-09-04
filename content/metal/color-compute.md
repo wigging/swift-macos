@@ -1,6 +1,6 @@
 ---
 title: Color view with compute kernel
-date: August 29, 2023
+date: September 3, 2023
 example: swift-macos/xcode-projects/MetalColor
 ---
 
@@ -14,38 +14,19 @@ The main view is shown below and contains the `MetalView()` where the color is d
 // ContentView.swift
 
 import SwiftUI
-
-struct ContentView: View {
-    var body: some View {
-        VStack {
-            MetalView()
-            Text("Adjust the sliders to change color")
-        }
-        .padding()
-        .frame(minWidth: 400, minHeight: 300)
-    }
-}
-```
-
-The `MetalView` represents a `MTKView` as shown below. Notice the `MTKView` must be wrapped with a `NSViewRepresentable` for SwiftUI.
-
-```swift
-// MetalView.swift
-
-import SwiftUI
 import MetalKit
 
-struct MetalView: View {
+struct ContentView: View {
 
-    @State private var metalView = MTKView()
+    @State private var mtkView = MTKView()
     @State private var renderer: Renderer?
     @State private var color = SIMD4<Float>(0.8, 0.2, 0.7, 1)
 
     var body: some View {
         VStack {
-            MetalViewRepresentable(metalView: $metalView)
+            MetalView(mtkView: mtkView)
                 .onAppear {
-                    renderer = Renderer(metalView: metalView)
+                    renderer = Renderer(metalView: mtkView)
                     renderer?.color = color
                     renderer?.initializeBuffer()
                 }
@@ -73,19 +54,32 @@ struct MetalView: View {
                 renderer?.color.z = newValue
                 renderer?.initializeBuffer()
             }
+
+            Text("Adjust the sliders to change color")
         }
+        .padding()
+        .frame(minWidth: 400, minHeight: 300)
     }
 }
+```
 
-struct MetalViewRepresentable: NSViewRepresentable {
+The `MetalView` represents a `MTKView` as shown below. Notice the `MTKView` must be wrapped with a `NSViewRepresentable` for SwiftUI.
 
-    @Binding var metalView: MTKView
+```swift
+// MetalView.swift
+
+import SwiftUI
+import MetalKit
+
+struct MetalView: NSViewRepresentable {
+
+    let mtkView: MTKView
 
     func makeNSView(context: Context) -> some NSView {
-        metalView
+        return mtkView
     }
 
-    func updateNSView(_ uiView: NSViewType, context: Context) { }
+    func updateNSView(_ nsView: NSViewType, context: Context) { }
 }
 ```
 

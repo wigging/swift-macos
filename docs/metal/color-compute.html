@@ -26,7 +26,7 @@
         <div class="col-md">
 
         <h1>Color view with compute kernel</h1>
-        <h6>August 29, 2023</h6>
+        <h6>September 3, 2023</h6>
         <h6>swift-macos/xcode-projects/MetalColor</h6>
         <hr>
 
@@ -36,35 +36,19 @@
 <pre><code class="language-swift">// ContentView.swift
 
 import SwiftUI
-
-struct ContentView: View {
-    var body: some View {
-        VStack {
-            MetalView()
-            Text(&quot;Adjust the sliders to change color&quot;)
-        }
-        .padding()
-        .frame(minWidth: 400, minHeight: 300)
-    }
-}
-</code></pre>
-<p>The <code>MetalView</code> represents a <code>MTKView</code> as shown below. Notice the <code>MTKView</code> must be wrapped with a <code>NSViewRepresentable</code> for SwiftUI.</p>
-<pre><code class="language-swift">// MetalView.swift
-
-import SwiftUI
 import MetalKit
 
-struct MetalView: View {
+struct ContentView: View {
 
-    @State private var metalView = MTKView()
+    @State private var mtkView = MTKView()
     @State private var renderer: Renderer?
     @State private var color = SIMD4&lt;Float&gt;(0.8, 0.2, 0.7, 1)
 
     var body: some View {
         VStack {
-            MetalViewRepresentable(metalView: $metalView)
+            MetalView(mtkView: mtkView)
                 .onAppear {
-                    renderer = Renderer(metalView: metalView)
+                    renderer = Renderer(metalView: mtkView)
                     renderer?.color = color
                     renderer?.initializeBuffer()
                 }
@@ -92,19 +76,29 @@ struct MetalView: View {
                 renderer?.color.z = newValue
                 renderer?.initializeBuffer()
             }
+
+            Text(&quot;Adjust the sliders to change color&quot;)
         }
+        .padding()
+        .frame(minWidth: 400, minHeight: 300)
     }
 }
+</code></pre>
+<p>The <code>MetalView</code> represents a <code>MTKView</code> as shown below. Notice the <code>MTKView</code> must be wrapped with a <code>NSViewRepresentable</code> for SwiftUI.</p>
+<pre><code class="language-swift">// MetalView.swift
 
-struct MetalViewRepresentable: NSViewRepresentable {
+import SwiftUI
+import MetalKit
 
-    @Binding var metalView: MTKView
+struct MetalView: NSViewRepresentable {
+
+    let mtkView: MTKView
 
     func makeNSView(context: Context) -&gt; some NSView {
-        metalView
+        return mtkView
     }
 
-    func updateNSView(_ uiView: NSViewType, context: Context) { }
+    func updateNSView(_ nsView: NSViewType, context: Context) { }
 }
 </code></pre>
 <p>The <code>Renderer</code> object sets up the Metal device, pipeline, and buffers for drawing to the view. It also passes the <code>color</code> variable to the appropriate Metal buffer for assigning the RGB value to each pixel in the Metal view.</p>

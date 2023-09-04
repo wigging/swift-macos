@@ -8,7 +8,7 @@
             "id": "https://wigging.me/swift-macos/metal/color-compute.html",
             "url": "https://wigging.me/swift-macos/metal/color-compute.html",
             "title": "Color view with compute kernel",
-            "date_published": "2023-08-29T00:00:00Z",
+            "date_published": "2023-09-03T00:00:00Z",
             "content_html": "<p>Here is a basic example of using Metal to change the color of a view using a compute function (kernel). The sliders change the RGB color values for each pixel in the grid.</p><p><a href=\"https://wigging.me/swift-macos/metal/color-compute.html\">Continue reading...</a></p>"
         },
         {
