@@ -1,9 +1,12 @@
 //
 //  Shader.metal
-//  MetalColor
+//  MetalColorCompute
 //
-//  Created by Gavin Wiggins on 8/8/23.
+//  Created by Gavin Wiggins on 9/8/23.
 //
+
+#include <metal_stdlib>
+using namespace metal;
 
 #include <metal_stdlib>
 using namespace metal;

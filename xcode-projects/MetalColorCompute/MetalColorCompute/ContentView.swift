@@ -1,19 +1,19 @@
 //
 //  ContentView.swift
-//  MetalColor
+//  MetalColorCompute
 //
-//  Created by Gavin Wiggins on 8/8/23.
+//  Created by Gavin Wiggins on 9/8/23.
 //
 
 import SwiftUI
 import MetalKit
 
 struct ContentView: View {
-    
+
     @State private var mtkView = MTKView()
     @State private var renderer: Renderer?
     @State private var color = SIMD4<Float>(0.8, 0.2, 0.7, 1)
-    
+
     var body: some View {
         VStack {
             MetalView(mtkView: mtkView)
@@ -22,7 +22,7 @@ struct ContentView: View {
                     renderer?.color = color
                     renderer?.initializeBuffer()
                 }
-            
+
             Slider(value: $color.x, in: 0...1) {
                 Text("Red \(color.x, specifier: "%.2f")")
             }
@@ -46,7 +46,7 @@ struct ContentView: View {
                 renderer?.color.z = newValue
                 renderer?.initializeBuffer()
             }
-            
+
             Text("Adjust the sliders to change color")
         }
         .padding()

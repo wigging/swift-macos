@@ -1,12 +1,12 @@
 ---
 title: Color view with compute kernel
-date: September 3, 2023
-example: swift-macos/xcode-projects/MetalColor
+date: September 8, 2023
+example: swift-macos/xcode-projects/MetalColorCompute
 ---
 
-Here is a basic example of using Metal to change the color of a view using a compute function (kernel). The sliders change the RGB color values for each pixel in the grid.
+Here is a basic example of using Metal to change the color of a view using a compute function (kernel). The pixels in the view are represented in Metal as a grid. The sliders change the RGB color values for each pixel in the grid.
 
-<img src="../img/metal-color.png" style="max-width:400px;border:1px solid lightgrey;border-radius:12px;" alt="metal color">
+<img src="../img/metal-color-compute.png" style="max-width:400px;border:1px solid lightgrey;border-radius:12px;" alt="metal color">
 
 The main view is shown below and contains the `MetalView()` where the color is drawn.
 

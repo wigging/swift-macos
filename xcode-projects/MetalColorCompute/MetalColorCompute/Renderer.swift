@@ -1,20 +1,20 @@
 //
 //  Renderer.swift
-//  MetalColor
+//  MetalColorCompute
 //
-//  Created by Gavin Wiggins on 8/8/23.
+//  Created by Gavin Wiggins on 9/8/23.
 //
 
 import MetalKit
 
 class Renderer: NSObject {
-    
+
     static var device: MTLDevice!
     static var commandQueue: MTLCommandQueue!
 
     var colorState: MTLComputePipelineState!
     var colorBuffer: MTLBuffer!
-    
+
     var color = SIMD4<Float>()
 
     init(metalView: MTKView) {
@@ -26,7 +26,7 @@ class Renderer: NSObject {
         else {
             fatalError("GPU not available")
         }
-        
+
         Renderer.device = device
         Renderer.commandQueue = commandQueue
 
@@ -42,10 +42,10 @@ class Renderer: NSObject {
         metalView.device = device
         metalView.framebufferOnly = false
         metalView.delegate = self
-        
+
         initializeBuffer()
     }
-    
+
     func initializeBuffer() {
         let size = MemoryLayout<SIMD4<Float>>.size
         colorBuffer = Renderer.device.makeBuffer(bytes: &color, length: size)
@@ -54,19 +54,19 @@ class Renderer: NSObject {
 
 extension Renderer: MTKViewDelegate {
     func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) { }
-    
+
     func draw(in view: MTKView) {
         guard let drawable = view.currentDrawable else { return }
 
         // Command buffer
         let commandBuffer = Renderer.commandQueue.makeCommandBuffer()
-        
+
         // Command encoder
         let commandEncoder = commandBuffer?.makeComputeCommandEncoder()
         commandEncoder?.setComputePipelineState(colorState)
         commandEncoder?.setTexture(drawable.texture, index: 0)
         commandEncoder?.setBuffer(colorBuffer, offset: 0, index: 0)
-        
+
         // Threads
         let w = colorState.threadExecutionWidth
         let h = colorState.maxTotalThreadsPerThreadgroup / w
@@ -76,7 +76,7 @@ extension Renderer: MTKViewDelegate {
 
         // Complete encoding
         commandEncoder?.endEncoding()
-        
+
         // Commit buffer
         commandBuffer?.present(drawable)
         commandBuffer?.commit()

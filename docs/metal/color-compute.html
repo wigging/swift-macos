@@ -26,12 +26,12 @@
         <div class="col-md">
 
         <h1>Color view with compute kernel</h1>
-        <h6>September 3, 2023</h6>
-        <h6>swift-macos/xcode-projects/MetalColor</h6>
+        <h6>September 8, 2023</h6>
+        <h6>swift-macos/xcode-projects/MetalColorCompute</h6>
         <hr>
 
-        <p>Here is a basic example of using Metal to change the color of a view using a compute function (kernel). The sliders change the RGB color values for each pixel in the grid.</p>
-<p><img src="../img/metal-color.png" style="max-width:400px;border:1px solid lightgrey;border-radius:12px;" alt="metal color"></p>
+        <p>Here is a basic example of using Metal to change the color of a view using a compute function (kernel). The pixels in the view are represented in Metal as a grid. The sliders change the RGB color values for each pixel in the grid.</p>
+<p><img src="../img/metal-color-compute.png" style="max-width:400px;border:1px solid lightgrey;border-radius:12px;" alt="metal color"></p>
 <p>The main view is shown below and contains the <code>MetalView()</code> where the color is drawn.</p>
 <pre><code class="language-swift">// ContentView.swift
 
