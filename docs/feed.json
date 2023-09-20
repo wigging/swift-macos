@@ -5,6 +5,13 @@
     "feed_url": "https://wigging.me/swift-macos/feed.json",
     "items": [
         {
+            "id": "https://wigging.me/swift-macos/metal/triangle.html",
+            "url": "https://wigging.me/swift-macos/metal/triangle.html",
+            "title": "Triangle",
+            "date_published": "2023-09-19T00:00:00Z",
+            "content_html": "<p>This example creates a triangle using vertex and fragment shaders.</p><p><a href=\"https://wigging.me/swift-macos/metal/triangle.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://wigging.me/swift-macos/metal/clear-color.html",
             "url": "https://wigging.me/swift-macos/metal/clear-color.html",
             "title": "Clear color",
