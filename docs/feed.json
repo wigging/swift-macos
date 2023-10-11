@@ -5,6 +5,13 @@
     "feed_url": "https://gavinw.me/swift-macos/feed.json",
     "items": [
         {
+            "id": "https://gavinw.me/swift-macos/metal/sampler.html",
+            "url": "https://gavinw.me/swift-macos/metal/sampler.html",
+            "title": "Sampler",
+            "date_published": "2023-10-10T00:00:00Z",
+            "content_html": "<p>This example uses a Metal <code>sampler</code> to upscale a noise texture as the Metal view increases in size. The left image shown below represents the actual size of the texture. The right image is the sampled (upscaled) texture due to the larger window size which increases the size of the Metal view.</p><p><a href=\"https://gavinw.me/swift-macos/metal/sampler.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://gavinw.me/swift-macos/metal/noise.html",
             "url": "https://gavinw.me/swift-macos/metal/noise.html",
             "title": "Noise",
