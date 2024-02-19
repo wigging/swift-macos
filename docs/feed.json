@@ -5,6 +5,13 @@
     "feed_url": "https://gavinw.me/swift-macos/feed.json",
     "items": [
         {
+            "id": "https://gavinw.me/swift-macos/swift/create-package.html",
+            "url": "https://gavinw.me/swift-macos/swift/create-package.html",
+            "title": "Create a package",
+            "date_published": "2024-02-18T00:00:00Z",
+            "content_html": "<p>There are two approaches to creating a Swift package. One is by creating a new package in Xcode and the other is with the Swift command line tool.</p><p><a href=\"https://gavinw.me/swift-macos/swift/create-package.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://gavinw.me/swift-macos/metal/sampler.html",
             "url": "https://gavinw.me/swift-macos/metal/sampler.html",
             "title": "Sampler",
