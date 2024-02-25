@@ -5,6 +5,13 @@
     "feed_url": "https://gavinw.me/swift-macos/feed.json",
     "items": [
         {
+            "id": "https://gavinw.me/swift-macos/swift/compiler-optimizations.html",
+            "url": "https://gavinw.me/swift-macos/swift/compiler-optimizations.html",
+            "title": "Compiler optimizations",
+            "date_published": "2024-02-24T00:00:00Z",
+            "content_html": "<p>The Swift compiler <code>swiftc</code> provides options such as <code>-O</code>, <code>-Osize</code>, and <code>-Ounchecked</code> to build code with optimizations turned on. Use optimizations such as <code>-Osize</code> to target small code size and the <code>-Ounchecked</code> to remove runtime safety checks.</p><p><a href=\"https://gavinw.me/swift-macos/swift/compiler-optimizations.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://gavinw.me/swift-macos/swift/create-package.html",
             "url": "https://gavinw.me/swift-macos/swift/create-package.html",
             "title": "Create a package",
