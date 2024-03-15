@@ -5,6 +5,13 @@
     "feed_url": "https://gavinw.me/swift-macos/feed.json",
     "items": [
         {
+            "id": "https://gavinw.me/swift-macos/swift/package-library.html",
+            "url": "https://gavinw.me/swift-macos/swift/package-library.html",
+            "title": "Package a library",
+            "date_published": "2024-03-15T00:00:00Z",
+            "content_html": "<p>There are two ways to create a Swift package for a library: using the command line and using Xcode. Each approach is discussed in the following sections.</p><p><a href=\"https://gavinw.me/swift-macos/swift/package-library.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://gavinw.me/swift-macos/swift/compiler-optimizations.html",
             "url": "https://gavinw.me/swift-macos/swift/compiler-optimizations.html",
             "title": "Compiler optimizations",

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Open Graph -->
+    <meta property="og:url" content="https://gavinw.me/swift-macos/swift/package-library.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Swift Programming for macOS">
+    <meta property="og:description" content="Package a library">
+    <meta property="og:image" content="https://gavinw.me/swift-macos/img/ogimage750x1200.jpg">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- Highlightjs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <!-- JSON feed -->
+    <link href="https://gavinw.me/swift-macos/feed.json" rel="alternate" type="application/feed+json" title="Swift macOS">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles.css">
+
+    <title>Swift macOS</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+
+        <h1>Package a library</h1>
+        <h6>March 15, 2024</h6>
+        <hr>
+
+        <p>There are two ways to create a Swift package for a library: using the command line and using Xcode. Each approach is discussed in the following sections.</p>
+<h2>Command line</h2>
+<p>Use the commands shown below to create a library package. Notice the name of the package is MyPackage while the directory is called mypkg. If a name is not provided to the <code>swift package</code> command then the directory name is used as the package name.</p>
+<pre><code class="language-text">mkdir mypkg
+cd mypkg
+swift package init --name MyPackage
+</code></pre>
+<p>The type of package can be explicitly given as shown here. By default, a library package is created so there is no need to define the type for this example.</p>
+<pre><code class="language-text">swift package init --type library --name MyPackage
+</code></pre>
+<p>The file structure after creating the package is shown below.</p>
+<pre><code class="language-text">mypkg/
+├── Sources/
+│   └── MyPackage/
+│       └── MyPackage.swift
+├── Tests/
+│   └── MyPackageTests/
+│       └── MyPackageTests.swift
+├── .gitignore
+└── Package.swift
+</code></pre>
+<p>Use the <code>swift test</code> command to run the tests for the package.</p>
+<h2>Xcode</h2>
+<p>Select File &gt; New &gt; Package... then choose Multiplatform Library to create a package in Xcode. The name you provide in the Save As field will be used as the name of the package. The image below shows the Xcode Project Navigator for a package named MyPackage. To run the tests, select Product &gt; Test from the menu or press Command U on the keyboard.</p>
+<p><img src="../img/package-library.png" style="max-width:600px;" alt="Xcode package library"></p>
+
+        </div>
+    </div>
+    <div class="row my-5">
+    <div class="col">
+        <p class="text-center small my-5">
+            <a href="https://gavinw.me">Gavin Wiggins</a> © 2024
+        </p>
+    </div>
+    </div>
+</div>
+</body>
+</html>
