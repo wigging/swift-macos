@@ -5,6 +5,13 @@
     "feed_url": "https://gavinw.me/swift-macos/feed.json",
     "items": [
         {
+            "id": "https://gavinw.me/swift-macos/metal/matrix-multiplication.html",
+            "url": "https://gavinw.me/swift-macos/metal/matrix-multiplication.html",
+            "title": "Matrix multiplication",
+            "date_published": "2024-05-03T00:00:00Z",
+            "content_html": "<p>Metal Performance Shaders provide <code>MPSMatrix</code> and <code>MPSMatrixMultiplication</code> objects to perform matrix multiplication on the GPU. The code below demonstrates multiplication of two matrices.</p><p><a href=\"https://gavinw.me/swift-macos/metal/matrix-multiplication.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://gavinw.me/swift-macos/swift/package-library.html",
             "url": "https://gavinw.me/swift-macos/swift/package-library.html",
             "title": "Package a library",
