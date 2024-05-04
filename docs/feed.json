@@ -5,6 +5,13 @@
     "feed_url": "https://gavinw.me/swift-macos/feed.json",
     "items": [
         {
+            "id": "https://gavinw.me/swift-macos/accelerate/matrix-multiplication.html",
+            "url": "https://gavinw.me/swift-macos/accelerate/matrix-multiplication.html",
+            "title": "Matrix multiplication",
+            "date_published": "2024-05-04T00:00:00Z",
+            "content_html": "<p>Accelerate provides two functions for performing matrix multiplication. The first is the <code>vDSP_mmulD</code> function which is demonstrated below.</p><p><a href=\"https://gavinw.me/swift-macos/accelerate/matrix-multiplication.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://gavinw.me/swift-macos/metal/matrix-multiplication.html",
             "url": "https://gavinw.me/swift-macos/metal/matrix-multiplication.html",
             "title": "Matrix multiplication",

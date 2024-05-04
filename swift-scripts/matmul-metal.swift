@@ -1,6 +1,6 @@
 // Compile and run with
-// swiftc -framework CoreGraphics -Ounchecked metal-multiplication.swift
-// ./metal-multiplication
+// swiftc -framework CoreGraphics -Ounchecked matmul-metal.swift
+// ./matmul-metal
 
 import MetalPerformanceShaders
 

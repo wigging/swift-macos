@@ -1,7 +1,7 @@
 ---
 title: Matrix multiplication
 date: May 3, 2024
-example: swift-macos/swift-scripts/matrix-multiplication.swift
+example: swift-macos/swift-scripts/matmul-metal.swift
 ---
 
 Metal Performance Shaders provide `MPSMatrix` and `MPSMatrixMultiplication` objects to perform matrix multiplication on the GPU. The code below demonstrates multiplication of two matrices.
@@ -79,8 +79,8 @@ for i in 0..<matrixC.rows {
 Compile and run the code using the commands shown below. In macOS, you must link to the Core Graphics framework to get a Metal device object. This is required for apps that don't use graphics such as command line tools or scripts.
 
 ```text
-swiftc -framework CoreGraphics -Ounchecked metal-multiplication.swift
-./metal-multiplication
+swiftc -framework CoreGraphics -Ounchecked matmul-metal.swift
+./matmul-metal
 ```
 
 The output is:

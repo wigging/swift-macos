@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Open Graph -->
+    <meta property="og:url" content="https://gavinw.me/swift-macos/accelerate/matrix-multiplication.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Swift Programming for macOS">
+    <meta property="og:description" content="Matrix multiplication">
+    <meta property="og:image" content="https://gavinw.me/swift-macos/img/ogimage750x1200.jpg">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- Highlightjs -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <!-- JSON feed -->
+    <link href="https://gavinw.me/swift-macos/feed.json" rel="alternate" type="application/feed+json" title="Swift macOS">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles.css">
+
+    <title>Swift macOS</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+
+        <h1>Matrix multiplication</h1>
+        <h6>May 4, 2024</h6>
+        <h6>swift-macos/swift-scripts/matmul-accel.swift</h6>
+        <hr>
+
+        <p>Accelerate provides two functions for performing matrix multiplication. The first is the <code>vDSP_mmulD</code> function which is demonstrated below.</p>
+<pre><code class="language-swift">// Arrays represent 2D matrices, rows and columns are defined for each array
+// Note that if matrix A is m x p then matrix B must be p x n thus matrix C is m x n
+
+let a: [Double] = [5, 2, 3,
+                   4, 5, 6,
+                   7, 8, 9]
+
+let b: [Double] = [1, 2, 3, 4,
+                   4, 5, 6, 7,
+                   1, 3, 2, 1]
+
+let m: vDSP_Length = 3 // rows in matrices A and C
+let n: vDSP_Length = 4 // columns in matrices B and C
+let p: vDSP_Length = 3 // columns in matrix A, rows in matrix B
+let stride: vDSP_Stride = 1
+
+var c = [Double](repeating: 0, count: Int(m * n))
+vDSP_mmulD(a, stride, b, stride, &amp;c, stride, m, n, p)
+
+// Print result
+
+for i in 0..&lt;m {
+    for j in 0..&lt;n {
+        let idx = Int(i * n + j)
+        print(c[idx], terminator: &quot;  &quot;)
+    }
+    print(&quot;&quot;)
+}
+</code></pre>
+<p>Compile and run the example using the commands shown here. Notice you must compile with the new LAPACK headers to avoid deprecation warnings.</p>
+<pre><code class="language-text">swiftc -Xcc -DACCELERATE_NEW_LAPACK -Ounchecked matmul-accel.swift
+./matmul-accel
+</code></pre>
+<p>The result is:</p>
+<pre><code class="language-text">16.0  29.0  33.0  37.0
+30.0  51.0  54.0  57.0
+48.0  81.0  87.0  93.0
+</code></pre>
+<p>Accelerate also provides the <code>cblas_dgemm</code> function for matrix multiplication which is demonstrated here. This example is compiled the same way as the previous example and provides the same result.</p>
+<pre><code class="language-swift">// Arrays represent 2D matrices, rows and columns are defined for each array
+// Note that if matrix A is m x k then matrix B must be k x n thus matrix C is m x n
+
+var a: [Double] = [5, 2, 3,
+                   4, 5, 6,
+                   7, 8, 9]
+
+var b: [Double] = [1, 2, 3, 4,
+                   4, 5, 6, 7,
+                   1, 3, 2, 1]
+
+let m: Int32 = 3 // rows in matrices A and C
+let n: Int32 = 4 // columns in matrices B and C
+let k: Int32 = 3 // columns in matrix A, rows in matrix B
+let alpha = 1.0
+let beta = 0.0
+
+var c = [Double](repeating: 0, count: Int(m * n))
+
+cblas_dgemm(CblasRowMajor, CblasNoTrans, CblasNoTrans, m, n, k, alpha, &amp;a, k, &amp;b, n, beta, &amp;c, n)
+
+// Print result
+
+for i in 0..&lt;m {
+    for j in 0..&lt;n {
+        let idx = Int(i * n + j)
+        print(c[idx], terminator: &quot;  &quot;)
+    }
+    print(&quot;&quot;)
+}
+</code></pre>
+
+        </div>
+    </div>
+    <div class="row my-5">
+    <div class="col">
+        <p class="text-center small my-5">
+            <a href="https://gavinw.me">Gavin Wiggins</a> © 2024
+        </p>
+    </div>
+    </div>
+</div>
+</body>
+</html>
