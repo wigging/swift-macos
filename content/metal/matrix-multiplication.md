@@ -76,7 +76,7 @@ for i in 0..<matrixC.rows {
 }
 ```
 
-Compile and run the code using the following commands:
+Compile and run the code using the commands shown below. In macOS, you must link to the Core Graphics framework to get a Metal device object. This is required for apps that don't use graphics such as command line tools or scripts.
 
 ```text
 swiftc -framework CoreGraphics -Ounchecked metal-multiplication.swift

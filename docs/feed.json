@@ -446,25 +446,25 @@
             "content_html": "<p>Check if a value is within a given range using the contains method.</p><p><a href=\"https://gavinw.me/swift-macos/swift/range.html\">Continue reading...</a></p>"
         },
         {
-            "id": "https://gavinw.me/swift-macos/swift/accelerate-sort.html",
-            "url": "https://gavinw.me/swift-macos/swift/accelerate-sort.html",
-            "title": "Sort array values",
-            "date_published": "2022-11-11T00:00:00Z",
-            "content_html": "<p>Sort the values in an array by ascending or descending order. Values of the array must be Float or Double.</p><p><a href=\"https://gavinw.me/swift-macos/swift/accelerate-sort.html\">Continue reading...</a></p>"
-        },
-        {
-            "id": "https://gavinw.me/swift-macos/swift/accelerate-absolute.html",
-            "url": "https://gavinw.me/swift-macos/swift/accelerate-absolute.html",
+            "id": "https://gavinw.me/swift-macos/accelerate/absolute-value.html",
+            "url": "https://gavinw.me/swift-macos/accelerate/absolute-value.html",
             "title": "Absolute value",
             "date_published": "2022-11-11T00:00:00Z",
-            "content_html": "<p>Get the absolute values of a vector using the vDSP.absolute function.</p><p><a href=\"https://gavinw.me/swift-macos/swift/accelerate-absolute.html\">Continue reading...</a></p>"
+            "content_html": "<p>Get the absolute values of a vector using the vDSP.absolute function.</p><p><a href=\"https://gavinw.me/swift-macos/accelerate/absolute-value.html\">Continue reading...</a></p>"
         },
         {
-            "id": "https://gavinw.me/swift-macos/swift/accelerate-reverse.html",
-            "url": "https://gavinw.me/swift-macos/swift/accelerate-reverse.html",
+            "id": "https://gavinw.me/swift-macos/accelerate/sort.html",
+            "url": "https://gavinw.me/swift-macos/accelerate/sort.html",
+            "title": "Sort array values",
+            "date_published": "2022-11-11T00:00:00Z",
+            "content_html": "<p>Sort the values in an array by ascending or descending order. Values of the array must be Float or Double.</p><p><a href=\"https://gavinw.me/swift-macos/accelerate/sort.html\">Continue reading...</a></p>"
+        },
+        {
+            "id": "https://gavinw.me/swift-macos/accelerate/reverse.html",
+            "url": "https://gavinw.me/swift-macos/accelerate/reverse.html",
             "title": "Reverse array elements",
             "date_published": "2022-11-11T00:00:00Z",
-            "content_html": "<p>Reverse the order of elements in an array using the vDSP.reverse function. Values in the array must be Float or Double.</p><p><a href=\"https://gavinw.me/swift-macos/swift/accelerate-reverse.html\">Continue reading...</a></p>"
+            "content_html": "<p>Reverse the order of elements in an array using the vDSP.reverse function. Values in the array must be Float or Double.</p><p><a href=\"https://gavinw.me/swift-macos/accelerate/reverse.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/swift-macos/swift/resources.html",
