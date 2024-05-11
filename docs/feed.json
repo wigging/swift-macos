@@ -5,6 +5,13 @@
     "feed_url": "https://gavinw.me/swift-macos/feed.json",
     "items": [
         {
+            "id": "https://gavinw.me/swift-macos/accelerate/complex-multiplication.html",
+            "url": "https://gavinw.me/swift-macos/accelerate/complex-multiplication.html",
+            "title": "Complex multiplication",
+            "date_published": "2024-05-11T00:00:00Z",
+            "content_html": "<p>Use the <code>cblas_cgemv</code> function in Accelerate to multiply a matrix and vector with single-precision complex values. For this example, a structure named <code>Complex</code> with <code>real</code> and <code>imag</code> properties is utilized but <code>DSPComplex</code> can also be used.</p><p><a href=\"https://gavinw.me/swift-macos/accelerate/complex-multiplication.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://gavinw.me/swift-macos/accelerate/matrix-multiplication.html",
             "url": "https://gavinw.me/swift-macos/accelerate/matrix-multiplication.html",
             "title": "Matrix multiplication",
