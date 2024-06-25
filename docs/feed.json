@@ -5,6 +5,13 @@
     "feed_url": "https://gavinw.me/swift-macos/feed.json",
     "items": [
         {
+            "id": "https://gavinw.me/swift-macos/swift/elapsed-time.html",
+            "url": "https://gavinw.me/swift-macos/swift/elapsed-time.html",
+            "title": "Elapsed time",
+            "date_published": "2024-06-24T00:00:00Z",
+            "content_html": "<p>The functions shown below are examples of measuring elapsed time in Swift. The sleep function is used to delay the code execution for 4 seconds. Consequently, the elapsed time for each example is approximately 4 seconds.</p><p><a href=\"https://gavinw.me/swift-macos/swift/elapsed-time.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://gavinw.me/swift-macos/accelerate/complex-multiplication.html",
             "url": "https://gavinw.me/swift-macos/accelerate/complex-multiplication.html",
             "title": "Complex multiplication",
@@ -437,13 +444,6 @@
             "title": "Comments",
             "date_published": "2022-11-12T00:00:00Z",
             "content_html": "<p>Single-line comments begin with two forward-slashes <code>//</code> while multiline comments are wrapped with forward-slashes and asterisks such as <code>/* */</code>.</p><p><a href=\"https://gavinw.me/swift-macos/swift/comments.html\">Continue reading...</a></p>"
-        },
-        {
-            "id": "https://gavinw.me/swift-macos/swift/elapsed-time.html",
-            "url": "https://gavinw.me/swift-macos/swift/elapsed-time.html",
-            "title": "Elapsed time",
-            "date_published": "2022-11-12T00:00:00Z",
-            "content_html": "<p>Below are two examples of measuring elapsed time in Swift. The sleep function is used to delay the code execution for 4 seconds. Consequently, the elapsed time for both examples is approximately 4 seconds.</p><p><a href=\"https://gavinw.me/swift-macos/swift/elapsed-time.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/swift-macos/swift/date-formatting.html",
