@@ -5,6 +5,13 @@
     "feed_url": "https://gavinw.me/swift-macos/feed.json",
     "items": [
         {
+            "id": "https://gavinw.me/swift-macos/swift/flat-indexing.html",
+            "url": "https://gavinw.me/swift-macos/swift/flat-indexing.html",
+            "title": "Flat indexing an N-dimensional array",
+            "date_published": "2024-08-07T00:00:00Z",
+            "content_html": "<p>An N-dimensional or multi-dimensional array is a data structure with one or more dimensions. An index for each dimension must be provided to access a particular element's value. Since the array's data is stored in one-dimensional memory, the indices must be converted to a flat index (one-dimension) to access the corresponding memory location.</p><p><a href=\"https://gavinw.me/swift-macos/swift/flat-indexing.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://gavinw.me/swift-macos/swift/elapsed-time.html",
             "url": "https://gavinw.me/swift-macos/swift/elapsed-time.html",
             "title": "Elapsed time",
