@@ -25,7 +25,7 @@ func flatIndex(indices: [Int], shape: [Int]) -> Int {
 The function is based on the formula shown below where indices are \\(i_1, i_2, ..., i_N\\) and dimensions are \\(d_1, d_2, ..., d_N\\).
 
 $$
-\text{flat index} = i_1 + (i_2 \times d_1) + (i_3 \times d_1 * d_2) + ... + (i_N \times d_1 \times d_2 \times ... \times d_{N-1})
+\text{flat index} = i_1 + (i_2 \times d_1) + (i_3 \times d_1 \times d_2) + ... + (i_N \times d_1 \times d_2 \times ... \times d_{N-1})
 $$
 
 The example below calculates the flat index for a 2D array.
