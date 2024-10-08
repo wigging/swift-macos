@@ -5,6 +5,13 @@
     "feed_url": "https://gavinw.me/swift-macos/feed.json",
     "items": [
         {
+            "id": "https://gavinw.me/swift-macos/swift/discardable-result.html",
+            "url": "https://gavinw.me/swift-macos/swift/discardable-result.html",
+            "title": "Discardable result",
+            "date_published": "2024-10-07T00:00:00Z",
+            "content_html": "<p>Functions marked with <code>@discardableResult</code> allow you to ignore the return value.</p><p><a href=\"https://gavinw.me/swift-macos/swift/discardable-result.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://gavinw.me/swift-macos/swift/flat-indexing.html",
             "url": "https://gavinw.me/swift-macos/swift/flat-indexing.html",
             "title": "Flat indexing an N-dimensional array",
