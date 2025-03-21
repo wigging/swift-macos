@@ -38,7 +38,7 @@ struct ContentView: View {
 }
 ```
 
-<p><img src="../img/window-resize1.png" style="max-width:300px;" alt="window size"></p>
+<p><img src="../images/window-resize1.png" style="max-width:300px;" alt="window size"></p>
 
 In the next example, a resizable window is created by defining the minimum and maximum size of the content view's frame. The minimum window size is 200x200 and its maximum size is 500x400.
 
@@ -75,4 +75,4 @@ struct ContentView: View {
 }
 ```
 
-<p><img src="../img/window-resize2.png" style="max-width:500px;" alt="window size"></p>
+<p><img src="../images/window-resize2.png" style="max-width:500px;" alt="window size"></p>

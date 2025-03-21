@@ -6,7 +6,7 @@ example: swift-macos/xcode-projects/MetalParticles
 
 This example uses Metal to draw particles (pixels) in a view. The particles move throughout the view based on their position and velocity. This example is inspired by the [Working with Particles in Metal part 3](https://metalkit.org/2017/11/30/working-with-particles-in-metal-part-3/) article by Marius Horga. However, this example is implemented with SwiftUI for macOS whereas Marius' example runs in an Xcode playground.
 
-<p><img src="../img/metal-particles.png" style="max-width:400px;" alt="metal particles"></p>
+<p><img src="../images/metal-particles.png" style="max-width:400px;" alt="metal particles"></p>
 
 The main view and window is setup in the SwiftUI ContentView.
 

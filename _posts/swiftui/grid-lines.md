@@ -5,7 +5,7 @@ date: February 4, 2023
 
 A GeometryReader can be used to equally space lines in a view even when that view changes size. This is accomplished by using the width and height of the container view to determine the spacing of the lines.
 
-<p><img src="../img/grid-lines.png" style="max-width:400px;" alt="grid lines"></p>
+<p><img src="../images/grid-lines.png" style="max-width:400px;" alt="grid lines"></p>
 
 ``` { .swift .pre1000 }
 import SwiftUI

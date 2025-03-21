@@ -6,7 +6,7 @@ example: swift-macos/xcode-projects/DisplayScale
 
 Get the display scale of the environment with the `displayScale` value. This can be used to convert a view's dimensions in points to pixels as seen in the example below.
 
-<img src="../img/display-scale.png" style="max-width:400px;border:1px solid lightgrey;border-radius:12px;" alt="display scale">
+<img src="../images/display-scale.png" style="max-width:400px;border:1px solid lightgrey;border-radius:12px;" alt="display scale">
 
 ```swift
 import SwiftUI

@@ -6,9 +6,9 @@ example: swift-macos/xcode-projects/MetalSampler
 
 This example uses a Metal `sampler` to upscale a noise texture as the Metal view increases in size. The left image shown below represents the actual size of the texture. The right image is the sampled (upscaled) texture due to the larger window size which increases the size of the Metal view.
 
-<img id="inline-img" src="../img/metal-sampler1.png" style="max-width:200px;float:left;margin-bottom:10px;border:1px solid lightgrey;border-radius:12px;" alt="metal sampler">
+<img id="inline-img" src="../images/metal-sampler1.png" style="max-width:200px;float:left;margin-bottom:10px;border:1px solid lightgrey;border-radius:12px;" alt="metal sampler">
 
-<img id="inline-img" src="../img/metal-sampler2.png" style="max-width:315px;margin-bottom:10px;border:1px solid lightgrey;border-radius:12px;" alt="metal sampler">
+<img id="inline-img" src="../images/metal-sampler2.png" style="max-width:315px;margin-bottom:10px;border:1px solid lightgrey;border-radius:12px;" alt="metal sampler">
 
 Code for the main SwiftUI view is shown below which contains the `MetalView` where the noise texture is drawn.
 
@@ -165,7 +165,7 @@ class Renderer: NSObject, MTKViewDelegate {
 
 The shader functions for this example are given below. Notice that instead of drawing two triangles to represent a quad, the `fullscreen_vertex()` shader function draws a single triangle that encloses the entire Metal view as shown in the figure below. The texture is only drawn to the visible area of the triangle. The `fullscreen_fragment()` function defines a linear sampler that is used to scale the texture as the Metal view's dimensions change. Another thank you to Warren Moore who provided the vertex and fragment sampler functions.
 
-<img src="../img/metal-sampler3.png" style="max-width:400px" alt="metal sampler">
+<img src="../images/metal-sampler3.png" style="max-width:400px" alt="metal sampler">
 
 ```{.cpp .pre1000}
 // Shaders.metal

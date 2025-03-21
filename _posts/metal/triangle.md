@@ -6,7 +6,7 @@ example: swift-macos/xcode-projects/MetalTriangle
 
 This example creates a triangle using vertex and fragment shaders.
 
-<img src="../img/metal-triangle.png" style="max-width:400px;border:1px solid lightgrey;border-radius:12px;" alt="metal triangle">
+<img src="../images/metal-triangle.png" style="max-width:400px;border:1px solid lightgrey;border-radius:12px;" alt="metal triangle">
 
 The main view is shown below and contains the `MetalView` where the triangle is drawn.
 

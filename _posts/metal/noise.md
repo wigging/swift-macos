@@ -6,7 +6,7 @@ example: swift-macos/xcode-projects/MetalNoise
 
 This example creates noise using a shader function that is based on the Golden Ratio. It is adapted from a function on the [Shadertoy](https://www.shadertoy.com/view/ltB3zD) website.
 
-<img src="../img/metal-noise.png" style="max-width:400px;border:1px solid lightgrey;border-radius:12px;" alt="metal noise">
+<img src="../images/metal-noise.png" style="max-width:400px;border:1px solid lightgrey;border-radius:12px;" alt="metal noise">
 
 The main view is shown below and contains the `MetalView` where the noise is drawn.
 

@@ -147,8 +147,8 @@ let imageColormap = makeColormapImage(image: grayImage, gradient: gradientImage)
 ```
 
 <div class="text-center">
-    <img id="inline-img" src="../img/image-data-gray1.png" style="max-width:200px;" alt="gray image">
-    <img id="inline-img" src="../img/image-colormap1.png" style="max-width:200px;" alt="colormap image">
+    <img id="inline-img" src="../images/image-data-gray1.png" style="max-width:200px;" alt="gray image">
+    <img id="inline-img" src="../images/image-colormap1.png" style="max-width:200px;" alt="colormap image">
 </div>
 
 The next example applies the viridis colormap to a gray scale image that was generated from random data.
@@ -176,6 +176,6 @@ let imageColormap2 = makeColormapImage(image: grayImage2, gradient: gradientImag
 ```
 
 <div class="text-center">
-    <img id="inline-img" src="../img/image-data-gray2.png" style="max-width:200px;" alt="gray image">
-    <img id="inline-img" src="../img/image-colormap2.png" style="max-width:200px;" alt="colormap image">
+    <img id="inline-img" src="../images/image-data-gray2.png" style="max-width:200px;" alt="gray image">
+    <img id="inline-img" src="../images/image-colormap2.png" style="max-width:200px;" alt="colormap image">
 </div>

@@ -5,7 +5,7 @@ date: November 13, 2022
 
 The picker control selects an item from a set of values. The appearance of the picker can be changed by using different styles and modifiers.
 
-<p><img src="../img/picker-control.png" style="max-width:400px;" alt="picker control"></p>
+<p><img src="../images/picker-control.png" style="max-width:400px;" alt="picker control"></p>
 
 ```swift
 import SwiftUI

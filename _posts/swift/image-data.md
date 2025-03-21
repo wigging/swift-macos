@@ -58,7 +58,7 @@ let dataLinear = vDSP.ramp(in: Float.zero...1, count: width * height)
 let grayImage1 = makeGrayImage(from: dataLinear, width: width, height: height)
 ```
 
-<img src="../img/image-data-gray1.png" style="max-width:200px;" alt="gray image">
+<img src="../images/image-data-gray1.png" style="max-width:200px;" alt="gray image">
 
 An array of random data from 0 to 1 can also be used to generate a gray scale image as demonstrated below.
 
@@ -77,7 +77,7 @@ for i in 0..<dataRandom.count {
 let grayImage2 = makeGrayImage(from: dataRandom, width: width, height: height)
 ```
 
-<img src="../img/image-data-gray2.png" style="max-width:200px;" alt="gray image">
+<img src="../images/image-data-gray2.png" style="max-width:200px;" alt="gray image">
 
 ## RGBA image
 
@@ -132,7 +132,7 @@ for i in 0..<dataRGB4.count {
 let rgbImage1 = makeRGBAImage(from: dataRGB4, width: width, height: height)
 ```
 
-<img src="../img/image-data-rgba.png" style="max-width:200px;" alt="rgba image">
+<img src="../images/image-data-rgba.png" style="max-width:200px;" alt="rgba image">
 
 ## RGB image
 
@@ -187,4 +187,4 @@ for i in 0..<dataRGB3.count {
 let rgbImage2 = makeRGBImage(from: dataRGB3, width: width, height: height)
 ```
 
-<img src="../img/image-data-rgb.png" style="max-width:200px;" alt="rgb image">
+<img src="../images/image-data-rgb.png" style="max-width:200px;" alt="rgb image">

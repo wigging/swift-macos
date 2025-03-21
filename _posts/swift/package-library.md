@@ -41,4 +41,4 @@ Use the `swift test` command to run the tests for the package.
 
 Select File > New > Package... then choose Multiplatform Library to create a package in Xcode. The name you provide in the Save As field will be used as the name of the package. The image below shows the Xcode Project Navigator for a package named MyPackage. To run the tests, select Product > Test from the menu or press Command U on the keyboard.
 
-<img src="../img/package-library.png" style="max-width:600px;" alt="Xcode package library">
+<img src="../images/package-library.png" style="max-width:600px;" alt="Xcode package library">

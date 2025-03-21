@@ -5,7 +5,7 @@ date: November 13, 2022
 
 The mouse pointer (or cursor) is represented by an arrow on the screen. Different cursors are available in macOS to indicate actions that the user can take with the mouse. See the [NSCursor documentation](https://developer.apple.com/documentation/appkit/nscursor) for a list of all the available cursors.
 
-<p><img src="../img/cursors.png" style="max-width:400px;" alt="cursors"></p>
+<p><img src="../images/cursors.png" style="max-width:400px;" alt="cursors"></p>
 
 ```swift
 import SwiftUI

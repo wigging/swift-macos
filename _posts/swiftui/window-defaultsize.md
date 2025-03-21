@@ -44,4 +44,4 @@ struct ContentView: View {
 }
 ```
 
-<img src="../img/window-defaultsize.png" style="max-width:400px;" alt="window default size">
+<img src="../images/window-defaultsize.png" style="max-width:400px;" alt="window default size">

@@ -5,7 +5,7 @@ date: July 8, 2023
 
 Use a `RectangleMark()` in a Swift Chart to create a 2D heat map of data. In this example, the data is represented using a `Grid` struct that contains an array of `Point` structs. The `Point` struct defines the x and y coordinate of the associated value. The x coordinate is a range based on the number of columns, the y coordinate is a range based on the number of columns, and the value is a random number from 0 to 1. Faint lines may appear on the chart if the frame size is not evenly divisible by the number of rows and columns defined by the `Grid` struct; this is likely caused by each `RectangleMark()` not perfectly aligning to the screen pixels.
 
-<p><img src="../img/heatmap.png" style="max-width:400px;" alt="heat map chart"></p>
+<p><img src="../images/heatmap.png" style="max-width:400px;" alt="heat map chart"></p>
 
 ```swift
 import SwiftUI

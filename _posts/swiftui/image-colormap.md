@@ -6,9 +6,9 @@ example: swift-macos/xcode-projects/ImageColormap
 
 This SwiftUI example demonstrates creating a gray scale image from numerical data. Data is provided as a linear ramp from 0 to 1 (see top image) or as random numbers in the range of 0 to 1 (see bottom image). A colormap filter applies color to the gray scale image using RGB values from the viridis colormap.
 
-<img src="../img/image-colormap-linear.png" style="max-width:600px;" alt="image colormap linear">
+<img src="../images/image-colormap-linear.png" style="max-width:600px;" alt="image colormap linear">
 
-<img src="../img/image-colormap-random.png" style="max-width:600px;" alt="image colormap linear">
+<img src="../images/image-colormap-random.png" style="max-width:600px;" alt="image colormap linear">
 
 The SwiftUI views are constructed as shown below.
 

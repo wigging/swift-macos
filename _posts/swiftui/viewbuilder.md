@@ -75,4 +75,4 @@ struct ContentView: View {
 }
 ```
 
-<p><img src="../img/viewbuilder.png" style="max-width:400px;" alt="view builder"></p>
+<p><img src="../images/viewbuilder.png" style="max-width:400px;" alt="view builder"></p>

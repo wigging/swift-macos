@@ -6,7 +6,7 @@ example: swift-macos/xcode-projects/MetalClear
 
 This example sets the clear color to blue for the Metal view. This color is like the background color of the view.
 
-<img src="../img/metal-clear.png" style="max-width:400px;border:1px solid lightgrey;border-radius:12px;" alt="metal clear color">
+<img src="../images/metal-clear.png" style="max-width:400px;border:1px solid lightgrey;border-radius:12px;" alt="metal clear color">
 
 The main view is shown below and contains the `MetalView` where the clear color is drawn.
 
