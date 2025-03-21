@@ -1,0 +1,7 @@
+# Configuration file used by Genja to generate this website.
+# See https://github.com/wigging/genja for more info about Genja.
+
+base_url = "https://gavinw.me/swift-macos"
+posts_output = "."
+site_output = "docs"
+title = "Swift macOS"
