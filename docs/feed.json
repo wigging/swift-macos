@@ -495,13 +495,6 @@
             "content_html": "<p>Reverse the order of elements in an array using the vDSP.reverse function. Values in the array must be Float or Double.</p><p><a href=\"https://gavinw.me/swift-macos/./accelerate/reverse.html\">Continue reading...</a></p>"
         },
         {
-            "id": "https://gavinw.me/swift-macos/./swift/resources.html",
-            "url": "https://gavinw.me/swift-macos/./swift/resources.html",
-            "title": "Resources",
-            "date_published": "2022-11-10T00:00:00Z",
-            "content_html": "<p>There are limited resources for developing native modern Mac apps (even from Apple). But below are some links that Mac developers may find useful.</p><p><a href=\"https://gavinw.me/swift-macos/./swift/resources.html\">Continue reading...</a></p>"
-        },
-        {
             "id": "https://gavinw.me/swift-macos/./swift/defaults-tool.html",
             "url": "https://gavinw.me/swift-macos/./swift/defaults-tool.html",
             "title": "Defaults command line tool",
@@ -521,13 +514,6 @@
             "title": "Read Eval Print Loop (REPL)",
             "date_published": "2022-11-10T00:00:00Z",
             "content_html": "<p>The Swift Read Eval Print Loop or REPL is an interactive terminal interface for Swift. Type the swift command in the terminal to launch the REPL. The REPL prompt is represented by an angle bracket &gt;. Use the :exit or Control-D commands to exit the REPL environment.</p><p><a href=\"https://gavinw.me/swift-macos/./swift/repl.html\">Continue reading...</a></p>"
-        },
-        {
-            "id": "https://gavinw.me/swift-macos/./swift/install-xcode.html",
-            "url": "https://gavinw.me/swift-macos/./swift/install-xcode.html",
-            "title": "Install Xcode",
-            "date_published": "2022-11-09T00:00:00Z",
-            "content_html": "<p>The first step (other than getting a Mac) is to download Xcode from the Mac App Store. Visit <a href=\"https://swift.org\">swift.org</a> for instructions on how to install Swift on other platforms such as Linux and Windows.</p><p><a href=\"https://gavinw.me/swift-macos/./swift/install-xcode.html\">Continue reading...</a></p>"
         }
     ]
 }
