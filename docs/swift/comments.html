@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Open Graph -->
-    <meta property="og:url" content="{{ meta.url }}">
+    <meta property="og:url" content="https://gavinw.me/swift-macos/./swift/comments.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Swift Programming for macOS">
-    <meta property="og:description" content="{{ meta.title }}">
+    <meta property="og:description" content="Comments">
     <meta property="og:image" content="https://gavinw.me/swift-macos/images/opengraph.jpg">
 
     <!-- Bootstrap -->
@@ -35,14 +35,21 @@
     <div class="row">
         <div class="col-md">
 
-        <h1>{{ meta.title }}</h1>
-        <h6>{{ meta.date }}</h6>
-        {% if meta.example %}
-        <h6>{{ meta.example }}</h6>
-        {% endif %}
+        <h1>Comments</h1>
+        <h6>November 12, 2022</h6>
         <hr>
 
-        {{ content }}
+        <p>Single-line comments begin with two forward-slashes <code>//</code> while multiline comments are wrapped with forward-slashes and asterisks such as <code>/* */</code>.</p>
+<pre><code class="language-swift">// This is a single line comment.
+
+let x = 99.1    // Another single line comment.
+
+/*
+This is a multiline comment
+that spans
+several lines.
+*/
+</code></pre>
 
         </div>
     </div>

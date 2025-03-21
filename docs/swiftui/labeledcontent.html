@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Open Graph -->
-    <meta property="og:url" content="{{ meta.url }}">
+    <meta property="og:url" content="https://gavinw.me/swift-macos/./swiftui/labeledcontent.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Swift Programming for macOS">
-    <meta property="og:description" content="{{ meta.title }}">
+    <meta property="og:description" content="LabeledContent">
     <meta property="og:image" content="https://gavinw.me/swift-macos/images/opengraph.jpg">
 
     <!-- Bootstrap -->
@@ -35,14 +35,32 @@
     <div class="row">
         <div class="col-md">
 
-        <h1>{{ meta.title }}</h1>
-        <h6>{{ meta.date }}</h6>
-        {% if meta.example %}
-        <h6>{{ meta.example }}</h6>
-        {% endif %}
+        <h1>LabeledContent</h1>
+        <h6>November 13, 2022</h6>
         <hr>
 
-        {{ content }}
+        <p>The LabeledContent view is comprised of a label and content. Usually, it displays the label on the leading edge and the content on the trailing edge. This is similar to using an HStack containing two views.</p>
+<p><img src="../images/labeledcontent.png" style="max-width:300px;" alt="labeled content"></p>
+
+<pre><code class="language-swift">import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        VStack {
+            Text(&quot;Below are labeled content examples.&quot;)
+
+            LabeledContent(&quot;Favorites&quot;) {
+                Image(systemName: &quot;star.fill&quot;)
+            }
+
+            LabeledContent(&quot;Wireless&quot;) {
+                Image(systemName: &quot;wifi&quot;)
+            }
+        }
+        .frame(width: 300, height: 200)
+    }
+}
+</code></pre>
 
         </div>
     </div>

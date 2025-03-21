@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Open Graph -->
+    <meta property="og:url" content="https://gavinw.me/swift-macos/./metal/matrix-multiplication.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Swift Programming for macOS">
+    <meta property="og:description" content="Matrix multiplication">
+    <meta property="og:image" content="https://gavinw.me/swift-macos/images/opengraph.jpg">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Highlightjs -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <!-- MathJax -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- JSON feed -->
+    <link href="https://gavinw.me/swift-macos/feed.json" rel="alternate" type="application/feed+json" title="Swift macOS">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles.css">
+
+    <title>Swift macOS</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+
+        <h1>Matrix multiplication</h1>
+        <h6>May 3, 2024</h6>
+        <hr>
+
+        <p>Metal Performance Shaders provide <code>MPSMatrix</code> and <code>MPSMatrixMultiplication</code> objects to perform matrix multiplication on the GPU. The code below demonstrates multiplication of two matrices.</p>
+<pre class="pre1000"><code class="language-swift">import MetalPerformanceShaders
+
+// Arrays that represent 2D matrices, rows and columns are defined for each array
+// Note that if matrix A is m x n then matrix B must be n x p thus matrix C is m x p
+
+let a: [Float] = [5, 2, 3,
+                  4, 5, 6,
+                  7, 8, 9]
+
+let b: [Float] = [1, 2, 3, 4,
+                  4, 5, 6, 7,
+                  1, 3, 2, 1]
+
+let rowsA = 3
+let columnsA = 3
+
+let rowsB = columnsA
+let columnsB = 4
+
+let rowsC = rowsA
+let columnsC = columnsB
+
+// Setup the Metal matrices
+
+guard let device = MTLCreateSystemDefaultDevice() else {
+    fatalError(&quot;Failed to get GPU (Metal device)&quot;)
+}
+
+let rowBytesA = columnsA * MemoryLayout&lt;Float&gt;.stride
+let rowBytesB = columnsB * MemoryLayout&lt;Float&gt;.stride
+let rowBytesC = columnsC * MemoryLayout&lt;Float&gt;.stride
+
+let bufferA = device.makeBuffer(bytes: a, length: rowsA * rowBytesA, options: .storageModeShared)!
+let bufferB = device.makeBuffer(bytes: b, length: rowsB * rowBytesB, options: .storageModeShared)!
+let bufferC = device.makeBuffer(length: rowsC * rowBytesC, options: .storageModeShared)!
+
+let descA = MPSMatrixDescriptor(dimensions: rowsA, columns: columnsA, rowBytes: rowBytesA, dataType: .float32)
+let descB = MPSMatrixDescriptor(dimensions: rowsB, columns: columnsB, rowBytes: rowBytesB, dataType: .float32)
+let descC = MPSMatrixDescriptor(dimensions: rowsC, columns: columnsC, rowBytes: rowBytesC, dataType: .float32)
+
+let matrixA = MPSMatrix(buffer: bufferA, descriptor: descA)
+let matrixB = MPSMatrix(buffer: bufferB, descriptor: descB)
+let matrixC = MPSMatrix(buffer: bufferC, descriptor: descC)
+
+// Perform matrix multiplication using Metal
+
+let commandBuffer = device.makeCommandQueue()!.makeCommandBuffer()!
+
+let mul = MPSMatrixMultiplication(device: device, resultRows: rowsC, resultColumns: columnsC, interiorColumns: columnsA)
+mul.encode(commandBuffer: commandBuffer, leftMatrix: matrixA, rightMatrix: matrixB, resultMatrix: matrixC)
+
+commandBuffer.commit()
+commandBuffer.waitUntilCompleted()
+
+// Print result
+
+let rawPointer = matrixC.data.contents()
+let floatPointer = rawPointer.bindMemory(to: Float.self, capacity: rowsC * columnsC)
+let bufferPointer = UnsafeBufferPointer(start: floatPointer, count: rowsC * columnsC)
+let arrayC = Array(bufferPointer)
+
+for i in 0..&lt;matrixC.rows {
+    for j in 0..&lt;matrixC.columns {
+        print(arrayC[i * matrixC.columns + j], terminator: &quot;  &quot;)
+    }
+    print(&quot;&quot;)
+}
+</code></pre>
+<p>Compile and run the code using the commands shown below. In macOS, you must link to the Core Graphics framework to get a Metal device object. This is required for apps that don't use graphics such as command line tools or scripts.</p>
+<pre><code class="language-text">swiftc -framework CoreGraphics -Ounchecked matmul-metal.swift
+./matmul-metal
+</code></pre>
+<p>The output is:</p>
+<pre><code class="language-text">16.0  29.0  33.0  37.0
+30.0  51.0  54.0  57.0
+48.0  81.0  87.0  93.0
+</code></pre>
+
+        </div>
+    </div>
+    <div class="row my-5">
+    <div class="col">
+        <p class="text-center small my-5">
+            <a href="https://gavinw.me/swift-macos">Swift Programming for macOS</a> © 2025 <br>
+            Built by <a href="https://gavinw.me">Gavin Wiggins</a>
+        </p>
+    </div>
+    </div>
+</div>
+</body>
+</html>

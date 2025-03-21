@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Open Graph -->
-    <meta property="og:url" content="{{ meta.url }}">
+    <meta property="og:url" content="https://gavinw.me/swift-macos/./swift/dictionaries.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Swift Programming for macOS">
-    <meta property="og:description" content="{{ meta.title }}">
+    <meta property="og:description" content="Dictionaries">
     <meta property="og:image" content="https://gavinw.me/swift-macos/images/opengraph.jpg">
 
     <!-- Bootstrap -->
@@ -35,14 +35,31 @@
     <div class="row">
         <div class="col-md">
 
-        <h1>{{ meta.title }}</h1>
-        <h6>{{ meta.date }}</h6>
-        {% if meta.example %}
-        <h6>{{ meta.example }}</h6>
-        {% endif %}
+        <h1>Dictionaries</h1>
+        <h6>November 12, 2022</h6>
         <hr>
 
-        {{ content }}
+        <p>A dictionary in Swift is a list of key-value pairs separated by colons and surrounded by square brackets such as <code>[key: value]</code>. Values returned from a dictionary are optional because the key may not exist in the dictionary.</p>
+<pre><code class="language-swift">// A dictionary literal
+
+let d = [&quot;one&quot;: 1, &quot;two&quot;: 2, &quot;three&quot;: 3]
+
+// An empty dictionary
+
+var e: [String: Int] = [:]
+
+// Get a value from a dictionary
+
+var fruits = [&quot;apples&quot;: 1, &quot;oranges&quot;: 3]
+print(fruits[&quot;oranges&quot;])
+// Prints an optional 3
+
+// Add an item to a dictionary
+
+fruits[&quot;berries&quot;: 8]
+print(fruits)
+// Prints a dictionary containing [&quot;apples&quot;: 1, &quot;oranges&quot;: 3, &quot;berries&quot;: 8]
+</code></pre>
 
         </div>
     </div>

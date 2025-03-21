@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Open Graph -->
-    <meta property="og:url" content="{{ meta.url }}">
+    <meta property="og:url" content="https://gavinw.me/swift-macos/./swiftui/menu-items.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Swift Programming for macOS">
-    <meta property="og:description" content="{{ meta.title }}">
+    <meta property="og:description" content="Menu items">
     <meta property="og:image" content="https://gavinw.me/swift-macos/images/opengraph.jpg">
 
     <!-- Bootstrap -->
@@ -35,14 +35,52 @@
     <div class="row">
         <div class="col-md">
 
-        <h1>{{ meta.title }}</h1>
-        <h6>{{ meta.date }}</h6>
-        {% if meta.example %}
-        <h6>{{ meta.example }}</h6>
-        {% endif %}
+        <h1>Menu items</h1>
+        <h6>November 13, 2022</h6>
         <hr>
 
-        {{ content }}
+        <p>Menus in Mac apps are typically located at the top of the screen in the menu bar. Menu items can be added to an app's menu using the commands modifier on the WindowGroup.</p>
+<p><img src="../images/menu-items.png" style="max-width:400px;" alt="menu items"></p>
+
+<pre><code class="language-swift">import SwiftUI
+
+@main
+struct MenuItemsApp: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }.commands {
+            CommandMenu(&quot;My Menu&quot;) {
+                Text(&quot;Some text&quot;)
+                Button(action: {}, label: {
+                    Image(systemName: &quot;clock&quot;)
+                    Text(&quot;Date &amp; Time&quot;)
+                })
+
+                Divider()
+
+                Button(action: {}, label: {
+                    Text(&quot;1️⃣ Item 1&quot;)
+                })
+                Button(action: {}, label: {
+                    Text(&quot;2️⃣ Item 2&quot;)
+                })
+
+                Divider()
+
+                Menu(&quot;Sub Menu&quot;) {
+                    Button(action: {}, label: {
+                        Text(&quot;Sub Item 1&quot;)
+                    })
+                    Button(action: {}, label: {
+                        Text(&quot;Sub Item 2&quot;)
+                    })
+                }
+            }
+        }
+    }
+}
+</code></pre>
 
         </div>
     </div>

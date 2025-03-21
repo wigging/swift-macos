@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Open Graph -->
-    <meta property="og:url" content="{{ meta.url }}">
+    <meta property="og:url" content="https://gavinw.me/swift-macos/./swift/range.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Swift Programming for macOS">
-    <meta property="og:description" content="{{ meta.title }}">
+    <meta property="og:description" content="Range">
     <meta property="og:image" content="https://gavinw.me/swift-macos/images/opengraph.jpg">
 
     <!-- Bootstrap -->
@@ -35,14 +35,38 @@
     <div class="row">
         <div class="col-md">
 
-        <h1>{{ meta.title }}</h1>
-        <h6>{{ meta.date }}</h6>
-        {% if meta.example %}
-        <h6>{{ meta.example }}</h6>
-        {% endif %}
+        <h1>Range</h1>
+        <h6>November 12, 2022</h6>
         <hr>
 
-        {{ content }}
+        <p>Check if a value is within a given range using the contains method.</p>
+<pre><code class="language-swift">// This prints &quot;yes&quot; because x is in the given range
+
+let x = 212.5
+
+if (200...300).contains(x) {
+    print(&quot;yes&quot;)
+} else {
+    print(&quot;nope&quot;)
+}
+
+// This prints &quot;nope&quot; because y is not in the range
+
+let y = 105
+
+if (200...300).contains(y) {
+    print(&quot;yes&quot;)
+} else {
+    print(&quot;nope&quot;)
+}
+</code></pre>
+<p>This can also be accomplished with the <code>~=</code> operator.</p>
+<pre><code class="language-swift">if 200...300 ~= y {
+    print(&quot;yes&quot;)
+} else {
+    print(&quot;nope&quot;)
+}
+</code></pre>
 
         </div>
     </div>

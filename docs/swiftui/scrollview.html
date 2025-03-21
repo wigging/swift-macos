@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Open Graph -->
-    <meta property="og:url" content="{{ meta.url }}">
+    <meta property="og:url" content="https://gavinw.me/swift-macos/./swiftui/scrollview.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Swift Programming for macOS">
-    <meta property="og:description" content="{{ meta.title }}">
+    <meta property="og:description" content="ScrollView">
     <meta property="og:image" content="https://gavinw.me/swift-macos/images/opengraph.jpg">
 
     <!-- Bootstrap -->
@@ -35,14 +35,44 @@
     <div class="row">
         <div class="col-md">
 
-        <h1>{{ meta.title }}</h1>
-        <h6>{{ meta.date }}</h6>
-        {% if meta.example %}
-        <h6>{{ meta.example }}</h6>
-        {% endif %}
+        <h1>ScrollView</h1>
+        <h6>November 13, 2022</h6>
         <hr>
 
-        {{ content }}
+        <p>The scroll view displays its content within a scrollable area of the window.</p>
+<p><img src="../images/scrollview.png" style="max-width:400px;" alt="scroll view"></p>
+
+<pre><code class="language-swift">import SwiftUI
+
+struct ContentView: View {
+    @State private var toggled = true
+
+    var body: some View {
+        ScrollView {
+            VStack(spacing: 25) {
+                Text(&quot;Scroll up and down&quot;).font(.headline)
+
+                Toggle(isOn: $toggled) { Text(&quot;Toggle 1&quot;) }
+
+                Toggle(isOn: $toggled) { Text(&quot;Toggle 2&quot;) }
+
+                Toggle(isOn: $toggled) { Text(&quot;Toggle 3&quot;) }
+
+                Button(&quot;Button 1&quot;) { }
+
+                Button(&quot;Button 2&quot;) { }
+
+                Button(&quot;Button 3&quot;) { }
+
+                Text(&quot;Last Item in scroll view&quot;)
+            }
+            .padding()
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+        }
+        .frame(width: 300, height: 200)
+    }
+}
+</code></pre>
 
         </div>
     </div>

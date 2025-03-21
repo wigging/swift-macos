@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Open Graph -->
-    <meta property="og:url" content="{{ meta.url }}">
+    <meta property="og:url" content="https://gavinw.me/swift-macos/./swiftui/window-defaultsize.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Swift Programming for macOS">
-    <meta property="og:description" content="{{ meta.title }}">
+    <meta property="og:description" content="Window default size">
     <meta property="og:image" content="https://gavinw.me/swift-macos/images/opengraph.jpg">
 
     <!-- Bootstrap -->
@@ -35,14 +35,47 @@
     <div class="row">
         <div class="col-md">
 
-        <h1>{{ meta.title }}</h1>
-        <h6>{{ meta.date }}</h6>
-        {% if meta.example %}
-        <h6>{{ meta.example }}</h6>
-        {% endif %}
+        <h1>Window default size</h1>
+        <h6>February 22, 2023</h6>
         <hr>
 
-        {{ content }}
+        <p>The default window size in this example is set to 400x200. If the window size is changed by dragging the corner or side, then the new size becomes the default size when the app is relaunched. Delete the app's container to restore the app to its default state.</p>
+<pre><code class="language-swift">// WindowDefaultSizeApp.swift
+
+import SwiftUI
+
+@main
+struct WindowDefaultSizeApp: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+        .defaultSize(width: 400, height: 200)
+    }
+}
+</code></pre>
+<pre><code class="language-swift">// ContentView.swift
+
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        VStack {
+            Image(systemName: &quot;globe&quot;)
+                .imageScale(.large)
+                .foregroundColor(.accentColor)
+            Text(&quot;Hello, world!&quot;)
+                .padding(.bottom)
+            Text(&quot;&quot;&quot;
+            Reset window to default size by deleting
+            ~/Library/Containers/com.GavinWiggins.WindowDefaultSize
+            &quot;&quot;&quot;)
+        }
+        .padding()
+    }
+}
+</code></pre>
+<p><img src="../images/window-defaultsize.png" style="max-width:400px;" alt="window default size"></p>
 
         </div>
     </div>

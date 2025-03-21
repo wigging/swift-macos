@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Open Graph -->
-    <meta property="og:url" content="{{ meta.url }}">
+    <meta property="og:url" content="https://gavinw.me/swift-macos/./swift/compiler-optimizations.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Swift Programming for macOS">
-    <meta property="og:description" content="{{ meta.title }}">
+    <meta property="og:description" content="Compiler optimizations">
     <meta property="og:image" content="https://gavinw.me/swift-macos/images/opengraph.jpg">
 
     <!-- Bootstrap -->
@@ -35,14 +35,30 @@
     <div class="row">
         <div class="col-md">
 
-        <h1>{{ meta.title }}</h1>
-        <h6>{{ meta.date }}</h6>
-        {% if meta.example %}
-        <h6>{{ meta.example }}</h6>
-        {% endif %}
+        <h1>Compiler optimizations</h1>
+        <h6>February 24, 2024</h6>
         <hr>
 
-        {{ content }}
+        <p>The Swift compiler <code>swiftc</code> provides options such as <code>-O</code>, <code>-Osize</code>, and <code>-Ounchecked</code> to build code with optimizations turned on. Use optimizations such as <code>-Osize</code> to target small code size and the <code>-Ounchecked</code> to remove runtime safety checks.</p>
+<p>The example below creates an array of size <code>n</code> that contains random numbers in the range from 1 to 10. The sum of the array is calculated then information about the result is printed to the screen.</p>
+<pre><code class="language-swift">// main.swift
+
+let n = 2_000_000
+let x = (1...n).map { _ in Float.random(in: 1...10) }
+let s = x.reduce(0, +)
+
+print(&quot;first item \(x[0])&quot;)
+print(&quot;last item \(x[n-1])&quot;)
+print(&quot;sum \(s)&quot;)
+</code></pre>
+<p>Compiling without optimizations and timing the code execution is shown below. The execution time is 1.84 seconds on a 2019 MacBook Pro with a 2.6 GHz Intel CPU and 32 GB of RAM.</p>
+<pre><code class="language-text">swiftc main.swift
+time ./main
+</code></pre>
+<p>Compiling with optimizations and timing the code execution is shown below. The execution time is 0.26 seconds. The code executes about 7 times faster when it is compiled with optimizations.</p>
+<pre><code class="language-text">swiftc main.swift -Ounchecked -o main_opt
+time ./main_opt
+</code></pre>
 
         </div>
     </div>

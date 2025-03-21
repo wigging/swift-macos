@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Open Graph -->
+    <meta property="og:url" content="https://gavinw.me/swift-macos/./metal/sampler.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Swift Programming for macOS">
+    <meta property="og:description" content="Sampler">
+    <meta property="og:image" content="https://gavinw.me/swift-macos/images/opengraph.jpg">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Highlightjs -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <!-- MathJax -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- JSON feed -->
+    <link href="https://gavinw.me/swift-macos/feed.json" rel="alternate" type="application/feed+json" title="Swift macOS">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles.css">
+
+    <title>Swift macOS</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+
+        <h1>Sampler</h1>
+        <h6>October 10, 2023</h6>
+        <hr>
+
+        <p>This example uses a Metal <code>sampler</code> to upscale a noise texture as the Metal view increases in size. The left image shown below represents the actual size of the texture. The right image is the sampled (upscaled) texture due to the larger window size which increases the size of the Metal view.</p>
+<p><img id="inline-img" src="../images/metal-sampler1.png" style="max-width:200px;float:left;margin-bottom:10px;border:1px solid lightgrey;border-radius:12px;" alt="metal sampler"></p>
+<p><img id="inline-img" src="../images/metal-sampler2.png" style="max-width:315px;margin-bottom:10px;border:1px solid lightgrey;border-radius:12px;" alt="metal sampler"></p>
+<p>Code for the main SwiftUI view is shown below which contains the <code>MetalView</code> where the noise texture is drawn.</p>
+<pre><code class="language-swift">// ContentView.swift
+
+import SwiftUI
+import MetalKit
+
+struct ContentView: View {
+
+    @State private var mtkView = MTKView()
+    @State private var renderer: Renderer?
+
+    var body: some View {
+        VStack {
+            MetalView(mtkView: mtkView).onAppear {
+                renderer = Renderer(metalView: mtkView)
+            }
+            .frame(minWidth: 200, minHeight: 200)
+            .padding()
+
+            Text(&quot;Resize window to resample texture&quot;)
+        }
+        .padding()
+    }
+}
+</code></pre>
+<p>The <code>MetalView</code> represents a <code>MTKView</code> as shown below. Notice the <code>MTKView</code> must be wrapped with a <code>NSViewRepresentable</code> for SwiftUI in macOS.</p>
+<pre><code class="language-swift">// MetalView.swift
+
+import SwiftUI
+import MetalKit
+
+struct MetalView: NSViewRepresentable {
+
+    let mtkView: MTKView
+
+    func makeNSView(context: Context) -&gt; some NSView {
+        return mtkView
+    }
+
+    func updateNSView(_ nsView: NSViewType, context: Context) { }
+}
+</code></pre>
+<p>The <code>Renderer</code> object sets up the Metal device, pipelines, and texture for drawing to the view. Thank you to Warren Moore who helped with the render pipeline.</p>
+<pre class="pre1000"><code class="language-swift">// Renderer.swift
+
+import MetalKit
+
+class Renderer: NSObject, MTKViewDelegate {
+
+    static var device: MTLDevice!
+    static var commandQueue: MTLCommandQueue!
+
+    var computePipeline: MTLComputePipelineState!
+    var renderPipeline: MTLRenderPipelineState!
+    var texture: MTLTexture!
+
+    init(metalView: MTKView) {
+        super.init()
+
+        // Setup the GPU and command queue
+        guard let device = MTLCreateSystemDefaultDevice(),
+              let commandQueue = device.makeCommandQueue()
+        else {
+            fatalError(&quot;GPU not available&quot;)
+        }
+        Renderer.device = device
+        Renderer.commandQueue = commandQueue
+
+        // Setup compute pipeline and the draw_noise shader function
+        let library = device.makeDefaultLibrary()
+        let drawNoise = library?.makeFunction(name: &quot;draw_noise&quot;)
+
+        do {
+            computePipeline = try device.makeComputePipelineState(function: drawNoise!)
+        } catch let error as NSError {
+            print(error)
+        }
+
+        // Setup render pipeline along with vertex and fragment shader functions
+        let vertexFunction = library?.makeFunction(name: &quot;fullscreen_vertex&quot;)
+        let fragmentFunction = library?.makeFunction(name: &quot;fullscreen_fragment&quot;)
+
+        let renderDescriptor = MTLRenderPipelineDescriptor()
+        renderDescriptor.vertexFunction = vertexFunction
+        renderDescriptor.fragmentFunction = fragmentFunction
+        renderDescriptor.colorAttachments[0].pixelFormat = metalView.colorPixelFormat
+        renderDescriptor.depthAttachmentPixelFormat = metalView.depthStencilPixelFormat
+
+        do {
+            renderPipeline = try device.makeRenderPipelineState(descriptor: renderDescriptor)
+        } catch {
+            fatalError(&quot;Could not create render pipeline state: \(error)&quot;)
+        }
+
+        // Setup the Metal view
+        metalView.device = device
+        metalView.clearColor = MTLClearColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)
+        metalView.framebufferOnly = false
+        metalView.delegate = self
+
+        // Setup the texture
+        let textureDescriptor = MTLTextureDescriptor.texture2DDescriptor(
+            pixelFormat: metalView.colorPixelFormat,
+            width: 400,
+            height: 400,
+            mipmapped: false)
+        textureDescriptor.usage = [.shaderRead, .shaderWrite]
+        texture = device.makeTexture(descriptor: textureDescriptor)
+    }
+
+    func mtkView(_ view: MTKView, drawableSizeWillChange size: CGSize) { }
+
+    func draw(in view: MTKView) {
+        guard let drawable = view.currentDrawable else { return }
+
+        // Command buffer
+        let commandBuffer = Renderer.commandQueue.makeCommandBuffer()
+
+        // Compute encoder and threads
+        let computeEncoder = commandBuffer?.makeComputeCommandEncoder()
+        computeEncoder?.setComputePipelineState(computePipeline)
+        computeEncoder?.setTexture(texture, index: 0)
+
+        let w = computePipeline.threadExecutionWidth
+        let h = computePipeline.maxTotalThreadsPerThreadgroup / w
+        let threadsPerThreadGroup = MTLSize(width: w, height: h, depth: 1)
+        let threadsPerGrid = MTLSize(width: texture.width, height: texture.height, depth: 1)
+
+        computeEncoder?.dispatchThreads(threadsPerGrid, threadsPerThreadgroup: threadsPerThreadGroup)
+        computeEncoder?.endEncoding()
+
+        // Render encoder
+        let renderEncoder = commandBuffer?.makeRenderCommandEncoder(descriptor: view.currentRenderPassDescriptor!)
+        renderEncoder?.setRenderPipelineState(renderPipeline)
+        renderEncoder?.setFragmentTexture(texture, index: 0)
+        renderEncoder?.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: 3)
+        renderEncoder?.endEncoding()
+
+        // Commit the buffer
+        commandBuffer?.present(drawable)
+        commandBuffer?.commit()
+    }
+}
+</code></pre>
+<p>The shader functions for this example are given below. Notice that instead of drawing two triangles to represent a quad, the <code>fullscreen_vertex()</code> shader function draws a single triangle that encloses the entire Metal view as shown in the figure below. The texture is only drawn to the visible area of the triangle. The <code>fullscreen_fragment()</code> function defines a linear sampler that is used to scale the texture as the Metal view's dimensions change. Another thank you to Warren Moore who provided the vertex and fragment sampler functions.</p>
+<p><img src="../images/metal-sampler3.png" style="max-width:400px" alt="metal sampler"></p>
+<pre class="pre1000"><code class="language-cpp">// Shaders.metal
+
+#include &lt;metal_stdlib&gt;
+using namespace metal;
+
+struct VertexOut {
+    float4 position [[position]];
+    float2 texCoords;
+};
+
+// A vertex function that can be used to draw a single triangle that covers the entire screen
+
+vertex VertexOut fullscreen_vertex(uint vertexID [[vertex_id]]) {
+    switch (vertexID) {
+        case 0:
+            return { .position = { -1.0, 1.0, 0.0, 1.0 }, .texCoords = { 0.0, 0.0 } };
+        case 1:
+            return { .position = { -1.0, -3.0, 0.0, 1.0 }, .texCoords = { 0.0, 2.0 } };
+        case 2: default:
+            return { .position = {  3.0, 1.0, 0.0, 1.0 }, .texCoords = { 2.0, 0.0 } };
+    }
+}
+
+// A linear sampler to upscale the texture
+// See section 2.10 Samplers on page 41 in Metal Shading Language PDF for more info
+
+fragment half4 fullscreen_fragment(VertexOut in [[stage_in]],
+                                    texture2d&lt;half, access::sample&gt; colorMap [[texture(0)]])
+{
+    constexpr sampler linear_sampler(coord::normalized, filter::linear, mip_filter::linear, address::repeat);
+    half4 color = colorMap.sample(linear_sampler, in.texCoords);
+    return color;
+}
+
+// Generate noise using the golden ratio
+// Based on Shadertoy example https://www.shadertoy.com/view/ltB3zD
+
+float gold_noise(float2 xy, float seed) {
+    float phi = 1.61803398874989484820459;
+    float z = fract(tan(distance(xy * phi, xy) * seed) * xy.x);
+    return z;
+}
+
+// Draw the noise to the output texture
+
+kernel void draw_noise(
+    uint2 id [[thread_position_in_grid]],
+    texture2d&lt;half, access::write&gt; output [[texture(0)]]
+){
+    float r = gold_noise(float2(id.x, id.y), 0.1);
+    float g = gold_noise(float2(id.x, id.y), 0.2);
+    float b = gold_noise(float2(id.x, id.y), 0.3);
+    half3 c = half3(r, g, b);
+
+    half4 color = half4(c, 1.0);
+    output.write(color, id);
+}
+</code></pre>
+
+        </div>
+    </div>
+    <div class="row my-5">
+    <div class="col">
+        <p class="text-center small my-5">
+            <a href="https://gavinw.me/swift-macos">Swift Programming for macOS</a> © 2025 <br>
+            Built by <a href="https://gavinw.me">Gavin Wiggins</a>
+        </p>
+    </div>
+    </div>
+</div>
+</body>
+</html>

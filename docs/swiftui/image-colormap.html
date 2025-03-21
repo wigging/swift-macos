@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Open Graph -->
+    <meta property="og:url" content="https://gavinw.me/swift-macos/./swiftui/image-colormap.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Swift Programming for macOS">
+    <meta property="og:description" content="Image from colormap filter">
+    <meta property="og:image" content="https://gavinw.me/swift-macos/images/opengraph.jpg">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Highlightjs -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <!-- MathJax -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- JSON feed -->
+    <link href="https://gavinw.me/swift-macos/feed.json" rel="alternate" type="application/feed+json" title="Swift macOS">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles.css">
+
+    <title>Swift macOS</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+
+        <h1>Image from colormap filter</h1>
+        <h6>July 22, 2023</h6>
+        <hr>
+
+        <p>This SwiftUI example demonstrates creating a gray scale image from numerical data. Data is provided as a linear ramp from 0 to 1 (see top image) or as random numbers in the range of 0 to 1 (see bottom image). A colormap filter applies color to the gray scale image using RGB values from the viridis colormap.</p>
+<p><img src="../images/image-colormap-linear.png" style="max-width:600px;" alt="image colormap linear"></p>
+<p><img src="../images/image-colormap-random.png" style="max-width:600px;" alt="image colormap linear"></p>
+<p>The SwiftUI views are constructed as shown below.</p>
+<pre><code class="language-swift">import SwiftUI
+
+struct DataImageView: View {
+
+    @Binding var data: [Float]
+
+    var body: some View {
+        HStack(spacing: 40) {
+            if data.count &gt; 1 {
+                let grayImage = makeGrayImage(from: data, width: 200, height: 200)
+                let viridisImage = makeViridisImage()
+                let colormapImage = makeColormapImage(image: grayImage, gradient: viridisImage)
+
+                Image(grayImage, scale: 1.0, label: Text(&quot;gray image&quot;))
+                    .frame(width: 200, height: 200)
+                Image(colormapImage, scale: 1.0, label: Text(&quot;colormap image&quot;))
+                    .frame(width: 200, height: 200)
+            } else {
+                Image(systemName: &quot;photo&quot;)
+                    .frame(width: 200, height: 200)
+                    .border(.gray)
+                Image(systemName: &quot;photo&quot;)
+                    .frame(width: 200, height: 200)
+                    .border(.gray)
+            }
+        }
+        .padding(.bottom)
+    }
+}
+
+struct ContentView: View {
+
+    @State private var selectedData: DataType = .none
+    @State private var data: [Float] = [0.0]
+
+    var body: some View {
+        VStack {
+            DataImageView(data: $data)
+
+            Picker(&quot;Data&quot;, selection: $selectedData) {
+                Text(&quot;Linear Ramp&quot;).tag(DataType.linear)
+                Text(&quot;Random&quot;).tag(DataType.random)
+                Text(&quot;None&quot;).tag(DataType.none)
+            }
+            .pickerStyle(.segmented)
+            .frame(width: 400)
+            .padding(.bottom)
+
+            Button(&quot;Create Image&quot;) {
+                switch selectedData {
+                case .linear:
+                    data = linearData(width: 200, height: 200)
+                case .random:
+                    data = randomData(width: 200, height: 200)
+                case .none:
+                    data = [0.0]
+                }
+            }
+        }
+        .padding()
+        .frame(minWidth: 600, minHeight: 400)
+    }
+}
+</code></pre>
+<p>The functions that create the data used for the gray scale image are given here.</p>
+<pre><code class="language-swift">import Accelerate
+
+enum DataType {
+    case linear
+    case random
+    case none
+}
+
+func linearData(width: Int, height: Int) -&gt; [Float] {
+    let data = vDSP.ramp(in: Float.zero...1, count: width * height)
+    return data
+}
+
+func randomData(width: Int, height: Int) -&gt; [Float] {
+
+    // Create random data
+    let n = width * height
+    var x = [UInt32](repeating: 0, count: n)
+    arc4random_buf(&amp;x, n * MemoryLayout&lt;UInt32&gt;.size)
+
+    // Normalize the data to range 0 to 1 using formula
+    // f = (s - s_min) / (s_max - s_min)
+    let data = vDSP.integerToFloatingPoint(x, floatingPointType: Float.self)
+    let max = data.max()!
+    let min = data.min()!
+    let u = vDSP.add(min * -1, data)
+    let dataNorm = vDSP.divide(u, max - min)
+
+    return dataNorm
+}
+</code></pre>
+<p>The numerical data is passed to the <code>makeGrayImage()</code> function along with the width and height of the image.</p>
+<pre><code class="language-swift">import Accelerate
+
+/// Create a gray scale image from an array using CGContext.
+/// - Parameters:
+///   - data: Array contains values from 0 to 1. Assume size of array is width x height.
+///   - width: Width of the generated image.
+///   - height: Height of the generated image.
+/// - Returns: A gray scale CGImage.
+func makeGrayImage(from data: [Float], width: Int, height: Int) -&gt; CGImage {
+
+    // Convert array to gray scale RGB values
+    // Note gray scale RGB values are all same number such as 255, 255, 255 and 80, 80, 80
+    let dataGray = vDSP.multiply(255, data)
+
+    // Convert array to UInt8
+    var gray = vDSP.floatingPointToInteger(dataGray, integerType: UInt8.self, rounding: .towardNearestInteger)
+
+    // Create image
+    let colorSpace = CGColorSpace(name: CGColorSpace.linearGray)!
+    let bitmapInfo = CGImageAlphaInfo.none.rawValue
+
+    let context = CGContext(data: &amp;gray,
+                            width: width,
+                            height: height,
+                            bitsPerComponent: 8,
+                            bytesPerRow: width,
+                            space: colorSpace,
+                            bitmapInfo: bitmapInfo)!
+
+    let image = context.makeImage()!
+
+    return image
+}
+</code></pre>
+<p>A gradient image that represents the viridis colormap is created from this <code>makeViridisImage()</code> function.</p>
+<pre><code class="language-swift">import CoreGraphics
+
+/// Create a linear gradient image representing the viridis colormap.
+/// - Returns: Image of the viridis colormap.
+func makeViridisImage() -&gt; CGImage {
+
+    // RGB values for viridis colormap
+    let viridis: [[UInt8]] = [
+        [253, 231, 37],
+        [181, 222, 43],
+        [110, 206, 88],
+        [53, 183, 121],
+        [31, 158, 137],
+        [38, 130, 142],
+        [49, 104, 142],
+        [62, 73, 137],
+        [72, 40, 120],
+        [68, 1, 84]
+    ]
+
+    let viridisColors: [CGColor] = viridis.map { rgb in
+        let r = CGFloat(rgb[0]) / 255.0
+        let g = CGFloat(rgb[1]) / 255.0
+        let b = CGFloat(rgb[2]) / 255.0
+        return CGColor(srgbRed: r, green: g, blue: b, alpha: 1.0)
+    }
+
+    let colorSpace = CGColorSpace(name: CGColorSpace.sRGB)!
+    let gradient = CGGradient(colorsSpace: colorSpace,
+                              colors: viridisColors as CFArray,
+                              locations: nil)!
+
+    let width = 256
+    let height = 1
+    let bitmapInfo = CGImageAlphaInfo.premultipliedLast.rawValue
+
+    let context = CGContext(data: nil,
+                            width: width,
+                            height: height,
+                            bitsPerComponent: 8,
+                            bytesPerRow: width * 4,
+                            space: colorSpace,
+                            bitmapInfo: bitmapInfo)!
+
+    let start = CGPoint(x: 0, y: 0)
+    let end = CGPoint(x: width, y: 0)
+    context.drawLinearGradient(gradient, start: start, end: end, options: [])
+
+    let image = context.makeImage()!
+
+    return image
+}
+</code></pre>
+<p>Finally, the gray scale image and the viridis image (gradient) are provided to the <code>makeColormapImage()</code> function to create the color image from the colormap filter.</p>
+<pre><code class="language-swift">import CoreGraphics
+import CoreImage
+
+/// Create an image from a colormap filter.
+/// - Parameters:
+///   - image: Image the colormap is applied to.
+///   - gradient: Gradient representing the colormap.
+/// - Returns: A colormapped image.
+func makeColormapImage(image: CGImage, gradient: CGImage) -&gt; CGImage {
+
+    // Convert to CIImage for filter
+    let inputImage = CIImage(cgImage: image)
+    let gradientImage = CIImage(cgImage: gradient)
+
+    let filter = CIFilter(name: &quot;CIColorMap&quot;)!
+    filter.setValue(inputImage, forKey: kCIInputImageKey)
+    filter.setValue(gradientImage, forKey: kCIInputGradientImageKey)
+
+    let filteredImage = filter.outputImage!
+    let context = CIContext()
+    let image = context.createCGImage(filteredImage, from: filteredImage.extent)!
+
+    return image
+}
+</code></pre>
+
+        </div>
+    </div>
+    <div class="row my-5">
+    <div class="col">
+        <p class="text-center small my-5">
+            <a href="https://gavinw.me/swift-macos">Swift Programming for macOS</a> © 2025 <br>
+            Built by <a href="https://gavinw.me">Gavin Wiggins</a>
+        </p>
+    </div>
+    </div>
+</div>
+</body>
+</html>

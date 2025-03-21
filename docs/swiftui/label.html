@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Open Graph -->
-    <meta property="og:url" content="{{ meta.url }}">
+    <meta property="og:url" content="https://gavinw.me/swift-macos/./swiftui/label.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Swift Programming for macOS">
-    <meta property="og:description" content="{{ meta.title }}">
+    <meta property="og:description" content="Label">
     <meta property="og:image" content="https://gavinw.me/swift-macos/images/opengraph.jpg">
 
     <!-- Bootstrap -->
@@ -35,14 +35,41 @@
     <div class="row">
         <div class="col-md">
 
-        <h1>{{ meta.title }}</h1>
-        <h6>{{ meta.date }}</h6>
-        {% if meta.example %}
-        <h6>{{ meta.example }}</h6>
-        {% endif %}
+        <h1>Label</h1>
+        <h6>November 13, 2022</h6>
         <hr>
 
-        {{ content }}
+        <p>Use a Label to show text and an icon side by side. The icon can be either an SF Symbol or your own image. The label can be scaled with the font modifier. A completely custom label can be created using custom views for the text and icon.</p>
+<p><img src="../images/label.png" style="max-width:400px;" alt="label text"></p>
+
+<pre><code class="language-swift">import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        VStack {
+            Text(&quot;Small and large label:&quot;).padding(8)
+            Label(&quot;Cloudy&quot;, systemImage: &quot;cloud.fill&quot;)
+            Label(&quot;Cloudy&quot;, systemImage: &quot;cloud.fill&quot;).font(.title)
+
+            Text(&quot;Show only the title or icon:&quot;).padding(8)
+            Label(&quot;Cloudy&quot;, systemImage: &quot;cloud.fill&quot;).labelStyle(.titleOnly)
+            Label(&quot;Cloudy&quot;, systemImage: &quot;cloud.fill&quot;).labelStyle(.iconOnly)
+
+            Text(&quot;Custom label:&quot;).padding(8)
+            Label {
+                Text(&quot;My Label&quot;).font(.headline)
+                    .padding(3)
+                    .background(.gray.opacity(0.4))
+            } icon: {
+                RoundedRectangle(cornerRadius: 8)
+                    .fill(.purple)
+                    .frame(width: 20, height: 20)
+            }
+        }
+        .frame(width: 400, height: 300)
+    }
+}
+</code></pre>
 
         </div>
     </div>

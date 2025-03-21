@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Open Graph -->
-    <meta property="og:url" content="{{ meta.url }}">
+    <meta property="og:url" content="https://gavinw.me/swift-macos/./swiftui/display-scale.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Swift Programming for macOS">
-    <meta property="og:description" content="{{ meta.title }}">
+    <meta property="og:description" content="Display scale">
     <meta property="og:image" content="https://gavinw.me/swift-macos/images/opengraph.jpg">
 
     <!-- Bootstrap -->
@@ -35,14 +35,29 @@
     <div class="row">
         <div class="col-md">
 
-        <h1>{{ meta.title }}</h1>
-        <h6>{{ meta.date }}</h6>
-        {% if meta.example %}
-        <h6>{{ meta.example }}</h6>
-        {% endif %}
+        <h1>Display scale</h1>
+        <h6>August 28, 2023</h6>
         <hr>
 
-        {{ content }}
+        <p>Get the display scale of the environment with the <code>displayScale</code> value. This can be used to convert a view's dimensions in points to pixels as seen in the example below.</p>
+<p><img src="../images/display-scale.png" style="max-width:400px;border:1px solid lightgrey;border-radius:12px;" alt="display scale"></p>
+<pre><code class="language-swift">import SwiftUI
+
+struct ContentView: View {
+
+    @Environment(\.displayScale) var displayScale
+
+    var body: some View {
+        VStack(spacing: 10) {
+            Text(&quot;This screen's display scale is:  \(displayScale, specifier: &quot;%.2f&quot;)&quot;)
+            Text(&quot;This view is 300x200 points.&quot;)
+            Text(&quot;This view is \(300*displayScale, specifier: &quot;%.0f&quot;)x\(200*displayScale, specifier: &quot;%.0f&quot;) pixels.&quot;)
+        }
+        .padding()
+        .frame(minWidth: 300, minHeight: 200)
+    }
+}
+</code></pre>
 
         </div>
     </div>

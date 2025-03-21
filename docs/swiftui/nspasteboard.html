@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Open Graph -->
-    <meta property="og:url" content="{{ meta.url }}">
+    <meta property="og:url" content="https://gavinw.me/swift-macos/./swiftui/nspasteboard.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Swift Programming for macOS">
-    <meta property="og:description" content="{{ meta.title }}">
+    <meta property="og:description" content="NSPasteboard">
     <meta property="og:image" content="https://gavinw.me/swift-macos/images/opengraph.jpg">
 
     <!-- Bootstrap -->
@@ -35,14 +35,37 @@
     <div class="row">
         <div class="col-md">
 
-        <h1>{{ meta.title }}</h1>
-        <h6>{{ meta.date }}</h6>
-        {% if meta.example %}
-        <h6>{{ meta.example }}</h6>
-        {% endif %}
+        <h1>NSPasteboard</h1>
+        <h6>November 13, 2022</h6>
         <hr>
 
-        {{ content }}
+        <p>The typical way to copy text is to select it with the mouse then press ⌘C. To do this in code, use the NSPasteboard class to transfer text to the pasteboard server.</p>
+<p><img src="../images/nspasteboard.png" style="max-width:400px;" alt="pasteboard"></p>
+
+<pre><code class="language-swift">import SwiftUI
+
+struct ContentView: View {
+
+    @State private var name = &quot;&quot;
+
+    var body: some View {
+        VStack(spacing: 20) {
+            Text(&quot;Type some text in the text field, then copy it to the clipboard by clicking the Copy Text button.&quot;)
+
+            TextField(&quot;enter some text&quot;, text: $name)
+                .multilineTextAlignment(.center)
+
+            Button(&quot;Copy Text&quot;) {
+                let pb = NSPasteboard.general
+                pb.clearContents()
+                pb.setString(self.name, forType: .string)
+            }
+        }
+        .padding(80)
+        .frame(width: 400, height: 300)
+    }
+}
+</code></pre>
 
         </div>
     </div>

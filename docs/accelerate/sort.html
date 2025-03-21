@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Open Graph -->
-    <meta property="og:url" content="{{ meta.url }}">
+    <meta property="og:url" content="https://gavinw.me/swift-macos/./accelerate/sort.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Swift Programming for macOS">
-    <meta property="og:description" content="{{ meta.title }}">
+    <meta property="og:description" content="Sort array values">
     <meta property="og:image" content="https://gavinw.me/swift-macos/images/opengraph.jpg">
 
     <!-- Bootstrap -->
@@ -35,14 +35,22 @@
     <div class="row">
         <div class="col-md">
 
-        <h1>{{ meta.title }}</h1>
-        <h6>{{ meta.date }}</h6>
-        {% if meta.example %}
-        <h6>{{ meta.example }}</h6>
-        {% endif %}
+        <h1>Sort array values</h1>
+        <h6>November 11, 2022</h6>
         <hr>
 
-        {{ content }}
+        <p>Sort the values in an array by ascending or descending order. Values of the array must be Float or Double.</p>
+<pre><code class="language-swift">import Accelerate
+
+var y: [Float] = [8, 3.5, 0, 7, 9, 2, 6, 1]
+vDSP.sort(&amp;y, sortOrder: .ascending)
+
+// y becomes [0.0, 1.0, 2.0, 3.5, 6.0, 7.0, 8.0, 9.0]
+
+vDSP.sort(&amp;y, sortOrder: .descending)
+
+// y becomes [9.0, 8.0, 7.0, 6.0, 3.5, 2.0, 1.0, 0.0]
+</code></pre>
 
         </div>
     </div>

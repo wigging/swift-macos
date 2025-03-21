@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Open Graph -->
-    <meta property="og:url" content="{{ meta.url }}">
+    <meta property="og:url" content="https://gavinw.me/swift-macos/./swiftui/async-for-loop.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Swift Programming for macOS">
-    <meta property="og:description" content="{{ meta.title }}">
+    <meta property="og:description" content="Async for-in loop">
     <meta property="og:image" content="https://gavinw.me/swift-macos/images/opengraph.jpg">
 
     <!-- Bootstrap -->
@@ -35,14 +35,48 @@
     <div class="row">
         <div class="col-md">
 
-        <h1>{{ meta.title }}</h1>
-        <h6>{{ meta.date }}</h6>
-        {% if meta.example %}
-        <h6>{{ meta.example }}</h6>
-        {% endif %}
+        <h1>Async for-in loop</h1>
+        <h6>June 13, 2023</h6>
         <hr>
 
-        {{ content }}
+        <p>Use an asynchronous operation to update a SwiftUI Text view from a for-in loop. In this example, the <code>step</code> variable is updated for each iteration on the main thread. This allows the variable to update the Text view.</p>
+<p><img src="../images/asyncforloop.png" style="max-width:400px;border:1px solid lightgrey;border-radius:12px;" alt="async for loop"></p>
+<pre><code class="language-swift">import SwiftUI
+
+class Simulation: ObservableObject {
+
+    @Published var step = 0
+    let nsteps = 10
+
+    func run() async {
+        for n in 0..&lt;nsteps {
+            await MainActor.run {
+                self.step = n
+            }
+            print(&quot;Running \(n) / \(nsteps)&quot;)
+            sleep(2)
+        }
+    }
+}
+
+struct ContentView: View {
+
+    @StateObject private var simulation = Simulation()
+
+    var body: some View {
+        VStack {
+            Text(&quot;Running \(simulation.step + 1) / \(simulation.nsteps)&quot;)
+            Button(&quot;Run simulation&quot;) {
+                Task {
+                    await simulation.run()
+                }
+            }
+        }
+        .padding()
+        .frame(width: 400, height: 300)
+    }
+}
+</code></pre>
 
         </div>
     </div>

@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Open Graph -->
-    <meta property="og:url" content="{{ meta.url }}">
+    <meta property="og:url" content="https://gavinw.me/swift-macos/./swift/discardable-result.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Swift Programming for macOS">
-    <meta property="og:description" content="{{ meta.title }}">
+    <meta property="og:description" content="Discardable result">
     <meta property="og:image" content="https://gavinw.me/swift-macos/images/opengraph.jpg">
 
     <!-- Bootstrap -->
@@ -35,14 +35,35 @@
     <div class="row">
         <div class="col-md">
 
-        <h1>{{ meta.title }}</h1>
-        <h6>{{ meta.date }}</h6>
-        {% if meta.example %}
-        <h6>{{ meta.example }}</h6>
-        {% endif %}
+        <h1>Discardable result</h1>
+        <h6>October 7, 2024</h6>
         <hr>
 
-        {{ content }}
+        <p>Functions marked with <code>@discardableResult</code> allow you to ignore the return value.</p>
+<p>For example, the log function shown below prints a log message and also returns a string. You must assign the result to an underscore if you don't want to use the returned string value.</p>
+<pre><code class="language-swift">func log(_ message: String) -&gt; String {
+    let logInfo = &quot;[INFO] \(message)&quot;
+    print(logInfo)
+    return logInfo
+}
+
+let _ = log(&quot;Hello there&quot;)
+</code></pre>
+<p>Alternatively, you can mark the log function with <code>@discardableResult</code> to ignore the returned string as shown below. This doesn't require the use of an underscore to ignore the returned value; however, the returned value can still be captured.</p>
+<pre><code class="language-swift">@discardableResult
+func log(_ message: String) -&gt; String {
+    let logInfo = &quot;[INFO] \(message)&quot;
+    print(logInfo)
+    return logInfo
+}
+
+// Ignore the returned string value
+log(&quot;Hello there&quot;)
+
+// Use the returned string to print another log message
+let s = log(&quot;Hello there again&quot;)
+print(&quot;Log message is: \(s)&quot;)
+</code></pre>
 
         </div>
     </div>

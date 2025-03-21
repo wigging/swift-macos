@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Open Graph -->
-    <meta property="og:url" content="{{ meta.url }}">
+    <meta property="og:url" content="https://gavinw.me/swift-macos/./swiftui/toggle-animation.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Swift Programming for macOS">
-    <meta property="og:description" content="{{ meta.title }}">
+    <meta property="og:description" content="Toggle animation">
     <meta property="og:image" content="https://gavinw.me/swift-macos/images/opengraph.jpg">
 
     <!-- Bootstrap -->
@@ -35,14 +35,31 @@
     <div class="row">
         <div class="col-md">
 
-        <h1>{{ meta.title }}</h1>
-        <h6>{{ meta.date }}</h6>
-        {% if meta.example %}
-        <h6>{{ meta.example }}</h6>
-        {% endif %}
+        <h1>Toggle animation</h1>
+        <h6>November 13, 2022</h6>
         <hr>
 
-        {{ content }}
+        <p>An example of fading text in and out using a toggle is given below. Without the animation modifier, the text would just appear or disappear below the toggle button.</p>
+<p><img src="../images/toggle-animation.png" style="max-width:400px;" alt="toggle animate"></p>
+
+<pre><code class="language-swift">import SwiftUI
+
+struct ContentView: View {
+
+    @State private var visible = false
+
+    var body: some View {
+        VStack {
+            Toggle(&quot;Visible&quot;, isOn: $visible)
+            if visible {
+                Text(&quot;Hello there 👋&quot;)
+            }
+        }
+        .animation(.default, value: visible)
+        .frame(width: 400, height: 300)
+    }
+}
+</code></pre>
 
         </div>
     </div>

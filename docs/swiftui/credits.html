@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Open Graph -->
-    <meta property="og:url" content="{{ meta.url }}">
+    <meta property="og:url" content="https://gavinw.me/swift-macos/./swiftui/credits.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Swift Programming for macOS">
-    <meta property="og:description" content="{{ meta.title }}">
+    <meta property="og:description" content="Credits">
     <meta property="og:image" content="https://gavinw.me/swift-macos/images/opengraph.jpg">
 
     <!-- Bootstrap -->
@@ -35,14 +35,27 @@
     <div class="row">
         <div class="col-md">
 
-        <h1>{{ meta.title }}</h1>
-        <h6>{{ meta.date }}</h6>
-        {% if meta.example %}
-        <h6>{{ meta.example }}</h6>
-        {% endif %}
+        <h1>Credits</h1>
+        <h6>November 13, 2022</h6>
         <hr>
 
-        {{ content }}
+        <p>The About window in a Mac application is viewed by selecting the app's name in the top menu bar, then choosing the About item in the menu. The image below displays Safari's About window.</p>
+<p><img src="../images/credits1.png" style="max-width:600px;" alt="safari credits"></p>
+
+<p>To add credits to the About window, add a file named Credits.rtf to the Xcode project. The text in the RTF file will appear in the About window below the app version and copyright. For example, the following text in Credits.rtf will appear under the version number in the About window:</p>
+<pre><code>My Credits
+
+These are the credits for this app. They go in a rich text file named
+&quot;Credits&quot; in the Xcode project. See below for an example of a list.
+
+    •   First item is here
+    •   Second item here
+    •   Third item goes here
+    •   Fourth items goes here
+    •   Fifth item is here
+    •   Six item is the last
+</code></pre>
+<p><img src="../images/credits2.png" style="max-width:300px;" alt="credits"></p>
 
         </div>
     </div>

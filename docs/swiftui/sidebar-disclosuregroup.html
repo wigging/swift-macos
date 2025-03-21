@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Open Graph -->
+    <meta property="og:url" content="https://gavinw.me/swift-macos/./swiftui/sidebar-disclosuregroup.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Swift Programming for macOS">
+    <meta property="og:description" content="Sidebar DisclosureGroup">
+    <meta property="og:image" content="https://gavinw.me/swift-macos/images/opengraph.jpg">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Highlightjs -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <!-- MathJax -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- JSON feed -->
+    <link href="https://gavinw.me/swift-macos/feed.json" rel="alternate" type="application/feed+json" title="Swift macOS">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles.css">
+
+    <title>Swift macOS</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+
+        <h1>Sidebar DisclosureGroup</h1>
+        <h6>November 13, 2022</h6>
+        <hr>
+
+        <p>To organize our sidebar view, we can use DisclosureGroup. We can create different sections and specify if they are expanded by default when the application launches.</p>
+<p><img src="../images/sidebar-disclosuregroup.png" style="max-width:400px;" alt="sidebar disclosuregroup"></p>
+
+<pre><code class="language-swift">import SwiftUI
+
+struct Sidebar: View {
+
+    @State private var isExpanded: Bool = true
+
+    var body: some View {
+        List {
+            DisclosureGroup(isExpanded:$isExpanded) {
+                Label(&quot;Books&quot;, systemImage: &quot;book.closed&quot;)
+                Label(&quot;Tutorials&quot;, systemImage: &quot;list.bullet.rectangle&quot;)
+                Label(&quot;Video Tutorials&quot;, systemImage: &quot;tv&quot;)
+                Label(&quot;Contacts&quot;, systemImage: &quot;mail.stack&quot;)
+                Label(&quot;Search&quot;, systemImage: &quot;magnifyingglass&quot;)
+            } label: {
+                Label(&quot;All&quot;, systemImage: &quot;list.bullet.rectangle&quot;)
+            }
+        }
+        .listStyle(SidebarListStyle())
+        .toolbar {
+            Button(action: toggleSidebar, label: {
+                Image(systemName: &quot;sidebar.left&quot;).help(&quot;Toggle Sidebar&quot;)
+            })
+        }
+        .frame(minWidth: 150)
+    }
+}
+
+private func toggleSidebar() {
+    NSApp.keyWindow?.contentViewController?.tryToPerform(#selector(NSSplitViewController.toggleSidebar(_:)), with: nil)
+}
+
+struct ContentView: View {
+
+    var body: some View {
+        NavigationView {
+            Sidebar()
+            Text(&quot;Use button to toggle sidebar.&quot;)
+                .frame(minWidth: 200)
+        }
+        .frame(width: 500, height: 300)
+    }
+}
+</code></pre>
+<pre><code class="language-swift">import SwiftUI
+
+@main
+struct SidebarToggleApp: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+        .commands {
+            SidebarCommands()
+        }
+    }
+}
+</code></pre>
+
+        </div>
+    </div>
+    <div class="row my-5">
+    <div class="col">
+        <p class="text-center small my-5">
+            <a href="https://gavinw.me/swift-macos">Swift Programming for macOS</a> © 2025 <br>
+            Built by <a href="https://gavinw.me">Gavin Wiggins</a>
+        </p>
+    </div>
+    </div>
+</div>
+</body>
+</html>

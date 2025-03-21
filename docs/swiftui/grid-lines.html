@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Open Graph -->
-    <meta property="og:url" content="{{ meta.url }}">
+    <meta property="og:url" content="https://gavinw.me/swift-macos/./swiftui/grid-lines.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Swift Programming for macOS">
-    <meta property="og:description" content="{{ meta.title }}">
+    <meta property="og:description" content="Grid lines">
     <meta property="og:image" content="https://gavinw.me/swift-macos/images/opengraph.jpg">
 
     <!-- Bootstrap -->
@@ -35,14 +35,49 @@
     <div class="row">
         <div class="col-md">
 
-        <h1>{{ meta.title }}</h1>
-        <h6>{{ meta.date }}</h6>
-        {% if meta.example %}
-        <h6>{{ meta.example }}</h6>
-        {% endif %}
+        <h1>Grid lines</h1>
+        <h6>February 4, 2023</h6>
         <hr>
 
-        {{ content }}
+        <p>A GeometryReader can be used to equally space lines in a view even when that view changes size. This is accomplished by using the width and height of the container view to determine the spacing of the lines.</p>
+<p><img src="../images/grid-lines.png" style="max-width:400px;" alt="grid lines"></p>
+
+<pre class="pre1000"><code class="language-swift">import SwiftUI
+
+struct ContentView: View {
+
+    let xSteps = 5  // purple lines for x-axis grid
+    let ySteps = 4  // black lines for y-axis grid
+
+    var body: some View {
+        ZStack(alignment: .top) {
+            GeometryReader { geometry in
+                Rectangle()
+                    .fill(Color.gray)
+
+                // x-axis grid shown as purple lines
+                ForEach(0..&amp;lt;self.xSteps+1) {
+                    Rectangle()
+                        .fill(Color.purple)
+                        .frame(width: 3)
+                        .offset(x: geometry.size.width / CGFloat(self.xSteps) * CGFloat($0), y: 0.0)
+                }
+
+                // y-axis grid shown as black lines
+                ForEach(0..&amp;lt;self.ySteps+1) {
+                    Rectangle()
+                        .fill(Color.black)
+                        .frame(height: 3)
+                        .offset(x: 0.0, y: geometry.size.height / CGFloat(self.ySteps) * CGFloat($0))
+                }
+            }
+        }
+        .frame(minWidth: 400, minHeight: 300)
+        .padding()
+        .background(Color.secondary)
+    }
+}
+</code></pre>
 
         </div>
     </div>

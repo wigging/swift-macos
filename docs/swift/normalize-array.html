@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Open Graph -->
-    <meta property="og:url" content="{{ meta.url }}">
+    <meta property="og:url" content="https://gavinw.me/swift-macos/./swift/normalize-array.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Swift Programming for macOS">
-    <meta property="og:description" content="{{ meta.title }}">
+    <meta property="og:description" content="Normalize array values">
     <meta property="og:image" content="https://gavinw.me/swift-macos/images/opengraph.jpg">
 
     <!-- Bootstrap -->
@@ -35,14 +35,40 @@
     <div class="row">
         <div class="col-md">
 
-        <h1>{{ meta.title }}</h1>
-        <h6>{{ meta.date }}</h6>
-        {% if meta.example %}
-        <h6>{{ meta.example }}</h6>
-        {% endif %}
+        <h1>Normalize array values</h1>
+        <h6>July 17, 2023</h6>
         <hr>
 
-        {{ content }}
+        <p>In this example, values in an array are normalized to be in the range 0 to 1. The normalized values are calculated using the maximum and minimum values from the original array.</p>
+<pre><code class="language-swift">import Accelerate
+
+// Create random data
+
+var data = [Float](repeating: 0, count: 10)
+
+for i in 0..&lt;data.count {
+    data[i] = .random(in: 2...14)
+}
+
+print(data)
+
+// Normalize the data to range 0 to 1 using formula
+// f = (s - s_min) / (s_max - s_min)
+
+let max = data.max()!
+let min = data.min()!
+
+let u = vDSP.add(min * -1, data)
+let dataNorm = vDSP.divide(u, max - min)
+
+print(dataNorm)
+</code></pre>
+<p>This prints the following for the original <code>data</code> array:</p>
+<pre><code class="language-text">[6.4362693, 4.47931, 9.550757, 7.8200455, 13.466277, 3.6958234, 8.916201, 13.379278, 13.523174, 5.611622]
+</code></pre>
+<p>This prints the following for the normalized <code>dataNorm</code> array:</p>
+<pre><code class="language-text">[0.27885908, 0.07972511, 0.5957795, 0.41966772, 0.9942103, 0.0, 0.531209, 0.9853576, 1.0, 0.19494557]
+</code></pre>
 
         </div>
     </div>

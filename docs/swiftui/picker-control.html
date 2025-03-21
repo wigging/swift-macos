@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Open Graph -->
+    <meta property="og:url" content="https://gavinw.me/swift-macos/./swiftui/picker-control.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Swift Programming for macOS">
+    <meta property="og:description" content="Picker control">
+    <meta property="og:image" content="https://gavinw.me/swift-macos/images/opengraph.jpg">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Highlightjs -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <!-- MathJax -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- JSON feed -->
+    <link href="https://gavinw.me/swift-macos/feed.json" rel="alternate" type="application/feed+json" title="Swift macOS">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles.css">
+
+    <title>Swift macOS</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+
+        <h1>Picker control</h1>
+        <h6>November 13, 2022</h6>
+        <hr>
+
+        <p>The picker control selects an item from a set of values. The appearance of the picker can be changed by using different styles and modifiers.</p>
+<p><img src="../images/picker-control.png" style="max-width:400px;" alt="picker control"></p>
+
+<pre><code class="language-swift">import SwiftUI
+
+struct ContentView: View {
+
+    let bands = [&quot;Nirvana&quot;, &quot;Pearl Jam&quot;, &quot;NIN&quot;]
+    @State private var selectedBand = 0
+
+    @State private var selectedName = 0
+
+    var body: some View {
+        VStack(spacing: 20) {
+
+            Picker(&quot;Band&quot;, selection: $selectedBand) {
+                ForEach(0..&amp;lt;bands.count) {
+                    Text(self.bands[$0])
+                }
+            }
+
+            Picker(&quot;Band&quot;, selection: $selectedBand) {
+                ForEach(0..&amp;lt;bands.count) {
+                    Text(self.bands[$0])
+                }
+            }
+            .pickerStyle(RadioGroupPickerStyle())
+
+            Picker(&quot;Band&quot;, selection: $selectedBand) {
+                ForEach(0..&amp;lt;bands.count) {
+                    Text(self.bands[$0])
+                }
+            }
+            .pickerStyle(SegmentedPickerStyle())
+
+            Picker(&quot;Name&quot;, selection: $selectedName) {
+                Text(&quot;Homer Simpson&quot;).tag(0)
+                Text(&quot;Lisa Simpson&quot;).tag(1)
+                Text(&quot;Bart Simpson&quot;).tag(2)
+            }
+            .fixedSize()
+
+            Picker(&quot;Name&quot;, selection: $selectedName) {
+                Text(&quot;Homer Simpson&quot;).tag(0)
+                Text(&quot;Lisa Simpson&quot;).tag(1)
+                Text(&quot;Bart Simpson&quot;).tag(2)
+            }
+            .labelsHidden()
+            .fixedSize()
+
+        }
+        .padding()
+        .frame(width: 400, height: 300)
+    }
+}
+</code></pre>
+
+        </div>
+    </div>
+    <div class="row my-5">
+    <div class="col">
+        <p class="text-center small my-5">
+            <a href="https://gavinw.me/swift-macos">Swift Programming for macOS</a> © 2025 <br>
+            Built by <a href="https://gavinw.me">Gavin Wiggins</a>
+        </p>
+    </div>
+    </div>
+</div>
+</body>
+</html>

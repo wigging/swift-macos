@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Open Graph -->
-    <meta property="og:url" content="{{ meta.url }}">
+    <meta property="og:url" content="https://gavinw.me/swift-macos/./swift/elapsed-time.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Swift Programming for macOS">
-    <meta property="og:description" content="{{ meta.title }}">
+    <meta property="og:description" content="Elapsed time">
     <meta property="og:image" content="https://gavinw.me/swift-macos/images/opengraph.jpg">
 
     <!-- Bootstrap -->
@@ -35,14 +35,59 @@
     <div class="row">
         <div class="col-md">
 
-        <h1>{{ meta.title }}</h1>
-        <h6>{{ meta.date }}</h6>
-        {% if meta.example %}
-        <h6>{{ meta.example }}</h6>
-        {% endif %}
+        <h1>Elapsed time</h1>
+        <h6>June 24, 2024</h6>
         <hr>
 
-        {{ content }}
+        <p>The functions shown below are examples of measuring elapsed time in Swift. The sleep function is used to delay the code execution for 4 seconds. Consequently, the elapsed time for each example is approximately 4 seconds.</p>
+<pre><code class="language-swift">import Foundation
+
+func exampleOne() {
+    let tic = DispatchTime.now().uptimeNanoseconds
+    sleep(4)
+    let toc = DispatchTime.now().uptimeNanoseconds
+
+    print(&quot;Elapsed time is \((toc - tic) / 1_000_000_000) seconds&quot;)
+}
+
+func exampleTwo() {
+    let tic = CFAbsoluteTimeGetCurrent()
+    sleep(4)
+    let toc = CFAbsoluteTimeGetCurrent()
+
+    print(&quot;Elapsed time is \(toc - tic) seconds&quot;)
+}
+
+func exampleThree() {
+    let tic = Date.now
+    sleep(4)
+    let toc = tic.timeIntervalSinceNow.magnitude
+
+    print(&quot;Elapsed time is \(toc) seconds&quot;)
+}
+
+func exampleFour() {
+    let clock = ContinuousClock()
+    let result = clock.measure {
+        sleep(4)
+    }
+
+    print(&quot;Elapsed time is \(result)&quot;)
+}
+
+exampleOne()
+exampleTwo()
+exampleThree()
+exampleFour()
+</code></pre>
+<p>Running the above code in a file named <code>elapsedtime.swift</code> gives the following output:</p>
+<pre><code class="language-text">$ swiftc elapsedtime.swift; ./elapsedtime
+
+Elapsed time is 4 seconds
+Elapsed time is 4.005115985870361 seconds
+Elapsed time is 4.005129098892212 seconds
+Elapsed time is 4.003226656 seconds
+</code></pre>
 
         </div>
     </div>

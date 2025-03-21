@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Open Graph -->
-    <meta property="og:url" content="{{ meta.url }}">
+    <meta property="og:url" content="https://gavinw.me/swift-macos/./swiftui/blur-effect.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Swift Programming for macOS">
-    <meta property="og:description" content="{{ meta.title }}">
+    <meta property="og:description" content="Blur effect">
     <meta property="og:image" content="https://gavinw.me/swift-macos/images/opengraph.jpg">
 
     <!-- Bootstrap -->
@@ -35,14 +35,38 @@
     <div class="row">
         <div class="col-md">
 
-        <h1>{{ meta.title }}</h1>
-        <h6>{{ meta.date }}</h6>
-        {% if meta.example %}
-        <h6>{{ meta.example }}</h6>
-        {% endif %}
+        <h1>Blur effect</h1>
+        <h6>February 4, 2023</h6>
         <hr>
 
-        {{ content }}
+        <p>The blur modifier, denoted by <code>.blur</code>, can be used to blur a view.</p>
+<p><img src="../images/blur-effect1.png" style="max-width:400px;" alt="blur effect"></p>
+<p><img src="../images/blur-effect2.png" style="max-width:400px;" alt="blur effect"></p>
+
+<pre class="pre1000"><code class="language-swift">import SwiftUI
+
+struct ContentView: View {
+
+    @State private var blurRadius: CGFloat = 0.0
+
+    var body: some View {
+        VStack(spacing: 40) {
+            Text(&quot;Hello 😁&quot;)
+                .font(.title)
+                .blur(radius: blurRadius)
+
+            Button(&quot;My Button&quot;){}
+                .blur(radius: blurRadius)
+
+            Slider(value: $blurRadius, in: 0...20, minimumValueLabel: Text(&quot;0&quot;), maximumValueLabel: Text(&quot;20&quot;)) {
+                Text(&quot;Blur radius&quot;)
+            }
+            .padding()
+        }
+        .frame(width: 400, height: 300)
+    }
+}
+</code></pre>
 
         </div>
     </div>

@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Open Graph -->
-    <meta property="og:url" content="{{ meta.url }}">
+    <meta property="og:url" content="https://gavinw.me/swift-macos/./swift/create-package.html">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Swift Programming for macOS">
-    <meta property="og:description" content="{{ meta.title }}">
+    <meta property="og:description" content="Create a package">
     <meta property="og:image" content="https://gavinw.me/swift-macos/images/opengraph.jpg">
 
     <!-- Bootstrap -->
@@ -35,14 +35,19 @@
     <div class="row">
         <div class="col-md">
 
-        <h1>{{ meta.title }}</h1>
-        <h6>{{ meta.date }}</h6>
-        {% if meta.example %}
-        <h6>{{ meta.example }}</h6>
-        {% endif %}
+        <h1>Create a package</h1>
+        <h6>February 18, 2024</h6>
         <hr>
 
-        {{ content }}
+        <p>There are two approaches to creating a Swift package. One is by creating a new package in Xcode and the other is with the Swift command line tool.</p>
+<h2>Xcode</h2>
+<p>The first approach is to use Xcode. After launching Xcode 15, select File -&gt; New -&gt; Package from the menu, then choose the Library template. This will create a Xcode project for a stand-alone Swift package. A package can also be created in an existing Xcode project.</p>
+<h2>Command line</h2>
+<p>The second approach to create a Swift package is to use the <code>swift</code> command line tool. First create a directory for the package. In that directory, run the command shown below to create a package named "MyPkg". This will create the same files as the Xcode approach. Opening the <code>Package.swift</code> file will automatically launch Xcode.</p>
+<pre><code class="language-text">mkdir MyPackage
+cd MyPackage
+swift package init --type library --name MyPkg
+</code></pre>
 
         </div>
     </div>
