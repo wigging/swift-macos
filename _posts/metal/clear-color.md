@@ -1,5 +1,5 @@
 ---
-title: Clear color
+title: Clear color in Metal
 date: September 10, 2023
 example: swift-macos/xcode-projects/MetalClear
 ---

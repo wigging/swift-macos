@@ -1,5 +1,5 @@
 ---
-title: Matrix multiplication
+title: Matrix multiplication with Accelerate
 date: May 4, 2024
 example: swift-macos/swift-scripts/matmul-accel.swift
 ---

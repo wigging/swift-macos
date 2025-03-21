@@ -1,5 +1,5 @@
 ---
-title: Sort array values
+title: Sort array values with Accelerate
 date: November 11, 2022
 ---
 

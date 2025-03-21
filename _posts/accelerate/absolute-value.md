@@ -1,5 +1,5 @@
 ---
-title: Absolute value
+title: Absolute value with Accelerate
 date: November 11, 2022
 ---
 

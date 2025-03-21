@@ -1,5 +1,5 @@
 ---
-title: Matrix multiplication
+title: Matrix multiplication with Metal
 date: May 3, 2024
 example: swift-macos/swift-scripts/matmul-metal.swift
 ---

@@ -1,5 +1,5 @@
 ---
-title: Color view with compute kernel
+title: Color view with Metal compute kernel
 date: September 8, 2023
 example: swift-macos/xcode-projects/MetalColorCompute
 ---

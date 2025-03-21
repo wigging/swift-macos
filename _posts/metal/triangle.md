@@ -1,5 +1,5 @@
 ---
-title: Triangle
+title: Basic triangle in Metal
 date: September 19, 2023
 example: swift-macos/xcode-projects/MetalTriangle
 ---

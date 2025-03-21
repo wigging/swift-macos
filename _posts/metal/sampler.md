@@ -1,5 +1,5 @@
 ---
-title: Sampler
+title: Sampler in Metal
 date: October 10, 2023
 example: swift-macos/xcode-projects/MetalSampler
 ---

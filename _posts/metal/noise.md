@@ -1,5 +1,5 @@
 ---
-title: Noise
+title: Noise with Metal
 date: September 29, 2023
 example: swift-macos/xcode-projects/MetalNoise
 ---

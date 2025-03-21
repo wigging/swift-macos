@@ -1,5 +1,5 @@
 ---
-title: Complex multiplication
+title: Complex multiplication with Accelerate
 date: May 11, 2024
 example: swift-macos/xcode-projects/MatMulComplex
 ---

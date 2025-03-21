@@ -1,5 +1,5 @@
 ---
-title: Particles
+title: Particles using Metal
 date: August 29, 2023
 example: swift-macos/xcode-projects/MetalParticles
 ---

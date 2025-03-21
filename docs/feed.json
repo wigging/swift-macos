@@ -28,21 +28,21 @@
         {
             "id": "https://gavinw.me/swift-macos/./accelerate/complex-multiplication.html",
             "url": "https://gavinw.me/swift-macos/./accelerate/complex-multiplication.html",
-            "title": "Complex multiplication",
+            "title": "Complex multiplication with Accelerate",
             "date_published": "2024-05-11T00:00:00Z",
             "content_html": "<p>Use the <code>cblas_cgemv</code> function in Accelerate to multiply a matrix and vector with single-precision complex values. For this example, a structure named <code>Complex</code> with <code>real</code> and <code>imag</code> properties is utilized but <code>DSPComplex</code> can also be used.</p><p><a href=\"https://gavinw.me/swift-macos/./accelerate/complex-multiplication.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/swift-macos/./accelerate/matrix-multiplication.html",
             "url": "https://gavinw.me/swift-macos/./accelerate/matrix-multiplication.html",
-            "title": "Matrix multiplication",
+            "title": "Matrix multiplication with Accelerate",
             "date_published": "2024-05-04T00:00:00Z",
             "content_html": "<p>Accelerate provides two functions for performing matrix multiplication. The first is the <code>vDSP_mmulD</code> function which is demonstrated below.</p><p><a href=\"https://gavinw.me/swift-macos/./accelerate/matrix-multiplication.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/swift-macos/./metal/matrix-multiplication.html",
             "url": "https://gavinw.me/swift-macos/./metal/matrix-multiplication.html",
-            "title": "Matrix multiplication",
+            "title": "Matrix multiplication with Metal",
             "date_published": "2024-05-03T00:00:00Z",
             "content_html": "<p>Metal Performance Shaders provide <code>MPSMatrix</code> and <code>MPSMatrixMultiplication</code> objects to perform matrix multiplication on the GPU. The code below demonstrates multiplication of two matrices.</p><p><a href=\"https://gavinw.me/swift-macos/./metal/matrix-multiplication.html\">Continue reading...</a></p>"
         },
@@ -70,42 +70,42 @@
         {
             "id": "https://gavinw.me/swift-macos/./metal/sampler.html",
             "url": "https://gavinw.me/swift-macos/./metal/sampler.html",
-            "title": "Sampler",
+            "title": "Sampler in Metal",
             "date_published": "2023-10-10T00:00:00Z",
             "content_html": "<p>This example uses a Metal <code>sampler</code> to upscale a noise texture as the Metal view increases in size. The left image shown below represents the actual size of the texture. The right image is the sampled (upscaled) texture due to the larger window size which increases the size of the Metal view.</p><p><a href=\"https://gavinw.me/swift-macos/./metal/sampler.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/swift-macos/./metal/noise.html",
             "url": "https://gavinw.me/swift-macos/./metal/noise.html",
-            "title": "Noise",
+            "title": "Noise with Metal",
             "date_published": "2023-09-29T00:00:00Z",
             "content_html": "<p>This example creates noise using a shader function that is based on the Golden Ratio. It is adapted from a function on the <a href=\"https://www.shadertoy.com/view/ltB3zD\">Shadertoy</a> website.</p><p><a href=\"https://gavinw.me/swift-macos/./metal/noise.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/swift-macos/./metal/triangle.html",
             "url": "https://gavinw.me/swift-macos/./metal/triangle.html",
-            "title": "Triangle",
+            "title": "Basic triangle in Metal",
             "date_published": "2023-09-19T00:00:00Z",
             "content_html": "<p>This example creates a triangle using vertex and fragment shaders.</p><p><a href=\"https://gavinw.me/swift-macos/./metal/triangle.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/swift-macos/./metal/clear-color.html",
             "url": "https://gavinw.me/swift-macos/./metal/clear-color.html",
-            "title": "Clear color",
+            "title": "Clear color in Metal",
             "date_published": "2023-09-10T00:00:00Z",
             "content_html": "<p>This example sets the clear color to blue for the Metal view. This color is like the background color of the view.</p><p><a href=\"https://gavinw.me/swift-macos/./metal/clear-color.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/swift-macos/./metal/color-compute.html",
             "url": "https://gavinw.me/swift-macos/./metal/color-compute.html",
-            "title": "Color view with compute kernel",
+            "title": "Color view with Metal compute kernel",
             "date_published": "2023-09-08T00:00:00Z",
             "content_html": "<p>Here is a basic example of using Metal to change the color of a view using a compute function (kernel). The pixels in the view are represented in Metal as a grid. The sliders change the RGB color values for each pixel in the grid.</p><p><a href=\"https://gavinw.me/swift-macos/./metal/color-compute.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/swift-macos/./metal/particles.html",
             "url": "https://gavinw.me/swift-macos/./metal/particles.html",
-            "title": "Particles",
+            "title": "Particles using Metal",
             "date_published": "2023-08-29T00:00:00Z",
             "content_html": "<p>This example uses Metal to draw particles (pixels) in a view. The particles move throughout the view based on their position and velocity. This example is inspired by the <a href=\"https://metalkit.org/2017/11/30/working-with-particles-in-metal-part-3/\">Working with Particles in Metal part 3</a> article by Marius Horga. However, this example is implemented with SwiftUI for macOS whereas Marius' example runs in an Xcode playground.</p><p><a href=\"https://gavinw.me/swift-macos/./metal/particles.html\">Continue reading...</a></p>"
         },
@@ -476,21 +476,21 @@
         {
             "id": "https://gavinw.me/swift-macos/./accelerate/absolute-value.html",
             "url": "https://gavinw.me/swift-macos/./accelerate/absolute-value.html",
-            "title": "Absolute value",
+            "title": "Absolute value with Accelerate",
             "date_published": "2022-11-11T00:00:00Z",
             "content_html": "<p>Get the absolute values of a vector using the vDSP.absolute function.</p><p><a href=\"https://gavinw.me/swift-macos/./accelerate/absolute-value.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/swift-macos/./accelerate/sort.html",
             "url": "https://gavinw.me/swift-macos/./accelerate/sort.html",
-            "title": "Sort array values",
+            "title": "Sort array values with Accelerate",
             "date_published": "2022-11-11T00:00:00Z",
             "content_html": "<p>Sort the values in an array by ascending or descending order. Values of the array must be Float or Double.</p><p><a href=\"https://gavinw.me/swift-macos/./accelerate/sort.html\">Continue reading...</a></p>"
         },
         {
             "id": "https://gavinw.me/swift-macos/./accelerate/reverse.html",
             "url": "https://gavinw.me/swift-macos/./accelerate/reverse.html",
-            "title": "Reverse array elements",
+            "title": "Reverse array elements using Accelerate",
             "date_published": "2022-11-11T00:00:00Z",
             "content_html": "<p>Reverse the order of elements in an array using the vDSP.reverse function. Values in the array must be Float or Double.</p><p><a href=\"https://gavinw.me/swift-macos/./accelerate/reverse.html\">Continue reading...</a></p>"
         },
