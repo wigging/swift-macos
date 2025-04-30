@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Open Graph -->
+    <meta property="og:url" content="https://gavinw.me/swift-macos/./swift/suppress-print.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Swift Programming for macOS">
+    <meta property="og:description" content="Suppress Print Output in Swift">
+    <meta property="og:image" content="https://gavinw.me/swift-macos/images/opengraph.jpg">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Highlightjs -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github-dark.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <!-- MathJax -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- JSON feed -->
+    <link href="https://gavinw.me/swift-macos/feed.json" rel="alternate" type="application/feed+json" title="Swift macOS">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles.css">
+
+    <title>Swift macOS</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md">
+
+        <h1>Suppress Print Output in Swift</h1>
+        <h6>April 29, 2025</h6>
+        <hr>
+
+        <p>Suppressing print output is useful for functions that accept a block of code as input. An example
+would be a benchmark function that accepts a block of code for profiling. The code may contain
+print statements that would print to the screen during each benchmark iteration. By suppressing the
+print output, the benchmark does not pollute the screen with unnecessary output.</p>
+<p>The Foundation framework provides access to C functions such as <code>dup</code>, <code>dup2</code>, and <code>fflush</code> that can
+be used to suppress print output in Swift. In the example below, the <code>suppressPrint</code> function
+accepts a block of code as a closure and uses the C functions to redirect the print output to
+<code>/dev/null</code>. Running the example will only print <code>Hello Marge</code> to the screen.</p>
+<pre><code class="language-swift">import Foundation
+
+func suppressPrint(_ block: () -&gt; ()) {
+    let originalStdout = dup(fileno(stdout)) // Save original stdout
+    let devNull = fopen(&quot;/dev/null&quot;, &quot;w&quot;)    // Open /dev/null
+    dup2(fileno(devNull), fileno(stdout))    // Redirect stdout to /dev/null
+
+    block()
+
+    fflush(stdout)                           // Flush output buffer
+    dup2(originalStdout, fileno(stdout))     // Restore stdout
+    close(originalStdout)                    // Close duplicate file descriptor
+    fclose(devNull)                          // Close file stream
+}
+
+func sayHello(to: String) {
+    print(&quot;Hello&quot;, to)
+}
+
+func main() {
+    suppressPrint {
+        sayHello(to: &quot;Homer&quot;)
+    }
+
+    sayHello(to: &quot;Marge&quot;)
+}
+
+main()
+</code></pre>
+<p>In the next example, the System framework provides a <code>FileDescriptor</code> struct that replaces the use
+of <code>dup</code>, <code>fopen</code>, <code>dup2</code>, and <code>fclose</code>. This provides a more Swift-like solution; but, there
+doesn't appear to be a Swift interface for <code>fflush</code> so Foundation is still needed.</p>
+<pre><code class="language-swift">import Foundation
+import System
+
+func suppressPrint(_ block: () -&gt; Void) {
+    do {
+        let stdoutFD = try FileDescriptor.standardOutput.duplicate()
+        let nullFD = try FileDescriptor.open(&quot;/dev/null&quot;, .writeOnly)
+        _ = try nullFD.duplicate(as: .standardOutput)
+
+        block()
+
+        fflush(stdout)
+        _ = try stdoutFD.duplicate(as: .standardOutput)
+        try stdoutFD.close()
+        try nullFD.close()
+    } catch {
+        print(&quot;Suppression failed:&quot;, error)
+    }
+}
+
+func sayHello(to: String) {
+    print(&quot;Hello&quot;, to)
+}
+
+func main() {
+    suppressPrint {
+        sayHello(to: &quot;Homer&quot;)
+        print(&quot;Done&quot;)
+    }
+
+    sayHello(to: &quot;Marge&quot;)
+}
+
+main()
+</code></pre>
+<p>See the <a href="https://developer.apple.com/documentation/system">System framework documentation</a> for more
+information about the file descriptor and other low-level file operations in Swift.</p>
+
+        </div>
+    </div>
+    <div class="row my-5">
+    <div class="col">
+        <p class="text-center small my-5">
+            <a href="https://gavinw.me/swift-macos">Swift Programming for macOS</a> © 2025<br>
+            Built with <a href="https://github.com/wigging/genja">Genja</a> by <a href="https://gavinw.me">Gavin Wiggins</a>
+        </p>
+    </div>
+    </div>
+</div>
+</body>
+</html>

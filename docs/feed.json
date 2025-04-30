@@ -5,6 +5,13 @@
     "feed_url": "https://gavinw.me/swift-macos/feed.json",
     "items": [
         {
+            "id": "https://gavinw.me/swift-macos/./swift/suppress-print.html",
+            "url": "https://gavinw.me/swift-macos/./swift/suppress-print.html",
+            "title": "Suppress Print Output in Swift",
+            "date_published": "2025-04-29T00:00:00Z",
+            "content_html": "<p>Suppressing print output is useful for functions that accept a block of code as input. An example\nwould be a benchmark function that accepts a block of code for profiling. The code may contain\nprint statements that would print to the screen during each benchmark iteration. By suppressing the\nprint output, the benchmark does not pollute the screen with unnecessary output.</p><p><a href=\"https://gavinw.me/swift-macos/./swift/suppress-print.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://gavinw.me/swift-macos/./swift/discardable-result.html",
             "url": "https://gavinw.me/swift-macos/./swift/discardable-result.html",
             "title": "Discardable result",
