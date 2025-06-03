@@ -53,7 +53,7 @@
         <h2>Categories</h2>
         <hr>
 
-        <h3>Swift</h3>
+        <h4>Swift</h4>
         {% for post in posts | sort(attribute='title') %}
         {% if post.category == 'swift' %}
         <div class="row mx-auto mb-2" style="max-width:700px;">
@@ -67,7 +67,7 @@
         {% endif %}
         {% endfor %}
 
-        <h3>Swift UI</h3>
+        <h4>Swift UI</h4>
         {% for post in posts | sort(attribute='title') %}
         {% if post.category == 'swiftui' %}
         <div class="row mx-auto mb-2" style="max-width:700px;">
@@ -81,7 +81,7 @@
         {% endif %}
         {% endfor %}
 
-        <h3>Accelerate</h3>
+        <h4>Accelerate</h4>
         {% for post in posts | sort(attribute='title') %}
         {% if post.category == 'accelerate' %}
         <div class="row mx-auto mb-2" style="max-width:700px;">
@@ -95,7 +95,7 @@
         {% endif %}
         {% endfor %}
 
-        <h3>Metal</h3>
+        <h4>Metal</h4>
         {% for post in posts | sort(attribute='title') %}
         {% if post.category == 'metal' %}
         <div class="row mx-auto mb-2" style="max-width:700px;">

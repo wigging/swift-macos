@@ -5,6 +5,13 @@
     "feed_url": "https://gavinw.me/swift-macos/feed.json",
     "items": [
         {
+            "id": "https://gavinw.me/swift-macos/./swift/random-array.html",
+            "url": "https://gavinw.me/swift-macos/./swift/random-array.html",
+            "title": "Array of Random Numbers in Swift",
+            "date_published": "2025-05-29T00:00:00Z",
+            "content_html": "<p>Swift does not provide a feature to directly create an array of random numbers. Such an array must be built by generating a random number and assigning that number to an array element. The following sections demonstrate several methods to generate random numbers in Swift. Each method is benchmarked by filling a large array with random numbers.</p><p><a href=\"https://gavinw.me/swift-macos/./swift/random-array.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://gavinw.me/swift-macos/./swift/suppress-print.html",
             "url": "https://gavinw.me/swift-macos/./swift/suppress-print.html",
             "title": "Suppress Print Output in Swift",
