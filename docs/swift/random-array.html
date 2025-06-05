@@ -247,7 +247,8 @@ hyperfine --warmup 3 './lapack' './rand' './rand48' './wyrand' './wyuniform'
 </table>
 
 <p>Based on the benchmarks, using Swift's default random number generator is very slow compared to pseudorandom number generators such as wyrand. If you don't need cryptographically secure random numbers then consider using a custom random number generator for faster performance; especially when filling arrays with pseudorandom numbers.</p>
-<p>This post is based on a <a href="https://forums.swift.org/t/creating-an-array-of-random-numbers-in-swift-is-slow/80022">Swift Forums</a> discussion. Thank you to everyone on the forum post who offered advice and comments on this topic.</p>
+<h2>Further reading</h2>
+<p>This post is based on a <a href="https://forums.swift.org/t/creating-an-array-of-random-numbers-in-swift-is-slow/80022">Swift Forums</a> discussion. Thank you to everyone on the forum post who offered advice and comments on this topic. The code discussed in this post is available on GitHub in the <a href="https://github.com/wigging/swift-macos">swift-macos/scripts/random-array</a> directory.</p>
 
         </div>
     </div>

@@ -238,4 +238,6 @@ A summary of the benchmark results is shown in the table below. The Time column 
 
 Based on the benchmarks, using Swift's default random number generator is very slow compared to pseudorandom number generators such as wyrand. If you don't need cryptographically secure random numbers then consider using a custom random number generator for faster performance; especially when filling arrays with pseudorandom numbers.
 
-This post is based on a [Swift Forums](https://forums.swift.org/t/creating-an-array-of-random-numbers-in-swift-is-slow/80022) discussion. Thank you to everyone on the forum post who offered advice and comments on this topic.
+## Further reading
+
+This post is based on a [Swift Forums](https://forums.swift.org/t/creating-an-array-of-random-numbers-in-swift-is-slow/80022) discussion. Thank you to everyone on the forum post who offered advice and comments on this topic. The code discussed in this post is available on GitHub in the [swift-macos/scripts/random-array](https://github.com/wigging/swift-macos) directory.
