@@ -165,7 +165,7 @@ swiftc -Ounchecked random.swift
 swiftc -Ounchecked wyrandom.swift
 swiftc -Ounchecked wyuniform.swift
 
-# Run then benchmark
+# Run the benchmark
 hyperfine --warmup 3 './lapack' './rand48' './random' './wyrandom' './wyuniform'
 </code></pre>
 <p>A summary of the benchmark results is shown in the table below. The Time column is the mean time in milliseconds. The Speedup column is how much faster Wyrand uniform is compared to the other methods. The results were obtained on a 2025 M4 MacBook Air with 32 GB of unified memory and with Swift version 6.1.2. The Wyrand uniform generator was 50x faster than the default random number generator in Swift when filling an array with 100,000,000 random numbers.</p>
