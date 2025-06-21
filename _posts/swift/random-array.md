@@ -153,7 +153,7 @@ swiftc -Ounchecked random.swift
 swiftc -Ounchecked wyrandom.swift
 swiftc -Ounchecked wyuniform.swift
 
-# Run then benchmark
+# Run the benchmark
 hyperfine --warmup 3 './lapack' './rand48' './random' './wyrandom' './wyuniform'
 ```
 
