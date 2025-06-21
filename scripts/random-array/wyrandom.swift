@@ -1,15 +1,15 @@
 /*
-Compile    -->  swiftc -Ounchecked wyrand.swift
-Run        -->  ./wyrand
-Benchmark  -->  hyperfine --warmup 3 './wyrand'
+Compile    -->  swiftc -Ounchecked wyrandom.swift
+Run        -->  ./wyrandom
+Benchmark  -->  hyperfine --warmup 3 './wyrandom'
 
-Based on reference:
+Reference:
 https://lemire.me/blog/2019/03/19/the-fastest-conventional-random-number-generator-that-can-pass-big-crush/
 */
 
 import Foundation
 
-struct WyRand: RandomNumberGenerator {
+struct Wyrand: RandomNumberGenerator {
     private var state : UInt64
 
     init(seed: UInt64 = mach_absolute_time()) {
@@ -23,28 +23,27 @@ struct WyRand: RandomNumberGenerator {
     }
 }
 
-func main() {
-    // --- Check ---
-    // var rng = WyRand(seed: 3)
+func runCheck() {
+    // var rng = Wyrand(seed: 3)
     // print(rng.next())
     // print(rng.next())
 
-    // --- Check ---
-    // let n = 5
-    // var rng = WyRand()
+    let n = 5
+    var rng = Wyrand()
 
-    // let result = Array<Double>(unsafeUninitializedCapacity: n) { buffer, initCount in
-    //     for i in 0..<n {
-    //         buffer[i] = Double.random(in: 0..<1, using: &rng)
-    //     }
-    //     initCount = n
-    // }
+    let result = Array<Double>(unsafeUninitializedCapacity: n) { buffer, initCount in
+        for i in 0..<n {
+            buffer[i] = Double.random(in: 0..<1, using: &rng)
+        }
+        initCount = n
+    }
 
-    // print(result)
+    print(result)
+}
 
-    // --- Benchmark ---
+func runBenchmark() {
     let n = 100_000_000
-    var rng = WyRand()
+    var rng = Wyrand()
 
     let result = Array<Double>(unsafeUninitializedCapacity: n) { buffer, initCount in
         for i in 0..<n {
@@ -57,4 +56,5 @@ func main() {
     print(result[n - 1])
 }
 
-main()
+// runCheck()
+runBenchmark()

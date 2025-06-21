@@ -36,51 +36,41 @@
         <div class="col-md">
 
         <h1>Array of Random Numbers in Swift</h1>
-        <h6>May 29, 2025</h6>
+        <h6>June 20, 2025</h6>
         <hr>
 
-        <p>Swift does not provide a feature to directly create an array of random numbers. Such an array must be built by generating a random number and assigning that number to an array element. The following sections demonstrate several methods to generate random numbers in Swift. Each method is benchmarked by filling a large array with random numbers.</p>
+        <p>Swift does not provide a feature to directly create an array of random numbers. Such an array must be built by generating a random number and assigning that number to an array element. The following sections demonstrate several methods to generate pseudorandom numbers in Swift with double precision. Each method is benchmarked by filling a large array with random numbers.</p>
 <h2>Swift random</h2>
 <p>Swift provides a static random method for different types such as <code>Double.random</code>. This uses the system's default random number generator which is cryptographically secure whenever possible. The code below uses <code>Double.random</code> to fill an array of 100,000,000 elements with random numbers that range from 0 to 1 (excluding 1).</p>
-<pre><code class="language-swift">// rand.swift
+<pre><code class="language-swift">// random.swift
 
-func main() {
-    let n = 100_000_000
+let n = 100_000_000
 
-    let result = Array&lt;Double&gt;(unsafeUninitializedCapacity: n) { buffer, initCount in
-        for i in 0..&lt;n {
-            buffer[i] = Double.random(in: 0..&lt;1)
-        }
-        initCount = n
+let result = Array&lt;Double&gt;(unsafeUninitializedCapacity: n) { buffer, initCount in
+
+    for i in 0..&lt;n {
+        buffer[i] = Double.random(in: 0..&lt;1)
     }
 
-    print(result[0])
-    print(result[n - 1])
+    initCount = n
 }
-
-main()
 </code></pre>
 <h2>Accelerate drand48</h2>
-<p>The Accelerate framework provides a <code>drand48</code> function that returns a random double-precision value over a uniform distribution [0, 1). This function generates pseudo-random numbers using a linear congruential algorithm with 48-bit integer arithmetic. The code below is similar to the previous example except <code>drand48</code> generates the random numbers for the array elements.</p>
+<p>The Accelerate framework provides a <code>drand48</code> function that returns a random double-precision value over a uniform distribution [0, 1) which includes zero but excludes one. This function generates pseudo-random numbers using a linear congruential algorithm with 48-bit integer arithmetic. The code below is similar to the previous example except <code>drand48</code> generates the random numbers for the array elements.</p>
 <pre><code class="language-swift">// rand48.swift
 
 import Accelerate
 
-func main() {
-    let n = 100_000_000
+let n = 100_000_000
 
-    let result = Array&lt;Double&gt;(unsafeUninitializedCapacity: n) { buffer, initCount in
-        for i in 0..&lt;n {
-            buffer[i] = drand48()
-        }
-        initCount = n
+let result = Array&lt;Double&gt;(unsafeUninitializedCapacity: n) { buffer, initCount in
+
+    for i in 0..&lt;n {
+        buffer[i] = drand48()
     }
 
-    print(result[0])
-    print(result[n - 1])
+    initCount = n
 }
-
-main()
 </code></pre>
 <h2>LAPACK dlarnv</h2>
 <p>The Accelerate framework also provides access to LAPACK routines. The <a href="https://netlib.org/lapack/explore-html/d5/dd2/group__larnv_ga768743496c909a18850020a8ce0382b4.html">LAPACK dlarnv</a> function creates an array of random numbers from a 0 to 1 uniform distribution when <code>idist</code> is 1.</p>
@@ -88,34 +78,27 @@ main()
 
 import Accelerate
 
-func main() {
-    let n = 100_000_000
+let n = 100_000_000
 
-    let result = Array&lt;Double&gt;(unsafeUninitializedCapacity: n) { buffer, initCount in
-        var idist: Int32 = 1
-        var nn = Int32(n)
+let result = Array&lt;Double&gt;(unsafeUninitializedCapacity: n) { buffer, initCount in
+    var idist: Int32 = 1
+    var nn = Int32(n)
 
-        var iseed: [Int32] = (0..&lt;3).map { _ in Int32.random(in: 1..&lt;4095) }
-        iseed += [2 * (Int32.random(in: 1..&lt;4095) / 2) + 1 ]
+    var iseed: [Int32] = (0..&lt;3).map { _ in Int32.random(in: 1..&lt;4095) }
+    iseed += [2 * (Int32.random(in: 1..&lt;4095) / 2) + 1 ]
 
-        dlarnv_(&amp;idist, &amp;iseed, &amp;nn, buffer.baseAddress)
+    dlarnv_(&amp;idist, &amp;iseed, &amp;nn, buffer.baseAddress)
 
-        initCount = n
-    }
-
-    print(result[0])
-    print(result[n - 1])
+    initCount = n
 }
-
-main()
 </code></pre>
-<h2>WyRand random</h2>
+<h2>Wyrand random</h2>
 <p>The static random methods like <code>Double.random</code> accept a <a href="https://developer.apple.com/documentation/swift/randomnumbergenerator">RandomNumberGenerator</a>. The example below is a Swift implementation of the wyrand pseudorandom number generator which is associated with the <a href="https://github.com/wangyi-fudan/wyhash">wyhash</a> function by Wang Yi. The generator is passed to the <code>Double.random</code> method to create the random number for the array element. There is also the <a href="https://github.com/lemire/SwiftWyhash">SwiftWyhash</a> port by Daniel Lemire that is based on an older version of wyrand. Also see Daniel's 2019 <a href="https://lemire.me/blog/2019/03/19/the-fastest-conventional-random-number-generator-that-can-pass-big-crush/">article</a> about fast random number generators.</p>
-<pre><code class="language-swift">// wyrand.swift
+<pre><code class="language-swift">// wyrandom.swift
 
 import Foundation
 
-struct WyRand: RandomNumberGenerator {
+struct Wyrand: RandomNumberGenerator {
     private var state : UInt64
 
     init(seed: UInt64 = mach_absolute_time()) {
@@ -129,34 +112,27 @@ struct WyRand: RandomNumberGenerator {
     }
 }
 
-func main() {
-    let n = 100_000_000
-    var rng = WyRand()
+let n = 100_000_000
+var rng = Wyrand()
 
-    let result = Array&lt;Double&gt;(unsafeUninitializedCapacity: n) { buffer, initCount in
-        for i in 0..&lt;n {
-            buffer[i] = Double.random(in: 0..&lt;1, using: &amp;rng)
-        }
-        initCount = n
+let result = Array&lt;Double&gt;(unsafeUninitializedCapacity: n) { buffer, initCount in
+    for i in 0..&lt;n {
+        buffer[i] = Double.random(in: 0..&lt;1, using: &amp;rng)
     }
-
-    print(result[0])
-    print(result[n - 1])
+    initCount = n
 }
-
-main()
 </code></pre>
-<h2>WyRand uniform</h2>
-<p>This example is similar to the WyRand code given above except <code>Double.random</code> is not used. Instead of passing the generator to <code>Double.random</code>, the integer returned from the generator is converted to a uniform distribution [0, 1) using the <code>wy2u01</code> function. The function shown here is based on the <code>wy2u01</code> C function given in the wyhash repo.</p>
+<h2>Wyrand uniform</h2>
+<p>This example is similar to the Wyrand code given above except <code>Double.random</code> is not used. Instead of passing the generator to <code>Double.random</code>, the integer returned from the generator is converted to a double with a uniform distribution over the interval [0, 1).</p>
 <pre><code class="language-swift">// wyuniform.swift
 
 import Foundation
 
-struct WyRand: RandomNumberGenerator {
+struct Wyrand: RandomNumberGenerator {
     private var state : UInt64
 
-    init(seed: UInt64 = mach_absolute_time()) {
-        state = seed
+    init(seed: UInt64? = nil) {
+        state = seed ?? mach_absolute_time()
     }
 
     mutating func next() -&gt; UInt64 {
@@ -164,45 +140,35 @@ struct WyRand: RandomNumberGenerator {
         let mul = state.multipliedFullWidth(by: state ^ 0x8bb84b93962eacc9)
         return mul.low ^ mul.high
     }
-}
 
-func wy2u01(_ r: UInt64) -&gt; Double {
-    let norm = 1.0 / Double(1 &lt;&lt; 52)
-    return Double(r &gt;&gt; 12) * norm
-}
-
-func main() {
-    let n = 100_000_000
-    var rng = WyRand()
-
-    let result = Array&lt;Double&gt;(unsafeUninitializedCapacity: n) { buffer, initCount in
-        for i in 0..&lt;n {
-            let r = rng.next()
-            let uniform = wy2u01(r)
-            buffer[i] = uniform
-        }
-        initCount = n
+    mutating func nextUniform() -&gt; Double {
+        Double(next() &gt;&gt; 11) * 0x1.0p-53
     }
-
-    print(result[0])
-    print(result[n - 1])
 }
 
-main()
+let n = 100_000_000
+var rng = Wyrand()
+
+let result = Array&lt;Double&gt;(unsafeUninitializedCapacity: n) { buffer, initCount in
+    for i in 0..&lt;n {
+        buffer[i] = rng.nextUniform()
+    }
+    initCount = n
+}
 </code></pre>
 <h2>Benchmarks</h2>
 <p>The compiler and benchmark commands for each example are shown below. The <a href="https://github.com/sharkdp/hyperfine">hyperfine</a> command-line tool is used to benchmark the compiled code.</p>
 <pre><code class="language-bash"># Compile the code
 swiftc -Xcc -DACCELERATE_NEW_LAPACK -Ounchecked lapack.swift
-swiftc -Ounchecked rand.swift
 swiftc -Ounchecked rand48.swift
-swiftc -Ounchecked wyrand.swift
+swiftc -Ounchecked random.swift
+swiftc -Ounchecked wyrandom.swift
 swiftc -Ounchecked wyuniform.swift
 
 # Run then benchmark
-hyperfine --warmup 3 './lapack' './rand' './rand48' './wyrand' './wyuniform'
+hyperfine --warmup 3 './lapack' './rand48' './random' './wyrandom' './wyuniform'
 </code></pre>
-<p>A summary of the benchmark results is shown in the table below. The Time column is the mean time in milliseconds. The Speedup column is how much faster WyRand uniform is compared to the other methods. The results were obtained on a 2025 M4 MacBook Air with 32 GB of unified memory and with Swift version 6.1.2. The WyRand uniform generator was 50x faster than the default random number generator in Swift when filling an array with 100,000,000 random numbers.</p>
+<p>A summary of the benchmark results is shown in the table below. The Time column is the mean time in milliseconds. The Speedup column is how much faster Wyrand uniform is compared to the other methods. The results were obtained on a 2025 M4 MacBook Air with 32 GB of unified memory and with Swift version 6.1.2. The Wyrand uniform generator was 50x faster than the default random number generator in Swift when filling an array with 100,000,000 random numbers.</p>
 <table class="table table-dark table-hover">
 <thead>
     <tr>
@@ -215,7 +181,7 @@ hyperfine --warmup 3 './lapack' './rand' './rand48' './wyrand' './wyuniform'
 <tbody>
     <tr>
         <td>Swift random</td>
-        <td>rand.swift</td>
+        <td>random.swift</td>
         <td>3318</td>
         <td>50.5x</td>
     </tr>
@@ -232,13 +198,13 @@ hyperfine --warmup 3 './lapack' './rand' './rand48' './wyrand' './wyuniform'
         <td>2.8x</td>
     </tr>
     <tr>
-        <td>WyRand random</td>
-        <td>wyrand.swift</td>
+        <td>Wyrand random</td>
+        <td>wyrandom.swift</td>
         <td>81</td>
         <td>1.2x</td>
     </tr>
     <tr>
-        <td>WyRand uniform</td>
+        <td>Wyrand uniform</td>
         <td>wyuniform.swift</td>
         <td>65</td>
         <td>-</td>
@@ -246,7 +212,7 @@ hyperfine --warmup 3 './lapack' './rand' './rand48' './wyrand' './wyuniform'
 </tbody>
 </table>
 
-<p>Based on the benchmarks, using Swift's default random number generator is very slow compared to pseudorandom number generators such as wyrand. If you don't need cryptographically secure random numbers then consider using a custom random number generator for faster performance; especially when filling arrays with pseudorandom numbers.</p>
+<p>Based on the benchmarks, using Swift's default random number generator is very slow compared to pseudorandom number generators such as wyrand. If you don't need cryptographically secure random numbers then consider using a custom random number generator for faster performance; especially when filling arrays with pseudorandom values.</p>
 <h2>Further reading</h2>
 <p>This post is based on a <a href="https://forums.swift.org/t/creating-an-array-of-random-numbers-in-swift-is-slow/80022">Swift Forums</a> discussion. Thank you to everyone on the forum post who offered advice and comments on this topic. The code discussed in this post is available on GitHub in the <a href="https://github.com/wigging/swift-macos">swift-macos/scripts/random-array</a> directory.</p>
 
