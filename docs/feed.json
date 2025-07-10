@@ -5,6 +5,13 @@
     "feed_url": "https://gavinw.me/swift-macos/feed.json",
     "items": [
         {
+            "id": "https://gavinw.me/swift-macos/./swift/command-line-args.html",
+            "url": "https://gavinw.me/swift-macos/./swift/command-line-args.html",
+            "title": "Command-line arguments",
+            "date_published": "2025-07-09T00:00:00Z",
+            "content_html": "<p>Use the <code>CommandLine</code> enumeration in Swift to get command-line arguments when executing a program. The arguments are obtained as an array of strings. The example below prints all the arguments passed to the program. The name of the executed program is the first argument. The second argument is expected to be an integer <code>n</code> and the third argument is a string <code>t</code>.</p><p><a href=\"https://gavinw.me/swift-macos/./swift/command-line-args.html\">Continue reading...</a></p>"
+        },
+        {
             "id": "https://gavinw.me/swift-macos/./swift/random-array.html",
             "url": "https://gavinw.me/swift-macos/./swift/random-array.html",
             "title": "Array of Random Numbers in Swift",
