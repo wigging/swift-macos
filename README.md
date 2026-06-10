@@ -69,6 +69,7 @@ Example code is located in the `scripts`, `xcode-playgrounds`, and `xcode-projec
 - [SwiftUI ViewBuilder](https://gavinw.me/notes/swiftui/viewbuilder.html)
 - [Tables in SwiftUI](https://gavinw.me/notes/swiftui/table.html)
 - [Text in SwiftUI](https://gavinw.me/notes/swiftui/text.html)
+- [TextField Input Suggestions](https://gavinw.me/notes/swiftui/textfield-suggestions.html)
 - [TextField in SwiftUI](https://gavinw.me/notes/swiftui/textfield.html)
 - [Three Column NavigationView in SwiftUI](https://gavinw.me/notes/swiftui/three-column-nav.html)
 - [Toggle SwiftUI Animation](https://gavinw.me/notes/swiftui/toggle-animation.html)
